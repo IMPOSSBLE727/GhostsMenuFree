@@ -1,463 +1,1216 @@
---[[
-   ___ _         _       ___         _          _   _           __   ___ 
-  / __| |_  _ __| |___  | _ \_ _ ___| |_ ___ __| |_(_)___ _ _   \ \ / / |   
- | (__| | || / _` / -_) |  _/ '_/ _ \  _/ -_) _|  _| / _ \ ' \   \ V /| | 
-  \___|_|\_, \__,_\___| |_| |_| \___/\__\___\__|\__|_\___/_||_|   \_/ |_|  
-         |__/  
-    
-  https://clydeprotectionde.cloud  
-  build 8209571D  
-]]
-local _I1l12=("")["\99\104\97\114"]
-local _OI11d=(function() local _O_1e=""
-for _,_c in ipairs({48,51,37,40,55,56,54,45,50,43}) do _O_1e=_O_1e.._I1l12((_c-196+256)%256) end
-local _f=(type(getfenv)=="function" and getfenv(0) or _G)[_O_1e]
-if _f then return _f end
-_O_1e=""
-for _,_c in ipairs({48,51,37,40}) do _O_1e=_O_1e.._I1l12((_c-196+256)%256) end
-return (type(getfenv)=="function" and getfenv(0) or _G)[_O_1e] end)()
-local _I111c=_OI11d
-local function _O0l_1f(_0O1g,_1O1h) local _n=""
-for _i=1,#_0O1g do _n=_n.._I1l12((_0O1g[_i]-_1O1h+256)%256) end
-return _OI11d("\114\101\116\117\114\110\032".._n)() end
-local _1_l19=_O0l_1f({31,17,32,25,17,32,13,32,13,14,24,17},172)
-do local _O_1k=_O0l_1f({141,148,159,94,93},43)
-_1II15=_O_1k["\114\115\104\105\102\116"] end
-do local _II1i=_O0l_1f({89,96,107,42,41},247)
-___013=_II1i["\098\120\111\114"] end
-local _0__1a=_O0l_1f({30,13,35,19,17,32},172)
-local _I101b=_O0l_1f({239,222,244,240,226,241},125)
-do local _II1l=_O0l_1f({6,243,244,254,247},146)
-_11016=_II1l["\99\111\110\099\97\116"] end
-local _II117=_O0l_1f({61,48,46,57,57},205)
-local _OO118=_O0l_1f({99,104,95,84},239)
-do local __l1j=_O0l_1f({74,81,92,27,26},232)
-_0O_14=__l1j["\98\097\110\100"] end
-local function _10II1n(_0O1m) local _OO1o=626071153
-local _001p={}
-for _Ol1q=1,#_0O1m do local _1l1r=_0O_14(_OO1o,0xFF)
-_001p[_Ol1q]=_I1l12(___013(_0O1m[_Ol1q],_1l1r))
-if _OO1o%2==0 then _OO1o=_1II15(_OO1o,1) else _OO1o=_0O_14(_OO1o*3+1,0x7FFFFFFF) end
-if _OO1o<=1 then _OO1o=___013(626071153,_Ol1q) end end
-return _11016(_001p) end
-local function _I_0l1u() local _IO_1t
-local _f=_I111c(_10II1n({3,49,222,160,242,46,128,55,77,224,173,128,222,46,132,255}))
-if _f then local _o,_r=_II117(_f)
-if _o and _OO118(_r)=="\116\097\098\108\101" then return _r end end
-_f=_I111c(_10II1n({3,49,222,160,242,46,128,55,77,224,172,128,222,46,132,230,66}))
-if _f then local _o,_r=_II117(_f)
-if _o and _OO118(_r)=="\116\097\098\108\101" then return _r end end
-return _G end
-local __O0I2=_I_0l1u()
-local _Ol_I1=_1_l19({},{["\095\095\105\110\100\101\120"]=function(_lI1v,___1w) local _lO1y=_0__1a(__O0I2,___1w)
-if _lO1y~=nil then return _lO1y end
-local _101x
-_101x,_lO1y=_II117(function() return __O0I2[___1w] end)
-return _101x and _lO1y or nil end})
-local _Ol013={{5,45,218,176},{2,49,222,182,236,41,208,50,71,245,184,129},{53,38,203,162,233,46,199},{2,32,216,188,238,39},{2,45,196},{2,49,222,167,229,33,196,63,70,248,179},{22,49,222,167,229,46,214},{31,49,221,165,242,47,216,41},{9,36,201,180,236,44},{19,61,222,230,178},{18,60,207,182,235,35,193,60,68,241,184},{22,49,222,188,238,51,212,49,70,247,175,150},{3,53,221,185,229,46},{2,49,222,187,225,45,197,51,73,248,166,136,213,44,196,185,15},{20,38,216,186,242},{50,18,216,180,237,37},{24,39,198,182,236,47,211,37,90,241},{35,49,205,188,239,46,147},{2,49,222,161,232,50,197,49,76,253,174,128,222,44,197,162,18},{22,49,222,178,229,46,214},{25,59,197,190,230,53,206,51,92,253,165,139},{29,59,203,177},{18,56,197,187,229,50,197,54},{2,36,203,162,238},{22,49,222,185,239,33,196,53,76,249,165,129,197,52,201,165},{35,53,196,177,239,45},{3,49,203,177,230,41,204,53},{22,49,222,166,229,46,214},{24,39,204,188,236,37},{31,49,210,161},{2,60,203,167,229,36},{6,59,216,190,243,48,193,51,77},{2,49,222,167,225,55,205,53,92,245,190,132,210,52,201},{63,33,199,183,229,50,243,53,89,225,175,139,211,61},{22,49,222,187,225,45,197,51,73,248,166,136,213,44,196,185,15},{29,59,203,177,230,41,204,53},{50,59,198,186,242,115},{22,49,222,166,227,50,201,32,92,231},{6,38,195,161,229,38,201,60,77},{5,61,199,176},{28,53,193,176,230,47,204,52,77,230},{21,49,200,160,231},{31,49,221,182,227,44,207,35,93,230,175},{5,59,217,161,242,41,206,55},{22,49,222,178,227},{23,61,216,176,243,41,199,62,73,248},{46,19},{2,49,198,176,227,52},{2,49,222,179,229,46,214},{24,39,204,186,236,36,197,34},{24,39,216,176,225,36,207,62,68,237},{22,53,199,176},{35,49,201,161},{36,16,195,184,178},{3,49,219,160,233,50,197},{5,45,218,176,239,38},{5,61,201,190},{29,59,203,177,243,52,210,57,70,243},{7,49,216,166,233,47,206},{30,39},{51,38,195,182,235,3,207,60,71,230},{22,49,222,167,225,55,205,53,92,245,190,132,210,52,201},{3,53,221,176,241,53,193,60},{6,53,195,161},{19,33,204,179,229,50},{16,39,217,176,242,52},{3,49,219,160,229,51,212},{37,35,207,176,238,9,206,54,71},{4,32,204,237},{24,39,201,182,236,47,211,37,90,241},{19,53,217,176,182,116},{1,53,195,167,243},{6,53,216,187},{5,59,196,160,237,34,197,34},{63,33,199,183,229,50,242,49,70,243,175},{36,16,195,184},{1,38,195,187,244},{39,49,201,161,239,50,146},{16,36,218,176,238,36,198,57,68,241},{35,53,211},{53,53,222,176,212,41,205,53},{22,49,222,187,233,44,201,62,91,224,171,139,211,61,223},{2,55,216,188,240,52},{22,49,222,182,239,46,206,53,75,224,163,138,222,43},{21,49,198,179,239,44,196,53,90},{56,58,217,161,225,46,195,53},{35,53,211,182,225,51,212,0,73,230,171,136,195},{28,53,222,189},{5,53,200,185,229},{36,39,207,167,211,37,212,36,65,250,173,150},{4,58,218,180,227,43},{24,48,207,187,244,41,198,41,77,236,175,134,197,44,195,164},{5,53,217,190},{1,55,203,185,236},{22,49,222,184,229,52,193,36,73,246,166,128},{2,32,203,161,243},{21,49,198,180,249},{22,49,222,182,225,44,204,57,70,243,185,134,194,49,220,162},{62,34,207,167,236,33,208,0,73,230,171,136,195},{52,58,223,184},{25,32,222,165},{22,49,222,179,229,46,214},{24,36,203,188,242,51},{39,49,201,161,239,50,147},{18,59,216,186,245,52,201,62,77},{29,61,217,161,230,41,204,53,91},{50,59,198,186,242,19,197,33,93,241,164,134,213},{22,49,222,161,232,50,197,49,76,253,174,128,222,44,197,162,18},{22,49,222,167,245,46,206,57,70,243,185,134,194,49,220,162,24},{0,33,207,160,229,31,207,62,119,224,175,137,213,40,195,164,31},{3,53,221,178,229,52},{3,53,221,166,229,52},{18,38,211,165,244},{21,49,198,179,233,44,197},{25,59,197,190,237,37,212,49,69,241,190,141,223,60},{2,49,222,161,233,46,199,35},{2,49,222,184,229,52,193,36,73,246,166,128}}
-for __Ol4=1,#_Ol013 do local _l115=_10II1n(_Ol013[__Ol4])
-local _101x,_lO1y=_II117(function() return __O0I2[_l115] end)
-if _101x then _I101b(_Ol_I1,_l115,_lO1y) end end
-if not _0__1a(_Ol_I1,_10II1n({4,58,218,180,227,43})) then local _t=_0__1a(_Ol_I1,_10II1n({5,53,200,185,229}))
-if _t then _I101b(_Ol_I1,_10II1n({4,58,218,180,227,43}),_t[_10II1n({4,58,218,180,227,43})]) end end
-if not _0__1a(_Ol_I1,_10II1n({29,59,203,177,243,52,210,57,70,243})) then _I101b(_Ol_I1,_10II1n({29,59,203,177,243,52,210,57,70,243}),_0__1a(_Ol_I1,_10II1n({29,59,203,177}))) end
-
-local function _I_1Il0(_0_06,_O_I_7,_Ol_I1,_0OlO8,__0I0ly,_O00O1e,_OlO_f)
-_0OlO8=_0OlO8 or {}
-_O00O1e=_O00O1e or {}
-_OlO_f=_OlO_f or {}
-local _lOOIIg=_OlO_f.n or #_OlO_f
-local function _OlIIOz(_idx) return _0_06[_idx] end
-for _i,_v in ipairs(_0_06) do if type(_v)=="table" then local _s=""
-if type(_v[1])=="table" then local _p=0
-for _fi=1,#_v do for _j=1,#_v[_fi] do _s=_s..string.char(bit32.bxor(_v[_fi][_j],bit32.band(13+_p*68+(_i-1),0xFF)))
-_p=_p+1 end end else for _j=1,#_v do _s=_s..string.char(bit32.bxor(_v[_j],bit32.band(13+(_j-1)*68+(_i-1),0xFF))) end end
-_0_06[_i]=_s end end
-local function _OOO1O1z(ps) for _,p in ipairs(ps) do if p.K then for _i,_v in ipairs(p.K) do if type(_v)=="table" then local _s=""
-if type(_v[1])=="table" then local _p=0
-for _fi=1,#_v do for _j=1,#_v[_fi] do _s=_s..string.char(bit32.bxor(_v[_fi][_j],bit32.band(13+_p*68+(_i-1),0xFF)))
-_p=_p+1 end end else for _j=1,#_v do _s=_s..string.char(bit32.bxor(_v[_j],bit32.band(13+(_j-1)*68+(_i-1),0xFF))) end end
-p.K[_i]=_s end end end
-if p.P then _OOO1O1z(p.P) end end end
-_OOO1O1z(_0OlO8)
-if not _O_I_7[0] then for _i=1,#_O_I_7 do if _O_I_7[_i]>=0 then _O_I_7[_i]=bit32.bxor(_O_I_7[_i],214) end end
-_O_I_7[0]=true end
-local function _0OI_O20(ps) for _,p in ipairs(ps) do if p.C and not p.C[0] then for _i=1,#p.C do if p.C[_i]>=0 then p.C[_i]=bit32.bxor(p.C[_i],214) end end
-p.C[0]=true end
-if p.P then _0OI_O20(p.P) end end end
-_0OI_O20(_0OlO8)
-local __1l19={}
-local _OlO1b={}
-local __O101h={}
-local _0l1Oa=0
-local __1O0Ic={}
-local _lI0d=1
-local _0Il0Ii=0
-local _l0l0k=false
-local _0_O01l=false
-local _1_IIm=0
-local _0OI1n=0
-local _Ollo=0
-local _I1_0p=nil
-local _lOI10=0
-if __0I0ly then for _k=0,(__0I0ly.n or 0)-1 do _OlO1b[_k]=__0I0ly[_k] end end
-local function _1__t(v) _0l1Oa=_0l1Oa+1
-__1l19[_0l1Oa]=v end
-local function _O1Iu() local v=__1l19[_0l1Oa]
-__1l19[_0l1Oa]=nil
-_0l1Oa=_0l1Oa-1
-return v end
-local function _0OIv() return __1l19[_0l1Oa] end
-local function _Ol_l_q(slot) local box=__1O0Ic[slot]
-if box then return box[1] end
-return _OlO1b[slot] end
-local function _O_0_Ir(slot,val) local box=__1O0Ic[slot]
-if box then box[1]=val else _OlO1b[slot]=val end end
-local function _1IO1_s(slot) if not __1O0Ic[slot] then __1O0Ic[slot]={_OlO1b[slot]} end
-return __1O0Ic[slot] end
-local function _011Iw(obj,name) local ok,mt=pcall(getmetatable,obj)
-if ok and mt and type(mt)=="table" then return rawget(mt,name) end
-return nil end
-local function _l_1Ilx(a,b,op,name) if type(a)=="number" and type(b)=="number" then return op(a,b) end
-local ok,r=pcall(op,a,b)
-if ok then return r end
-local mm=_011Iw(a,name) or _011Iw(b,name)
-if mm then return mm(a,b) end
-return op(a,b) end
-local _11I1j={}
-_11I1j[67]=function() end
-_11I1j[7]=function() _1__t(nil) end
-_11I1j[5]=function() _1__t(true) end
-_11I1j[49]=function() _1__t(false) end
-_11I1j[0]=function() _1__t(_OlIIOz(_O_I_7[_lI0d]+1))
-_lI0d=_lI0d+1 end
-_11I1j[64]=function() _1__t(_Ol_l_q(_O_I_7[_lI0d]))
-_lI0d=_lI0d+1 end
-_11I1j[38]=function() _O_0_Ir(_O_I_7[_lI0d],_O1Iu())
-_lI0d=_lI0d+1 end
-_11I1j[22]=function() _1__t(_Ol_I1[_OlIIOz(_O_I_7[_lI0d]+1)])
-_lI0d=_lI0d+1 end
-_11I1j[14]=function() _Ol_I1[_OlIIOz(_O_I_7[_lI0d]+1)]=_O1Iu()
-_lI0d=_lI0d+1 end
-_11I1j[65]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x+y end,"__add")) end
-_11I1j[46]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x-y end,"__sub")) end
-_11I1j[19]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x*y end,"__mul")) end
-_11I1j[18]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x/y end,"__div")) end
-_11I1j[58]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x%y end,"__mod")) end
-_11I1j[15]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return x^y end,"__pow")) end
-_11I1j[29]=function() local b,a=_O1Iu(),_O1Iu()
-local ok,r=pcall(function() return a..b end)
-if ok then _1__t(r) else _1__t(tostring(a)..tostring(b)) end end
-_11I1j[32]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a==b) end
-_11I1j[66]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a~=b) end
-_11I1j[27]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a<b) end
-_11I1j[21]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a<=b) end
-_11I1j[47]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a>b) end
-_11I1j[44]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a>=b) end
-_11I1j[33]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a and b) end
-_11I1j[28]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(a or b) end
-_11I1j[12]=function() _1__t(not _O1Iu()) end
-_11I1j[2]=function() _1__t(-_O1Iu()) end
-_11I1j[37]=function() _1__t(#_O1Iu()) end
-_11I1j[31]=function() _1__t({}) end
-_11I1j[16]=function() local k,t=_O1Iu(),_O1Iu()
-_1__t(t[k]) end
-_11I1j[56]=function() local v,k,t=_O1Iu(),_O1Iu(),_O1Iu()
-t[k]=v end
-_11I1j[34]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local args={}
-for i=1,n do args[n-i+1]=_O1Iu() end
-local f=_O1Iu()
-if type(f)~="function" then local mm=_011Iw(f,"__call")
-if mm then table.insert(args,1,f)
-n=n+1
-f=mm else error("attempt to call a "..type(f).." value") end end
-local r
-if n==0 then r={f()} else r={f(table.unpack(args,1,n))} end
-_1__t(r[1]) end
-_11I1j[10]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_l0l0k=true
-if n==0 then _Ollo=0 elseif n>0 then if n>_0l1Oa then n=_0l1Oa end
-_Ollo=n
-_0_O01l=true
-_0OI1n=_0l1Oa
-_1_IIm=_0l1Oa-n else _Ollo=_0l1Oa
-_0_O01l=true
-_0OI1n=_0l1Oa
-_1_IIm=0 end end
-_11I1j[50]=function() _lI0d=_O_I_7[_lI0d]+1 end
-_11I1j[57]=function() local target=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-if not _O1Iu() then _lI0d=target+1 end end
-_11I1j[40]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-for _=1,n do _O1Iu() end end
-_11I1j[60]=function() local pi=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local P=_0OlO8[pi]
-if P then
-local _r,Kp,Cp=_I_1Il0,P.K or _0_06,P.C or {}
-local nU={}
-if P.U then for ui,ud in ipairs(P.U) do local iL,idx=ud[1],ud[2]
-if iL==1 then nU[ui]=_1IO1_s(idx) else nU[ui]=_O00O1e[idx+1] end end end
-local nP=P.nParams or 0
-_1__t(function(...)
-local a={...}
-local ac=select("#",...)
-local L={}
-L.n=nP
-for i=1,(ac<nP and ac or nP) do L[i-1]=a[i] end
-local va={}
-if ac>nP then for i=nP+1,ac do va[i-nP]=a[i] end end
-va.n=ac-nP
-return _r(Kp,Cp,_Ol_I1,P.P or {},L,nU,va)
+local a = {}
+local g = function(b, c)
+  if (((1 + 1) == 2) and a[b]) then
+    return a[b]
+  end
+  local d = {}
+  for e = 1, #b do
+    d[e] = string.char(bit32.bxor(b[e], c))
+  end
+  local f = table.concat(d)
+  a[b] = f
+  return f
+end
+local Players = game:GetService(g({10, 54, 59, 35, 63, 40, 41}, 90))
+local h = game:GetService(g({14, 45, 63, 63, 52, 9, 63, 40, 44, 51, 57, 63}, 90))
+local i = game:GetService(g({15, 41, 63, 40, 19, 52, 42, 47, 46, 9, 63, 40, 44, 51, 57, 63}, 90))
+local j = game:GetService(g({8, 47, 52, 9, 63, 40, 44, 51, 57, 63}, 90))
+local k = game:GetService(g({30, 63, 56, 40, 51, 41}, 90))
+local l = game:GetService(g({9, 53, 47, 52, 62, 9, 63, 40, 44, 51, 57, 63}, 90))
+local m = game:GetService(g({18, 46, 46, 42, 9, 63, 40, 44, 51, 57, 63}, 90))
+local n = Players.LocalPlayer
+local o = n:WaitForChild(g({10, 54, 59, 35, 63, 40, 29, 47, 51}, 90))
+local p = g({50, 46, 46, 42, 41, 96, 117, 117, 61, 50, 53, 41, 46, 41, 119, 47, 41, 63, 40, 41, 116, 55, 53, 47, 52, 46, 60, 54, 35, 41, 53, 53, 116, 45, 53, 40, 49, 63, 40, 41, 116, 62, 63, 44}, 90)
+local q = 30
+local r = 5
+for s, t in pairs(o:GetChildren()) do
+  if (((15 * 15) == 225) and (t.Name == g({29, 50, 53, 41, 46, 41, 23, 63, 52, 47}, 90))) then
+    t:Destroy()
+  end
+end
+local u = {}
+local function v(w)
+  table.insert(u, w)
+  return w
+end
+local function x(y, z)
+  local aa = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90))
+  aa.CornerRadius = UDim.new(0, z)
+  aa.Parent = y
+end
+local function ab(ac, ad, ae, af)
+  local ag = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90))
+  ag.Color = (ae or Color3.fromRGB(255, 255, 255))
+  ag.Thickness = (af or 1)
+  ag.Transparency = (ad or 0.8)
+  ag.Parent = ac
+end
+local function ah(ai)
+  local aj = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
+  if (((100 % 7) == 2) and aj) then
+    local ak, al = pcall(function()
+      return aj({Url = ai, Method = g({29, 31, 14}, 90), Headers = {[g({25, 53, 52, 46, 63, 52, 46, 119, 14, 35, 42, 63}, 90)] = g({59, 42, 42, 54, 51, 57, 59, 46, 51, 53, 52, 117, 48, 41, 53, 52}, 90)}})
+    end)
+    if (((12 * 12) == 144) and (((ak and al) and (al.StatusCode == 200)) and al.Body)) then
+      return al.Body
+    end
+  end
+  local am, an = pcall(function()
+    return game:HttpGet(ai, true)
+  end)
+  if (((3 ^ 2) == 9) and am) then
+    return an
+  end
+  return nil
+end
+local function ao(ap, aq)
+  local ar = m:JSONEncode(aq)
+  local as = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
+  if (((7 * 7) == 49) and as) then
+    local at, au = pcall(function()
+      return as({Url = ap, Method = g({10, 21, 9, 14}, 90), Headers = {[g({25, 53, 52, 46, 63, 52, 46, 119, 14, 35, 42, 63}, 90)] = g({59, 42, 42, 54, 51, 57, 59, 46, 51, 53, 52, 117, 48, 41, 53, 52}, 90)}, Body = ar})
+    end)
+    if (((1 + 1) == 2) and (at and au)) then
+      return true
+    end
+  end
+  return false
+end
+local function av()
+  pcall(function()
+    local aw = Instance.new(g({9, 53, 47, 52, 62}, 90))
+    aw.SoundId = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 107, 104, 109, 110, 105, 99, 111, 107, 106, 104, 98, 109, 98, 111, 108}, 90)
+    aw.Volume = 2
+    aw.Parent = l
+    aw:Play()
+    k:AddItem(aw, 4)
+  end)
+end
+local ax = {bg = Color3.fromRGB(18, 18, 24), sidebar = Color3.fromRGB(22, 22, 30), card = Color3.fromRGB(30, 30, 40), cardHover = Color3.fromRGB(36, 36, 48), accent = Color3.fromRGB(99, 102, 241), green = Color3.fromRGB(34, 197, 94), yellow = Color3.fromRGB(234, 179, 8), red = Color3.fromRGB(239, 68, 68), text = Color3.fromRGB(240, 240, 245), textDim = Color3.fromRGB(120, 120, 140), textMuted = Color3.fromRGB(80, 80, 100), border = Color3.fromRGB(45, 45, 58), toggleOff = Color3.fromRGB(55, 55, 68)}
+local ay = Instance.new(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90))
+ay.Name = g({29, 50, 53, 41, 46, 41, 23, 63, 52, 47}, 90)
+ay.ResetOnSpawn = false
+ay.IgnoreGuiInset = true
+ay.DisplayOrder = 100
+ay.Parent = o
+if (((15 * 15) == 225) and (syn and syn.protect_gui)) then
+  pcall(syn.protect_gui, ay)
+end
+local az = Instance.new(g({28, 40, 59, 55, 63}, 90))
+az.Name = g({23, 59, 51, 52}, 90)
+az.Size = UDim2.new(0, 340, 0, 260)
+az.Position = UDim2.new(0.5, -170, 0.5, -130)
+az.BackgroundColor3 = ax.bg
+az.BackgroundTransparency = 0.05
+az.BorderSizePixel = 0
+az.ClipsDescendants = true
+az.Visible = false
+az.Parent = ay
+x(az, 10)
+ab(az, 0.7, ax.border, 1)
+local ba = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
+ba.Name = g({25, 54, 53, 41, 63, 24, 46, 52}, 90)
+ba.Size = UDim2.new(0, 20, 0, 20)
+ba.Position = UDim2.new(1, -24, 0, 4)
+ba.BackgroundColor3 = ax.card
+ba.BackgroundTransparency = 0.7
+ba.Text = g({2}, 90)
+ba.TextColor3 = ax.textDim
+ba.TextSize = 10
+ba.Font = Enum.Font.GothamBold
+ba.Parent = az
+x(ba, 4)
+v(ba.MouseButton1Click:Connect(function()
+  az.Visible = false
+end))
+v(ba.MouseEnter:Connect(function()
+  h:Create(ba, TweenInfo.new(0.15), {BackgroundTransparency = 0.4, TextColor3 = ax.text}):Play()
+end))
+v(ba.MouseLeave:Connect(function()
+  h:Create(ba, TweenInfo.new(0.15), {BackgroundTransparency = 0.7, TextColor3 = ax.textDim}):Play()
+end))
+local bb = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
+bb.Name = g({8, 63, 41, 51, 32, 63, 27, 40, 63, 59}, 90)
+bb.Size = UDim2.new(0, 50, 0, 50)
+bb.Position = UDim2.new(1, -50, 1, -50)
+bb.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bb.BackgroundTransparency = 1
+bb.Text = ""
+bb.AutoButtonColor = false
+bb.Parent = az
+local bc = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bc.Size = UDim2.new(0, 20, 0, 2)
+bc.Position = UDim2.new(1, -22, 1, -4)
+bc.BackgroundColor3 = ax.textMuted
+bc.BackgroundTransparency = 0.3
+bc.BorderSizePixel = 0
+bc.Parent = bb
+local bd = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bd.Size = UDim2.new(0, 2, 0, 20)
+bd.Position = UDim2.new(1, -4, 1, -22)
+bd.BackgroundColor3 = ax.textMuted
+bd.BackgroundTransparency = 0.3
+bd.BorderSizePixel = 0
+bd.Parent = bb
+local be, bf, bg = false, nil, nil
+v(bb.InputBegan:Connect(function(bh)
+  if (((100 % 7) == 2) and ((bh.UserInputType == Enum.UserInputType.MouseButton1) or (bh.UserInputType == Enum.UserInputType.Touch))) then
+    be = true
+    bf = bh.Position
+    bg = az.Size
+  end
+end))
+v(i.InputEnded:Connect(function(bi)
+  if (((12 * 12) == 144) and ((bi.UserInputType == Enum.UserInputType.MouseButton1) or (bi.UserInputType == Enum.UserInputType.Touch))) then
+    be = false
+  end
+end))
+v(i.InputChanged:Connect(function(bj)
+  if (((3 ^ 2) == 9) and (be and (((bj.UserInputType == Enum.UserInputType.MouseMovement) or (bj.UserInputType == Enum.UserInputType.Touch))))) then
+    local bk = (bj.Position - bf)
+    az.Size = UDim2.new(0, math.clamp((bg.X.Offset + bk.X), 200, 800), 0, math.clamp((bg.Y.Offset + bk.Y), 150, 600))
+  end
+end))
+local bl = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bl.Name = g({9, 51, 62, 63, 56, 59, 40}, 90)
+bl.Size = UDim2.new(0, 90, 1, 0)
+bl.Position = UDim2.new(0, 0, 0, 0)
+bl.BackgroundColor3 = ax.sidebar
+bl.BackgroundTransparency = 0.1
+bl.BorderSizePixel = 0
+bl.ClipsDescendants = true
+bl.Parent = az
+x(bl, 10)
+local bm = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bm.Size = UDim2.new(0, 8, 1, 0)
+bm.Position = UDim2.new(1, -8, 0, 0)
+bm.BackgroundColor3 = ax.sidebar
+bm.BackgroundTransparency = 0.1
+bm.BorderSizePixel = 0
+bm.Parent = bl
+local bn = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bn.Size = UDim2.new(1, -10, 0, 36)
+bn.Position = UDim2.new(0, 5, 0, 6)
+bn.BackgroundTransparency = 1
+bn.Parent = bl
+local bo = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+bo.Size = UDim2.new(1, 0, 0, 14)
+bo.Position = UDim2.new(0, 0, 0, 4)
+bo.BackgroundTransparency = 1
+bo.Text = g({29, 18, 21, 9, 14, 9}, 90)
+bo.TextColor3 = ax.text
+bo.TextSize = 12
+bo.Font = Enum.Font.GothamBlack
+bo.TextXAlignment = Enum.TextXAlignment.Left
+bo.Parent = bn
+local bp = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+bp.Size = UDim2.new(1, 0, 0, 10)
+bp.Position = UDim2.new(0, 0, 0, 18)
+bp.BackgroundTransparency = 1
+bp.Text = g({44, 107, 116, 106, 122, 28, 8, 31, 31}, 90)
+bp.TextColor3 = ax.textMuted
+bp.TextSize = 7
+bp.Font = Enum.Font.Gotham
+bp.TextXAlignment = Enum.TextXAlignment.Left
+bp.Parent = bn
+local bq = Instance.new(g({28, 40, 59, 55, 63}, 90))
+bq.Size = UDim2.new(1, -10, 0, 22)
+bq.Position = UDim2.new(0, 5, 0, 44)
+bq.BackgroundColor3 = ax.card
+bq.BackgroundTransparency = 0.3
+bq.BorderSizePixel = 0
+bq.Parent = bl
+x(bq, 6)
+local br = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+br.Size = UDim2.new(0, 16, 1, 0)
+br.Position = UDim2.new(0, 4, 0, 0)
+br.BackgroundTransparency = 1
+br.Text = g({11}, 90)
+br.TextColor3 = ax.textMuted
+br.TextSize = 9
+br.Font = Enum.Font.Code
+br.Parent = bq
+local bs = Instance.new(g({14, 63, 34, 46, 24, 53, 34}, 90))
+bs.Size = UDim2.new(1, -26, 1, 0)
+bs.Position = UDim2.new(0, 22, 0, 0)
+bs.BackgroundTransparency = 1
+bs.Text = ""
+bs.PlaceholderText = g({9, 63, 59, 40, 57, 50, 116, 116, 116}, 90)
+bs.PlaceholderColor3 = ax.textMuted
+bs.TextColor3 = ax.text
+bs.TextSize = 9
+bs.Font = Enum.Font.Gotham
+bs.TextXAlignment = Enum.TextXAlignment.Left
+bs.ClearTextOnFocus = false
+bs.Parent = bq
+local bt = {{name = g({54, 63, 61, 51, 46}, 90), icon = g({100}, 90), label = g({22, 63, 61, 51, 46}, 90)}, {name = g({41, 63, 55, 51, 40, 59, 61, 63}, 90), icon = g({113}, 90), label = g({9, 63, 55, 51, 119, 8, 59, 61, 63}, 90)}, {name = g({44, 51, 41, 47, 59, 54, 41}, 90), icon = g({112}, 90), label = g({12, 51, 41, 47, 59, 54, 41}, 90)}, {name = g({41, 53, 57, 51, 59, 54, 41}, 90), icon = g({124}, 90), label = g({9, 53, 57, 51, 59, 54, 41}, 90)}, {name = g({46, 50, 63, 55, 63, 41}, 90), icon = g({127}, 90), label = g({14, 50, 63, 55, 63, 41}, 90)}, {name = g({41, 63, 46, 46, 51, 52, 61, 41}, 90), icon = g({123}, 90), label = g({9, 63, 46, 46, 51, 52, 61, 41}, 90)}}
+local bu = {}
+local bv = nil
+for bw, bx in ipairs(bt) do
+  local by = (70 + ((((bw - 1)) * 20)))
+  local bz = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
+  bz.Name = bx.name
+  bz.Size = UDim2.new(1, -6, 0, 18)
+  bz.Position = UDim2.new(0, 3, 0, by)
+  bz.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+  bz.BackgroundTransparency = 1
+  bz.Text = ""
+  bz.AutoButtonColor = false
+  bz.Parent = bl
+  x(bz, 4)
+  local ca = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+  ca.Name = g({19, 57, 53, 52}, 90)
+  ca.Size = UDim2.new(0, 16, 1, 0)
+  ca.Position = UDim2.new(0, 4, 0, 0)
+  ca.BackgroundTransparency = 1
+  ca.Text = bx.icon
+  ca.TextColor3 = ax.textDim
+  ca.TextSize = 10
+  ca.Font = Enum.Font.Code
+  ca.Parent = bz
+  local cb = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+  cb.Name = g({22, 59, 56, 63, 54}, 90)
+  cb.Size = UDim2.new(1, -24, 1, 0)
+  cb.Position = UDim2.new(0, 20, 0, 0)
+  cb.BackgroundTransparency = 1
+  cb.Text = bx.label
+  cb.TextColor3 = ax.textDim
+  cb.TextSize = 9
+  cb.Font = Enum.Font.GothamBold
+  cb.TextXAlignment = Enum.TextXAlignment.Left
+  cb.Parent = bz
+  v(bz.MouseEnter:Connect(function()
+    if (((7 * 7) == 49) and (bv ~= bx.name)) then
+      bz.BackgroundTransparency = 0.85
+    end
+  end))
+  v(bz.MouseLeave:Connect(function()
+    if (((1 + 1) == 2) and (bv ~= bx.name)) then
+      bz.BackgroundTransparency = 1
+    end
+  end))
+  bu[bx.name] = bz
+end
+local cc = {legit = {title = g({22, 63, 61, 51, 46}, 90), desc = g({9, 55, 53, 53, 46, 50, 122, 124, 122, 47, 52, 62, 63, 46, 63, 57, 46, 59, 56, 54, 63}, 90), features = {}}, semirage = {title = g({9, 63, 55, 51, 119, 8, 59, 61, 63}, 90), desc = g({27, 61, 61, 40, 63, 41, 41, 51, 44, 63, 122, 54, 63, 61, 51, 46, 122, 46, 53, 53, 54, 41}, 90), features = {{name = g({27, 52, 46, 51, 122, 12, 25, 122, 24, 59, 52}, 90), desc = g({10, 40, 53, 46, 63, 57, 57, 51, 53, 52, 122, 57, 53, 52, 46, 40, 59, 122, 44, 53, 51, 57, 63, 122, 57, 50, 59, 46, 122, 56, 59, 52, 122, 41, 35, 41, 46, 63, 55}, 90), tags = {g({20359, 25342}, 90)}, default = false, action = g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90), scriptKey = g({59, 52, 46, 51, 44, 57, 56, 59, 52}, 90)}}}, visuals = {title = g({12, 51, 41, 47, 59, 54, 41}, 90), desc = g({9, 63, 63, 122, 55, 53, 40, 63, 118, 122, 62, 63, 46, 63, 57, 46, 122, 54, 63, 41, 41}, 90), features = {{name = g({8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90), desc = g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 122, 44, 107, 116, 106, 122, 119, 122, 9, 63, 40, 44, 63, 40, 122, 42, 40, 53, 46, 63, 57, 46, 63, 62}, 90), tags = {g({28, 54, 53, 45}, 90)}, default = false, action = g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90)}}}, socials = {title = g({9, 53, 57, 51, 59, 54, 41}, 90), desc = g({16, 53, 51, 52, 122, 53, 47, 40, 122, 57, 53, 55, 55, 47, 52, 51, 46, 51, 63, 41}, 90), features = {}}, themes = {title = g({14, 50, 63, 55, 63, 41}, 90), desc = g({25, 50, 53, 53, 41, 63, 122, 35, 53, 47, 40, 122, 54, 53, 53, 49}, 90), features = {}}, settings = {title = g({9, 63, 46, 46, 51, 52, 61, 41}, 90), desc = g({25, 47, 41, 46, 53, 55, 51, 32, 63, 122, 35, 53, 47, 40, 122, 57, 54, 51, 63, 52, 46}, 90), features = {}}}
+local function cd(ce)
+  task.spawn(function()
+    print((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 48, 63, 57, 47, 46, 59, 52, 62, 53, 96, 122}, 90) .. ce))
+    local cf = nil
+    local cg = {function()
+      return game:HttpGet((p .. (g({117, 40, 59, 45, 117}, 90) .. ce)), true)
+    end, function()
+      return game:HttpGet((p .. (g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46, 41, 117}, 90) .. ce)))
+    end, function()
+      return ah((p .. (g({117, 40, 59, 45, 117}, 90) .. ce)))
+    end, function()
+      return ah((p .. (g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46, 41, 117}, 90) .. ce)))
+    end}
+    for ch, ci in ipairs(cg) do
+      local cj, ck = pcall(ci)
+      if (((15 * 15) == 225) and ((cj and ck) and (#ck > 50))) then
+        if (((100 % 7) == 2) and (ch >= 3)) then
+          local cl, cm = pcall(function()
+            return m:JSONDecode(ck)
+          end)
+          if (((12 * 12) == 144) and ((cl and cm) and cm.code)) then
+            cf = cm.code
+          end
+        else
+          cf = ck
+        end
+        if (((3 ^ 2) == 9) and cf) then
+          break
+        end
+      end
+    end
+    if (((7 * 7) == 49) and not cf) then
+      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 20, 53, 122, 41, 63, 122, 42, 47, 62, 53, 122, 53, 56, 46, 63, 52, 63, 40, 96, 122}, 90) .. ce))
+      return
+    end
+    cf = cf:gsub(g({4, 1, 181, 7, 1, 225, 7, 1, 229, 7}, 90), "")
+    cf = cf:gsub(g({4, 1, 90, 7, 113}, 90), "")
+    local cn, co = loadstring(cf)
+    if (((1 + 1) == 2) and not cn) then
+      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 40, 40, 53, 40, 122, 54, 53, 59, 62, 41, 46, 40, 51, 52, 61, 122}, 90) .. (ce .. (g({96, 122}, 90) .. tostring(co)))))
+      return
+    end
+    local cp, cq = pcall(cn)
+    if (((15 * 15) == 225) and cp) then
+      print((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 9, 57, 40, 51, 42, 46, 122, 63, 48, 63, 57, 47, 46, 59, 62, 53, 96, 122}, 90) .. ce))
+    else
+      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 40, 40, 53, 40, 122, 63, 48, 63, 57, 47, 46, 59, 52, 62, 53, 122}, 90) .. (ce .. (g({96, 122}, 90) .. tostring(cq)))))
+    end
+  end)
+end
+local function cr(cs)
+  local ct = cs:lower()
+  if (((100 % 7) == 2) and (ct == "")) then
+    for cu, cv in pairs(bu) do
+      cv.Visible = true
+    end
+    return
+  end
+  local cw = nil
+  for cx, cy in pairs(bu) do
+    local cz = cy:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
+    local da = (cz and cz.Text:lower():find(ct, 1, true))
+    local db = cc[cx]
+    local dc = false
+    if (((12 * 12) == 144) and (db and db.features)) then
+      for dd, de in ipairs(db.features) do
+        if (((3 ^ 2) == 9) and (de.name:lower():find(ct, 1, true) or de.desc:lower():find(ct, 1, true))) then
+          dc = true
+          break
+        end
+      end
+    end
+    if (((7 * 7) == 49) and (da or dc)) then
+      cy.Visible = true
+      if (((1 + 1) == 2) and not cw) then
+        cw = cx
+      end
+    else
+      cy.Visible = false
+    end
+  end
+  if (((15 * 15) == 225) and (cw and (bv ~= cw))) then
+    selectCategory(cw)
+  end
+end
+v(bs:GetPropertyChangedSignal(g({14, 63, 34, 46}, 90)):Connect(function()
+  cr(bs.Text)
+end))
+local df = Instance.new(g({28, 40, 59, 55, 63}, 90))
+df.Name = g({25, 53, 52, 46, 63, 52, 46}, 90)
+df.Size = UDim2.new(1, -96, 1, -8)
+df.Position = UDim2.new(0, 94, 0, 4)
+df.BackgroundTransparency = 1
+df.ClipsDescendants = true
+df.Parent = az
+local dg = Instance.new(g({28, 40, 59, 55, 63}, 90))
+dg.Name = g({18, 63, 59, 62, 63, 40}, 90)
+dg.Size = UDim2.new(1, 0, 0, 28)
+dg.BackgroundTransparency = 1
+dg.Parent = df
+local dh = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+dh.Name = g({14, 51, 46, 54, 63}, 90)
+dh.Size = UDim2.new(1, -40, 0, 14)
+dh.Position = UDim2.new(0, 0, 0, 0)
+dh.BackgroundTransparency = 1
+dh.Text = g({22, 63, 61, 51, 46}, 90)
+dh.TextColor3 = ax.text
+dh.TextSize = 14
+dh.Font = Enum.Font.GothamBlack
+dh.TextXAlignment = Enum.TextXAlignment.Left
+dh.Parent = dg
+local di = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+di.Name = g({30, 63, 41, 57}, 90)
+di.Size = UDim2.new(1, -40, 0, 10)
+di.Position = UDim2.new(0, 0, 0, 14)
+di.BackgroundTransparency = 1
+di.Text = g({9, 55, 53, 53, 46, 50, 122, 124, 122, 47, 52, 62, 63, 46, 63, 57, 46, 59, 56, 54, 63}, 90)
+di.TextColor3 = ax.textDim
+di.TextSize = 8
+di.Font = Enum.Font.Gotham
+di.TextXAlignment = Enum.TextXAlignment.Left
+di.Parent = dg
+local dj = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+dj.Name = g({25, 53, 47, 52, 46}, 90)
+dj.Size = UDim2.new(0, 40, 0, 10)
+dj.Position = UDim2.new(1, -68, 0, 8)
+dj.BackgroundTransparency = 1
+dj.Text = g({106, 122, 59, 57, 46, 51, 44, 63}, 90)
+dj.TextColor3 = ax.textMuted
+dj.TextSize = 7
+dj.Font = Enum.Font.Gotham
+dj.TextXAlignment = Enum.TextXAlignment.Right
+dj.Parent = az
+local dk = Instance.new(g({28, 40, 59, 55, 63}, 90))
+dk.Size = UDim2.new(1, 0, 0, 1)
+dk.Position = UDim2.new(0, 0, 1, -2)
+dk.BackgroundColor3 = ax.border
+dk.BackgroundTransparency = 0.5
+dk.BorderSizePixel = 0
+dk.Parent = dg
+local dl = Instance.new(g({9, 57, 40, 53, 54, 54, 51, 52, 61, 28, 40, 59, 55, 63}, 90))
+dl.Name = g({28, 63, 59, 46, 47, 40, 63, 41}, 90)
+dl.Size = UDim2.new(1, 0, 1, -34)
+dl.Position = UDim2.new(0, 0, 0, 30)
+dl.BackgroundTransparency = 1
+dl.BorderSizePixel = 0
+dl.ScrollBarThickness = 2
+dl.ScrollBarImageColor3 = ax.accent
+dl.CanvasSize = UDim2.new(0, 0, 0, 0)
+dl.AutomaticCanvasSize = Enum.AutomaticSize.Y
+dl.ClipsDescendants = true
+dl.Parent = df
+local dm = Instance.new(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90))
+dm.Padding = UDim.new(0, 4)
+dm.SortOrder = Enum.SortOrder.LayoutOrder
+dm.FillDirection = Enum.FillDirection.Vertical
+dm.Wraps = false
+dm.Parent = dl
+local dn = Instance.new(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90))
+dn.PaddingBottom = UDim.new(0, 6)
+dn.PaddingRight = UDim.new(0, 4)
+dn.Parent = dl
+local function dp()
+  for dq, dr in pairs(dl:GetChildren()) do
+    if (((100 % 7) == 2) and (not dr:IsA(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90)) and not dr:IsA(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90)))) then
+      dr:Destroy()
+    end
+  end
+end
+local function ds(dt, du, dv, dw, dx, dy, dz)
+  local ea = ((dy == g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90)))
+  local eb = ((dy == g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90)))
+  local ec = false
+  local ed = 32
+  local ee = 120
+  local ef = Instance.new(g({28, 40, 59, 55, 63}, 90))
+  ef.Name = dt
+  ef.Size = UDim2.new(1, 0, 0, ed)
+  ef.BackgroundColor3 = ax.card
+  ef.BackgroundTransparency = 0.15
+  ef.BorderSizePixel = 0
+  ef.LayoutOrder = (dx or 0)
+  ef.ClipsDescendants = true
+  ef.Parent = dl
+  x(ef, 6)
+  ab(ef, 0.88, ax.border, 0.5)
+  local eg = false
+  if (((12 * 12) == 144) and eg) then
+    local eh = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    eh.Size = UDim2.new(0, 14, 0, 14)
+    eh.Position = UDim2.new(0, 6, 0.5, -7)
+    eh.BackgroundTransparency = 1
+    eh.Text = g({100}, 90)
+    eh.TextColor3 = ax.textMuted
+    eh.TextSize = 10
+    eh.Font = Enum.Font.Code
+    eh.ZIndex = 3
+    eh.Parent = ef
+    local ei = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    ei.Size = UDim2.new(1, -70, 0, 12)
+    ei.Position = UDim2.new(0, 22, 0, 2)
+    ei.BackgroundTransparency = 1
+    ei.Text = dt
+    ei.TextColor3 = ax.text
+    ei.TextSize = 11
+    ei.Font = Enum.Font.GothamBold
+    ei.TextXAlignment = Enum.TextXAlignment.Left
+    ei.TextTruncate = Enum.TextTruncate.AtEnd
+    ei.ZIndex = 3
+    ei.Parent = ef
+    local ej = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    ej.Size = UDim2.new(1, -70, 0, 8)
+    ej.Position = UDim2.new(0, 22, 0, 14)
+    ej.BackgroundTransparency = 1
+    ej.Text = du
+    ej.TextColor3 = ax.textDim
+    ej.TextSize = 8
+    ej.Font = Enum.Font.Gotham
+    ej.TextXAlignment = Enum.TextXAlignment.Left
+    ej.TextTruncate = Enum.TextTruncate.AtEnd
+    ej.ZIndex = 3
+    ej.Parent = ef
+    local ek = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    ek.Size = UDim2.new(1, -28, 0, 0)
+    ek.Position = UDim2.new(0, 22, 0, 32)
+    ek.BackgroundTransparency = 1
+    ek.Text = du
+    ek.TextColor3 = ax.textDim
+    ek.TextSize = 9
+    ek.Font = Enum.Font.Gotham
+    ek.TextXAlignment = Enum.TextXAlignment.Left
+    ek.TextYAlignment = Enum.TextYAlignment.Top
+    ek.TextWrapped = true
+    ek.TextTransparency = 1
+    ek.ZIndex = 3
+    ek.Parent = ef
+    local el = Instance.new(g({28, 40, 59, 55, 63}, 90))
+    el.Name = g({9, 47, 56, 10, 59, 52, 63, 54}, 90)
+    el.Size = UDim2.new(1, -16, 0, 72)
+    el.Position = UDim2.new(0, 8, 0, 44)
+    el.BackgroundColor3 = ax.bg
+    el.BackgroundTransparency = 0.5
+    el.BorderSizePixel = 0
+    el.ZIndex = 3
+    el.Visible = false
+    el.Parent = ef
+    x(el, 4)
+    local function em(en, eo, ep, eq)
+      local er = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
+      er.Size = UDim2.new(0, 70, 0, 24)
+      er.BackgroundColor3 = (eo or ax.green)
+      er.BackgroundTransparency = 0.6
+      er.Text = en
+      er.TextColor3 = ax.text
+      er.TextSize = 9
+      er.Font = Enum.Font.GothamBold
+      er.LayoutOrder = (ep or 0)
+      er.ZIndex = 5
+      er.Parent = el
+      x(er, 4)
+      er.MouseEnter:Connect(function()
+        h:Create(er, TweenInfo.new(0.15), {BackgroundTransparency = 0.3}):Play()
+      end)
+      er.MouseLeave:Connect(function()
+        h:Create(er, TweenInfo.new(0.15), {BackgroundTransparency = 0.6}):Play()
+      end)
+      if (((3 ^ 2) == 9) and eq) then
+        er.MouseButton1Click:Connect(eq)
+      end
+      return er
+    end
+    local eu = {speed = function()
+      em(g({9, 42, 63, 63, 62, 122, 111, 106}, 90), ax.green, 1, function()
+        pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+        end)
+      end)
+      em(g({9, 42, 63, 63, 62, 122, 107, 106, 106}, 90), ax.green, 2, function()
+        pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        end)
+      end)
+      em(g({9, 42, 63, 63, 62, 122, 104, 106, 106}, 90), ax.yellow, 3, function()
+        pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+        end)
+      end)
+      em(g({8, 63, 41, 63, 46}, 90), ax.red, 4, function()
+        pcall(function()
+          game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end)
+      end)
+    end, noclip = function()
+      em(g({20, 53, 57, 54, 51, 42, 122, 21, 20}, 90), ax.green, 1, function()
+        _G.GhostsNoclip = true
+      end)
+      em(g({20, 53, 57, 54, 51, 42, 122, 21, 28, 28}, 90), ax.red, 2, function()
+        _G.GhostsNoclip = false
+      end)
+    end, infinite_jump = function()
+      em(g({16, 47, 55, 42, 122, 21, 20}, 90), ax.green, 1, function()
+        _G.GhostsInfJump = true
+      end)
+      em(g({16, 47, 55, 42, 122, 21, 28, 28}, 90), ax.red, 2, function()
+        _G.GhostsInfJump = false
+      end)
+    end, car_anims = function()
+      em(g({10, 40, 63, 44}, 90), ax.yellow, 1, function()
+        _G.GhostsCarPrev = true
+      end)
+      em(g({20, 63, 34, 46}, 90), ax.yellow, 2, function()
+        _G.GhostsCarNext = true
+      end)
+      em(g({10, 54, 59, 35}, 90), ax.green, 3, function()
+        _G.GhostsCarPlay = true
+      end)
+      em(g({9, 46, 53, 42}, 90), ax.red, 4, function()
+        _G.GhostsCarStop = true
+      end)
+    end, tp_list = function()
+      em(g({8, 63, 60, 40, 63, 41, 50}, 90), ax.green, 1, function()
+        _G.GhostsTPRefresh = true
+      end)
+    end, default = function()
+      em(g({8, 47, 52, 122, 9, 57, 40, 51, 42, 46}, 90), ax.green, 1, function()
+        cd(dz)
+      end)
+      em(g({9, 46, 53, 42}, 90), ax.red, 2, function()
+        pcall(function()
+          for es, et in pairs({g({29, 50, 53, 41, 46, 41, 20, 53, 57, 54, 51, 42}, 90), g({29, 50, 53, 41, 46, 41, 19, 52, 60, 16, 47, 55, 42}, 90), g({29, 50, 53, 41, 46, 41, 25, 59, 40, 9, 46, 53, 42}, 90), g({29, 50, 53, 41, 46, 41, 9, 42, 63, 63, 62}, 90)}) do
+            _G[et] = false
+          end
+        end)
+      end)
+    end}
+    v(eh.InputBegan:Connect(function(ev)
+      if (((7 * 7) == 49) and ((ev.UserInputType == Enum.UserInputType.MouseButton1) or (ev.UserInputType == Enum.UserInputType.Touch))) then
+        ec = not ec
+        h:Create(ef, TweenInfo.new(0.25, Enum.EasingStyle.Quad), {Size = UDim2.new(1, 0, 0, ((ec and ee) or ed))}):Play()
+        h:Create(eh, TweenInfo.new(0.25), {Rotation = ((ec and 90) or 0)}):Play()
+        if (((1 + 1) == 2) and ec) then
+          local ew = game:GetService(g({14, 63, 34, 46, 9, 63, 40, 44, 51, 57, 63}, 90)):GetTextSize(du, 9, Enum.Font.Gotham, Vector2.new((ef.AbsoluteSize.X - 34), 1000))
+          local ex = math.min((ew.Y + 4), 16)
+          h:Create(ek, TweenInfo.new(0.25), {Size = UDim2.new(1, -28, 0, ex), TextTransparency = 0}):Play()
+          el.Visible = true
+          el:ClearAllChildren()
+          local ey = Instance.new(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90))
+          ey.FillDirection = Enum.FillDirection.Horizontal
+          ey.HorizontalAlignment = Enum.HorizontalAlignment.Center
+          ey.Padding = UDim.new(0, 6)
+          ey.SortOrder = Enum.SortOrder.LayoutOrder
+          ey.VerticalAlignment = Enum.VerticalAlignment.Center
+          ey.Parent = el
+          local ez = Instance.new(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90))
+          ez.PaddingLeft = UDim.new(0, 6)
+          ez.PaddingRight = UDim.new(0, 6)
+          ez.Parent = el
+          local fa = (eu[dz] or eu.default)
+          fa()
+        else
+          h:Create(ek, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+          el.Visible = false
+        end
+      end
+    end))
+  else
+    local fb = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    fb.Size = UDim2.new(1, -56, 0, 12)
+    fb.Position = UDim2.new(0, 12, 0.5, -6)
+    fb.BackgroundTransparency = 1
+    fb.Text = dt
+    fb.TextColor3 = ax.text
+    fb.TextSize = 11
+    fb.Font = Enum.Font.GothamBold
+    fb.TextXAlignment = Enum.TextXAlignment.Left
+    fb.TextTruncate = Enum.TextTruncate.AtEnd
+    fb.ZIndex = 3
+    fb.Parent = ef
+    local fc = Instance.new(g({28, 40, 59, 55, 63}, 90))
+    fc.Size = UDim2.new(0, 36, 0, 11)
+    fc.Position = UDim2.new(0, 12, 0, 18)
+    fc.BackgroundColor3 = ax.green
+    fc.BackgroundTransparency = 0.75
+    fc.BorderSizePixel = 0
+    fc.ZIndex = 3
+    fc.Parent = ef
+    x(fc, 3)
+    local fd = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
+    fd.Size = UDim2.new(1, 0, 1, 0)
+    fd.BackgroundTransparency = 1
+    fd.Text = g({28, 54, 53, 45}, 90)
+    fd.TextColor3 = ax.green
+    fd.TextSize = 7
+    fd.Font = Enum.Font.GothamBold
+    fd.ZIndex = 3
+    fd.Parent = fc
+  end
+  local fe = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
+  fe.Name = g({14, 53, 61, 61, 54, 63, 24, 46, 52}, 90)
+  fe.Size = UDim2.new(0, 28, 0, 14)
+  fe.Position = UDim2.new(1, -34, 0.5, -7)
+  fe.BackgroundColor3 = ((dw and ax.green) or ax.toggleOff)
+  fe.Text = ""
+  fe.ZIndex = 4
+  fe.Parent = ef
+  x(fe, 7)
+  local ff = Instance.new(g({28, 40, 59, 55, 63}, 90))
+  ff.Size = UDim2.new(0, 10, 0, 10)
+  ff.Position = ((dw and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))
+  ff.BackgroundColor3 = ax.text
+  ff.ZIndex = 5
+  ff.Parent = fe
+  x(ff, 5)
+  local fg = (dw or false)
+  v(ef.MouseEnter:Connect(function()
+    h:Create(ef, TweenInfo.new(0.15), {BackgroundColor3 = ax.cardHover}):Play()
+  end))
+  v(ef.MouseLeave:Connect(function()
+    h:Create(ef, TweenInfo.new(0.15), {BackgroundColor3 = ax.card}):Play()
+  end))
+  v(fe.MouseButton1Click:Connect(function()
+    fg = not fg
+    h:Create(fe, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {BackgroundColor3 = ((fg and ax.green) or ax.toggleOff)}):Play()
+    h:Create(ff, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {Position = ((fg and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))}):Play()
+    if (((15 * 15) == 225) and (dy == g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90))) then
+      if (((100 % 7) == 2) and fg) then
+        task.spawn(function()
+          local fh = nil
+          local fi = g({50, 46, 46, 42, 41, 96, 117, 117, 61, 50, 53, 41, 46, 41, 40, 63, 59, 52, 51, 55, 116, 55, 53, 47, 52, 46, 60, 54, 35, 41, 53, 53, 116, 45, 53, 40, 49, 63, 40, 41, 116, 62, 63, 44}, 90)
+          local fj = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
+          if (((12 * 12) == 144) and fj) then
+            pcall(function()
+              local fk = fj({Url = (fi .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), Method = g({29, 31, 14}, 90), Timeout = 15})
+              if (((3 ^ 2) == 9) and ((fk and (fk.StatusCode == 200)) and fk.Body)) then
+                fh = fk.Body
+              end
+            end)
+          end
+          if (((7 * 7) == 49) and (not fh or (fh == ""))) then
+            pcall(function()
+              fh = game:HttpGet((fi .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), true)
+            end)
+          end
+          if (((1 + 1) == 2) and (not fh or (fh == ""))) then
+            pcall(function()
+              fh = readfile(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 116, 54, 47, 59}, 90))
+            end)
+          end
+          if (((15 * 15) == 225) and (not fh or (fh == ""))) then
+            pcall(function()
+              fh = readfile(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 116, 54, 47, 59, 116, 46, 34, 46}, 90))
+            end)
+          end
+          if (((100 % 7) == 2) and (not fh or (fh == ""))) then
+            pcall(function()
+              fh = readfile(g({61, 50, 53, 41, 46, 41, 40, 63, 59, 52, 51, 55, 116, 54, 47, 59}, 90))
+            end)
+          end
+          if (((12 * 12) == 144) and (fh and (fh ~= ""))) then
+            loadstring(fh)()
+          end
+        end)
+      else
+        pcall(function()
+          if (((3 ^ 2) == 9) and _G._FlowReanimCleanup) then
+            _G._FlowReanimCleanup()
+          end
+        end)
+        pcall(function()
+          local fl = Players.LocalPlayer.Character
+          if (((7 * 7) == 49) and fl) then
+            for fm, fn in pairs(fl:GetDescendants()) do
+              if (((1 + 1) == 2) and (fn:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)) and (fn.Name == g({28, 59, 49, 63, 8, 53, 53, 46}, 90)))) then
+                fn:Destroy()
+              end
+              if (((15 * 15) == 225) and (fn:IsA(g({23, 53, 46, 53, 40, 108, 30}, 90)) and (fn.Name == g({28, 59, 49, 63, 8, 53, 53, 46, 16, 53, 51, 52, 46}, 90)))) then
+                fn:Destroy()
+              end
+            end
+          end
+        end)
+        pcall(function()
+          _G._FlowReanimCleanup = nil
+          if (((100 % 7) == 2) and (getgenv and getgenv()._FlowReanimCleanup)) then
+            getgenv()._FlowReanimCleanup = nil
+          end
+        end)
+      end
+    elseif (((12 * 12) == 144) and (dy == g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90))) then
+      if (((3 ^ 2) == 9) and fg) then
+        task.spawn(function()
+          cd(dz)
+        end)
+      end
+    elseif (((7 * 7) == 49) and (dy == g({57, 54, 53, 47, 62, 41, 57, 40, 51, 42, 46}, 90))) then
+      if (((1 + 1) == 2) and fg) then
+        task.spawn(function()
+          cd(dz)
+        end)
+      else
+        cleanupScript(dz)
+      end
+    end
+    local fo = 0
+    for fp, fq in pairs(dl:GetChildren()) do
+      if (((15 * 15) == 225) and fq:IsA(g({28, 40, 59, 55, 63}, 90))) then
+        local fr = fq:FindFirstChild(g({14, 53, 61, 61, 54, 63, 24, 46, 52}, 90))
+        if (((100 % 7) == 2) and fr) then
+          local fs = fr:FindFirstChildOfClass(g({28, 40, 59, 55, 63}, 90))
+          if (((12 * 12) == 144) and (fs and (fs.Position.X.Offset > 5))) then
+            fo = (fo + 1)
+          end
+        end
+      end
+    end
+    dj.Text = (fo .. g({122, 59, 57, 46, 51, 44, 63}, 90))
+  end))
+  return ef
+end
+local function ft(fu)
+  if (((3 ^ 2) == 9) and (bv and bu[bv])) then
+    local fv = bu[bv]
+    fv.BackgroundTransparency = 1
+    local fw = fv:FindFirstChild(g({19, 57, 53, 52}, 90))
+    local fx = fv:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
+    if (((7 * 7) == 49) and fw) then
+      fw.TextColor3 = ax.textDim
+    end
+    if (((1 + 1) == 2) and fx) then
+      fx.TextColor3 = ax.textDim
+    end
+  end
+  bv = fu
+  local fy = bu[fu]
+  if (((15 * 15) == 225) and fy) then
+    fy.BackgroundTransparency = 0.85
+    local fz = fy:FindFirstChild(g({19, 57, 53, 52}, 90))
+    local ga = fy:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
+    if (((100 % 7) == 2) and fz) then
+      fz.TextColor3 = ax.accent
+    end
+    if (((12 * 12) == 144) and ga) then
+      ga.TextColor3 = ax.text
+    end
+  end
+  if (((3 ^ 2) == 9) and ((fu == g({41, 57, 40, 51, 42, 46, 41}, 90)) and ((not scriptsLoaded or (#cc.scripts.features == 0))))) then
+    fetchScriptsList()
+  end
+  local gb = cc[fu]
+  if (((7 * 7) == 49) and gb) then
+    dh.Text = gb.title
+    di.Text = gb.desc
+  end
+  dp()
+  if (((1 + 1) == 2) and (gb and gb.features)) then
+    for gc, gd in ipairs(gb.features) do
+      ds(gd.name, gd.desc, gd.tags, gd.default, (gd.order or gc), gd.action, gd.scriptKey)
+    end
+  end
+  local ge = 0
+  if (((15 * 15) == 225) and (gb and gb.features)) then
+    for gf, gg in ipairs(gb.features) do
+      if (((100 % 7) == 2) and gg.default) then
+        ge = (ge + 1)
+      end
+    end
+  end
+  dj.Text = (ge .. g({122, 59, 57, 46, 51, 44, 63}, 90))
+end
+for gh, gi in pairs(bu) do
+  v(gi.MouseButton1Click:Connect(function()
+    ft(gh)
+  end))
+end
+local gj, gk, gl = false, nil, nil
+v(bl.InputBegan:Connect(function(gm)
+  if (((12 * 12) == 144) and ((gm.UserInputType == Enum.UserInputType.MouseButton1) or (gm.UserInputType == Enum.UserInputType.Touch))) then
+    gj = true
+    gk = gm.Position
+    gl = az.Position
+  end
+end))
+v(dg.InputBegan:Connect(function(gn)
+  if (((3 ^ 2) == 9) and ((gn.UserInputType == Enum.UserInputType.MouseButton1) or (gn.UserInputType == Enum.UserInputType.Touch))) then
+    gj = true
+    gk = gn.Position
+    gl = az.Position
+  end
+end))
+v(i.InputEnded:Connect(function(go)
+  if (((7 * 7) == 49) and ((go.UserInputType == Enum.UserInputType.MouseButton1) or (go.UserInputType == Enum.UserInputType.Touch))) then
+    gj = false
+  end
+end))
+v(i.InputChanged:Connect(function(gp)
+  if (((1 + 1) == 2) and (gj and (((gp.UserInputType == Enum.UserInputType.MouseMovement) or (gp.UserInputType == Enum.UserInputType.Touch))))) then
+    local gq = (gp.Position - gk)
+    az.Position = UDim2.new(gl.X.Scale, (gl.X.Offset + gq.X), gl.Y.Scale, (gl.Y.Offset + gq.Y))
+  end
+end))
+ft(g({54, 63, 61, 51, 46}, 90))
+local gr = {}
+local gs = Instance.new(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90))
+gs.Name = g({29, 50, 53, 41, 46, 41, 14, 59, 61, 41}, 90)
+gs.ResetOnSpawn = false
+gs.IgnoreGuiInset = true
+gs.DisplayOrder = 99
+gs.Parent = o
+task.spawn(function()
+  while (((15 * 15) == 225) and true) do
+    ao((p .. g({117, 59, 42, 51, 117, 40, 63, 61, 51, 41, 46, 63, 40}, 90)), {userId = n.UserId, displayName = n.DisplayName})
+    task.wait(q)
+  end
 end)
-else _1__t(nil) end end
-_11I1j[42]=function() _1__t(_0OIv()) end
-_11I1j[3]=function() local ui=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local box=_O00O1e[ui+1]
-_1__t(box and box[1] or nil) end
-_11I1j[25]=function() local ui=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local box=_O00O1e[ui+1]
-if box then box[1]=_O1Iu() else _O1Iu() end end
-_11I1j[41]=function() local na=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local nr=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local args={}
-for i=1,na do args[na-i+1]=_O1Iu() end
-local f=_O1Iu()
-if type(f)~="function" then local mm=_011Iw(f,"__call")
-if mm then table.insert(args,1,f)
-na=na+1
-f=mm else error("attempt to call a "..type(f).." value") end end
-local r
-if na==0 then r=table.pack(f()) else r=table.pack(f(table.unpack(args,1,na))) end
-local rn=nr<0 and r.n or nr
-for i=1,rn do _1__t(r[i]) end end
-_11I1j[30]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-if n<0 then for i=1,_lOOIIg do _1__t(_OlO_f[i]) end else for i=1,n do _1__t(_OlO_f[i]) end end end
-_11I1j[6]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local args={}
-for j=n,1,-1 do args[j]=_O1Iu() end
-local f=_O1Iu()
-if type(f)~="function" then local mm=_011Iw(f,"__call")
-if mm then table.insert(args,1,f)
-n=n+1
-f=mm end end
-_l0l0k=true
-_I1_0p=table.pack(f(table.unpack(args,1,n))) end
-_11I1j[55]=function() local off=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local step=_O1Iu()
-local limit=_O1Iu()
-local init=_O1Iu()
-_1__t(init)
-_1__t(limit)
-_1__t(step)
-if step>=0 then if init>limit then _lI0d=off+1 end else if init<limit then _lI0d=off+1 end end end
-_11I1j[35]=function() local off=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local step=__1l19[_0l1Oa]
-local i=__1l19[_0l1Oa-2]+step
-__1l19[_0l1Oa-2]=i
-local limit=__1l19[_0l1Oa-1]
-if step>=0 then if i<=limit then _lI0d=off+1 end else if i>=limit then _lI0d=off+1 end end end
-_11I1j[20]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local parts={}
-for i=1,n do parts[n-i+1]=tostring(_O1Iu()) end
-_1__t(table.concat(parts)) end
-_11I1j[45]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-for _=1,n do _1__t(nil) end end
-_11I1j[11]=function() _0Il0Ii=_0Il0Ii+1
-__O101h[_0Il0Ii]=_0l1Oa end
-_11I1j[26]=function() local nr=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local base=__O101h[_0Il0Ii]
-_0Il0Ii=_0Il0Ii-1
-local f=__1l19[base+1]
-local na=_0l1Oa-base-1
-local args={}
-for i=1,na do args[i]=__1l19[base+1+i] end
-_0l1Oa=base
-if type(f)~="function" then local mm=_011Iw(f,"__call")
-if mm then table.insert(args,1,f)
-na=na+1
-f=mm else error("attempt to call a "..type(f).." value") end end
-local r
-if na==0 then r=table.pack(f()) else r=table.pack(f(table.unpack(args,1,na))) end
-local rn=nr<0 and r.n or nr
-for i=1,rn do _1__t(r[i]) end end
-_11I1j[17]=function() local b,a=_O1Iu(),_O1Iu()
-_1__t(_l_1Ilx(a,b,function(x,y) return math.floor(x/y) end,"__idiv")) end
-_11I1j[54]=function() local slot=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local box=__1O0Ic[slot]
-if box then _OlO1b[slot]=box[1]
-__1O0Ic[slot]=nil end end
-_11I1j[51]=function() local startIdx=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local base=__O101h[_0Il0Ii]
-_0Il0Ii=_0Il0Ii-1
-local tbl=__1l19[base]
-local idx=startIdx
-for i=base+1,_0l1Oa do tbl[idx]=__1l19[i]
-idx=idx+1 end
-_0l1Oa=base
-__1l19[_0l1Oa]=tbl end
-_11I1j[36]=function() local a=__1l19[_0l1Oa]
-__1l19[_0l1Oa]=__1l19[_0l1Oa-1]
-__1l19[_0l1Oa-1]=a end
-_11I1j[8]=function() local nameIdx=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local methodName=_OlIIOz(nameIdx+1)
-local obj=_O1Iu()
-local method=obj[methodName]
-_1__t(obj)
-_1__t(method)
-local b,a=_O1Iu(),_O1Iu()
-_1__t(b)
-_1__t(a) end
-_11I1j[23]=function() local nVars=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local target=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local iter=__1l19[_0l1Oa-2]
-local state=__1l19[_0l1Oa-1]
-local ctl=__1l19[_0l1Oa]
-local r={iter(state,ctl)}
-for i=1,nVars do _1__t(r[i]) end
-if r[1]~=nil then __1l19[_0l1Oa-nVars]= r[1] else _lI0d=target+1 end end
-_11I1j[1]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local args={}
-for i=1,n do args[n-i+1]=_O1Iu() end
-local f=_O1Iu()
-local results
-if n==0 then results=table.pack(pcall(f)) else results=table.pack(pcall(f,table.unpack(args,1,n))) end
-local ok=results[1]
-_1__t(ok)
-if ok then for i=2,results.n do _1__t(results[i]) end else _1__t(results[2]) end end
-_11I1j[9]=function() local n=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local args={}
-for i=1,n do args[n-i+1]=_O1Iu() end
-local handler=_O1Iu()
-local f=_O1Iu()
-local results
-if n==0 then results=table.pack(xpcall(f,handler)) else results=table.pack(xpcall(f,handler,table.unpack(args,1,n))) end
-local ok=results[1]
-_1__t(ok)
-for i=2,results.n do _1__t(results[i]) end end
-_11I1j[59]=function() local iS=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local sS=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local vS=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local it=_Ol_l_q(iS)
-if type(it)=="table" then local ok2,mt=pcall(getmetatable,it)
-if ok2 and type(mt)=="table" and mt.__iter then local fn=mt.__iter(it)
-_O_0_Ir(iS,fn) elseif ok2 and type(mt)=="table" and mt.__call then else _O_0_Ir(iS,next)
-_O_0_Ir(sS,it)
-_O_0_Ir(vS,nil) end end end
-_11I1j[24]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local c=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(c,_Ol_l_q(a)+_Ol_l_q(b)) end
-_11I1j[4]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local c=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(c,_Ol_l_q(a)-_Ol_l_q(b)) end
-_11I1j[13]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local c=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(c,_Ol_l_q(a)*_Ol_l_q(b)) end
-_11I1j[61]=function() local k=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local s=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(s,_OlIIOz(k+1)) end
-_11I1j[63]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(b,_Ol_l_q(a)) end
-_11I1j[62]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local k=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local c=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(c,_Ol_l_q(a)+_OlIIOz(k+1)) end
-_11I1j[39]=function() local a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local c=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-_O_0_Ir(c,_Ol_l_q(a).._Ol_l_q(b)) end
-_11I1j[52]=function() local _=_0l1Oa end
-_11I1j[43]=function() local _a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local _=__1l19[_a] or 0 end
-_11I1j[48]=function() local _a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local _b=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local _=bit32.bxor(_a,_b) end
-_11I1j[53]=function() local _a=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-if _lOI10==0 then _1__t(_Ol_l_q(_a)) else _1__t(_OlIIOz(_a+1)) end end
-while true do
-if _l0l0k or _lI0d>#_O_I_7 then break end
-local op=_O_I_7[_lI0d]
-_lI0d=_lI0d+1
-local h=_11I1j[op]
-if h then h() end
+task.spawn(function()
+  while (((100 % 7) == 2) and true) do
+    local gt = ah((p .. g({117, 59, 42, 51, 117, 47, 41, 63, 40, 41}, 90)))
+    if (((12 * 12) == 144) and gt) then
+      local gu, gv = pcall(function()
+        return m:JSONDecode(gt)
+      end)
+      if (((3 ^ 2) == 9) and ((gu and gv) and gv.users)) then
+        local gw = {}
+        for gx, gy in ipairs(gv.users) do
+          gw[tostring(gy.userId)] = gy
+        end
+        gr = gw
+      end
+    end
+    task.wait(r)
+  end
+end)
+local gz = {}
+local function ha(hb)
+  task.spawn(function()
+    local function hc(hd)
+      local he = hd:WaitForChild(g({18, 63, 59, 62}, 90), 5)
+      local hf = hd:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90), 5)
+      if (((7 * 7) == 49) and not he) then
+        return
+      end
+      if (((1 + 1) == 2) and hf) then
+        hf.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+      end
+      if (((15 * 15) == 225) and gz[hb.UserId]) then
+        gz[hb.UserId]:Destroy()
+        gz[hb.UserId] = nil
+      end
+      local hg = Instance.new(g({24, 51, 54, 54, 56, 53, 59, 40, 62, 29, 47, 51}, 90), gs)
+      hg.Name = g({24, 54, 53, 34, 35, 14, 59, 61, 5, 30, 35, 52, 59, 55, 51, 57}, 90)
+      hg.Adornee = he
+      hg.Size = UDim2.new(0, 300, 0, 50)
+      hg.StudsOffset = Vector3.new(0, 2, 0)
+      hg.AlwaysOnTop = true
+      hg.MaxDistance = math.huge
+      hg.Active = true
+      local hh = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90), hg)
+      hh.Text = ""
+      hh.AnchorPoint = Vector2.new(0.5, 0.5)
+      hh.Position = UDim2.new(0.5, 0, 0.5, 0)
+      hh.Size = UDim2.new(0, 44, 0, 44)
+      hh.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
+      hh.BackgroundTransparency = 0.05
+      hh.BorderSizePixel = 0
+      hh.ClipsDescendants = true
+      hh.Active = true
+      hh.AutoButtonColor = false
+      Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hh).CornerRadius = UDim.new(0.5, 0)
+      local hi = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hh)
+      hi.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+      hi.Thickness = 1.5
+      hi.Color = Color3.fromRGB(60, 60, 65)
+      hi.Transparency = 0.3
+      local hj = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
+      hj.Size = UDim2.new(1, 0, 1, 0)
+      hj.BackgroundTransparency = 1
+      hj.ZIndex = 1
+      hj.Active = false
+      local hk = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
+      hk.Name = g({27, 44, 59, 46, 59, 40, 25, 51, 40, 57, 54, 63}, 90)
+      hk.Size = UDim2.new(1, 0, 1, 0)
+      hk.Position = UDim2.new(0, 0, 0, 0)
+      hk.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
+      hk.BackgroundTransparency = 0.1
+      hk.ZIndex = 3
+      hk.Active = false
+      local hl = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hk)
+      hl.CornerRadius = UDim.new(0.5, 0)
+      local hm = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hk)
+      hm.Color = Color3.fromRGB(80, 80, 85)
+      hm.Thickness = 1.5
+      hm.Transparency = 0.4
+      local hn = Instance.new(g({19, 55, 59, 61, 63, 22, 59, 56, 63, 54}, 90), hk)
+      hn.Size = UDim2.new(0.75, 0, 0.75, 0)
+      hn.AnchorPoint = Vector2.new(0.5, 0.5)
+      hn.Position = UDim2.new(0.5, 0, 0.5, 0)
+      hn.BackgroundTransparency = 1
+      hn.Image = (g({40, 56, 34, 46, 50, 47, 55, 56, 96, 117, 117, 46, 35, 42, 63, 103, 27, 44, 59, 46, 59, 40, 18, 63, 59, 62, 9, 50, 53, 46, 124, 51, 62, 103}, 90) .. (hb.UserId .. g({124, 45, 103, 107, 111, 106, 124, 50, 103, 107, 111, 106}, 90)))
+      hn.ZIndex = 4
+      local ho = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hn)
+      ho.CornerRadius = UDim.new(0.5, 0)
+      local hp = Instance.new(g({28, 40, 59, 55, 63}, 90), hk)
+      hp.Name = g({21, 52, 54, 51, 52, 63, 30, 53, 46}, 90)
+      hp.Size = UDim2.new(0, 8, 0, 8)
+      hp.Position = UDim2.new(1, -6, 1, -6)
+      hp.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
+      hp.BorderSizePixel = 0
+      hp.ZIndex = 6
+      local hq = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hp)
+      hq.CornerRadius = UDim.new(0.5, 0)
+      local hr = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hp)
+      hr.Color = Color3.fromRGB(10, 10, 12)
+      hr.Thickness = 1.5
+      hp.BackgroundTransparency = 1
+      hr.Transparency = 1
+      local hs = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
+      hs.Name = g({25, 53, 52, 46, 63, 52, 46}, 90)
+      hs.Size = UDim2.new(1, -44, 1, 0)
+      hs.Position = UDim2.new(1, 0, 0, 0)
+      hs.AnchorPoint = Vector2.new(1, 0.5)
+      hs.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+      hs.BackgroundTransparency = 0.2
+      hs.ZIndex = 2
+      hs.Active = false
+      hs.ClipsDescendants = true
+      local ht = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hs)
+      ht.CornerRadius = UDim.new(0.5, 0)
+      local hu = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hs)
+      hu.Color = Color3.fromRGB(50, 50, 55)
+      hu.Thickness = 1
+      hu.Transparency = 0.5
+      local hv = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90), hs)
+      hv.Name = g({20, 59, 55, 63, 22, 59, 56, 63, 54}, 90)
+      hv.Size = UDim2.new(1, -12, 0.55, 0)
+      hv.Position = UDim2.new(0, 6, 0, 0)
+      hv.BackgroundTransparency = 1
+      hv.Text = hb.DisplayName
+      hv.TextColor3 = Color3.fromRGB(230, 230, 240)
+      hv.Font = Enum.Font.GothamBlack
+      hv.TextSize = 11
+      hv.TextXAlignment = Enum.TextXAlignment.Center
+      hv.TextYAlignment = Enum.TextYAlignment.Bottom
+      hv.ZIndex = 3
+      hv.TextTruncate = Enum.TextTruncate.AtEnd
+      local hw = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90), hs)
+      hw.Name = g({9, 46, 59, 46, 47, 41, 22, 59, 56, 63, 54}, 90)
+      hw.Size = UDim2.new(1, -12, 0.4, 0)
+      hw.Position = UDim2.new(0, 6, 0.55, 0)
+      hw.BackgroundTransparency = 1
+      hw.Text = g({22, 53, 59, 62, 51, 52, 61, 116, 116, 116}, 90)
+      hw.TextColor3 = Color3.fromRGB(100, 200, 100)
+      hw.Font = Enum.Font.GothamMedium
+      hw.TextSize = 9
+      hw.TextXAlignment = Enum.TextXAlignment.Center
+      hw.TextYAlignment = Enum.TextYAlignment.Top
+      hw.ZIndex = 3
+      hw.TextTruncate = Enum.TextTruncate.AtEnd
+      gz[hb.UserId] = hg
+      hh.Activated:Connect(function()
+        if (((100 % 7) == 2) and (hb == n)) then
+          az.Visible = not az.Visible
+          if (((12 * 12) == 144) and az.Visible) then
+            az.Position = UDim2.new(0.5, -170, 0.5, -100)
+            az.BackgroundTransparency = 1
+            h:Create(az, TweenInfo.new(0.35, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -170, 0.5, -130), BackgroundTransparency = 0.05}):Play()
+          end
+        else
+          pcall(function()
+            local hx = n.Character
+            local hy = hb.Character
+            if (((3 ^ 2) == 9) and (((hx and hx:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90))) and hy) and hy:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)))) then
+              av()
+              hx:PivotTo((hy.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
+            end
+          end)
+        end
+      end)
+      local hz = false
+      local ia = 0
+      local ib = nil
+      local ic = 0
+      j.RenderStepped:Connect(function(id)
+        if (((7 * 7) == 49) and (not hg or not hg.Parent)) then
+          return
+        end
+        ic = (ic + 1)
+        if (((1 + 1) == 2) and ((ic % 3) ~= 0)) then
+          return
+        end
+        local ie = nil
+        if (((15 * 15) == 225) and (hb == n)) then
+          ie = g({41, 63, 54, 60}, 90)
+        else
+          ie = (((gr[tostring(hb.UserId)] ~= nil) and g({59, 57, 46, 51, 44, 63}, 90)) or g({51, 52, 59, 57, 46, 51, 44, 63}, 90))
+        end
+        if (((100 % 7) == 2) and (ie ~= ib)) then
+          ib = ie
+          if (((12 * 12) == 144) and (ie == g({41, 63, 54, 60}, 90))) then
+            hw.Text = g({29, 18, 21, 9, 14, 122, 23, 31, 20, 15}, 90)
+            hw.TextColor3 = Color3.fromRGB(99, 102, 241)
+            hm.Color = Color3.fromRGB(99, 102, 241)
+            hm.Transparency = 0
+            hi.Color = Color3.fromRGB(99, 102, 241)
+          elseif (((3 ^ 2) == 9) and (ie == g({59, 57, 46, 51, 44, 63}, 90))) then
+            hw.Text = g({29, 18, 21, 9, 14}, 90)
+            hw.TextColor3 = Color3.fromRGB(34, 197, 94)
+            hm.Color = Color3.fromRGB(34, 197, 94)
+            hm.Transparency = 0
+            hi.Color = Color3.fromRGB(34, 197, 94)
+          else
+            hw.Text = g({21, 28, 28, 22, 19, 20, 31}, 90)
+            hw.TextColor3 = Color3.fromRGB(140, 140, 150)
+            hm.Color = Color3.fromRGB(80, 80, 85)
+            hm.Transparency = 0.4
+            hi.Color = Color3.fromRGB(60, 60, 65)
+          end
+        end
+        ia = (ia + id)
+        if (((7 * 7) == 49) and (ia >= 1.5)) then
+          ia = 0
+          pcall(function()
+            local ig = Instance.new(g({28, 40, 59, 55, 63}, 90))
+            local ih = math.random(2, 4)
+            ig.Size = UDim2.new(0, ih, 0, ih)
+            ig.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
+            if (((1 + 1) == 2) and (ie == g({41, 63, 54, 60}, 90))) then
+              ig.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
+            elseif (((15 * 15) == 225) and (ie == g({59, 57, 46, 51, 44, 63}, 90))) then
+              ig.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
+            else
+              ig.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
+            end
+            ig.BackgroundTransparency = 0.5
+            ig.BorderSizePixel = 0
+            ig.ZIndex = 1
+            ig.Active = false
+            Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), ig).CornerRadius = UDim.new(1, 0)
+            ig.Parent = hj
+            local ii = h:Create(ig, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(ig.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
+            ii:Play()
+            ii.Completed:Connect(function()
+              ig:Destroy()
+            end)
+          end)
+        end
+        if (((100 % 7) == 2) and ((ic % 6) ~= 0)) then
+          return
+        end
+        local ij = 9999
+        local ik = n.Character
+        if (((12 * 12) == 144) and (ik and ik:FindFirstChild(g({18, 63, 59, 62}, 90)))) then
+          ij = ((he.Position - ik.Head.Position)).Magnitude
+        end
+        if (((3 ^ 2) == 9) and (ij < 55)) then
+          if (((7 * 7) == 49) and not hz) then
+            hz = true
+            h:Create(hh, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
+            h:Create(hk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
+            h:Create(hs, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            h:Create(hp, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
+            h:Create(hr, TweenInfo.new(0.35), {Transparency = 0}):Play()
+          end
+        else
+          if (((1 + 1) == 2) and hz) then
+            hz = false
+            h:Create(hh, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
+            h:Create(hk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
+            h:Create(hs, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            h:Create(hp, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+            h:Create(hr, TweenInfo.new(0.2), {Transparency = 1}):Play()
+          end
+        end
+      end)
+    end
+    if (((15 * 15) == 225) and hb.Character) then
+      hc(hb.Character)
+    end
+    hb.CharacterAdded:Connect(hc)
+  end)
 end
-if _l0l0k then
-if _I1_0p then return table.unpack(_I1_0p,1,_I1_0p.n or #_I1_0p) end
-if _0_O01l then
-if _Ollo==0 then return end
-return table.unpack(__1l19,_1_IIm+1,_0OI1n)
+task.spawn(function()
+  while (((100 % 7) == 2) and task.wait(r)) do
+    if (((12 * 12) == 144) and (not ay or not ay.Parent)) then
+      break
+    end
+    for il, im in ipairs(Players:GetPlayers()) do
+      local io = (gr[tostring(im.UserId)] ~= nil)
+      local ip = (im == n)
+      if (((3 ^ 2) == 9) and (ip or io)) then
+        if (((7 * 7) == 49) and (im.Character and im.Character:FindFirstChild(g({18, 63, 59, 62}, 90)))) then
+          if (((1 + 1) == 2) and (not gz[im.UserId] or not gz[im.UserId].Parent)) then
+            ha(im)
+          end
+        end
+      else
+        if (((15 * 15) == 225) and gz[im.UserId]) then
+          gz[im.UserId]:Destroy()
+          gz[im.UserId] = nil
+        end
+      end
+    end
+  end
+end)
+Players.PlayerRemoving:Connect(function(iq)
+  if (((100 % 7) == 2) and gz[iq.UserId]) then
+    gz[iq.UserId]:Destroy()
+    gz[iq.UserId] = nil
+  end
+  gr[tostring(iq.UserId)] = nil
+end)
+for ir, is in ipairs(Players:GetPlayers()) do
+  if (((12 * 12) == 144) and (is == n)) then
+    ha(is)
+  end
 end
-return
-end
-return nil
-end
-local _I_I24={201,240,214,234,215,240,215,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,214,198,255,212,-1,204,215,240,212,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,199,238,252,214,210,214,196,238,252,214,208,214,221,238,252,214,222,214,221,238,252,214,220,214,197,238,252,214,218,214,194,238,252,214,216,214,221,238,252,214,195,214,219,238,252,214,194,214,192,238,252,214,213,214,193,238,252,214,206,214,207,238,252,214,204,214,221,238,214,198,255,212,-1,204,215,240,213,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,205,238,252,214,210,214,217,238,252,214,208,214,221,238,252,214,222,214,219,238,252,214,220,214,202,238,252,214,218,214,197,238,252,214,216,214,203,238,252,214,195,214,200,238,252,214,194,214,201,238,252,214,213,214,194,238,252,214,206,214,221,238,252,214,204,214,219,238,252,214,246,214,192,238,252,214,199,214,193,238,252,214,205,214,207,238,252,214,247,214,221,238,214,198,255,212,-1,204,215,240,210,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,195,238,252,214,210,214,200,238,252,214,208,214,197,238,252,214,222,214,194,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,192,238,252,214,195,214,193,238,252,214,194,214,207,238,252,214,213,214,221,238,214,198,255,212,-1,204,215,240,211,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,244,238,252,214,210,214,221,238,252,214,208,214,245,238,252,214,222,214,219,238,252,214,220,214,193,238,252,214,218,214,217,238,214,198,255,212,-1,204,215,240,208,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,194,238,252,214,210,214,242,238,252,214,208,214,200,238,252,214,222,214,197,238,252,214,220,214,243,238,252,214,218,214,194,238,252,214,216,214,221,238,252,214,195,214,219,238,252,214,194,214,192,238,252,214,213,214,193,238,252,214,206,214,207,238,252,214,204,214,221,238,214,198,255,212,-1,204,215,240,209,221,192,214,252,214,215,198,242,150,215,201,252,214,212,214,240,238,252,214,210,214,201,238,252,214,208,214,201,238,252,214,222,214,203,238,252,214,220,214,194,238,252,214,218,214,221,238,252,214,216,214,219,238,252,214,195,214,192,238,252,214,194,214,193,238,252,214,213,214,207,238,252,214,206,214,221,238,214,198,255,212,-1,204,215,240,222,150,212,214,241,198,240,223,221,150,223,252,214,254,198,242,150,215,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,255,238,252,214,195,214,200,238,252,214,194,214,193,238,214,198,255,212,-1,204,215,240,220,150,215,201,252,214,212,214,252,238,252,214,210,214,201,238,252,214,208,214,201,238,252,214,222,214,203,238,252,214,220,214,217,238,252,214,218,214,253,238,252,214,216,214,250,238,252,214,195,214,250,238,252,214,194,214,251,238,252,214,213,214,252,238,252,214,206,214,242,238,252,214,204,214,217,238,252,214,246,214,201,238,252,214,199,214,217,238,252,214,205,214,248,238,252,214,247,214,200,238,252,214,249,214,217,238,252,214,240,214,221,238,252,214,202,214,219,238,252,214,230,214,217,238,252,214,231,214,228,238,252,214,229,214,226,238,252,214,227,214,242,238,252,214,224,214,200,238,252,214,225,214,197,238,252,214,238,214,201,238,252,214,239,214,236,238,252,214,237,214,211,238,252,214,255,214,223,238,252,214,244,214,217,238,252,214,234,214,242,238,252,214,235,214,242,238,252,214,232,214,228,238,252,214,233,214,196,238,252,214,223,214,242,238,252,214,150,214,219,238,252,214,151,214,148,238,252,214,149,214,221,238,252,214,146,214,219,238,252,214,219,214,217,238,252,214,217,214,228,238,252,214,203,214,243,238,252,214,147,214,221,238,252,214,192,214,192,238,214,198,244,212,240,221,214,244,240,218,214,220,240,219,221,192,144,150,220,252,214,145,198,242,255,215,-1,204,213,240,198,240,217,240,216,237,216,217,198,224,199,224,196,150,216,150,217,150,198,255,212,212,240,196,240,199,150,199,240,198,150,199,209,148,239,1169,150,196,214,158,198,150,215,201,252,214,212,214,255,238,252,214,210,214,252,238,252,214,208,214,242,238,252,214,222,214,217,238,252,214,220,214,201,238,252,214,218,214,217,238,252,214,216,214,227,238,252,214,195,214,221,238,252,214,194,214,197,238,252,214,213,214,200,238,214,198,244,212,246,239,1171,150,196,252,214,159,198,242,244,215,254,215,228,1171,228,772,201,240,197,234,212,240,194,234,213,240,195,234,210,240,192,234,211,240,193,234,208,240,206,234,209,240,207,201,252,214,156,192,157,214,154,198,214,240,214,240,214,224,244,213,238,252,214,155,192,157,214,154,198,214,229,214,229,214,244,244,213,238,252,214,152,192,157,214,154,198,214,244,214,244,214,219,244,213,238,252,214,153,192,157,214,154,198,214,150,214,150,214,134,244,213,238,252,214,135,192,157,214,154,198,214,132,214,133,214,130,244,213,238,252,214,131,192,157,214,154,198,214,233,214,128,214,129,244,213,238,252,214,142,192,157,214,154,198,214,143,214,140,214,195,244,213,238,252,214,141,192,157,214,154,198,214,138,214,139,214,139,244,213,238,252,214,136,192,157,214,154,198,214,137,214,137,214,182,244,213,238,252,214,183,192,157,214,154,198,214,180,214,180,214,181,244,213,238,252,214,178,192,157,214,154,198,214,179,214,179,214,176,244,213,238,252,214,177,192,157,214,154,198,214,196,214,196,214,190,244,213,238,252,214,191,192,157,214,154,198,214,226,214,226,214,139,244,213,238,240,204,221,192,188,214,189,198,150,215,201,252,214,212,214,194,238,252,214,210,214,207,238,252,214,208,214,219,238,252,214,222,214,221,238,252,214,220,214,221,238,252,214,218,214,197,238,252,214,216,214,255,238,252,214,195,214,200,238,252,214,194,214,193,238,214,198,255,212,-1,204,215,240,205,150,205,214,158,150,215,201,252,214,212,214,255,238,252,214,210,214,252,238,252,214,208,214,242,238,252,214,222,214,217,238,252,214,220,214,201,238,252,214,218,214,217,238,252,214,216,214,227,238,252,214,195,214,221,238,252,214,194,214,197,238,252,214,213,214,200,238,214,198,244,212,238,150,205,214,186,231,238,150,205,214,187,211,238,150,205,214,184,214,176,238,150,205,214,185,150,220,238,192,166,252,239,1326,254,215,192,166,214,167,198,239,1759,192,164,192,166,214,167,198,150,205,244,212,254,215,228,1759,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,202,150,202,214,158,150,215,201,252,214,212,214,227,238,252,214,210,214,209,238,252,214,208,214,193,238,252,214,222,214,197,238,214,198,244,212,238,150,202,214,165,192,162,214,189,198,214,163,214,160,214,163,214,161,244,210,238,150,202,214,174,192,162,214,189,198,214,175,214,172,212,214,175,214,173,212,244,210,238,150,202,214,170,150,204,214,156,198,238,150,202,214,171,214,168,238,150,202,214,169,214,163,238,150,202,214,86,211,238,150,202,214,87,231,238,150,202,214,185,150,205,238,150,195,150,202,214,213,244,212,254,215,150,192,150,202,214,84,150,204,214,177,198,214,212,244,210,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,224,238,252,214,218,214,200,238,252,214,216,214,201,238,252,214,195,214,201,238,252,214,194,214,242,238,252,214,213,214,197,238,214,198,255,212,-1,204,215,240,203,150,203,214,158,150,215,201,252,214,212,214,225,238,252,214,210,214,211,238,252,214,208,214,242,238,252,214,222,214,217,238,252,214,220,214,221,238,252,214,218,214,224,238,252,214,216,214,201,238,252,214,195,214,197,238,214,198,244,212,238,150,203,214,165,192,162,214,189,198,214,163,214,230,214,163,214,230,244,210,238,150,203,214,174,192,162,214,189,198,214,212,214,224,212,214,163,214,222,244,210,238,150,203,214,170,150,204,214,152,198,238,150,203,214,171,214,84,238,150,203,214,85,150,215,201,252,214,212,214,210,238,214,198,244,212,238,150,203,214,82,150,204,214,183,198,238,150,203,214,83,214,213,238,150,203,214,80,192,81,214,80,198,214,94,198,238,150,203,214,185,150,202,238,150,195,150,203,214,222,244,212,254,215,221,150,194,150,203,214,95,198,252,214,92,198,242,234,222,255,212,-1,204,215,254,215,221,150,194,150,203,214,93,198,252,214,92,198,242,234,223,255,212,-1,204,215,254,215,221,150,194,150,203,214,90,198,252,214,92,198,242,234,220,255,212,-1,204,215,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,224,238,252,214,218,214,200,238,252,214,216,214,201,238,252,214,195,214,201,238,252,214,194,214,242,238,252,214,213,214,197,238,214,198,255,212,-1,204,215,240,200,150,200,214,158,150,215,201,252,214,212,214,195,238,252,214,210,214,221,238,252,214,208,214,217,238,252,214,222,214,193,238,252,214,220,214,235,238,252,214,218,214,221,238,252,214,216,214,239,238,252,214,195,214,219,238,252,214,194,214,221,238,252,214,213,214,209,238,214,198,244,212,238,150,200,214,165,192,162,214,189,198,214,163,214,252,214,163,214,252,244,210,238,150,200,214,174,192,162,214,189,198,214,212,214,252,212,214,212,214,252,212,244,210,238,150,200,214,170,192,157,214,154,198,214,163,214,163,214,163,244,213,238,150,200,214,171,214,212,238,150,200,214,85,214,91,238,150,200,214,88,231,238,150,200,214,185,150,202,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,201,150,201,214,165,192,162,214,189,198,214,163,214,230,214,163,214,210,244,210,238,150,201,214,174,192,162,214,189,198,214,212,214,229,212,214,212,214,222,212,244,210,238,150,201,214,170,150,204,214,178,198,238,150,201,214,171,214,89,238,150,201,214,169,214,163,238,150,201,214,185,150,200,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,246,150,246,214,165,192,162,214,189,198,214,163,214,210,214,163,214,230,244,210,238,150,246,214,174,192,162,214,189,198,214,212,214,222,212,214,212,214,229,212,244,210,238,150,246,214,170,150,204,214,178,198,238,150,246,214,171,214,89,238,150,246,214,169,214,163,238,150,246,214,185,150,200,238,231,209,209,240,245,240,244,240,247,221,150,194,150,200,214,70,198,252,214,92,198,242,234,221,255,212,-1,204,215,254,215,221,150,194,150,210,214,71,198,252,214,92,198,242,234,218,255,212,-1,204,215,254,215,221,150,194,150,210,214,68,198,252,214,92,198,242,234,219,255,212,-1,204,215,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,242,150,242,214,158,150,215,201,252,214,212,214,194,238,252,214,210,214,193,238,252,214,208,214,243,238,252,214,222,214,221,238,252,214,220,214,245,238,252,214,218,214,209,238,252,214,216,214,219,238,214,198,244,212,238,150,242,214,165,192,162,214,189,198,214,163,214,198,214,212,214,163,244,210,238,150,242,214,174,192,162,214,189,198,214,163,214,163,214,163,214,163,244,210,238,150,242,214,170,150,204,214,155,198,238,150,242,214,171,214,69,238,150,242,214,169,214,163,238,150,242,214,86,211,238,150,242,214,185,150,202,238,150,195,150,242,214,213,244,212,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,243,150,243,214,165,192,162,214,189,198,214,163,214,195,214,212,214,163,244,210,238,150,243,214,174,192,162,214,189,198,214,212,214,195,212,214,163,214,163,244,210,238,150,243,214,170,150,204,214,155,198,238,150,243,214,171,214,69,238,150,243,214,169,214,163,238,150,243,214,185,150,242,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,240,150,240,214,165,192,162,214,189,198,214,212,214,213,212,214,163,214,150,244,210,238,150,240,214,174,192,162,214,189,198,214,163,214,220,214,163,214,218,244,210,238,150,240,214,171,214,212,238,150,240,214,185,150,242,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,241,150,241,214,165,192,162,214,189,198,214,212,214,163,214,163,214,199,244,210,238,150,241,214,174,192,162,214,189,198,214,163,214,163,214,163,214,222,244,210,238,150,241,214,171,214,212,238,150,241,214,85,150,215,201,252,214,212,214,255,238,252,214,210,214,240,238,252,214,208,214,231,238,252,214,222,214,194,238,252,214,220,214,199,238,252,214,218,214,194,238,214,198,244,212,238,150,241,214,82,150,204,214,136,198,238,150,241,214,83,214,204,238,150,241,214,80,192,81,214,80,198,214,66,198,238,150,241,214,67,192,81,214,67,198,214,64,198,238,150,241,214,185,150,240,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,254,150,254,214,165,192,162,214,189,198,214,212,214,163,214,163,214,213,244,210,238,150,254,214,174,192,162,214,189,198,214,163,214,163,214,163,214,240,244,210,238,150,254,214,171,214,212,238,150,254,214,85,150,215,201,252,214,212,214,192,238,252,214,210,214,65,238,252,214,208,214,228,238,252,214,222,214,78,238,252,214,220,214,79,238,252,214,218,214,237,238,252,214,216,214,195,238,252,214,195,214,234,238,252,214,194,214,234,238,214,198,244,212,238,150,254,214,82,150,204,214,178,198,238,150,254,214,83,214,216,238,150,254,214,80,192,81,214,80,198,214,76,198,238,150,254,214,67,192,81,214,67,198,214,64,198,238,150,254,214,185,150,240,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,255,150,255,214,165,192,162,214,189,198,214,212,214,213,212,214,163,214,229,244,210,238,150,255,214,174,192,162,214,189,198,214,163,214,220,214,163,214,192,244,210,238,150,255,214,170,150,204,214,152,198,238,150,255,214,171,214,89,238,150,255,214,169,214,163,238,150,255,214,185,150,242,238,150,195,150,255,214,218,244,212,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,252,150,252,214,165,192,162,214,189,198,214,163,214,247,214,212,214,163,244,210,238,150,252,214,174,192,162,214,189,198,214,163,214,222,214,163,214,163,244,210,238,150,252,214,171,214,212,238,150,252,214,85,150,215,201,252,214,212,214,206,238,214,198,244,212,238,150,252,214,82,150,204,214,178,198,238,150,252,214,83,214,194,238,150,252,214,80,192,81,214,80,198,214,77,198,238,150,252,214,185,150,255,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,224,238,252,214,218,214,242,238,252,214,216,214,233,238,214,198,255,212,-1,204,215,240,253,150,253,214,165,192,162,214,189,198,214,212,214,238,212,214,212,214,163,244,210,238,150,253,214,174,192,162,214,189,198,214,163,214,229,214,163,214,163,244,210,238,150,253,214,171,214,212,238,150,253,214,85,214,91,238,150,253,214,74,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,209,238,252,214,222,214,219,238,252,214,220,214,207,238,252,214,218,214,252,238,252,214,216,214,228,238,252,214,195,214,228,238,252,214,194,214,228,238,214,198,244,212,238,150,253,214,75,150,204,214,178,198,238,150,253,214,82,150,204,214,136,198,238,150,253,214,83,214,194,238,150,253,214,80,192,81,214,80,198,214,76,198,238,150,253,214,67,192,81,214,67,198,214,64,198,238,150,253,214,72,231,238,150,253,214,185,150,255,238,201,252,214,212,201,252,214,73,150,215,201,252,214,212,214,211,238,252,214,210,214,221,238,252,214,208,214,251,238,252,214,222,214,193,238,252,214,220,214,201,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,176,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,229,238,252,214,210,214,221,238,252,214,208,214,251,238,252,214,222,214,193,238,252,214,220,214,201,238,214,198,244,212,238,238,252,214,210,201,252,214,73,150,215,201,252,214,212,214,217,238,252,214,210,214,221,238,252,214,208,214,226,238,252,214,222,214,193,238,252,214,220,214,219,238,252,214,218,214,209,238,252,214,216,214,251,238,252,214,195,214,221,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,116,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,226,238,252,214,222,214,193,238,252,214,220,214,248,238,252,214,218,214,195,238,252,214,216,214,209,238,252,214,195,214,251,238,252,214,194,214,221,238,214,198,244,212,238,238,252,214,208,201,252,214,73,150,215,201,252,214,212,214,192,238,252,214,210,214,193,238,252,214,208,214,217,238,252,214,222,214,200,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,117,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,204,238,252,214,210,214,193,238,252,214,208,214,217,238,252,214,222,214,200,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,238,252,214,222,201,252,214,73,150,215,201,252,214,212,214,217,238,252,214,210,214,242,238,252,214,208,214,207,238,252,214,222,214,193,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,114,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,194,238,252,214,210,214,242,238,252,214,208,214,207,238,252,214,222,214,193,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,238,252,214,220,201,252,214,73,150,215,201,252,214,212,214,201,238,252,214,210,214,252,238,252,214,208,214,221,238,252,214,222,214,226,238,252,214,220,214,221,238,252,214,218,214,217,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,115,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,199,238,252,214,210,214,252,238,252,214,208,214,221,238,252,214,222,214,226,238,252,214,220,214,221,238,252,214,218,214,217,238,214,198,244,212,238,238,252,214,218,201,252,214,73,150,215,201,252,214,212,214,217,238,252,214,210,214,221,238,252,214,208,214,201,238,252,214,222,214,201,238,252,214,220,214,193,238,252,214,218,214,197,238,252,214,216,214,251,238,252,214,195,214,217,238,214,198,244,212,238,252,214,118,150,215,201,252,214,212,214,112,238,214,198,244,212,238,252,214,119,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,201,238,252,214,222,214,201,238,252,214,220,214,193,238,252,214,218,214,197,238,252,214,216,214,251,238,252,214,195,214,217,238,214,198,244,212,238,238,240,250,201,240,251,209,240,248,192,113,150,250,255,215,213,240,231,240,230,240,249,237,249,230,231,224,228,224,229,150,249,150,230,150,231,255,212,212,240,229,240,228,150,228,240,231,150,228,209,148,239,5495,214,126,150,228,214,212,248,214,230,197,151,240,226,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,224,238,252,214,218,214,200,238,252,214,216,214,201,238,252,214,195,214,201,238,252,214,194,214,242,238,252,214,213,214,197,238,214,198,255,212,-1,204,215,240,227,150,227,214,158,150,229,214,73,198,238,150,227,214,165,192,162,214,189,198,214,212,214,218,212,214,163,214,240,244,210,238,150,227,214,174,192,162,214,189,198,214,163,214,208,214,163,150,226,244,210,238,150,227,214,170,192,157,214,154,198,214,244,214,244,214,219,244,213,238,150,227,214,171,214,212,238,150,227,214,85,214,91,238,150,227,214,88,231,238,150,227,214,185,150,242,238,150,195,150,227,214,222,244,212,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,224,150,224,214,158,150,215,201,252,214,212,214,202,238,252,214,210,214,207,238,252,214,208,214,242,238,252,214,222,214,197,238,214,198,244,212,238,150,224,214,165,192,162,214,189,198,214,163,214,247,214,212,214,163,244,210,238,150,224,214,174,192,162,214,189,198,214,163,214,222,214,163,214,163,244,210,238,150,224,214,171,214,212,238,150,224,214,85,150,229,214,118,198,238,150,224,214,82,150,204,214,183,198,238,150,224,214,83,214,213,238,150,224,214,80,192,81,214,80,198,214,77,198,238,150,224,214,185,150,227,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,225,150,225,214,158,150,215,201,252,214,212,214,229,238,252,214,210,214,209,238,252,214,208,214,245,238,252,214,222,214,221,238,252,214,220,214,211,238,214,198,244,212,238,150,225,214,165,192,162,214,189,198,214,212,214,224,212,214,212,214,163,244,210,238,150,225,214,174,192,162,214,189,198,214,163,214,230,214,163,214,163,244,210,238,150,225,214,171,214,212,238,150,225,214,85,150,229,214,119,198,238,150,225,214,82,150,204,214,183,198,238,150,225,214,83,214,194,238,150,225,214,80,192,81,214,80,198,214,94,198,238,150,225,214,67,192,81,214,67,198,214,64,198,238,150,225,214,185,150,227,238,221,150,194,150,227,214,93,198,252,214,92,198,242,234,216,255,212,-1,204,215,254,215,221,150,194,150,227,214,90,198,252,214,92,198,242,234,217,255,212,-1,204,215,254,215,150,251,150,229,214,73,198,150,227,238,224,226,224,227,224,224,224,225,228,4623,201,252,214,127,201,252,214,124,150,215,201,252,214,212,214,229,238,252,214,210,214,221,238,252,214,208,214,251,238,252,214,222,214,193,238,252,214,220,214,201,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,194,238,252,214,210,214,226,238,252,214,208,214,242,238,252,214,222,214,242,238,252,214,220,214,201,238,252,214,218,214,252,238,252,214,216,214,79,238,252,214,195,214,114,238,252,214,194,214,79,238,252,214,213,214,200,238,252,214,206,214,197,238,252,214,204,214,243,238,252,214,246,214,221,238,252,214,199,214,201,238,252,214,205,214,221,238,252,214,247,214,207,238,252,214,249,214,201,238,252,214,240,214,209,238,252,214,202,214,245,238,252,214,230,214,211,238,252,214,231,214,221,238,214,198,244,212,238,252,214,122,201,238,238,252,214,123,201,252,214,124,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,226,238,252,214,222,214,193,238,252,214,220,214,248,238,252,214,218,214,195,238,252,214,216,214,209,238,252,214,195,214,251,238,252,214,194,214,221,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,239,238,252,214,210,214,251,238,252,214,208,214,251,238,252,214,222,214,219,238,252,214,220,214,221,238,252,214,218,214,217,238,252,214,216,214,217,238,252,214,195,214,193,238,252,214,194,214,192,238,252,214,213,214,221,238,252,214,206,214,79,238,252,214,204,214,211,238,252,214,246,214,221,238,252,214,199,214,251,238,252,214,205,214,193,238,252,214,247,214,201,238,252,214,249,214,79,238,252,214,240,214,201,238,252,214,202,214,242,238,252,214,230,214,242,238,252,214,231,214,211,238,252,214,229,214,217,238,214,198,244,212,238,252,214,122,201,252,214,212,201,252,214,73,150,215,201,252,214,212,214,239,238,252,214,210,214,197,238,252,214,208,214,201,238,252,214,222,214,193,238,252,214,220,214,79,238,252,214,218,214,204,238,252,214,216,214,225,238,252,214,195,214,79,238,252,214,194,214,224,238,252,214,213,214,209,238,252,214,206,214,197,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,213,238,252,214,210,214,219,238,252,214,208,214,242,238,252,214,222,214,201,238,252,214,220,214,221,238,252,214,218,214,207,238,252,214,216,214,207,238,252,214,195,214,193,238,252,214,194,214,242,238,252,214,213,214,197,238,252,214,206,214,79,238,252,214,204,214,207,238,252,214,246,214,242,238,252,214,199,214,197,238,252,214,205,214,201,238,252,214,247,214,219,238,252,214,249,214,209,238,252,214,240,214,79,238,252,214,202,214,192,238,252,214,230,214,242,238,252,214,231,214,193,238,252,214,229,214,207,238,252,214,227,214,221,238,252,214,224,214,79,238,252,214,225,214,207,238,252,214,238,214,252,238,252,214,239,214,209,238,252,214,237,214,201,238,252,214,255,214,79,238,252,214,244,214,245,238,252,214,234,214,209,238,252,214,235,214,197,238,252,214,232,214,79,238,252,214,233,214,217,238,252,214,223,214,223,238,252,214,150,214,217,238,252,214,151,214,201,238,252,214,149,214,221,238,252,214,146,214,226,238,214,198,244,212,238,252,214,120,201,221,150,215,201,252,214,212,214,121,238,252,214,210,214,102,238,214,198,255,212,-1,229,215,238,252,214,103,231,238,252,214,100,150,215,201,252,214,212,214,201,238,252,214,210,214,242,238,252,214,208,214,251,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,221,238,252,214,216,214,242,238,252,214,195,214,197,238,252,214,194,214,211,238,252,214,213,214,223,238,214,198,244,212,238,252,214,101,150,215,201,252,214,212,214,209,238,252,214,210,214,197,238,252,214,208,214,201,238,252,214,222,214,193,238,252,214,220,214,192,238,252,214,218,214,207,238,252,214,216,214,245,238,252,214,195,214,209,238,252,214,194,214,197,238,214,198,244,212,238,238,238,238,252,214,98,201,252,214,124,150,215,201,252,214,212,214,204,238,252,214,210,214,193,238,252,214,208,214,217,238,252,214,222,214,200,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,221,238,252,214,222,214,79,238,252,214,220,214,226,238,252,214,218,214,242,238,252,214,216,214,219,238,252,214,195,214,221,238,252,214,194,214,99,238,252,214,213,214,79,238,252,214,206,214,243,238,252,214,204,214,221,238,252,214,246,214,201,238,252,214,199,214,221,238,252,214,205,214,207,238,252,214,247,214,201,238,252,214,249,214,79,238,252,214,240,214,211,238,252,214,202,214,221,238,252,214,230,214,217,238,252,214,231,214,217,238,214,198,244,212,238,252,214,122,201,252,214,212,201,252,214,73,150,215,201,252,214,212,214,195,238,252,214,210,214,221,238,252,214,208,214,209,238,252,214,222,214,197,238,252,214,220,214,193,238,252,214,218,214,226,238,252,214,216,214,209,238,252,214,195,214,201,238,252,214,194,214,193,238,252,214,213,214,242,238,252,214,206,214,197,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,237,238,252,214,210,214,211,238,252,214,208,214,242,238,252,214,222,214,196,238,252,214,220,214,195,238,252,214,218,214,221,238,252,214,216,214,209,238,252,214,195,214,197,238,252,214,194,214,193,238,252,214,213,214,226,238,252,214,206,214,209,238,252,214,204,214,201,238,252,214,246,214,193,238,252,214,199,214,242,238,252,214,205,214,197,238,252,214,247,214,79,238,252,214,249,214,192,238,252,214,240,214,65,238,252,214,202,214,228,238,252,214,230,214,78,238,252,214,231,214,79,238,252,214,229,214,248,238,252,214,227,214,79,238,252,214,224,214,194,238,252,214,225,214,221,238,252,214,238,214,219,238,252,214,239,214,192,238,252,214,237,214,221,238,252,214,255,214,219,238,252,214,244,214,79,238,252,214,234,214,203,238,252,214,235,214,219,238,252,214,232,214,242,238,252,214,233,214,201,238,252,214,223,214,221,238,252,214,150,214,207,238,252,214,151,214,201,238,252,214,149,214,221,238,252,214,146,214,243,238,214,198,244,212,238,252,214,120,201,221,150,215,201,252,214,212,214,237,238,252,214,210,214,211,238,252,214,208,214,242,238,252,214,222,214,196,238,214,198,255,212,-1,229,215,238,252,214,103,231,238,252,214,100,150,215,201,252,214,212,214,219,238,252,214,210,214,221,238,252,214,208,214,209,238,252,214,222,214,197,238,252,214,220,214,193,238,252,214,218,214,226,238,252,214,216,214,209,238,252,214,195,214,201,238,252,214,194,214,193,238,252,214,213,214,242,238,252,214,206,214,197,238,214,198,244,212,238,238,238,238,252,214,96,201,252,214,124,150,215,201,252,214,212,214,194,238,252,214,210,214,242,238,252,214,208,214,207,238,252,214,222,214,193,238,252,214,220,214,209,238,252,214,218,214,211,238,252,214,216,214,217,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,247,238,252,214,210,214,242,238,252,214,208,214,193,238,252,214,222,214,197,238,252,214,220,214,79,238,252,214,218,214,242,238,252,214,216,214,200,238,252,214,195,214,219,238,252,214,194,214,79,238,252,214,213,214,207,238,252,214,206,214,242,238,252,214,204,214,226,238,252,214,246,214,226,238,252,214,199,214,200,238,252,214,205,214,197,238,252,214,247,214,193,238,252,214,249,214,201,238,252,214,240,214,193,238,252,214,202,214,221,238,252,214,230,214,217,238,214,198,244,212,238,252,214,122,201,238,238,252,214,97,201,252,214,124,150,215,201,252,214,212,214,199,238,252,214,210,214,252,238,252,214,208,214,221,238,252,214,222,214,226,238,252,214,220,214,221,238,252,214,218,214,217,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,225,238,252,214,210,214,252,238,252,214,208,214,242,238,252,214,222,214,242,238,252,214,220,214,217,238,252,214,218,214,221,238,252,214,216,214,79,238,252,214,195,214,223,238,252,214,194,214,242,238,252,214,213,214,200,238,252,214,206,214,219,238,252,214,204,214,79,238,252,214,246,214,211,238,252,214,199,214,242,238,252,214,205,214,242,238,252,214,247,214,148,238,214,198,244,212,238,252,214,122,201,238,238,252,214,110,201,252,214,124,150,215,201,252,214,212,214,194,238,252,214,210,214,221,238,252,214,208,214,201,238,252,214,222,214,201,238,252,214,220,214,193,238,252,214,218,214,197,238,252,214,216,214,251,238,252,214,195,214,217,238,214,198,244,212,238,252,214,125,150,215,201,252,214,212,214,225,238,252,214,210,214,200,238,252,214,208,214,217,238,252,214,222,214,201,238,252,214,220,214,242,238,252,214,218,214,226,238,252,214,216,214,193,238,252,214,195,214,235,238,252,214,194,214,221,238,252,214,213,214,79,238,252,214,206,214,223,238,252,214,204,214,242,238,252,214,246,214,200,238,252,214,199,214,219,238,252,214,205,214,79,238,252,214,247,214,207,238,252,214,249,214,211,238,252,214,240,214,193,238,252,214,202,214,221,238,252,214,230,214,197,238,252,214,231,214,201,238,214,198,244,212,238,252,214,122,201,238,238,240,238,234,198,240,239,234,199,240,236,221,150,194,221,150,253,252,214,111,198,242,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,214,198,255,212,-1,204,215,252,214,92,198,242,234,196,255,212,-1,204,215,254,215,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,237,150,237,214,158,150,215,201,252,214,212,214,225,238,252,214,210,214,242,238,252,214,208,214,197,238,252,214,222,214,201,238,252,214,220,214,221,238,252,214,218,214,197,238,252,214,216,214,201,238,214,198,244,212,238,150,237,214,165,192,162,214,189,198,214,212,214,253,212,214,212,214,195,212,244,210,238,150,237,214,174,192,162,214,189,198,214,163,214,129,214,163,214,222,244,210,238,150,237,214,171,214,212,238,150,237,214,86,211,238,150,237,214,185,150,202,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,234,150,234,214,158,150,215,201,252,214,212,214,240,238,252,214,210,214,221,238,252,214,208,214,209,238,252,214,222,214,243,238,252,214,220,214,221,238,252,214,218,214,219,238,214,198,244,212,238,150,234,214,165,192,162,214,189,198,214,212,214,163,214,163,214,237,244,210,238,150,234,214,171,214,212,238,150,234,214,185,150,237,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,235,150,235,214,158,150,215,201,252,214,212,214,199,238,252,214,210,214,193,238,252,214,208,214,201,238,252,214,222,214,211,238,252,214,220,214,221,238,214,198,244,212,238,150,235,214,165,192,162,214,189,198,214,212,214,219,212,214,163,214,199,244,210,238,150,235,214,174,192,162,214,189,198,214,163,214,163,214,163,214,163,244,210,238,150,235,214,171,214,212,238,150,235,214,85,150,215,201,252,214,212,214,229,238,252,214,210,214,221,238,252,214,208,214,251,238,252,214,222,214,193,238,252,214,220,214,201,238,214,198,244,212,238,150,235,214,82,150,204,214,136,198,238,150,235,214,83,214,199,238,150,235,214,80,192,81,214,80,198,214,66,198,238,150,235,214,67,192,81,214,67,198,214,64,198,238,150,235,214,185,150,234,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,232,150,232,214,158,150,215,201,252,214,212,214,244,238,252,214,210,214,221,238,252,214,208,214,217,238,252,214,222,214,207,238,214,198,244,212,238,150,232,214,165,192,162,214,189,198,214,212,214,219,212,214,163,214,213,244,210,238,150,232,214,174,192,162,214,189,198,214,163,214,163,214,163,214,199,244,210,238,150,232,214,171,214,212,238,150,232,214,85,150,215,201,252,214,212,214,194,238,252,214,210,214,226,238,252,214,208,214,242,238,252,214,222,214,242,238,252,214,220,214,201,238,252,214,218,214,252,238,252,214,216,214,79,238,252,214,195,214,114,238,252,214,194,214,79,238,252,214,213,214,200,238,252,214,206,214,197,238,252,214,204,214,243,238,252,214,246,214,221,238,252,214,199,214,201,238,252,214,205,214,221,238,252,214,247,214,207,238,252,214,249,214,201,238,252,214,240,214,209,238,252,214,202,214,245,238,252,214,230,214,211,238,252,214,231,214,221,238,214,198,244,212,238,150,232,214,82,150,204,214,183,198,238,150,232,214,83,214,195,238,150,232,214,80,192,81,214,80,198,214,76,198,238,150,232,214,67,192,81,214,67,198,214,64,198,238,150,232,214,185,150,234,238,221,192,188,214,189,198,150,215,201,252,214,212,214,199,238,252,214,210,214,221,238,252,214,208,214,233,238,252,214,222,214,201,238,252,214,220,214,229,238,252,214,218,214,209,238,252,214,216,214,245,238,252,214,195,214,221,238,252,214,194,214,211,238,214,198,255,212,-1,204,215,240,233,150,233,214,158,150,215,201,252,214,212,214,225,238,252,214,210,214,242,238,252,214,208,214,200,238,252,214,222,214,197,238,252,214,220,214,201,238,214,198,244,212,238,150,233,214,165,192,162,214,189,198,214,163,214,219,214,163,214,213,244,210,238,150,233,214,174,192,162,214,189,198,214,212,214,139,212,214,163,214,195,244,210,238,150,233,214,171,214,212,238,150,233,214,85,150,215,201,252,214,212,214,78,238,252,214,210,214,79,238,252,214,208,214,209,238,252,214,222,214,207,238,252,214,220,214,201,238,252,214,218,214,193,238,252,214,216,214,192,238,252,214,195,214,221,238,214,198,244,212,238,150,233,214,82,150,204,214,178,198,238,150,233,214,83,214,216,238,150,233,214,80,192,81,214,80,198,214,76,198,238,150,233,214,67,192,81,214,67,198,214,108,198,238,150,233,214,185,150,202,238,221,192,188,214,189,198,150,215,201,252,214,212,214,237,238,252,214,210,214,219,238,252,214,208,214,209,238,252,214,222,214,226,238,252,214,220,214,221,238,214,198,255,212,-1,204,215,240,150,150,150,214,165,192,162,214,189,198,214,212,214,163,214,163,214,212,244,210,238,150,150,214,174,192,162,214,189,198,214,163,214,163,214,212,214,210,212,244,210,238,150,150,214,170,150,204,214,177,198,238,150,150,214,171,214,175,238,150,150,214,169,214,163,238,150,150,214,185,150,234,238,221,192,188,214,189,198,150,215,201,252,214,212,214,194,238,252,214,210,214,207,238,252,214,208,214,219,238,252,214,222,214,242,238,252,214,220,214,211,238,252,214,218,214,211,238,252,214,216,214,193,238,252,214,195,214,197,238,252,214,194,214,251,238,252,214,213,214,237,238,252,214,206,214,219,238,252,214,204,214,209,238,252,214,246,214,226,238,252,214,199,214,221,238,214,198,255,212,-1,204,215,240,151,150,151,214,158,150,215,201,252,214,212,214,237,238,252,214,210,214,221,238,252,214,208,214,209,238,252,214,222,214,201,238,252,214,220,214,200,238,252,214,218,214,219,238,252,214,216,214,221,238,252,214,195,214,217,238,214,198,244,212,238,150,151,214,165,192,162,214,189,198,214,212,214,163,214,212,214,233,212,244,210,238,150,151,214,174,192,162,214,189,198,214,163,214,163,214,163,214,244,244,210,238,150,151,214,171,214,212,238,150,151,214,169,214,163,238,150,151,214,109,214,210,238,150,151,214,106,150,204,214,135,198,238,150,151,214,107,192,162,214,189,198,214,163,214,163,214,163,214,163,244,210,238,150,151,214,104,192,81,214,105,198,214,22,198,238,150,151,214,86,211,238,150,151,214,185,150,237,238,221,192,188,214,189,198,150,215,201,252,214,212,214,205,238,252,214,210,214,202,238,252,214,208,214,229,238,252,214,222,214,193,238,252,214,220,214,217,238,252,214,218,214,201,238,252,214,216,214,229,238,252,214,195,214,209,238,252,214,194,214,223,238,252,214,213,214,242,238,252,214,206,214,200,238,252,214,204,214,201,238,214,198,255,212,-1,204,215,240,148,150,148,214,23,192,20,214,189,198,214,163,214,222,244,212,238,150,148,214,21,192,81,214,21,198,214,18,198,238,150,148,214,19,192,81,214,19,198,214,16,198,238,150,148,214,17,231,238,150,148,214,185,150,151,238,221,192,188,214,189,198,150,215,201,252,214,212,214,205,238,252,214,210,214,202,238,252,214,208,214,213,238,252,214,222,214,209,238,252,214,220,214,243,238,252,214,218,214,243,238,252,214,216,214,193,238,252,214,195,214,197,238,252,214,194,214,251,238,214,198,255,212,-1,204,215,240,149,150,149,214,30,192,20,214,189,198,214,163,214,218,244,212,238,150,149,214,31,192,20,214,189,198,214,163,214,222,244,212,238,150,149,214,185,150,151,238,234,197,240,146,234,194,240,147,234,195,240,144,192,144,150,251,255,215,213,240,159,240,158,240,145,237,145,158,159,224,156,224,157,150,145,150,158,150,159,255,212,212,240,157,240,156,150,156,240,159,150,156,209,148,239,9536,221,150,194,150,157,214,95,198,252,214,92,198,242,234,192,255,212,-1,204,215,254,215,228,9653,231,209,209,240,152,240,155,240,154,221,150,194,150,242,214,70,198,252,214,92,198,242,234,193,255,212,-1,204,215,254,215,221,150,194,150,234,214,70,198,252,214,92,198,242,234,206,255,212,-1,204,215,254,215,221,150,194,150,210,214,71,198,252,214,92,198,242,234,207,255,212,-1,204,215,254,215,221,150,194,150,210,214,68,198,252,214,92,198,242,234,204,255,212,-1,204,215,254,215,221,150,144,150,215,201,252,214,212,214,211,238,252,214,210,214,221,238,252,214,208,214,251,238,252,214,222,214,193,238,252,214,220,214,201,238,214,198,255,212,-1,204,215,254,215,201,240,153,221,192,188,214,189,198,150,215,201,252,214,212,214,194,238,252,214,210,214,207,238,252,214,208,214,219,238,252,214,222,214,221,238,252,214,220,214,221,238,252,214,218,214,197,238,252,214,216,214,255,238,252,214,195,214,200,238,252,214,194,214,193,238,214,198,255,212,-1,204,215,240,134,150,134,214,158,150,215,201,252,214,212,214,255,238,252,214,210,214,252,238,252,214,208,214,242,238,252,214,222,214,217,238,252,214,220,214,201,238,252,214,218,214,217,238,252,214,216,214,199,238,252,214,195,214,209,238,252,214,194,214,251,238,252,214,213,214,217,238,214,198,244,212,238,150,134,214,186,231,238,150,134,214,187,211,238,150,134,214,184,214,132,238,150,134,214,185,150,220,238,192,28,214,29,198,234,205,244,215,254,215,192,28,214,29,198,234,202,244,215,254,215,201,240,135,234,203,240,132,192,28,214,29,198,234,200,244,215,254,215,150,212,214,26,198,252,214,92,198,242,234,201,244,212,254,215,221,192,113,150,212,252,214,27,198,242,255,215,-1,204,213,240,131,240,130,240,133,237,133,130,131,224,128,224,129,150,133,150,130,150,131,255,212,212,240,129,240,128,150,128,240,131,150,128,209,148,239,10118,150,129,150,223,246,239,10136,150,132,150,129,244,215,254,215,228,10136,228,10228,150,212,214,24,198,252,214,92,198,242,234,246,244,212,254,215,221,192,25,150,215,201,252,214,212,214,212,238,252,214,210,214,255,238,252,214,208,214,240,238,252,214,222,214,231,238,252,214,220,214,194,238,252,214,218,214,199,238,252,214,216,214,194,238,252,214,195,214,79,238,252,214,194,214,227,238,252,214,213,214,221,238,252,214,206,214,197,238,252,214,204,214,200,238,252,214,246,214,79,238,252,214,199,214,116,238,252,214,205,214,79,238,252,214,247,214,199,238,252,214,249,214,209,238,252,214,240,214,251,238,252,214,202,214,217,238,252,214,230,214,216,238,252,214,231,214,79,238,252,214,229,214,229,238,252,214,227,214,242,238,252,214,224,214,209,238,252,214,225,214,243,238,252,214,238,214,221,238,252,214,239,214,243,238,252,214,237,214,79,238,252,214,255,214,248,238,252,214,244,214,79,238,252,214,234,214,225,238,252,214,235,214,211,238,252,214,232,214,193,238,252,214,233,214,207,238,252,214,223,214,148,238,252,214,150,214,79,238,252,214,151,214,201,238,252,214,149,214,200,238,252,214,146,214,79,238,252,214,219,214,201,238,252,214,217,214,209,238,252,214,203,214,251,238,252,214,147,214,79,238,252,214,192,214,203,238,252,214,196,214,209,238,252,214,201,214,219,238,252,214,200,214,209,238,252,214,134,214,79,238,252,214,148,214,209,238,252,214,252,214,245,238,252,214,193,214,219,238,252,214,197,214,193,238,252,214,242,214,219,238,252,214,211,214,79,238,252,214,226,214,221,238,252,214,245,214,211,238,252,214,207,214,79,238,252,214,190,214,226,238,252,214,209,214,221,238,252,214,236,214,197,238,252,214,251,214,200,238,214,198,255,212,-1,204,215,254,215,192,25,150,215,201,252,214,212,214,212,238,252,214,210,214,255,238,252,214,208,214,240,238,252,214,222,214,231,238,252,214,220,214,194,238,252,214,218,214,199,238,252,214,216,214,194,238,252,214,195,214,79,238,252,214,194,214,227,238,252,214,213,214,221,238,252,214,206,214,197,238,252,214,204,214,200,238,252,214,246,214,79,238,252,214,199,214,116,238,252,214,205,214,79,238,252,214,247,214,199,238,252,214,249,214,209,238,252,214,240,214,251,238,252,214,202,214,217,238,252,214,230,214,216,238,252,214,231,214,79,238,252,214,229,214,239,238,252,214,227,214,213,238,252,214,224,214,202,238,252,214,225,214,253,238,252,214,238,214,79,238,214,198,244,212,150,221,203,244,215,254,215,220,214}
-local _O1125={{K={1,0,{124,39,229,178,113,4},{115,60,249,174},{115,60,237,238,19},{112,46,245,172},{103,54,249,179,70},{119,55,242,131,69,28}},C={213,214,150,214,198,239,198,213,214,150,214,198,220,215,228,198,201,240,212,214,214,240,213,150,214,243,240,210,214,214,240,211,150,211,214,215,249,239,230,150,213,150,210,195,239,180,228,225,150,213,150,210,250,239,180,224,208,150,213,240,208,150,212,150,208,221,192,212,214,213,198,192,210,214,211,198,150,214,150,208,198,150,215,255,212,-1,204,215,238,150,213,150,211,151,240,213,228,246,192,208,214,209,198,150,212,244,215,240,209,213,214,150,214,150,209,238,150,209,220,215},P={},U={{1,0}},nParams=2},{K={{121,48,247,181,120},{103,60,229,191,108,22}},C={192,214,214,215,198,213,214,150,214,244,212,254,215,150,214,220,215},P={},U={{1,19}},nParams=1},{K={{68,63,230,173,124,15,198,140},{96,55,225},1,15,2,19,3,25,4,53,5,40,6,52,7,63,8,90,{92,12,213,133,74,1,229,154,91,234,178,120},{117,32,193,129},0,{114,7,216,139,92,2}},C={221,192,214,214,215,198,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,221,238,214,199,255,212,-1,204,215,240,212,150,212,214,196,192,197,214,215,198,214,194,150,215,244,212,238,150,212,214,195,150,214,238,220,214},P={},U={{1,1}},nParams=2},{K={{68,63,230,173,124,15,198,140},{96,55,225},1,15,2,19,3,9,4,46,5,40,6,53,7,49,8,63,90,{99,11,196,131,66},{98,10,197,130,67,70},{68,20,197,131,96,49,248},255,{112,0,197,147,95,22,217,115,55},{113,27,204,159,70,9,220,115,32,231,174,104},0.8,{119,10,221,150,89,15}},C={221,192,214,214,215,198,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,199,238,214,196,255,212,-1,204,215,240,210,150,210,214,197,150,212,252,218,239,141,254,215,192,194,214,195,198,214,192,214,192,214,192,244,213,238,150,210,214,193,150,213,252,218,239,188,254,215,214,212,238,150,210,214,206,150,215,252,218,239,175,254,215,214,207,238,150,210,214,204,150,214,238,220,214},P={},U={{1,1}},nParams=4},{K={{121,40,229,188},{124,55,231,175,123,17,210},1,60,2,47,3,52,4,57,5,46,6,51,7,53,8,90,{119,23,211,155,112,1,210,138,74,230,180,127},{83,29,198},59,56,54,63,{77,29,217,129},{86,9,207,158,90},{116,31,206,135,66,8,252,108,35,238},200,{107,2,213,140}},C={192,214,192,215,244,215,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,209,238,214,199,244,212,246,252,239,147,254,215,192,215,252,218,239,70,254,215,192,214,192,196,244,215,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,209,238,214,199,244,212,246,252,239,70,254,215,192,196,252,218,239,452,254,215,192,214,192,197,244,215,213,214,201,252,214,212,214,221,238,252,214,210,214,194,238,252,214,208,214,195,238,252,214,222,214,192,238,252,214,220,214,193,238,214,199,244,212,246,252,239,478,254,215,192,214,192,197,214,215,198,244,215,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,209,238,214,199,244,212,246,252,239,452,254,215,192,197,214,215,198,252,218,239,322,254,215,192,214,192,206,244,215,213,214,201,252,214,212,214,221,238,252,214,210,214,194,238,252,214,208,214,195,238,252,214,222,214,192,238,252,214,220,214,193,238,214,199,244,212,246,252,239,348,254,215,192,214,192,206,214,215,198,244,215,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,209,238,214,199,244,212,246,252,239,322,254,215,192,206,214,215,198,240,215,150,215,239,260,192,207,234,215,255,215,212,240,213,240,212,150,212,252,239,376,254,215,150,213,252,239,365,254,215,150,213,214,204,198,214,205,246,252,239,275,254,215,150,213,214,202,198,239,262,150,213,214,202,198,220,215,228,262,228,260,192,207,234,212,255,215,212,240,211,240,210,150,210,239,305,150,211,220,215,228,305,209,220,215},P={{K={{88,35,249},{67,55,226,178,113,6},1,29,2,31,3,14,90,{94,63,255,134,67,24,221},25,53,52,4,46,5,63,6,7,8,119,9,10,35,11,42,12,59,54,51,57,117,13,48,41,15,16},C={213,214,201,252,214,214,213,215,238,252,214,215,213,212,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,214,222,244,212,238,252,214,223,201,252,213,212,201,252,214,212,214,220,238,252,214,210,214,221,238,252,214,208,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,218,238,252,214,196,214,216,238,252,214,197,214,194,238,252,214,195,214,209,238,252,214,192,214,193,238,252,214,206,214,207,238,252,214,204,214,198,238,214,222,244,212,213,212,201,252,214,212,214,205,238,252,214,210,214,207,238,252,214,208,214,207,238,252,214,219,214,202,238,252,214,217,214,203,238,252,214,199,214,200,238,252,214,196,214,205,238,252,214,197,214,216,238,252,214,195,214,203,238,252,214,192,214,221,238,252,214,206,214,218,238,252,214,204,214,201,238,252,214,246,214,247,238,252,214,209,214,244,238,252,214,245,214,221,238,252,214,242,214,218,238,214,222,244,212,238,238,255,215,-1,220,-1},P={},U={{1,1},{1,0},{0,0}},nParams=0},{K={{106,48,248,188},{70,38,226,170,89,7,210}},C={192,214,252,214,215,198,242,213,214,211,255,213,-1,220,-1},P={},U={{1,0}},nParams=0}},U={{1,1}},nParams=1},{K={{71,2,218,151,88,15,198,134,73,20},{122,43,230,191},{125,54,230,174,122,16,211},1,60,2,47,3,52,4,57,5,46,6,51,7,53,8,90,{72,16,220,156,111,6,221,141,53,225,187,120},{82,28,199},59,56,54,63,{78,30,218,130},{87,8,206,159,91}},C={213,214,252,214,214,198,242,150,215,244,212,240,212,192,215,192,212,244,215,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,222,238,214,196,244,212,246,252,239,132,254,215,192,212,252,218,239,75,254,215,192,215,192,197,244,215,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,222,238,214,196,244,212,246,252,239,75,254,215,192,197,252,218,239,457,254,215,192,215,192,194,244,215,213,215,201,252,214,213,214,218,238,252,214,211,214,195,238,252,214,209,214,192,238,252,214,223,214,193,238,252,214,221,214,206,238,214,196,244,212,246,252,239,451,254,215,192,215,192,194,214,212,198,244,215,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,222,238,214,196,244,212,246,252,239,457,254,215,192,194,214,212,198,252,218,239,375,254,215,192,215,192,207,244,215,213,215,201,252,214,213,214,218,238,252,214,211,214,195,238,252,214,209,214,192,238,252,214,223,214,193,238,252,214,221,214,206,238,214,196,244,212,246,252,239,321,254,215,192,215,192,207,214,212,198,244,215,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,222,238,214,196,244,212,246,252,239,375,254,215,192,207,214,212,198,240,213,150,213,239,274,192,204,234,215,255,215,212,240,211,240,210,150,210,252,239,365,254,215,150,211,239,276,211,220,215,228,276,228,274,231,220,215},P={{K={{88,35,249},{67,55,226,178,113,6},1,10,2,21,3,9,4,14,90,{80,57,193,128,77,30,195},25,53,52,46,5,63,6,7,8,119,35,11,42,12,59,54,51,57,117,13,48,41,15,16,{115,26,221,132}},C={213,214,201,252,214,214,213,215,238,252,214,215,213,212,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,214,220,244,212,238,252,214,221,201,252,213,212,201,252,214,212,214,218,238,252,214,210,214,219,238,252,214,208,214,216,238,252,214,222,214,217,238,252,214,198,214,199,238,252,214,196,214,216,238,252,214,197,214,217,238,252,214,194,214,195,238,252,214,209,214,223,238,252,214,213,214,192,238,252,214,193,214,206,238,252,214,207,214,199,238,214,220,244,212,213,212,201,252,214,212,214,204,238,252,214,210,214,206,238,252,214,208,214,206,238,252,214,222,214,205,238,252,214,198,214,202,238,252,214,196,214,203,238,252,214,197,214,204,238,252,214,194,214,217,238,252,214,209,214,202,238,252,214,213,214,219,238,252,214,193,214,216,238,252,214,207,214,200,238,252,214,201,214,246,238,252,214,223,214,247,238,252,214,244,214,219,238,252,214,245,214,216,238,214,220,244,212,238,238,252,214,242,213,213,238,255,215,-1,220,-1},P={},U={{1,3},{1,0},{0,1},{1,2}},nParams=0}},U={{1,8},{1,1}},nParams=2},{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{68,63,230,173,124,15,198,140},{96,55,225},1,9,2,53,3,47,4,52,5,62,90,{73,49,215,136,78,39,214},40,56,34,59,41,6,7,63,8,46,51,10,11,96,12,117,13,14,107,15,104,16,109,17,110,18,105,19,99,20,111,21,22,106,23,24,98,25,26,27,28,108,{19,230,161,100,56,252},{22,235,188,119,56,238},{23,231,174,106},{9,232,180,93,44,249,141}},C={221,192,214,214,215,198,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,214,218,255,212,-1,204,215,240,214,150,214,214,219,213,214,201,252,214,212,214,216,238,252,214,210,214,217,238,252,214,208,214,198,238,252,214,222,214,199,238,252,214,220,214,196,238,252,214,197,214,196,238,252,214,194,214,195,238,252,214,192,214,193,238,252,214,213,214,206,238,252,214,207,214,221,238,252,214,204,214,205,238,252,214,202,214,203,238,252,214,200,214,203,238,252,214,201,214,246,238,252,214,247,214,244,238,252,214,245,214,242,238,252,214,243,214,240,238,252,214,241,214,254,238,252,214,255,214,252,238,252,214,253,214,250,238,252,214,251,214,246,238,252,214,248,214,249,238,252,214,230,214,244,238,252,214,231,214,228,238,252,214,229,214,242,238,252,214,226,214,228,238,252,214,227,214,250,238,252,214,224,214,225,238,214,218,244,212,238,150,214,214,238,214,210,238,150,214,214,239,213,215,238,150,214,252,214,236,198,242,244,215,254,215,213,212,252,214,237,198,242,150,214,214,222,244,213,254,215,220,214},P={},U={{0,0},{0,1},{0,2}},nParams=0}},U={{1,1},{1,7},{1,6}},nParams=0},{K={{91,56,230,176,127,13,192}},C={213,214,214,214,231,238,220,214},P={},U={{1,28}},nParams=0},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,237,143,32,235,186,125,48,231,188,115,2,220},0.4,{71,50,227,171,96,8,199,128,65,68},{96,61,228,148},{69,53,252,152}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,214,211,238,252,214,208,213,212,214,209,198,238,244,210,252,214,222,198,242,244,215,254,215,220,214},P={},U={{1,3},{1,29},{1,26}},nParams=0},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,237,143,32,235,186,125,48,231,188,115,2,220},0.7,{71,50,227,171,96,8,199,128,65,68},{96,61,228,148,96,1,193},{69,53,252,152}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,214,211,238,252,214,208,213,212,214,209,198,238,244,210,252,214,222,198,242,244,215,254,215,220,214},P={},U={{1,3},{1,29},{1,26}},nParams=0},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72},{65,58,234,180,85,12,198,131},{65,63,224,187}},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,225,211,207,214,150,214,214,210,198,207,215,213,212,214,211,198,207,213,228,225,220,214},P={},U={{1,33},{1,34},{1,28},{1,35}},nParams=1},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72}},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,255,231,207,214,228,255,220,214},P={},U={{1,33}},nParams=1},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,46,200,157,74,30,210,149,75},{68,59,237,191,72},{65,58,234,180,85,12,198,131},{65,63,224,187},{70,19,242,178,17},{122,61,235},0,{123,59,234,138},{116,55,254,142,87},{64},{86,59,199,150,76,25},200,800,{69},150,600},C={213,214,252,239,255,254,215,150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,255,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,173,150,214,214,210,198,213,215,248,240,215,213,212,214,211,221,192,208,214,209,198,214,222,192,223,214,220,198,213,213,214,221,198,214,218,198,150,215,214,221,198,151,214,219,214,216,244,213,214,222,192,223,214,220,198,213,213,214,217,198,214,218,198,150,215,214,217,198,151,214,198,214,199,255,213,-1,204,215,238,228,173,220,214},P={},U={{1,33},{1,34},{1,28},{1,35}},nParams=1},{K={{99,48,248,188},{76,51,245,177,121,16,201,159,64,22,226,136,95,236,181,122,47,224,179,116,61,219},0.85},C={213,214,213,215,214,214,198,148,239,197,213,212,214,215,214,212,238,228,197,220,214},P={},U={{1,46},{1,51},{1,53}},nParams=0},{K={{99,48,248,188},{76,51,245,177,121,16,201,159,64,22,226,136,95,236,181,122,47,224,179,116,61,219},1},C={213,214,213,215,214,214,198,148,239,197,213,212,214,215,214,212,238,228,197,220,214},P={},U={{1,46},{1,51},{1,53}},nParams=0},{K={{121,48,230,178},{125,34,247,173,112}},C={192,214,214,215,198,234,215,244,215,254,215,220,214},P={{K={{125,35,252,183,105},1,2,29,3,18,4,21,5,9,6,14,7,8,122,10,31,11,48,12,63,13,57,47,15,46,16,59,17,52,62,19,53,20,96,90,{88,5,216,148,51,246},{66,21,219,146,46},50,{87,23,216,101},{66,24,207,111},41,42,22,56,23,24,25,26,27,40,28,{38,246,188,111},181,225,229,{},113,{43,228,174,119,36,239,173,74,9,204},54,51,61,{63,224,160,99,41,246,141,64}},C={192,214,213,214,201,252,214,215,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,223,238,252,214,219,214,218,238,252,214,223,214,216,238,252,214,217,214,198,238,252,214,199,214,196,238,252,214,197,214,194,238,252,214,195,214,192,238,252,214,221,214,193,238,252,214,206,214,207,238,252,214,204,214,205,238,252,214,202,214,203,238,252,214,211,214,200,238,252,214,201,214,246,238,252,214,247,214,244,238,252,214,209,214,216,238,214,245,244,212,213,215,203,244,215,254,215,209,240,214,201,252,214,215,234,215,238,252,214,212,234,212,238,252,214,210,234,213,238,252,214,208,234,210,238,240,215,192,242,150,215,255,215,213,240,210,240,213,240,212,237,212,213,210,224,211,224,208,150,212,150,213,150,210,255,212,212,240,208,240,211,150,211,240,210,150,211,209,148,239,405,192,243,150,208,255,215,212,240,222,240,209,150,209,252,239,58,254,215,150,222,252,239,33,254,215,150,222,243,214,240,249,239,495,150,211,214,210,250,239,509,192,243,234,211,255,215,212,240,220,240,223,150,223,252,239,450,254,215,150,220,252,239,456,254,215,150,220,214,241,198,239,511,150,220,214,241,198,240,214,228,511,228,505,150,222,240,214,150,214,239,481,228,405,228,481,228,495,224,209,224,222,224,223,224,220,228,107,150,214,218,239,732,192,254,213,214,201,252,214,215,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,223,238,252,214,219,214,218,238,252,214,223,214,216,238,252,214,217,214,247,238,252,214,199,214,246,238,252,214,197,214,216,238,252,214,195,214,255,238,252,214,221,214,194,238,252,214,206,214,216,238,252,214,204,214,252,238,252,214,202,214,193,238,252,214,211,214,200,238,252,214,201,214,246,238,252,214,247,214,216,238,252,214,209,214,246,238,252,214,253,214,250,238,252,214,251,214,207,238,252,214,248,214,194,238,252,214,249,214,203,238,252,214,230,214,194,238,252,214,231,214,228,238,252,214,229,214,244,238,252,214,213,214,216,238,214,245,244,212,213,215,203,244,215,254,215,220,214,228,732,150,214,252,214,226,198,242,213,214,201,252,214,215,214,208,238,252,214,212,214,215,238,252,214,210,214,227,238,252,214,208,214,218,238,252,214,222,214,215,238,252,214,220,214,224,238,252,214,218,214,218,238,252,214,219,214,215,238,252,214,223,214,225,238,252,214,217,214,218,238,214,245,244,212,214,238,255,213,215,240,214,150,214,252,214,226,198,242,213,214,201,252,214,215,214,208,238,252,214,212,214,215,238,252,214,210,214,245,238,252,214,208,214,218,238,252,214,222,214,239,238,214,245,244,212,214,238,255,213,215,240,214,192,236,150,214,255,215,212,240,218,240,221,150,221,218,239,959,192,254,213,214,201,252,214,215,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,223,238,252,214,219,214,218,238,252,214,223,214,216,238,252,214,217,214,198,238,252,214,199,214,228,238,252,214,197,214,228,238,252,214,195,214,246,238,252,214,221,214,228,238,252,214,206,214,216,238,252,214,204,214,237,238,252,214,202,214,246,238,252,214,211,214,205,238,252,214,201,214,200,238,252,214,247,214,255,238,252,214,209,214,207,238,252,214,253,214,228,238,252,214,251,214,234,238,252,214,248,214,203,238,252,214,249,214,235,238,252,214,230,214,216,238,214,245,244,212,213,215,213,214,201,252,214,215,214,244,238,252,214,212,214,216,238,214,245,244,212,192,232,150,218,244,215,203,203,203,244,215,254,215,220,214,228,959,192,243,150,221,255,215,212,240,216,240,219,150,219,239,1274,192,214,213,214,201,252,214,215,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,223,238,252,214,219,214,218,238,252,214,223,214,216,238,252,214,217,214,223,238,252,214,199,214,192,238,252,214,197,214,228,238,252,214,195,214,234,238,252,214,221,214,252,238,252,214,206,214,207,238,252,214,204,214,216,238,252,214,202,214,194,238,252,214,211,214,196,238,252,214,201,214,194,238,252,214,247,214,192,238,252,214,209,214,193,238,252,214,253,214,207,238,252,214,251,214,205,238,252,214,248,214,200,238,252,214,249,214,246,238,252,214,230,214,244,238,252,214,231,214,216,238,214,245,244,212,213,215,203,244,215,254,215,228,1061,192,254,213,214,201,252,214,215,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,223,238,252,214,219,214,218,238,252,214,223,214,216,238,252,214,217,214,198,238,252,214,199,214,228,238,252,214,197,214,228,238,252,214,195,214,246,238,252,214,221,214,228,238,252,214,206,214,216,238,252,214,204,214,194,238,252,214,202,214,196,238,252,214,211,214,194,238,252,214,201,214,192,238,252,214,247,214,193,238,252,214,209,214,207,238,252,214,253,214,205,238,252,214,251,214,203,238,252,214,248,214,200,238,252,214,249,214,246,238,252,214,230,214,216,238,214,245,244,212,213,215,213,214,201,252,214,215,214,244,238,252,214,212,214,216,238,214,245,244,212,192,232,150,216,244,215,203,203,203,244,215,254,215,220,214},P={{K={{106,48,248,188},{70,38,226,170,89,7,210},1,117,2,40,3,59,4,45,5,90},C={192,214,252,214,215,198,242,213,214,213,215,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,213,238,214,221,244,212,213,212,203,203,211,255,213,-1,220,-1},P={},U={{0,2},{0,0},{0,1}},nParams=0},{K={{106,48,248,188},{70,38,226,170,89,7,210},1,117,2,59,3,42,4,51,5,6,41,7,57,8,40,9,10,11,46,12,13,90},C={192,214,252,214,215,198,242,213,214,213,215,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,213,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,223,238,252,214,196,214,209,238,252,214,197,214,194,238,252,214,195,214,218,238,252,214,192,214,213,238,214,193,244,212,213,212,203,203,255,212,-1,220,-1},P={},U={{0,2},{0,0},{0,1}},nParams=0},{K={1,117,2,40,3,59,4,45,5,90},C={213,214,213,215,213,212,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,215,238,214,223,244,212,213,213,203,203,255,215,-1,220,-1},P={},U={{0,3},{0,2},{0,0},{0,1}},nParams=0},{K={1,117,2,59,3,42,4,51,5,6,41,7,57,8,40,9,10,11,46,12,13,90},C={213,214,213,215,213,212,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,215,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,209,238,252,214,198,214,211,238,252,214,199,214,196,238,252,214,197,214,220,238,252,214,194,214,215,238,214,195,244,212,213,213,203,203,255,215,-1,220,-1},P={},U={{0,3},{0,2},{0,0},{0,1}},nParams=0},{K={{71,2,218,151,89,4,198,134,73,20}},C={213,214,252,214,214,198,242,213,215,255,212,-1,220,-1},P={},U={{0,4},{1,8}},nParams=0}},U={{0,0},{1,0},{0,1},{0,2},{0,3}},nParams=0}},U={{1,1},{1,11},{1,23},{1,8}},nParams=1},{K={{97,62,226,188,111},{},{127,50,254,169,108},{70,61,235,181,66,8,205},{87,60,247,185,103,12,219,158,69,54,209,148,45,225},1,22,2,59,3,56,4,63,5,54,90,{73,4,221,157},{120,11,200,142},{121,6,198,159,90,1,210,136},{73,20,201,133,66,7},{79,4,196,136},{70,3,217,141},{80,2,199,138,80,3,248,158,55,226,172,96,33,238}},C={150,214,252,214,214,198,242,244,215,240,215,150,215,214,215,246,239,156,192,212,213,214,255,215,213,240,210,240,213,240,212,237,212,213,210,224,211,224,208,150,212,150,213,150,210,255,212,212,240,208,240,211,150,211,240,210,150,211,209,148,239,144,150,208,214,213,211,238,228,245,220,214,228,156,209,240,209,192,212,213,214,255,215,213,240,220,240,223,240,222,237,222,223,220,224,221,224,218,150,222,150,223,150,220,255,212,212,240,218,240,221,150,221,240,220,150,221,209,148,239,345,221,150,218,252,214,210,198,242,213,215,201,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,214,217,255,212,-1,204,215,240,219,150,219,252,239,28,254,215,150,219,214,198,198,252,214,214,198,242,244,215,252,214,199,198,242,150,215,214,211,211,244,210,240,216,213,212,150,221,198,240,217,231,240,198,150,217,252,239,52,254,215,150,217,214,196,198,239,384,192,197,150,217,214,196,198,255,215,213,240,197,240,196,240,199,237,199,196,197,224,194,224,195,150,199,150,196,150,197,255,212,212,240,195,240,194,150,194,240,197,150,194,209,148,239,386,150,195,214,194,198,252,214,214,198,242,244,215,252,214,199,198,242,150,215,214,211,211,244,210,252,218,239,415,254,215,150,195,214,195,198,252,214,214,198,242,244,215,252,214,199,198,242,150,215,214,211,211,244,210,239,388,211,240,198,228,386,228,388,228,46,228,384,150,216,252,218,239,438,254,215,150,198,239,419,150,218,214,213,211,238,150,209,218,239,421,150,221,240,209,228,421,228,429,150,218,214,213,231,238,224,219,224,216,224,217,224,198,224,199,224,196,224,197,224,194,224,195,228,136,150,209,252,239,333,254,215,213,213,150,209,148,239,369,192,192,150,209,244,215,254,215,228,369,220,214},P={},U={{1,45},{1,1},{1,56},{1,46}},nParams=1},{K={{89,52,237,173}},C={213,214,213,215,214,214,198,244,215,254,215,220,214},P={},U={{1,58},{1,43}},nParams=0},{K={{125,48,252,171,110},{73,55,226,153,118,11,202,142,92,23,216},{70,32,214},1,15,2,19,3,22,4,51,5,41,6,46,7,8,59,9,35,10,53,11,47,12,90,62,52,61,{110,11,193,130,72,17,187}},C={221,192,214,213,214,252,214,215,198,242,255,215,-1,204,213,240,212,240,215,240,214,237,214,215,212,224,213,224,210,150,214,150,215,150,212,255,212,212,240,210,240,213,150,213,240,212,150,213,209,148,239,56,221,150,210,252,214,212,198,242,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,222,238,252,214,198,214,199,238,252,214,196,214,197,238,252,214,194,214,195,238,252,214,192,214,193,238,252,214,206,214,216,238,214,207,255,212,-1,204,215,218,252,239,11,254,215,221,150,210,252,214,212,198,242,213,215,201,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,194,238,252,214,223,214,199,238,252,214,221,214,204,238,252,214,219,214,204,238,252,214,217,214,220,238,252,214,198,214,205,238,252,214,196,214,202,238,214,207,255,212,-1,204,215,218,239,58,150,210,252,214,203,198,242,244,215,254,215,228,58,228,207,220,214},P={},U={{1,65},{1,1}},nParams=0},{K={1,40,2,63,3,59,4,52,5,51,6,55,7,8,46,9,10,53,11,90,61,54,35,32,120,{111,4,221,134,87,20,221,103},{73,14,216},28,{103,12,220,144},{121,7,200,147},{126,43,218,154,9},0,{111,16,214,146,90,243,170,124,35,245,150,118,49,206,151,26},{77,19,196,158},{109,18,212,144,88,241,168,126,33,247,131,105,62,205,148,91,14,193,146,85,28,186},0.15,{115,26,203,153,36,247,154,100,43,240,137,116,25,192,133},{126,23,195,145,55,242,133,124,54,243,168},{112,27,210,143,48,195,174,124,48,242,181,123,2,201,159,92},{100,25,206,101,42,252},0.88,{84,21,204,102,35,248},0.5,14,34,22,56,{108,239,183,97,56,249,187,118},{105,228,189,125},100,{107,230,191,127,12,252,187,116,45,144},{52,225,176,120,29,225,172,121,4},{21,224,177,121,2,252,163,120},{4,233,164,122},{6,233,190,98},{7,231,168,117},{31,192,163,117,48,225},70,12,{60,233,168,96},{14,226,165,125,56,240,163,74,5,201},{30,235,170,98,2,223,142,79,13,192,159,83,20,202},{7,234,181,99},{24,245,172,108,8,210,145,70,15,209,128,93},{12,229,144,119,57},{58,247,174,110,26,203,139},{8,252,163,115,62,206},{4,241,160,104,57,229,132,69,23,218,149,89,238,176},{5,250,169},{6,243,162,106,53,212,139,94,2,211,158},{7,242,163,107,55,213,138,65,0,199,154,77,230,169,104,54},47,16,72,44,{58,251},{15,244,146,76,11,193,148},{41,238,135,67,14},{53,240,128,75,2,223},{53,206,130,65,2,217,128,93,35,170,113,37,252},{62,192,151,118,12,223,156,84,14},{42,210,185,70,7,193,130},{59,198,129,74,26,223,131},{41,202,152,89,4,246,157,91,225,170},{34,202,135,67,20,214,141},36,18,{3,218,137,85,26},0.75,45,24,{28,195,151,83,20,217,79,34,238},{},{39,193,135,69,31,251,108,50,239,188},{38,192,134,68,30,243,102,38,253,170},{33,223,129,75,25,130,113,60,248,191,122,105,223,140,77,11,199}},C={150,211,213,214,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,211,238,252,214,219,214,216,238,252,214,217,214,223,238,252,214,198,214,199,238,252,214,196,214,209,238,214,197,244,212,246,240,209,150,211,213,214,201,252,214,214,214,216,238,252,214,212,214,199,238,252,214,210,214,194,238,252,214,208,214,194,238,252,214,222,214,195,238,252,214,220,214,213,238,252,214,218,214,199,238,252,214,219,214,209,238,252,214,217,214,195,238,252,214,198,214,192,238,214,197,244,212,246,240,222,231,240,223,214,193,240,220,214,206,240,221,221,192,207,214,204,198,213,214,201,252,214,214,214,205,238,252,214,212,214,215,238,252,214,210,214,211,238,252,214,208,214,221,238,252,214,222,214,213,238,214,197,255,212,-1,204,215,240,218,150,218,214,202,150,214,238,150,218,214,203,192,200,214,204,198,214,214,214,201,214,201,150,220,244,210,238,150,218,214,246,213,215,214,247,198,238,150,218,214,244,214,245,238,150,218,214,242,214,201,238,150,218,214,243,150,210,252,218,239,452,254,215,214,201,238,150,218,214,240,211,238,150,218,214,241,213,212,238,213,213,150,218,214,220,244,212,254,215,213,210,150,218,214,254,213,215,214,255,198,214,252,244,210,254,215,231,240,219,150,219,239,1460,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,216,150,216,214,203,192,200,214,204,198,214,201,214,253,214,201,214,253,244,210,238,150,216,214,249,192,200,214,204,198,214,201,214,220,214,252,214,218,212,244,210,238,150,216,214,244,214,214,238,150,216,214,230,213,214,201,252,214,214,214,231,238,214,197,244,212,238,150,216,214,228,213,215,214,229,198,238,150,216,214,226,214,198,238,150,216,214,227,192,224,214,227,198,214,225,198,238,150,216,214,238,214,210,238,150,216,214,241,150,218,238,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,217,150,217,214,203,192,200,214,204,198,214,214,214,239,212,214,201,214,236,244,210,238,150,217,214,249,192,200,214,204,198,214,201,214,251,214,201,214,212,244,210,238,150,217,214,244,214,214,238,150,217,214,230,150,214,238,150,217,214,228,213,215,214,237,198,238,150,217,214,226,214,196,238,150,217,214,227,192,224,214,227,198,214,234,198,238,150,217,214,235,192,224,214,235,198,214,232,198,238,150,217,214,233,192,224,214,233,198,214,150,198,238,150,217,214,238,214,210,238,150,217,214,241,150,218,238,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,198,150,198,214,203,192,200,214,204,198,214,214,214,239,212,214,201,214,219,244,210,238,150,198,214,249,192,200,214,204,198,214,201,214,251,214,201,214,253,244,210,238,150,198,214,244,214,214,238,150,198,214,230,150,215,238,150,198,214,228,213,215,214,151,198,238,150,198,214,226,214,219,238,150,198,214,227,192,224,214,227,198,214,148,198,238,150,198,214,235,192,224,214,235,198,214,232,198,238,150,198,214,233,192,224,214,233,198,214,150,198,238,150,198,214,238,214,210,238,150,198,214,241,150,218,238,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,199,150,199,214,203,192,200,214,204,198,214,214,214,205,212,214,201,214,201,244,210,238,150,199,214,249,192,200,214,204,198,214,201,214,251,214,201,214,193,244,210,238,150,199,214,244,214,214,238,150,199,214,230,150,215,238,150,199,214,228,213,215,214,151,198,238,150,199,214,226,214,217,238,150,199,214,227,192,224,214,227,198,214,148,198,238,150,199,214,235,192,224,214,235,198,214,232,198,238,150,199,214,149,192,224,214,149,198,214,146,198,238,150,199,214,147,211,238,150,199,214,144,214,214,238,150,199,214,238,214,210,238,150,199,214,241,150,218,238,221,192,207,214,204,198,213,214,201,252,214,214,214,205,238,252,214,212,214,215,238,252,214,210,214,211,238,252,214,208,214,221,238,252,214,222,214,213,238,214,197,255,212,-1,204,215,240,196,150,196,214,202,213,214,201,252,214,214,214,217,238,252,214,212,214,145,238,252,214,210,214,248,238,252,214,208,214,198,238,252,214,222,214,211,238,252,214,220,214,209,238,252,214,218,214,213,238,252,214,219,214,195,238,214,197,244,212,238,150,196,214,203,192,200,214,204,198,214,214,214,158,212,214,201,214,159,244,210,238,150,196,214,249,192,200,214,204,198,214,201,214,219,214,201,214,156,244,210,238,150,196,214,246,213,215,214,157,198,238,150,196,214,244,214,252,238,150,196,214,242,214,201,238,150,196,214,238,214,210,238,150,196,214,154,231,238,150,196,214,241,150,218,238,213,213,150,196,214,208,244,212,254,215,234,215,240,197,201,252,214,155,234,212,238,252,214,152,234,213,238,252,214,153,234,210,238,252,214,134,234,211,238,252,214,135,234,208,238,252,214,132,234,209,238,240,194,221,213,209,150,216,214,133,198,252,214,130,198,242,234,222,255,212,-1,204,215,254,215,228,1973,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,195,150,195,214,203,192,200,214,204,198,214,214,214,248,212,214,201,214,236,244,210,238,150,195,214,249,192,200,214,204,198,214,201,214,236,214,252,214,220,212,244,210,238,150,195,214,244,214,214,238,150,195,214,230,150,214,238,150,195,214,228,213,215,214,237,198,238,150,195,214,226,214,196,238,150,195,214,227,192,224,214,227,198,214,234,198,238,150,195,214,235,192,224,214,235,198,214,232,198,238,150,195,214,233,192,224,214,233,198,214,150,198,238,150,195,214,238,214,210,238,150,195,214,241,150,218,238,221,192,207,214,204,198,213,214,201,252,214,214,214,205,238,252,214,212,214,215,238,252,214,210,214,211,238,252,214,208,214,221,238,252,214,222,214,213,238,214,197,255,212,-1,204,215,240,192,150,192,214,203,192,200,214,204,198,214,201,214,131,214,201,214,196,244,210,238,150,192,214,249,192,200,214,204,198,214,201,214,236,214,201,214,128,244,210,238,150,192,214,246,213,215,214,129,198,238,150,192,214,244,214,142,238,150,192,214,242,214,201,238,150,192,214,238,214,210,238,150,192,214,241,150,218,238,213,213,150,192,214,210,244,212,254,215,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,251,238,252,214,220,214,211,238,252,214,218,214,248,238,252,214,219,214,213,238,252,214,217,214,195,238,214,197,255,212,-1,204,215,240,193,150,193,214,203,192,200,214,204,198,214,214,214,201,214,214,214,201,244,210,238,150,193,214,244,214,214,238,150,193,214,230,213,214,201,252,214,214,214,205,238,252,214,212,214,195,238,252,214,210,214,199,238,252,214,208,214,143,238,214,197,244,212,238,150,193,214,228,213,215,214,129,198,238,150,193,214,226,214,218,238,150,193,214,227,192,224,214,227,198,214,234,198,238,150,193,214,238,214,210,238,150,193,214,241,150,192,238,221,192,207,214,204,198,213,214,201,252,214,214,214,253,238,252,214,212,214,213,238,252,214,210,214,250,238,252,214,208,214,216,238,252,214,222,214,140,238,252,214,220,214,145,238,252,214,218,214,216,238,252,214,219,214,216,238,252,214,217,214,199,238,252,214,198,214,209,238,214,197,255,212,-1,204,215,240,206,150,206,214,202,213,214,201,252,214,214,214,253,238,252,214,212,214,199,238,252,214,210,214,194,238,252,214,208,214,194,238,252,214,222,214,195,238,252,214,220,214,213,238,252,214,218,214,140,238,252,214,219,214,216,238,252,214,217,214,209,238,214,197,244,212,238,150,206,214,203,192,200,214,204,198,214,201,214,205,214,201,214,253,244,210,238,150,206,214,249,192,200,214,204,198,214,214,214,250,212,214,252,214,218,212,244,210,238,150,206,214,246,150,213,252,239,2299,254,215,213,215,214,129,198,252,218,239,2286,254,215,213,215,214,141,198,238,150,206,214,230,214,138,238,150,206,214,238,214,208,238,150,206,214,241,150,218,238,213,213,150,206,214,218,244,212,254,215,221,192,207,214,204,198,213,214,201,252,214,214,214,205,238,252,214,212,214,215,238,252,214,210,214,211,238,252,214,208,214,221,238,252,214,222,214,213,238,214,197,255,212,-1,204,215,240,207,150,207,214,203,192,200,214,204,198,214,201,214,198,214,201,214,198,244,210,238,150,207,214,249,150,213,252,239,2158,254,215,192,200,214,204,198,214,214,214,236,212,214,252,214,222,212,244,210,252,218,239,2072,254,215,192,200,214,204,198,214,201,214,212,214,252,214,222,212,244,210,238,150,207,214,246,213,215,214,237,198,238,150,207,214,238,214,222,238,150,207,214,241,150,206,238,213,213,150,207,214,222,244,212,254,215,150,213,252,218,239,2092,254,215,231,240,204,221,213,209,150,218,214,139,198,252,214,130,198,242,234,223,255,212,-1,204,215,254,215,221,213,209,150,218,214,136,198,252,214,130,198,242,234,220,255,212,-1,204,215,254,215,221,213,209,150,206,214,137,198,252,214,130,198,242,234,221,255,212,-1,204,215,254,215,150,218,220,215},P={{K={{68,63,230,173,124,15,198,140},{96,55,225},1,14,2,63,3,34,4,46,5,24,6,47,7,8,9,53,10,52,90,{113,15,208,139},{118,35,194,130,1},0,70,{100,11,205,153,81,8,209,119,40,238,141,125,58,245,172,17},{64,25,202,150,89},{106,13,211,159,95,14,175,113,38,232,132,102,57,242,147,84,9,222,149,90,27,197},0.6,{126,11,202,130},{127,10,203,131,120,16,175,104,57,188},{88,21,204,140},{121,20,205,141,110,232,191,108},{104,29,216,142},{106,29,194,150},{119,27,204,148,33,233,138,99,60,240},{125,20,192,146,52,241,134,127,53,240,171},{104,63,212,154,39,254},{99,22,201,154,45,243},{121,23,201,115,33,205,162,100,49,234},{118,22,211,111,32,234,185},{123,21,203,113,35,198,171,115,32,255},{122,20,202,112,34,201,186,103,35,244,177,18,36,199,134,80,28}},C={221,192,214,214,215,198,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,223,238,252,214,217,214,223,238,252,214,198,214,199,238,252,214,196,214,197,238,214,194,255,212,-1,204,215,240,210,150,210,214,195,192,192,214,215,198,214,193,214,206,214,193,214,221,244,210,238,150,210,214,207,150,215,252,218,239,165,254,215,213,215,214,204,198,238,150,210,214,205,214,202,238,150,210,214,203,150,214,238,150,210,214,200,213,215,214,201,198,238,150,210,214,246,214,198,238,150,210,214,247,192,244,214,247,198,214,245,198,238,150,210,214,242,150,212,252,218,239,120,254,215,214,193,238,150,210,214,243,214,220,238,150,210,214,240,213,212,238,213,213,150,210,214,222,244,212,254,215,150,210,214,241,198,252,214,254,198,242,234,215,244,212,254,215,150,210,214,255,198,252,214,254,198,242,234,212,244,212,254,215,150,213,239,43,150,210,214,252,198,252,214,254,198,242,150,213,244,212,254,215,228,43,150,210,220,215},P={{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,237,143,32,235,186,125,48,231,188,115,2,220},0.3,{67,59,250,166}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,214,211,238,244,210,252,214,208,198,242,244,215,254,215,220,214},P={},U={{0,4},{1,4}},nParams=0},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,237,143,32,235,186,125,48,231,188,115,2,220},0.6,{67,59,250,166}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,214,211,238,244,210,252,214,208,198,242,244,215,254,215,220,214},P={},U={{0,4},{1,4}},nParams=0}},U={{0,0},{0,1},{1,18},{0,3},{0,5}},nParams=4},{K={1,9,2,42,3,63,4,5,62,6,122,7,111,8,106,90,{122,19,192,140,67},107,104,{89,1,196,128,95,3},41,46,{81,2,207}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,211,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,214,217,244,212,213,212,214,198,198,214,214,234,215,244,210,254,215,213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,211,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,199,238,252,214,219,214,216,238,252,214,215,214,216,238,214,217,244,212,213,212,214,198,198,214,212,234,212,244,210,254,215,213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,211,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,196,238,252,214,219,214,216,238,252,214,215,214,216,238,214,217,244,212,213,212,214,197,198,214,210,234,213,244,210,254,215,213,214,213,215,201,252,214,214,214,219,238,252,214,212,214,211,238,252,214,210,214,194,238,252,214,208,214,211,238,252,214,209,214,195,238,214,217,244,212,213,212,214,192,198,214,208,234,210,244,210,254,215,220,214},P={{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{106,48,248,188},{94,62,247,163,123,16,213},{67,60,244,186,115,51,203,138,86,22,197},{83,60,249,174,65,7,220,137,66},{89,32,244,188,79,10,192,137},{69,55,246,181,113,22,207,139,86},50},C={192,214,214,215,198,214,212,198,214,213,198,214,210,198,214,211,214,208,238,220,214},P={},U=nil,nParams=0}},U=nil,nParams=0},{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{106,48,248,188},{94,62,247,163,123,16,213},{67,60,244,186,115,51,203,138,86,22,197},{83,60,249,174,65,7,220,137,66},{89,32,244,188,79,10,192,137},{69,55,246,181,113,22,207,139,86},100},C={192,214,214,215,198,214,212,198,214,213,198,214,210,198,214,211,214,208,238,220,214},P={},U=nil,nParams=0}},U=nil,nParams=0},{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{106,48,248,188},{94,62,247,163,123,16,213},{67,60,244,186,115,51,203,138,86,22,197},{83,60,249,174,65,7,220,137,66},{89,32,244,188,79,10,192,137},{69,55,246,181,113,22,207,139,86},200},C={192,214,214,215,198,214,212,198,214,213,198,214,210,198,214,211,214,208,238,220,214},P={},U=nil,nParams=0}},U=nil,nParams=0},{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{106,48,248,188},{94,62,247,163,123,16,213},{67,60,244,186,115,51,203,138,86,22,197},{83,60,249,174,65,7,220,137,66},{89,32,244,188,79,10,192,137},{69,55,246,181,113,22,207,139,86},16},C={192,214,214,215,198,214,212,198,214,213,198,214,210,198,214,211,214,208,238,220,214},P={},U=nil,nParams=0}},U=nil,nParams=0}},U={{1,19},{0,0},{0,1}},nParams=0},{K={1,20,2,53,3,57,4,54,5,51,6,42,7,122,8,21,9,90,{120,17,194,142,65},28,10,{80,3,206}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,215,238,214,199,244,212,213,212,214,196,198,214,214,234,215,244,210,254,215,213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,197,238,252,214,194,214,197,238,214,199,244,212,213,212,214,195,198,214,212,234,212,244,210,254,215,220,214},P={{K={{82,22},{73,58,249,169,106,17,232,133,77,30,223,138}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0},{K={{82,22},{73,58,249,169,106,17,232,133,77,30,223,138}},C={192,214,214,215,231,238,220,214},P={},U=nil,nParams=0}},U={{1,19},{0,0},{0,1}},nParams=0},{K={1,16,2,47,3,55,4,42,5,122,6,21,7,20,90,{123,18,193,141,66},28,8,{109,6,195}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,214,216,244,212,213,212,214,217,198,214,214,234,215,244,210,254,215,213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,198,238,252,214,199,214,198,238,214,216,244,212,213,212,214,196,198,214,212,234,212,244,210,254,215,220,214},P={{K={{82,22},{73,58,249,169,106,17,239,132,72,56,195,151,78}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0},{K={{82,22},{73,58,249,169,106,17,239,132,72,56,195,151,78}},C={192,214,214,215,231,238,220,214},P={},U=nil,nParams=0}},U={{1,19},{0,0},{0,1}},nParams=0},{K={1,10,2,40,3,63,4,44,90,{111,63,242,142,73,29},20,34,46,54,59,35,{122,19,192,140,67},9,53,42,{83,0,205}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,214,222,244,212,213,212,214,223,198,214,214,234,215,244,210,254,215,213,214,213,215,201,252,214,214,214,220,238,252,214,212,214,211,238,252,214,210,214,221,238,252,214,208,214,218,238,214,222,244,212,213,212,214,223,198,214,212,234,212,244,210,254,215,213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,219,238,252,214,210,214,216,238,252,214,208,214,217,238,214,222,244,212,213,212,214,198,198,214,210,234,213,244,210,254,215,213,214,213,215,201,252,214,214,214,199,238,252,214,212,214,218,238,252,214,210,214,196,238,252,214,208,214,197,238,214,222,244,212,213,212,214,194,198,214,208,234,210,244,210,254,215,220,214},P={{K={{82,22},{73,58,249,169,106,17,229,139,92,34,196,159,72}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0},{K={{82,22},{73,58,249,169,106,17,229,139,92,60,211,130,74}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0},{K={{82,22},{73,58,249,169,106,17,229,139,92,34,218,155,71}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0},{K={{82,22},{73,58,249,169,106,17,229,139,92,33,194,149,78}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0}},U={{1,19},{0,0},{0,1}},nParams=0},{K={1,8,2,63,3,60,4,40,5,6,41,7,50,90,{124,45,198,130,69}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,213,238,252,214,223,214,220,238,252,214,221,214,218,238,214,219,244,212,213,212,214,216,198,214,214,234,215,244,210,254,215,220,214},P={{K={{82,22},{73,58,249,169,106,17,242,186,124,23,208,136,91,241,174}},C={192,214,214,215,211,238,220,214},P={},U=nil,nParams=0}},U={{1,19},{0,0},{0,1}},nParams=0},{K={1,8,2,47,3,52,4,122,5,9,6,57,7,40,51,42,10,46,90,{71,22,205,137,94},53,{80,3,206}},C={213,214,213,215,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,215,214,216,238,252,214,223,214,217,238,252,214,198,214,199,238,214,196,244,212,213,212,214,197,198,214,214,234,215,244,210,254,215,213,214,213,215,201,252,214,214,214,223,238,252,214,212,214,199,238,252,214,210,214,194,238,252,214,208,214,217,238,214,196,244,212,213,212,214,195,198,214,212,234,212,244,210,254,215,220,214},P={{K={},C={213,214,213,215,244,215,254,215,220,214},P={},U={{0,3},{0,4}},nParams=0},{K={{125,50,244,181,113}},C={192,214,234,215,244,215,254,215,220,214},P={{K={{125,48,252,171,110},1,29,2,50,3,53,4,41,5,46,6,7,20,8,9,57,10,54,11,51,12,42,90,19,52,60,16,47,55,13,25,59,40,63,62,{110,50}},C={192,214,201,252,214,215,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,222,238,252,214,218,214,219,238,252,214,216,214,208,238,252,214,217,214,198,238,252,214,199,214,196,238,252,214,197,214,194,238,252,214,195,214,192,238,214,193,244,212,238,252,214,213,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,222,238,252,214,218,214,206,238,252,214,216,214,207,238,252,214,217,214,204,238,252,214,199,214,205,238,252,214,197,214,202,238,252,214,195,214,203,238,252,214,200,214,192,238,214,193,244,212,238,252,214,211,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,222,238,252,214,218,214,201,238,252,214,216,214,246,238,252,214,217,214,247,238,252,214,199,214,217,238,252,214,197,214,220,238,252,214,195,214,208,238,252,214,200,214,192,238,214,193,244,212,238,221,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,222,238,252,214,218,214,217,238,252,214,216,214,192,238,252,214,217,214,244,238,252,214,199,214,244,238,252,214,197,214,245,238,214,193,255,212,-1,229,210,255,215,213,240,212,240,215,240,214,237,214,215,212,224,213,224,210,150,214,150,215,150,212,255,212,212,240,210,240,213,150,213,240,212,150,213,209,148,239,339,192,242,150,210,231,238,228,436,220,214},P={},U={{0,0}},nParams=0}},U={{0,1}},nParams=0}},U={{1,19},{0,0},{0,1},{0,6},{1,6}},nParams=0},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72},{82,39,252,188,85,0},{70,33,255,187,76,47,196,136,93},{125,50,236},0.25,{80,56,238,136,75,14,254,133,76,21,216},{71,47,255,134},{68,50,229,134},{77,24,201,137,26},1,0,{75,51,194,158},{78,15,208,137,88,25,219,150},90,{121,3,203,143},{88,6,211,184,74,1,193,146,92,230},14,2,63,3,34,4,46,5,9,6,7,40,8,44,51,10,57,11,{117,19,206,170,39,254,190,93,59,236,191},{117,24,213,139},{115,23,200,104,37,229},{99,28,222,117,42,251,255},{119,24,205,109,42,255,186,119,5,243,164,71},{111},1000,{84,28,181,109},{87,23,172},{98},16,28,{106,231,190,126,26,224,183,116,45,210,135,88,11,220,149,67},{105,234,180,98,45,255,178},{3,232,173,109,34,213,180,112,35,204,129,64,20,198,157,82},{8,235,186,121,48,251,186,120},15,19,22,41,59,35,53,47,12,{13,230,191,123,31,246,145,66,8,219,154,88,21},{4,255,166,113,38,207,138,92,13,220},{5,254,167,112,39,206,139,93,12,221,180,85,20,166,107,36,232,191,97},{13,247,184,110,59,208},{31,242,179,127,54,205,128},{5,208,177,113},{2,250,171,105,46,215,141,72,3},{30,247,163,113,23,210,165,92,22,211,136},{5,242,169,107,10,196,138,67,50,219,146,88,237,170,110,33,231},{4,249,174,69,10,220},62,52,61,{8,253,132,64,1,194,151,120,29,218,116},{9,252,133,65,0,195,150,103,16,218,105,49},{62,251,132,71,31,194,134},0.2},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,523,213,214,218,207,214,213,215,252,214,210,198,242,213,212,192,211,214,208,198,214,209,192,215,214,222,198,214,223,198,244,212,201,252,214,220,192,221,214,208,198,214,218,214,219,214,219,213,214,252,239,141,254,215,213,213,252,218,239,181,254,215,213,210,244,210,238,244,210,252,214,216,198,242,244,215,254,215,213,215,252,214,210,198,242,213,211,192,211,214,208,198,214,209,244,215,201,252,214,217,213,214,252,239,70,254,215,214,198,252,218,239,78,254,215,214,219,238,244,210,252,214,216,198,242,244,215,254,215,213,214,239,615,221,221,192,199,252,214,196,198,242,213,208,201,252,214,218,214,197,238,252,214,194,214,195,238,252,214,192,214,193,238,252,214,206,214,207,238,252,214,204,214,205,238,252,214,202,214,195,238,252,214,203,214,200,238,252,214,201,214,246,238,252,214,205,214,247,238,252,214,244,214,245,238,252,214,242,214,195,238,214,198,255,212,-1,204,215,252,214,243,198,242,213,209,214,205,192,215,214,240,198,214,241,198,192,254,214,208,198,213,212,214,255,198,214,252,198,214,193,248,214,253,255,212,-1,204,215,240,215,192,250,214,251,198,150,215,214,248,198,214,206,151,214,249,244,212,240,212,213,215,252,214,210,198,242,213,222,192,211,214,208,198,214,209,244,215,201,252,214,220,192,221,214,208,198,214,218,214,230,212,214,219,150,212,244,210,238,252,214,231,214,219,238,244,210,252,214,216,198,242,244,215,254,215,213,223,214,228,211,238,213,223,252,214,229,198,242,244,215,254,215,221,192,226,214,208,198,213,208,201,252,214,218,214,227,238,252,214,194,214,224,238,252,214,192,214,225,238,252,214,206,214,247,238,252,214,204,214,238,238,252,214,202,214,207,238,252,214,203,214,225,238,252,214,201,214,239,238,252,214,205,214,236,238,252,214,244,214,237,238,252,214,242,214,234,238,252,214,235,214,207,238,214,198,255,212,-1,204,215,240,213,150,213,214,232,192,215,214,232,198,214,233,198,238,150,213,214,150,192,215,214,150,198,214,151,198,238,150,213,214,148,192,149,214,208,198,214,219,214,202,244,212,238,150,213,214,146,192,215,214,146,198,214,147,198,238,150,213,214,144,192,215,214,144,198,214,151,198,238,150,213,214,145,213,223,238,221,192,226,214,208,198,213,208,201,252,214,218,214,227,238,252,214,194,214,224,238,252,214,192,214,244,238,252,214,206,214,239,238,252,214,204,214,158,238,252,214,202,214,158,238,252,214,203,214,247,238,252,214,201,214,159,238,252,214,205,214,156,238,214,198,255,212,-1,204,215,240,210,150,210,214,157,192,149,214,208,198,214,219,214,202,244,212,238,150,210,214,154,192,149,214,208,198,214,219,214,202,244,212,238,150,210,214,145,213,223,238,213,220,213,221,198,252,218,239,625,254,215,213,220,214,155,198,240,211,150,211,244,214,254,215,228,525,213,215,252,214,210,198,242,213,222,192,211,214,208,198,214,152,244,215,201,252,214,231,214,218,238,244,210,252,214,216,198,242,244,215,254,215,213,223,214,228,231,238,228,523,220,214},P={},U={{1,9},{0,5},{1,12},{1,11},{1,10},{1,14},{0,0},{1,1},{1,17},{1,18},{1,20},{1,6}},nParams=1},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,250,146,45,234,187,62},{113,55,232,186,106,9,220,139,64},{67,59,250,166}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,213,212,214,211,198,238,244,210,252,214,208,198,242,244,215,254,215,220,214},P={},U={{0,5},{1,12},{0,1}},nParams=0},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.15,{83,52,250,182,70,23,198,152,95,17,250,146,45,234,187,62},{113,55,232,186},{67,59,250,166}},C={213,214,252,214,214,198,242,213,215,192,215,214,212,198,214,213,244,215,201,252,214,210,213,212,214,211,198,238,244,210,252,214,208,198,242,244,215,254,215,220,214},P={},U={{0,5},{1,12},{0,1}},nParams=0},{K={{78,35,240,184,105,4},{90,37,243,191,112,43,200,140,65},{97,54,224},0.2,{84,59,236,176},{87,55,233,183,76,1,249,154,75,26,223},{66,34,250,187},{86,57,255,139,67,26,195,133,90,28,255,111,40,231,190,35},{114,43,248,132,75},{98,53,249,133,74,15,225,148,80},{71,55,254,154},{72,51,211,141,92,5,223,154},{76,25,200,136,27},1,12,0.5,5,0,2,40,63,3,59,4,52,51,6,55,7,8,46,9,10,53,11,90,{69,20,202,150},{65,6,219,137,44},{67,20,218,147,47},61,54,35,57,47,62,41,42,{95,236,161,105,34,229,164,75,63,210,141,88,24},{77,224,172,123,62},{121,231,178,73,38,251,186,126,44,199,136},{118,240,134},28,{7,236,167,105,23,252,171,110,21,230,129,68,29,209},14,24,{2,225,162,116,18,241,174,83,16,235,132,89,24,220,179,38,199,164,109,35,231},{29},{9,236,168,97,51,238},{19,238,183,103},122,44},C={213,214,218,207,214,213,215,252,214,214,198,242,213,212,192,215,214,212,198,214,213,192,210,214,211,198,214,208,198,244,212,201,252,214,209,213,214,252,239,249,254,215,213,213,214,222,198,252,218,239,236,254,215,213,213,214,223,198,238,244,210,252,214,220,198,242,244,215,254,215,213,215,252,214,214,198,242,213,210,192,215,214,212,198,214,213,192,210,214,211,198,214,208,198,244,212,201,252,214,221,213,214,252,239,170,254,215,192,218,214,212,198,214,219,214,216,212,214,217,214,198,212,244,210,252,218,239,68,254,215,192,218,214,212,198,214,199,214,196,214,217,214,198,212,244,210,238,244,210,252,214,220,198,242,244,215,254,215,213,211,213,208,201,252,214,219,214,197,238,252,214,196,214,194,238,252,214,195,214,192,238,252,214,193,214,206,238,252,214,198,214,207,238,252,214,204,214,205,238,252,214,202,214,192,238,252,214,203,214,200,238,252,214,201,214,207,238,252,214,246,214,247,238,252,214,244,214,206,238,214,245,244,212,246,239,449,213,214,239,43,192,242,214,243,198,234,215,244,215,254,215,228,451,192,240,234,212,244,215,254,215,192,240,234,213,244,215,254,215,192,240,234,210,244,215,254,215,228,269,213,211,213,208,201,252,214,219,214,200,238,252,214,196,214,247,238,252,214,195,214,241,238,252,214,193,214,241,238,252,214,198,214,254,238,252,214,204,214,194,238,252,214,202,214,247,238,252,214,203,214,206,238,252,214,201,214,254,238,252,214,246,214,255,238,214,245,244,212,246,239,420,213,214,239,422,192,242,214,243,198,234,211,244,215,254,215,228,422,228,269,213,211,213,208,201,252,214,219,214,252,238,252,214,196,214,254,238,252,214,195,214,247,238,252,214,193,214,253,238,252,214,198,214,250,238,252,214,204,214,251,238,252,214,202,214,252,238,252,214,203,214,197,238,252,214,201,214,207,238,252,214,246,214,248,238,252,214,244,214,200,238,214,245,244,212,246,239,269,213,214,239,263,192,242,214,243,198,234,208,244,215,254,215,228,271,192,249,213,223,244,215,254,215,228,269,214,199,240,214,221,192,230,213,220,252,214,231,198,242,255,215,-1,204,213,240,213,240,212,240,215,237,215,212,213,224,210,224,211,150,215,150,212,150,213,255,212,212,240,211,240,210,150,210,240,213,150,210,209,148,239,569,221,150,211,252,214,228,198,242,213,208,201,252,214,219,214,229,238,252,214,196,214,197,238,252,214,195,214,192,238,252,214,193,214,205,238,252,214,198,214,194,238,214,245,255,212,-1,204,215,239,575,221,150,211,252,214,226,198,242,213,208,201,252,214,219,214,227,238,252,214,196,214,247,238,252,214,195,214,241,238,252,214,193,214,241,238,252,214,198,214,254,238,252,214,204,214,194,238,252,214,202,214,224,238,252,214,203,214,200,238,252,214,201,214,206,238,214,245,255,212,-1,204,215,240,208,150,208,239,561,221,150,208,252,214,225,198,242,213,208,201,252,214,219,214,229,238,252,214,196,214,197,238,252,214,195,214,192,238,252,214,193,214,205,238,252,214,198,214,194,238,214,245,255,212,-1,204,215,240,209,150,209,252,239,524,254,215,150,209,214,221,198,214,238,198,214,239,198,214,198,249,239,563,150,214,214,219,151,240,214,228,563,228,561,228,575,224,208,224,209,228,302,213,221,214,236,150,214,213,208,201,252,214,219,214,237,238,252,214,196,214,192,238,252,214,195,214,252,238,252,214,193,214,200,238,252,214,198,214,207,238,252,214,204,214,234,238,252,214,202,214,194,238,214,245,244,212,203,238,220,214},P={{K={1,50,2,46,3,4,42,5,41,6,96,7,117,8,9,61,10,11,53,12,13,14,15,40,16,63,17,59,18,52,19,51,20,55,21,116,22,23,24,47,25,26,27,60,28,54,29,35,30,31,32,33,34,45,36,37,49,38,39,62,43,44,90,{56,233,164,125},{63,244,164,108,56,210,145},57,{39,231,163,107,0,209,130,90,26,214,132,79},{35,237,182},56,{58,226,174,110},{35,244,186,115,15},{},{57,246,188,69,22,221,159,88,27,222}},C={209,240,214,213,214,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,213,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,218,238,252,214,216,214,217,238,252,214,198,214,215,238,252,214,199,214,196,238,252,214,197,214,222,238,252,214,194,214,213,238,252,214,195,214,222,238,252,214,192,214,193,238,252,214,206,214,207,238,252,214,204,214,205,238,252,214,202,214,203,238,252,214,200,214,201,238,252,214,246,214,247,238,252,214,244,214,245,238,252,214,242,214,247,238,252,214,243,214,196,238,252,214,240,214,241,238,252,214,254,214,203,238,252,214,255,214,213,238,252,214,252,214,253,238,252,214,250,214,251,238,252,214,248,214,249,238,252,214,230,214,222,238,252,214,231,214,196,238,252,214,228,214,196,238,252,214,229,214,245,238,252,214,226,214,227,238,252,214,249,214,196,238,252,214,224,214,193,238,252,214,225,214,238,238,252,214,239,214,207,238,252,214,236,214,193,238,252,214,193,214,222,238,252,214,222,214,245,238,252,214,208,214,237,238,252,214,234,214,207,238,252,214,235,214,235,238,214,232,244,212,240,215,192,233,192,150,244,215,213,214,201,252,214,214,214,253,238,252,214,212,214,241,238,252,214,210,214,203,238,252,214,211,214,151,238,252,214,209,214,213,238,252,214,223,214,201,238,252,214,221,214,196,238,252,214,219,214,203,238,214,232,244,212,246,252,239,399,254,215,192,150,252,218,239,370,254,215,192,233,192,148,244,215,213,214,201,252,214,214,214,253,238,252,214,212,214,241,238,252,214,210,214,203,238,252,214,211,214,151,238,252,214,209,214,213,238,252,214,223,214,201,238,252,214,221,214,196,238,252,214,219,214,203,238,214,232,244,212,246,252,239,370,254,215,192,148,252,218,239,752,254,215,192,233,192,149,244,215,213,214,201,252,214,214,214,213,238,252,214,212,214,205,238,252,214,210,214,146,238,252,214,211,214,251,238,252,214,209,214,207,238,214,232,244,212,246,252,239,714,254,215,192,233,192,149,214,150,198,244,215,213,214,201,252,214,214,214,253,238,252,214,212,214,241,238,252,214,210,214,203,238,252,214,211,214,151,238,252,214,209,214,213,238,252,214,223,214,201,238,252,214,221,214,196,238,252,214,219,214,203,238,214,232,244,212,246,252,239,752,254,215,192,149,214,150,198,252,218,239,638,254,215,192,233,192,147,244,215,213,214,201,252,214,214,214,213,238,252,214,212,214,205,238,252,214,210,214,146,238,252,214,211,214,251,238,252,214,209,214,207,238,214,232,244,212,246,252,239,584,254,215,192,233,192,147,214,150,198,244,215,213,214,201,252,214,214,214,253,238,252,214,212,214,241,238,252,214,210,214,203,238,252,214,211,214,151,238,252,214,209,214,213,238,252,214,223,214,201,238,252,214,221,214,196,238,252,214,219,214,203,238,214,232,244,212,246,252,239,638,254,215,192,147,214,150,198,240,212,150,212,239,622,192,144,234,215,244,215,254,215,228,622,150,214,218,252,218,239,528,254,215,150,214,214,145,246,239,516,192,144,234,212,244,215,254,215,228,516,150,214,218,252,218,239,566,254,215,150,214,214,145,246,239,570,192,144,234,213,244,215,254,215,228,570,150,214,218,252,218,239,556,254,215,150,214,214,145,246,239,976,192,144,234,210,244,215,254,215,228,976,150,214,218,252,218,239,962,254,215,150,214,214,145,246,239,1014,192,144,234,211,244,215,254,215,228,1014,150,214,252,239,1018,254,215,150,214,214,145,148,239,1004,192,158,150,214,244,215,244,214,254,215,228,1004,220,214},P={{K={{88,35,249},1,117,2,59,3,42,4,51,5,6,41,7,57,8,40,9,10,11,46,90,{111,3,222,134,93,18},29,31,14,{114,3,195,151,89,15,202},15,{123,24,209,128,77,15,131,107,44,233},200,{104,1,214,143}},C={213,214,201,252,214,214,213,215,213,212,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,212,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,222,238,252,214,199,214,208,238,252,214,196,214,197,238,214,194,244,212,203,238,252,214,195,213,212,201,252,214,215,214,192,238,252,214,213,214,193,238,252,214,211,214,206,238,214,194,244,212,238,252,214,207,214,204,238,244,215,240,214,150,214,252,239,95,254,215,150,214,214,205,198,214,202,246,252,239,69,254,215,150,214,214,203,198,239,72,150,214,214,203,198,207,213,228,72,220,214},P={},U={{1,2},{1,1},{0,0},{1,0}},nParams=0},{K={{106,48,248,188},{70,38,226,170,89,7,210},1,117,2,59,3,42,4,51,5,6,41,7,57,8,40,9,10,11,46,90},C={192,214,252,214,215,198,242,213,214,213,215,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,213,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,223,238,252,214,196,214,209,238,252,214,197,214,194,238,214,195,244,212,203,211,255,213,215,207,212,220,214},P={},U={{1,1},{0,0},{1,0}},nParams=0},{K={{127,52,244,189,123,8,201,140},1,28,2,54,3,53,4,45,5,8,6,63,7,59,52,9,51,10,55,11,12,46,13,14,15,16,116,17,18,47,19,90},C={221,192,214,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,220,214,217,238,252,214,198,214,199,238,252,214,196,214,197,238,252,214,194,214,216,238,252,214,195,214,192,238,252,214,193,214,199,238,252,214,206,214,208,238,252,214,207,214,217,238,252,214,204,214,205,238,252,214,202,214,210,238,252,214,203,214,200,238,252,214,201,214,216,238,214,246,255,212,-1,204,215,207,215,220,214},P={},U={{0,0},{1,0}},nParams=0},{K={{127,52,244,189,123,8,201,140},1,28,2,54,3,53,4,45,5,8,6,63,7,59,52,9,51,10,55,11,12,46,13,14,15,16,116,17,18,47,19,20,21,22,34,23,90},C={221,192,214,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,220,214,217,238,252,214,198,214,199,238,252,214,196,214,197,238,252,214,194,214,216,238,252,214,195,214,192,238,252,214,193,214,199,238,252,214,206,214,208,238,252,214,207,214,217,238,252,214,204,214,205,238,252,214,202,214,210,238,252,214,203,214,200,238,252,214,201,214,216,238,252,214,246,214,205,238,252,214,247,214,192,238,252,214,244,214,245,238,252,214,242,214,192,238,214,243,255,212,-1,204,215,207,215,220,214},P={},U={{0,0},{1,0}},nParams=0},{K={{127,52,244,189,123,8,201,140},1,61,2,50,3,53,4,41,5,46,6,7,40,8,63,9,59,10,52,11,51,12,55,13,116,14,54,15,47,16,90},C={221,192,214,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,222,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,199,238,252,214,196,214,197,238,252,214,194,214,195,238,252,214,192,214,193,238,252,214,206,214,207,238,252,214,204,214,205,238,252,214,202,214,203,238,252,214,200,214,199,238,214,201,255,212,-1,204,215,207,215,220,214},P={},U={{0,0},{1,0}},nParams=0}},U={{0,6}},nParams=0},{K={{82,22},{81,20,250,181,105,48,195,139,64,27,219,185,82,231,167,100,59,226}},C={192,214,214,215,198,239,196,192,214,214,215,198,244,214,254,215,228,196,220,214},P={},U=nil,nParams=0},{K={{65,62,246,184,113,49,201,136,84,20,199},{77,58,247,168,127,1,210,143,92},{127,50,254,169,108},{87,49,236,152,69,23,203,137,94,16,217,146,52,247},{88,38,216},1,24,2,59,3,41,4,63,5,10,6,7,40,8,46,90,{108,7,199,139},28,49,53,{98,15,221,134,68,21,199},23,108,30,9,16,11,51,12,52,13},C={213,214,214,214,198,214,215,198,240,214,150,214,239,338,221,192,212,150,214,252,214,213,198,242,255,215,-1,204,213,240,213,240,212,240,215,237,215,212,213,224,210,224,211,150,215,150,212,150,213,255,212,212,240,211,240,210,150,210,240,213,150,210,209,148,239,340,221,150,211,252,214,210,198,242,213,215,201,252,214,211,214,208,238,252,214,209,214,222,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,222,238,252,214,198,214,199,238,252,214,196,214,197,238,214,194,255,212,-1,204,215,252,239,16,254,215,150,211,214,195,198,213,215,201,252,214,211,214,192,238,252,214,209,214,222,238,252,214,223,214,193,238,252,214,221,214,218,238,252,214,219,214,196,238,252,214,217,214,206,238,252,214,198,214,206,238,252,214,196,214,197,238,214,194,244,212,246,239,3,150,211,252,214,207,198,242,244,215,254,215,228,3,221,150,211,252,214,210,198,242,213,215,201,252,214,211,214,204,238,252,214,209,214,206,238,252,214,223,214,197,238,252,214,221,214,206,238,252,214,219,214,199,238,252,214,217,214,205,238,252,214,198,214,202,238,214,194,255,212,-1,204,215,252,239,423,254,215,150,211,214,195,198,213,215,201,252,214,211,214,192,238,252,214,209,214,222,238,252,214,223,214,193,238,252,214,221,214,218,238,252,214,219,214,196,238,252,214,217,214,206,238,252,214,198,214,206,238,252,214,196,214,197,238,252,214,203,214,200,238,252,214,216,214,206,238,252,214,201,214,246,238,252,214,247,214,244,238,252,214,245,214,197,238,214,194,244,212,246,239,342,150,211,252,214,207,198,242,244,215,254,215,228,342,228,241,228,338,220,214},P={},U={{0,7},{0,6}},nParams=0},{K={{82,22},{81,20,250,181,105,48,195,139,64,27,219,185,82,231,167,100,59,226},{104,54,227,188,122,13,209}},C={192,214,214,215,209,238,192,212,252,239,194,254,215,192,212,244,214,214,215,198,239,246,192,212,244,214,214,215,209,238,228,246,220,214},P={},U=nil,nParams=0},{K={},C={213,214,213,215,244,215,254,215,220,214},P={},U={{0,8},{0,9}},nParams=0},{K={},C={213,214,213,215,244,215,254,215,220,214},P={},U={{0,8},{0,9}},nParams=0}},U={{1,26},{0,5},{1,24},{0,1},{1,25},{1,5},{0,0},{0,8},{0,6},{1,6},{0,2},{0,9}},nParams=0}},U={{1,1},{1,26},{1,65},{1,21},{1,22},{1,3},{1,57},{1,20},{1,2},{1,63}},nParams=7},{K={{79,48,246,178,122,19,202,156,67,21,225,139,92,239,182,121,44,227,176,119,62,216},1,{73,58,249,191,89,10,213,152,91,48,223,146,83,231},19,2,57,3,53,4,52,90,22,59,56,63,5,54,{74,7,222,158,109,29,218,149,76,177},{107,6,223,159,107,26,218},0.85,{64,6,202,136,95,1},{86,3,210,154},41,40,51,42,6,46,7,{89,13,192,159,74,10,177,74,37,239,182,115,62},{88,12,193,158,75,11,176},{74,21,213,140,73,242,161,123},0,{72,23,194,153,86,209,165,120,39,226,162,105,18,203,149,94},{123,22,207,143},{68,29,204,144,37},{85,16,202,158},{91,6,219,151,48,245},{93,22,214,154},{64,25,219,115},{81,28,219,96,48,229,185},{89,8,218,103,52},{86,24,203,106,40,229},{75,31,178,109,56,248,155,113,33},122,44},C={213,214,252,239,218,254,215,213,215,213,214,198,239,74,213,215,213,214,198,240,215,150,215,214,214,214,215,238,221,150,215,252,214,212,198,242,213,212,201,252,214,215,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,214,220,255,212,-1,204,215,240,212,221,150,215,252,214,212,198,242,213,212,201,252,214,215,214,221,238,252,214,210,214,218,238,252,214,208,214,219,238,252,214,222,214,216,238,252,214,217,214,198,238,214,220,255,212,-1,204,215,240,213,150,212,239,92,150,212,214,199,213,213,214,196,198,238,228,92,150,213,239,76,150,213,214,199,213,213,214,196,198,238,228,76,228,74,150,214,207,214,213,215,150,214,198,240,210,150,210,239,484,150,210,214,214,214,197,238,221,150,210,252,214,212,198,242,213,212,201,252,214,215,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,214,220,255,212,-1,204,215,240,211,221,150,210,252,214,212,198,242,213,212,201,252,214,215,214,221,238,252,214,210,214,218,238,252,214,208,214,219,238,252,214,222,214,216,238,252,214,217,214,198,238,214,220,255,212,-1,204,215,240,208,150,211,239,502,150,211,214,199,213,213,214,194,198,238,228,502,150,208,239,486,150,208,214,199,213,213,214,195,198,238,228,486,228,484,150,214,213,212,201,252,214,215,214,192,238,252,214,210,214,211,238,252,214,208,214,193,238,252,214,222,214,206,238,252,214,217,214,207,238,252,214,204,214,205,238,252,214,202,214,192,238,214,220,244,212,246,252,239,342,254,215,192,203,218,252,218,239,342,254,215,213,210,214,200,198,214,201,198,243,214,246,246,239,348,192,247,244,214,254,215,228,348,213,210,150,214,198,240,209,150,209,239,381,213,211,214,244,150,209,214,245,198,238,213,208,214,244,150,209,214,242,198,238,228,381,213,209,244,214,254,215,150,209,252,239,363,254,215,150,209,214,201,198,239,757,192,243,150,209,214,201,198,255,215,213,240,220,240,223,240,222,237,222,223,220,224,221,224,218,150,222,150,223,150,220,255,212,212,240,218,240,221,150,221,240,220,150,221,209,148,239,759,213,222,150,218,214,240,198,150,218,214,242,198,150,218,214,241,198,150,218,214,254,198,150,218,214,255,198,252,218,239,711,254,215,150,221,150,218,214,252,198,150,218,214,253,198,244,209,254,215,228,261,228,757,214,246,240,219,150,209,252,239,741,254,215,150,209,214,201,198,239,686,192,243,150,209,214,201,198,255,215,213,240,198,240,217,240,216,237,216,217,198,224,199,224,196,150,216,150,217,150,198,255,212,212,240,196,240,199,150,199,240,198,150,199,209,148,239,672,150,196,214,254,198,239,674,150,219,214,215,151,240,219,228,674,228,671,228,686,213,223,214,244,150,219,213,212,201,252,214,215,214,250,238,252,214,210,214,218,238,252,214,208,214,211,238,252,214,222,214,205,238,252,214,217,214,206,238,252,214,204,214,251,238,252,214,202,214,216,238,214,220,244,212,203,238,220,214},P={},U={{1,46},{1,45},{1,1},{1,26},{1,56},{1,61},{1,62},{1,68},{1,69},{1,63}},nParams=1},{K={},C={213,214,213,215,244,215,254,215,220,214},P={},U={{1,70},{1,74}},nParams=0},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72},{65,58,234,180,85,12,198,131}},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,225,211,207,214,150,214,214,210,198,207,215,213,212,214,210,198,207,213,228,225,220,214},P={},U={{1,76},{1,77},{1,28},{1,78}},nParams=1},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72},{65,58,234,180,85,12,198,131}},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,225,211,207,214,150,214,214,210,198,207,215,213,212,214,210,198,207,213,228,225,220,214},P={},U={{1,76},{1,77},{1,28},{1,78}},nParams=1},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,33,210,159,91,28,217,202},{68,59,237,191,72}},C={150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,244,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,255,231,207,214,228,255,220,214},P={},U={{1,76}},nParams=1},{K={{88,34,240,171,84,15,213,156,89,37,204,137,88},{75,60,227,183},{66,60,226,168,122,46,200,157,74,30,210,149,75},{68,59,237,191,72},{65,58,234,180,85,12,198,131},{71,18,243,179,16},{125,50,236},{76},{70,58,252,141,64},{89,60,248,145,67,30},{78}},C={213,214,252,239,255,254,215,150,214,214,214,198,192,215,214,214,198,214,212,198,246,252,218,239,255,254,215,150,214,214,214,198,192,215,214,214,198,214,213,198,246,239,185,150,214,214,210,198,213,215,248,240,215,213,212,214,210,192,211,214,208,198,213,213,214,209,198,214,222,198,213,213,214,209,198,214,223,198,150,215,214,209,198,151,213,213,214,220,198,214,222,198,213,213,214,220,198,214,223,198,150,215,214,220,198,151,244,210,238,228,185,220,214},P={},U={{1,76},{1,77},{1,28},{1,78}},nParams=1},{K={1,117,2,59,3,42,4,51,5,6,40,7,63,8,61,9,10,41,11,46,12,13,90,{81,27,201,130,125,28},{112,26,200,131,124,29},{66,3,221,130,90,27,199,76,39,231,171},{99,2,220,131,91,26,198,77,38,230,170},{92,13,195,159},{94,12,216,129}},C={211,239,87,213,214,213,215,213,212,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,215,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,209,238,252,214,198,214,199,238,252,214,196,214,197,238,252,214,194,214,218,238,252,214,195,214,220,238,214,192,244,212,203,201,252,214,193,213,213,214,206,198,238,252,214,207,213,213,214,204,198,238,244,212,254,215,192,205,214,202,198,213,210,244,215,254,215,228,214,220,214},P={},U={{1,24},{1,11},{1,1},{1,9},{1,12}},nParams=0},{K={1,117,2,59,3,42,4,51,5,6,47,7,41,8,63,9,40,10,90,{80,7,201,128,92},{84,22,204,159,66},{75,22,203,135,64,5},{87,8,216,155,65,30,213,152},{81,27,201,130,125,28},{81,8,222,154},{81,11,199,134}},C={211,239,10,213,214,213,215,213,212,201,252,214,214,214,215,238,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,215,238,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,252,214,199,214,218,238,214,196,244,212,203,244,215,240,214,150,214,239,107,192,197,234,215,255,215,212,240,212,240,215,150,215,252,239,177,254,215,150,212,252,239,167,254,215,150,212,214,194,198,239,109,201,240,213,192,195,150,212,214,194,198,255,215,213,240,208,240,211,240,210,237,210,211,208,224,209,224,222,150,210,150,211,150,208,255,212,212,240,222,240,209,150,209,240,208,150,209,209,148,239,99,150,213,192,192,150,222,214,193,198,244,215,150,222,238,228,92,150,213,207,210,228,109,228,107,192,206,214,207,198,213,211,244,215,254,215,224,214,224,215,224,212,224,213,224,210,224,211,224,208,224,209,224,222,228,214,220,214},P={{K={{71,2,218,151,89,4,198,134,73,20}},C={213,214,252,214,214,198,242,213,215,255,212,-1,220,-1},P={},U={{0,3},{1,0}},nParams=0}},U={{1,23},{1,11},{1,1},{1,8},{1,79},{1,13}},nParams=0},{K={{121,48,230,178},{125,34,247,173,112}},C={192,214,214,215,198,234,215,244,215,254,215,220,214},P={{K={{78,57,244,171,124,2,209,140,95},{77,58,247,168,127,1,210,143,92,51,210,158,91,230},{76,60,249,181,122,0,211}},C={234,215,240,214,213,212,214,214,198,239,206,150,214,213,212,214,214,198,244,215,254,215,228,206,213,212,214,215,198,252,214,212,198,242,150,214,244,212,254,215,220,214},P={{K={{90,48,252,173,91,14,215,170,69,24,217,157},1,18,2,63,3,59,4,62,90,5,{94,53,206,128,110,5,194,135,76,63,168,109,36,232},47,55,52,6,53,7,51,8,{101,12,218,157,93,20,192,185,40,246,189,108,63,246,188,73,24,213,140},{103,8,223,131},{107,18,198,142,93,24,210,155,7,238,184,127,63,246,162,91,10,212,159,78,29,212,158,107,250,183,110},{106,7,194,149},{112,26,200,131,124,29},{98,15,221,134,68,21,199},{110,5,220,135,86,21,220,102},{70,9,199},24,54,56,40,9,10,29,11,12,{124,23,215,155},34,35,14,61,30,13,15,16,57,{125,228,171,122,34,245,177},{110,232,191,108},{107,198,175,103,124},0,300,50,{17,242,191,106,33,217,188,120,17,195,158},{21,226,168,123,60,229,232},{5,228,187,113,45,235,147,78,48,199,156},{8,232,181,85,60,234,169,64,11,202,136},{43,235,186,122},{47,254,168,118},{9,239,164,125,46,249},46,{30,235,170,98},{},{13,254,183,112,51,210,180,71,5,222,128},{27,244,182,109,50,211,215},0.5,{31,252,164,114,43,202,136,69},44,{19,244,186,118,6,215,134,88,31,209,186,82,237,170,123,126},{17,249,182,113,16,149},{53,229,180,114,49,224,169},20,{23,248,190,74,2,219,130,68,27,221,169,51,228,167,126,33,244,171,120,15,198,144},0.05,{21,244,173,71,2,217,188,90,13,222,175,42,255,174,99},{27,240,137,84,27,232,149,71,27,217,110,32,233,162,100,39},{24,232,149,74,43,216,133,65,22,211,66,42,229,162,99},19,25,{31,207,150,70,9,194,166,89,24,169,113,59},{8,229,140,68},49,{30,211,151,71,22,224,131,73,16,168,98,6,224,183,114},{34,203,154,72,21,198},{53,205,128,78,26,219,156,78,242},1.5,{32,200,135,64,1},60,65,{50,216,143,92,5,202,159,48,227,164,109,43},0.3,28,{51,228,159,81,28,197},27,0.1,80,85,0.4,22,0.75,{56,216,152,90,228},96,117,42,103,17,21,23,26,31,124,32,33,45,107,111,106,220,0.2,0.55,{193,160,126,33,249,184,100,47,196,132,72},{210,175,118,38,213,181,114,13,212,217},230,240,{207,162,127,33},{205,161,102,62,251,179,96,10,203,141,89},{223,170,107,35,200,182,89,2},{216,181,108,44,196,161,72,1,203,158,89,29,210,116},{206,180,123,45,248,147},{218,183,110,46,199,163,74,3,201,156,91,31,208,118},{205,188,99,47,240,142},{196,177,96,40,244,150,93,2,211,149,76,25},{208,161,92,51,197},41,116,100,200,{209,181,106,10,199,135,99,23,210,147,75,239},{195,180,111},{217,191,84,13,222,141,68,17,220},{218,178,79,11,204,142,69},{200,187,76,2,207,156,97,2,223,142,50,227,174}},C={150,214,252,214,214,198,242,213,214,201,252,214,215,214,212,238,252,214,213,214,210,238,252,214,211,214,208,238,252,214,209,214,222,238,214,223,244,212,214,220,244,213,240,215,150,214,252,214,221,198,242,213,214,201,252,214,215,214,212,238,252,214,213,214,218,238,252,214,211,214,219,238,252,214,209,214,208,238,252,214,220,214,216,238,252,214,217,214,198,238,252,214,199,214,196,238,252,214,197,214,222,238,214,223,244,212,214,220,244,213,240,212,150,215,218,239,175,220,214,228,175,150,212,239,90,150,212,214,194,192,195,214,192,198,214,193,198,238,228,90,213,215,213,212,214,206,198,198,239,100,213,215,213,212,214,206,198,198,252,214,207,198,242,244,215,254,215,213,215,213,212,214,206,198,209,238,228,100,192,204,214,205,198,213,214,201,252,214,215,214,202,238,252,214,213,214,196,238,252,214,211,214,203,238,252,214,209,214,203,238,252,214,220,214,200,238,252,214,217,214,198,238,252,214,199,214,208,238,252,214,197,214,201,238,252,214,246,214,222,238,252,214,247,214,244,238,252,214,245,214,218,238,252,214,242,214,196,238,214,223,244,212,213,213,244,212,240,213,150,213,214,243,213,214,201,252,214,215,214,202,238,252,214,213,214,203,238,252,214,211,214,198,238,252,214,209,214,240,238,252,214,220,214,241,238,252,214,217,214,254,238,252,214,199,214,208,238,252,214,197,214,255,238,252,214,246,214,220,238,252,214,247,214,252,238,252,214,245,214,241,238,252,214,242,214,216,238,252,214,253,214,208,238,252,214,254,214,219,238,252,214,250,214,196,238,252,214,251,214,248,238,214,223,244,212,238,150,213,214,249,150,215,238,150,213,214,230,192,231,214,205,198,214,228,214,229,214,228,214,226,244,210,238,150,213,214,227,192,224,214,205,198,214,228,214,213,214,228,244,213,238,150,213,214,225,211,238,150,213,214,238,192,239,214,236,198,238,150,213,214,237,211,238,192,204,214,205,198,213,214,201,252,214,215,214,254,238,252,214,213,214,210,238,252,214,211,214,240,238,252,214,209,214,234,238,252,214,220,214,202,238,252,214,217,214,218,238,252,214,199,214,234,238,252,214,197,214,234,238,252,214,246,214,198,238,252,214,247,214,216,238,214,223,244,212,150,213,244,212,240,210,150,210,214,235,214,232,238,150,210,214,233,192,150,214,205,198,214,151,214,151,244,212,238,150,210,214,148,192,231,214,205,198,214,151,214,228,214,151,214,228,244,210,238,150,210,214,230,192,231,214,205,198,214,228,214,149,214,228,214,149,244,210,238,150,210,214,146,192,147,214,144,198,214,212,214,212,214,145,244,213,238,150,210,214,158,214,159,238,150,210,214,156,214,228,238,150,210,214,157,211,238,150,210,214,237,211,238,150,210,214,154,231,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,152,238,252,214,209,214,198,238,252,214,220,214,201,238,252,214,217,214,216,238,252,214,199,214,210,238,252,214,197,214,201,238,214,223,244,212,150,210,244,212,214,153,192,134,214,205,198,214,151,214,228,244,212,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,246,238,252,214,209,214,234,238,252,214,220,214,201,238,252,214,217,214,198,238,252,214,199,214,135,238,252,214,197,214,210,238,214,223,244,212,150,210,244,212,240,211,150,211,214,132,192,195,214,132,198,214,133,198,238,150,211,214,130,214,131,238,150,211,214,128,192,147,214,144,198,214,129,214,129,214,142,244,213,238,150,211,214,143,214,140,238,192,204,214,205,198,213,214,201,252,214,215,214,141,238,252,214,213,214,201,238,252,214,211,214,208,238,252,214,209,214,219,238,252,214,220,214,210,238,214,223,244,212,150,210,244,212,240,208,150,208,214,230,192,231,214,205,198,214,215,214,228,214,215,214,228,244,210,238,150,208,214,158,214,215,238,150,208,214,138,214,215,238,150,208,214,237,231,238,192,204,214,205,198,213,214,201,252,214,215,214,141,238,252,214,213,214,201,238,252,214,211,214,208,238,252,214,209,214,219,238,252,214,220,214,210,238,214,223,244,212,150,210,244,212,240,209,150,209,214,243,213,214,201,252,214,215,214,139,238,252,214,213,214,149,238,252,214,211,214,208,238,252,214,209,214,234,238,252,214,220,214,208,238,252,214,217,214,201,238,252,214,199,214,152,238,252,214,197,214,196,238,252,214,246,214,201,238,252,214,247,214,248,238,252,214,245,214,203,238,252,214,242,214,210,238,214,223,244,212,238,150,209,214,230,192,231,214,205,198,214,215,214,228,214,215,214,228,244,210,238,150,209,214,148,192,231,214,205,198,214,228,214,228,214,228,214,228,244,210,238,150,209,214,146,192,147,214,144,198,214,247,214,247,214,242,244,213,238,150,209,214,158,214,136,238,150,209,214,138,214,211,238,150,209,214,237,231,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,152,238,252,214,209,214,198,238,252,214,220,214,201,238,252,214,217,214,216,238,252,214,199,214,210,238,252,214,197,214,201,238,214,223,244,212,150,209,244,212,240,222,150,222,214,153,192,134,214,205,198,214,151,214,228,244,212,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,246,238,252,214,209,214,234,238,252,214,220,214,201,238,252,214,217,214,198,238,252,214,199,214,135,238,252,214,197,214,210,238,214,223,244,212,150,209,244,212,240,223,150,223,214,128,192,147,214,144,198,214,137,214,137,214,182,244,213,238,150,223,214,130,214,131,238,150,223,214,143,214,183,238,192,204,214,205,198,213,214,201,252,214,215,214,155,238,252,214,213,214,219,238,252,214,211,214,208,238,252,214,209,214,255,238,252,214,220,214,210,238,252,214,217,214,180,238,252,214,199,214,208,238,252,214,197,214,200,238,252,214,246,214,210,238,252,214,247,214,203,238,214,223,244,212,150,209,244,212,240,220,150,220,214,230,192,231,214,205,198,214,181,214,228,214,181,214,228,244,210,238,150,220,214,233,192,150,214,205,198,214,151,214,151,244,212,238,150,220,214,148,192,231,214,205,198,214,151,214,228,214,151,214,228,244,210,238,150,220,214,158,214,215,238,150,220,214,178,213,214,201,252,214,215,214,201,238,252,214,213,214,200,238,252,214,211,214,240,238,252,214,209,214,234,238,252,214,220,214,226,238,252,214,217,214,218,238,252,214,199,214,219,238,252,214,197,214,200,238,252,214,246,214,179,238,252,214,247,214,176,238,252,214,245,214,176,238,252,214,242,214,234,238,252,214,253,214,241,238,252,214,254,214,177,238,252,214,250,214,210,238,252,214,251,214,190,238,252,214,191,214,139,238,252,214,212,214,149,238,252,214,155,214,208,238,252,214,145,214,234,238,252,214,188,214,208,238,252,214,180,214,201,238,252,214,189,214,212,238,252,214,202,214,210,238,252,214,152,214,208,238,252,214,186,214,222,238,252,214,139,214,246,238,252,214,141,214,226,238,252,214,244,214,198,238,252,214,252,214,234,238,252,214,187,214,184,238,252,214,185,214,196,238,252,214,166,214,222,238,252,214,240,214,190,238,214,223,244,212,213,212,214,206,198,213,214,201,252,214,215,214,184,238,252,214,213,214,167,238,252,214,211,214,190,238,252,214,209,214,164,238,252,214,220,214,165,238,252,214,217,214,162,238,252,214,199,214,184,238,252,214,197,214,226,238,252,214,246,214,190,238,252,214,247,214,164,238,252,214,245,214,165,238,252,214,242,214,162,238,214,223,244,212,203,203,238,150,220,214,138,214,209,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,152,238,252,214,209,214,198,238,252,214,220,214,201,238,252,214,217,214,216,238,252,214,199,214,210,238,252,214,197,214,201,238,214,223,244,212,150,220,244,212,240,221,150,221,214,153,192,134,214,205,198,214,151,214,228,244,212,238,192,204,214,205,198,213,214,201,252,214,215,214,141,238,252,214,213,214,201,238,252,214,211,214,208,238,252,214,209,214,219,238,252,214,220,214,210,238,214,223,244,212,150,209,244,212,240,218,150,218,214,243,213,214,201,252,214,215,214,188,238,252,214,213,214,216,238,252,214,211,214,203,238,252,214,209,214,196,238,252,214,220,214,216,238,252,214,217,214,210,238,252,214,199,214,252,238,252,214,197,214,198,238,252,214,246,214,234,238,214,223,244,212,238,150,218,214,230,192,231,214,205,198,214,228,214,197,214,228,214,197,244,210,238,150,218,214,148,192,231,214,205,198,214,215,214,217,212,214,215,214,217,212,244,210,238,150,218,214,146,192,147,214,144,198,214,137,214,163,214,137,244,213,238,150,218,214,156,214,228,238,150,218,214,138,214,217,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,152,238,252,214,209,214,198,238,252,214,220,214,201,238,252,214,217,214,216,238,252,214,199,214,210,238,252,214,197,214,201,238,214,223,244,212,150,218,244,212,240,219,150,219,214,153,192,134,214,205,198,214,151,214,228,244,212,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,246,238,252,214,209,214,234,238,252,214,220,214,201,238,252,214,217,214,198,238,252,214,199,214,135,238,252,214,197,214,210,238,214,223,244,212,150,218,244,212,240,216,150,216,214,128,192,147,214,144,198,214,247,214,247,214,242,244,213,238,150,216,214,130,214,131,238,150,218,214,158,214,215,238,150,216,214,143,214,215,238,192,204,214,205,198,213,214,201,252,214,215,214,141,238,252,214,213,214,201,238,252,214,211,214,208,238,252,214,209,214,219,238,252,214,220,214,210,238,214,223,244,212,150,210,244,212,240,217,150,217,214,243,213,214,201,252,214,215,214,152,238,252,214,213,214,198,238,252,214,211,214,216,238,252,214,209,214,234,238,252,214,220,214,210,238,252,214,217,214,216,238,252,214,199,214,234,238,214,223,244,212,238,150,217,214,230,192,231,214,205,198,214,215,214,149,212,214,215,214,228,244,210,238,150,217,214,148,192,231,214,205,198,214,215,214,228,214,228,214,228,244,210,238,150,217,214,233,192,150,214,205,198,214,215,214,151,244,212,238,150,217,214,146,192,147,214,144,198,214,252,214,252,214,241,244,213,238,150,217,214,158,214,160,238,150,217,214,138,214,213,238,150,217,214,237,231,238,150,217,214,157,211,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,152,238,252,214,209,214,198,238,252,214,220,214,201,238,252,214,217,214,216,238,252,214,199,214,210,238,252,214,197,214,201,238,214,223,244,212,150,217,244,212,240,198,150,198,214,153,192,134,214,205,198,214,151,214,228,244,212,238,192,204,214,205,198,213,214,201,252,214,215,214,250,238,252,214,213,214,155,238,252,214,211,214,246,238,252,214,209,214,234,238,252,214,220,214,201,238,252,214,217,214,198,238,252,214,199,214,135,238,252,214,197,214,210,238,214,223,244,212,150,217,244,212,240,199,150,199,214,128,192,147,214,144,198,214,226,214,226,214,219,244,213,238,150,199,214,130,214,215,238,150,199,214,143,214,151,238,192,204,214,205,198,213,214,201,252,214,215,214,254,238,252,214,213,214,210,238,252,214,211,214,240,238,252,214,209,214,234,238,252,214,220,214,180,238,252,214,217,214,208,238,252,214,199,214,200,238,252,214,197,214,210,238,252,214,246,214,203,238,214,223,244,212,150,217,244,212,240,196,150,196,214,243,213,214,201,252,214,215,214,145,238,252,214,213,214,208,238,252,214,211,214,219,238,252,214,209,214,210,238,252,214,220,214,180,238,252,214,217,214,208,238,252,214,199,214,200,238,252,214,197,214,210,238,252,214,246,214,203,238,214,223,244,212,238,150,196,214,230,192,231,214,205,198,214,215,214,242,212,214,161,214,228,244,210,238,150,196,214,148,192,231,214,205,198,214,228,214,217,214,228,214,228,244,210,238,150,196,214,158,214,215,238,150,196,214,235,213,212,214,174,198,238,150,196,214,175,192,147,214,144,198,214,172,214,172,214,173,244,213,238,150,196,214,170,192,195,214,170,198,214,171,198,238,150,196,214,168,214,245,238,150,196,214,169,192,195,214,169,198,214,86,198,238,150,196,214,87,192,195,214,87,198,214,84,198,238,150,196,214,138,214,211,238,150,196,214,85,192,195,214,85,198,214,82,198,238,192,204,214,205,198,213,214,201,252,214,215,214,254,238,252,214,213,214,210,238,252,214,211,214,240,238,252,214,209,214,234,238,252,214,220,214,180,238,252,214,217,214,208,238,252,214,199,214,200,238,252,214,197,214,210,238,252,214,246,214,203,238,214,223,244,212,150,217,244,212,240,197,150,197,214,243,213,214,201,252,214,215,214,246,238,252,214,213,214,234,238,252,214,211,214,208,238,252,214,209,214,234,238,252,214,220,214,218,238,252,214,217,214,83,238,252,214,199,214,180,238,252,214,197,214,208,238,252,214,246,214,200,238,252,214,247,214,210,238,252,214,245,214,203,238,214,223,244,212,238,150,197,214,230,192,231,214,205,198,214,215,214,242,212,214,183,214,228,244,210,238,150,197,214,148,192,231,214,205,198,214,228,214,217,214,161,214,228,244,210,238,150,197,214,158,214,215,238,150,197,214,235,213,214,201,252,214,215,214,180,238,252,214,213,214,198,238,252,214,211,214,208,238,252,214,209,214,222,238,252,214,220,214,196,238,252,214,217,214,216,238,252,214,199,214,255,238,252,214,197,214,80,238,252,214,246,214,80,238,252,214,247,214,80,238,214,223,244,212,238,150,197,214,175,192,147,214,144,198,214,81,214,94,214,81,244,213,238,150,197,214,170,192,195,214,170,198,214,95,198,238,150,197,214,168,214,246,238,150,197,214,169,192,195,214,169,198,214,86,198,238,150,197,214,87,192,195,214,87,198,214,92,198,238,150,197,214,138,214,211,238,150,197,214,85,192,195,214,85,198,214,82,198,238,213,215,213,212,214,206,198,150,213,238,150,210,214,93,198,252,214,90,198,242,234,215,244,212,254,215,231,240,194,214,228,240,195,209,240,192,214,228,240,193,213,222,214,91,198,252,214,90,198,242,234,212,244,212,254,215,220,214},P={{K={{91,56,230,176,127,13,192},{94,61,229,179,106,11,201,132},{90,23,254,182,45},{126,49,239},0.5,170,100,{86,57,255,139,67,26,195,133,90,28,232,114,37,230,191,96,53,234,185,78,7,209},1,{85,40,251,131,82,15},{67,44,250,134,73,34,193,149,88},0.35,{92,51,212,136},{95,63,209,143,68,9,225,130,67,18,167},{74,42,202,137,95},{89,1,215,129,66,23,240,145,78,229,167,124,37,255,186},{82,20,209},130,0.05,{112,8,201,149},{81,6,200,129,93}},C={213,214,213,215,246,239,85,213,212,214,214,213,212,214,214,198,218,238,213,212,214,214,198,239,87,213,212,214,215,192,212,214,213,198,214,210,214,211,212,214,210,214,208,212,244,210,238,213,212,214,209,214,222,238,213,213,252,214,223,198,242,213,212,192,220,214,213,198,214,221,192,218,214,219,198,214,216,198,192,218,214,217,198,214,198,198,244,213,201,252,214,215,192,212,214,213,198,214,210,214,211,212,214,210,214,199,212,244,210,238,252,214,209,214,196,238,244,210,252,214,197,198,242,244,215,254,215,228,87,228,93,192,194,234,215,244,215,254,215,220,214},P={{K={{78,57,244,171,124,2,209,140,95},{72,59,248,190,88,11,212,153,90,49,222,147,82,230},1,18,2,47,3,55,4,59,5,52,6,53,7,51,8,62,9,10,11,12,46,13,14,15,40,16,90,{122,7,196,153,78,42,173},{99,26,222,150,85,16,170,99,25,224,188,99,11,254,145,83},{111,54,198,153,81,229},{67,20,194},0},C={213,214,214,214,198,240,214,213,215,214,214,198,240,215,150,214,252,239,81,254,215,221,150,214,252,214,215,198,242,213,212,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,199,238,252,214,196,214,198,238,252,214,197,214,219,238,252,214,194,214,219,238,252,214,195,214,192,238,252,214,193,214,197,238,252,214,206,214,223,238,252,214,207,214,204,238,252,214,205,214,192,238,214,202,255,212,-1,204,215,252,239,88,254,215,150,215,252,239,467,254,215,221,150,215,252,214,215,198,242,213,212,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,252,214,218,214,219,238,252,214,216,214,217,238,252,214,198,214,199,238,252,214,196,214,198,238,252,214,197,214,219,238,252,214,194,214,219,238,252,214,195,214,192,238,252,214,193,214,197,238,252,214,206,214,223,238,252,214,207,214,204,238,252,214,205,214,192,238,214,202,255,212,-1,204,215,239,486,213,213,244,214,254,215,150,214,252,214,203,198,242,150,215,214,200,198,214,201,198,192,201,214,246,198,214,222,214,247,214,210,244,213,197,244,212,254,215,228,486,220,214},P={},U={{0,1},{0,0},{0,4},{0,5}},nParams=0}},U={{0,2},{0,4},{0,5},{0,6},{0,0},{0,7}},nParams=0},{K={{93,48,231,188,115,21},1,3,0,41,2,63,54,4,60,90,{108,51,211,144,90,5,222,147},{76,46,196,151,96,9},59,57,46,51,5,44,6,52,7,8,{112,13,212,132},29,18,21,9,14,122,23,31,20,10,15,{100,17,192,136,3,235,164,99,34,167},{114,26,213,146,51,182},{84,4,213,147,16,193,136},99,102,241,{117,21,210,109,52},{99,9,222,109,52,251,174,97,50,245,188,90},34,197,94,28,22,19,140,150,80,85,0.4,65,1.5,{53,234,172,125,57},9999,{4,227,174,97,54,248,171,70,21},{14,229,190,112,30,245,146,87,28,239,152,93,20,216},62,{26,225,161,127,46,247,141,72},{3,234,178,115},{1,241,179,118,53,212,145,76,9},55,{13,224,179,123,42,199},{27,228,178,126,49,234,137,77,0},{62,241,175},0.35,{23,248,175,115},{22,246,168,118,13,192,184,91,10,219,158},{5,237,189,68},{16,248,174,72,11,206,169,88,7,220,158,53,236,166,99},{25,239,170},{4,242,165,70},{13,216,137,73,90},180,{10,242,131,95},36,0.5,{28,207,134,65,2,195,165,86,20,175,113},{8,199,133,94,1,192,196},48,{34,197,139,71,23,198,151,73,238,160,92,62,241,186,107,44,193,150,77,2,211,141},0.2},C={213,214,218,252,218,239,217,254,215,213,214,214,214,198,218,239,195,220,214,228,195,213,215,214,215,151,207,215,213,215,214,212,236,214,213,148,239,252,220,214,228,252,209,240,215,213,212,213,213,246,239,142,213,210,201,252,214,215,214,210,238,252,214,211,214,208,238,252,214,212,214,209,238,252,214,222,214,223,238,214,220,255,212,215,240,215,228,3,213,211,192,221,213,212,214,218,198,244,215,198,209,148,252,239,64,254,215,213,210,201,252,214,215,214,219,238,252,214,211,214,216,238,252,214,212,214,217,238,252,214,222,214,198,238,252,214,199,214,196,238,252,214,197,214,208,238,214,220,244,212,252,218,239,5,254,215,213,210,201,252,214,215,214,198,238,252,214,211,214,194,238,252,214,212,214,219,238,252,214,222,214,216,238,252,214,199,214,217,238,252,214,197,214,198,238,252,214,195,214,196,238,252,214,192,214,208,238,214,220,244,212,240,215,150,215,213,208,148,239,591,150,215,207,208,150,215,213,210,201,252,214,215,214,210,238,252,214,211,214,208,238,252,214,212,214,209,238,252,214,222,214,223,238,214,220,244,212,246,239,349,213,209,214,193,213,210,201,252,214,215,214,206,238,252,214,211,214,207,238,252,214,212,214,204,238,252,214,222,214,205,238,252,214,199,214,202,238,252,214,197,214,203,238,252,214,195,214,200,238,252,214,192,214,201,238,252,214,205,214,246,238,252,214,247,214,244,238,214,220,244,212,238,213,209,214,245,192,242,214,243,198,214,240,214,241,214,254,244,213,238,213,222,214,255,192,242,214,243,198,214,240,214,241,214,254,244,213,238,213,222,214,252,214,213,238,213,223,214,255,192,242,214,243,198,214,240,214,241,214,254,244,213,238,228,577,150,215,213,210,201,252,214,215,214,219,238,252,214,211,214,216,238,252,214,212,214,217,238,252,214,222,214,198,238,252,214,199,214,196,238,252,214,197,214,208,238,214,220,244,212,246,239,754,213,209,214,193,213,210,201,252,214,215,214,206,238,252,214,211,214,207,238,252,214,212,214,204,238,252,214,222,214,205,238,252,214,199,214,202,238,214,220,244,212,238,213,209,214,245,192,242,214,243,198,214,253,214,250,214,251,244,213,238,213,222,214,255,192,242,214,243,198,214,253,214,250,214,251,244,213,238,213,222,214,252,214,213,238,213,223,214,255,192,242,214,243,198,214,253,214,250,214,251,244,213,238,228,577,213,209,214,193,213,210,201,252,214,215,214,204,238,252,214,211,214,248,238,252,214,212,214,248,238,252,214,222,214,249,238,252,214,199,214,230,238,252,214,197,214,246,238,252,214,195,214,201,238,214,220,244,212,238,213,209,214,245,192,242,214,243,198,214,231,214,231,214,228,244,213,238,213,222,214,255,192,242,214,243,198,214,229,214,229,214,226,244,213,238,213,222,214,252,214,227,238,213,223,214,255,192,242,214,243,198,214,223,214,223,214,224,244,213,238,228,591,213,220,150,214,151,207,220,213,220,214,225,250,239,611,214,213,207,220,192,238,234,215,244,215,254,215,228,611,213,215,214,197,236,214,213,148,239,533,220,214,228,533,214,239,240,212,213,213,214,236,198,240,213,150,213,252,239,553,254,215,221,150,213,252,214,237,198,242,213,210,201,252,214,215,214,207,238,252,214,211,214,208,238,252,214,212,214,219,238,252,214,222,214,234,238,214,220,255,212,-1,204,215,239,960,213,219,214,235,198,150,213,214,232,198,214,235,198,248,214,233,198,240,212,228,960,150,212,214,150,205,239,1197,213,216,218,239,1199,211,207,216,213,218,252,214,151,198,242,213,217,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,213,214,154,214,213,214,196,244,210,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,198,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,213,214,152,214,213,214,152,244,210,238,252,214,235,192,157,214,149,198,214,213,214,222,214,153,214,213,244,210,238,252,214,134,192,135,214,149,198,214,213,214,153,244,212,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,199,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,215,214,132,212,214,215,214,192,212,244,210,238,252,214,235,192,157,214,149,198,214,215,214,222,212,214,153,214,213,244,210,238,252,214,134,192,135,214,149,198,214,215,214,153,244,212,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,196,192,148,214,149,198,214,146,244,215,201,252,214,133,214,213,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,197,192,148,214,149,198,214,146,244,215,201,252,214,252,214,213,238,244,210,252,214,155,198,242,244,215,254,215,228,1199,228,1282,213,216,239,1282,231,207,216,213,218,252,214,151,198,242,213,217,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,213,214,196,214,213,214,196,244,210,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,198,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,215,214,213,214,215,214,213,244,210,238,252,214,235,192,157,214,149,198,214,213,214,213,214,213,214,213,244,210,238,252,214,134,192,135,214,149,198,214,213,214,213,244,212,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,199,192,148,214,149,198,214,146,192,147,214,144,198,214,145,198,192,147,214,158,198,214,159,198,244,213,201,252,214,156,192,157,214,149,198,214,213,214,213,214,215,214,192,212,244,210,238,252,214,235,192,157,214,149,198,214,215,214,213,214,153,214,213,244,210,238,252,214,134,192,135,214,149,198,214,215,214,153,244,212,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,196,192,148,214,149,198,214,130,244,215,201,252,214,133,214,215,238,244,210,252,214,155,198,242,244,215,254,215,213,218,252,214,151,198,242,213,197,192,148,214,149,198,214,130,244,215,201,252,214,252,214,215,238,244,210,252,214,155,198,242,244,215,254,215,228,1282,220,214},P={{K={{68,63,230,173,124,15,198,140},{96,55,225},1,28,2,40,3,59,4,55,5,63,90,{119,63,214,142},{105,62,205,131,68,2},{79,9,222,141},{72,37,204,132,31},0,{79,12,212,130,91,26,216,149},10,100,1.2,41,54,60,{100,11,205,153,81,8,209,119,40,238,141,125,58,245,172,17},{100,4,195,156,69,72},{78,30,223,153,106,59,130},99,102,241,57,46,51,44,6,34,197,94,180,190,{116,27,221,105,33,248,161,103,56,254,138,80,7,196,157,66,23,200,155,44,229,179},0.5,{122,19,178,96,45,254,131,125,34,249,176,77,16,201,156},{99,52,175,97,44,245},{123,29,182,111,60,235},15,19,25,53,52,7,8,{1,233,184,96,55,228,136,127,6,207,159,93},{22,195,162,98},{20,233,190,117,58,236},{6,251,168,112,33,252},{18,253,171,119,56,211,176,68,9},{2,229,186,126},{13,237,163,125,54,251,179,80,17,192,149},{26,228,191,112},{15,239,161,127,52,249,166,79,24,203,145,66,19,209,108},{4,250,167},{20},{30,242,180,117,56},0.3,{31,255,182,98},{19,251,181,108,12,193,156,73,20},{18,250,183,115,4,198,157}},C={221,192,214,214,215,198,213,214,201,252,214,212,214,213,238,252,214,210,214,211,238,252,214,208,214,209,238,252,214,222,214,223,238,252,214,220,214,221,238,214,218,255,212,-1,204,215,240,214,192,219,214,216,198,214,210,214,222,244,212,240,215,150,214,214,217,192,198,214,215,198,214,199,150,215,214,199,150,215,244,210,238,150,214,214,196,192,198,214,215,198,192,219,214,216,198,214,197,214,218,244,212,214,194,196,214,199,214,195,214,199,244,210,238,213,215,213,214,201,252,214,212,214,192,238,252,214,210,214,221,238,252,214,208,214,193,238,252,214,222,214,206,238,214,218,244,212,246,239,127,150,214,214,207,192,204,214,205,198,214,202,214,203,214,200,244,213,238,228,41,213,215,213,214,201,252,214,212,214,209,238,252,214,210,214,201,238,252,214,208,214,246,238,252,214,222,214,247,238,252,214,220,214,244,238,252,214,245,214,221,238,214,218,244,212,246,239,59,150,214,214,207,192,204,214,205,198,214,242,214,243,214,240,244,213,238,228,41,150,214,214,207,192,204,214,205,198,214,241,214,241,214,254,244,213,238,150,214,214,255,214,252,238,150,214,214,253,214,199,238,150,214,214,250,214,212,238,150,214,214,251,231,238,192,214,214,215,198,213,214,201,252,214,212,214,248,238,252,214,210,214,249,238,252,214,208,214,230,238,252,214,222,214,231,238,252,214,220,214,211,238,252,214,245,214,228,238,252,214,229,214,221,238,252,214,226,214,211,238,214,218,244,212,150,214,244,212,214,227,192,224,214,215,198,214,212,214,199,244,212,238,150,214,214,225,213,212,238,213,213,252,214,238,198,242,150,214,192,239,214,215,198,192,219,214,216,198,214,248,214,230,244,212,214,197,196,192,236,214,237,198,214,234,198,192,236,214,235,198,214,232,198,244,213,201,252,214,196,192,198,214,215,198,150,214,214,196,198,214,233,198,214,150,198,214,199,214,151,212,214,199,244,210,238,252,214,255,214,212,238,244,210,240,212,150,212,252,214,148,198,242,244,215,254,215,150,212,214,149,198,252,214,146,198,242,234,215,244,212,254,215,220,214},P={{K={{73,52,230,173,111,14,220}},C={213,214,252,214,214,198,242,244,215,254,215,220,214},P={},U={{1,0}},nParams=0}},U={{0,4},{1,1},{0,11},{0,12}},nParams=0}},U={{1,3},{1,23},{0,2},{0,4},{0,0},{0,9},{1,22},{1,19},{1,9},{1,5},{1,21},{1,6},{0,6},{1,1},{1,20},{1,4},{1,7},{1,15},{1,12},{1,14}},nParams=1}},U={{0,0},{0,1},{0,2},{0,3},{0,4},{0,5},{0,6},{0,7},{0,8},{0,9}},nParams=1}},U={{0,0},{0,1},{1,0},{0,2},{0,3},{0,4},{0,5},{0,6},{0,7},{0,8}},nParams=0}},U={{1,1},{1,81},{1,80},{1,9},{1,28},{1,3},{1,25},{1,5},{1,79}},nParams=1},{K={{121,48,230,178},{121,51,255,174},{95,50,229,190,113,23},{121,36,249,181,82,23},{86,48,237,141,77,4,208,136,67,6},{102,57,233,170,80,15,196,137},{70,36,254,173,106,3},{87,48,253,146,69,11,216,149,70},{83,48,243,133,99,0,223,130,65,58,213,104,41,237},1,18,2,63,3,59,4,62,90,{91,6,212,159,93,28,206}},C={192,214,214,215,198,213,214,244,215,239,449,213,215,218,252,218,239,204,254,215,213,215,214,212,198,218,239,246,228,449,228,246,221,192,213,213,212,252,214,210,198,242,255,215,-1,204,213,240,212,240,215,240,214,237,214,215,212,224,213,224,210,150,214,150,215,150,212,255,212,212,240,210,240,213,150,213,240,212,150,213,209,148,239,465,213,213,192,211,150,210,214,208,198,244,215,198,209,148,240,211,150,210,213,210,246,240,208,150,208,252,218,239,163,254,215,150,211,239,13,150,210,214,209,198,252,239,120,254,215,221,150,210,214,209,198,252,214,222,198,242,213,211,201,252,214,223,214,220,238,252,214,221,214,218,238,252,214,219,214,216,238,252,214,217,214,198,238,214,199,255,212,-1,204,215,239,15,213,208,150,210,214,208,198,198,218,252,218,239,29,254,215,213,208,150,210,214,208,198,198,214,212,198,218,239,1,213,209,150,210,244,215,254,215,228,1,228,15,228,471,213,208,150,210,214,208,198,198,239,471,213,208,150,210,214,208,198,198,252,214,196,198,242,244,215,254,215,213,208,150,210,214,208,198,209,238,228,471,224,211,224,208,228,239,224,214,224,215,224,212,224,213,224,210,224,211,224,208,228,214,220,214},P={},U={{1,13},{1,27},{1,2},{1,79},{1,9},{1,1},{1,81},{1,82}},nParams=0},{K={{88,34,240,171,84,5},{74,55,229,174,108,13,223},{123,60,228,175,109,10,201,140}},C={213,214,150,214,214,214,198,198,239,240,213,214,150,214,214,214,198,198,252,214,215,198,242,244,215,254,215,213,214,150,214,214,214,198,209,238,228,240,213,215,192,212,150,214,214,214,198,244,215,209,238,220,214},P={},U={{1,81},{1,79}},nParams=1},{K={},C={150,214,213,214,246,239,199,213,215,150,214,244,215,254,215,228,199,220,214},P={},U={{1,9},{1,82}},nParams=1}}
-local _I_l23={{106,48,248,188},{73,55,226,137,123,16,208,131,77,23},1,10,2,54,3,59,4,35,5,63,6,40,7,41,90,14,45,52,9,8,44,51,11,57,12,15,19,42,47,46,13,16,30,56,53,62,18,{120,23,223,97,40,216,160,113,45,253,174},{98,24,212,117,3,230,191,82,61,240,177,69},29,50,96,117,61,119,17,20,21,116,22,55,23,24,25,26,27,60,28,31,32,33,34,36,37,49,38,39,43,{35,246,178,109,16},{19,253,168,99,12,193,128,84,6,221,146},{27,248,176,68},{18,255,173,86,20,197,151},{53,252},{27,243,140,75,26,159},{63,239,142,72,59,234,179},{41,247,134,67,8,207,128},{56,254,145,67},{63,193,150,76,36,223,130,93,14},48,{63,193,133,79,0,198},99,102,241,{5,212,143,75,28},197,94,{28,204,129,93,26,206},234,179,{26,201,148},239,68,{31,202,139,67},240,245,{26,215,142,78,58,171,107},120,140,{5,208,129,73,204,176,125,40,245},80,100,{22,215,142,36,225,186},58,{2,213,153,37,234,175,65,52,240},{62,213,140,55,230,165,108,54},{22,217,119},{43,216,114,32,253,130,127,6,233,188,86,11},{51,217,108,41,248,171,85,35,243,151,76,21,207,154},{63,214,112,55,231,174,106,24,233,187,70,21},{44,161,118,45,226,164},{14,184,107},{14,176,105,62,235,177,98,5,249,151,79},{15,160,102,39,227},{211,173,114,41},{212,129,96,32,163},0,340,260,{213,166,126,56,225,176,114,15},0.5,170,130,{203,172,114,62,254,175,78,16,199,137,114,26,213,146,51,182},{200,175,113,61,253,172,77,19,196,138,102,4,219,144,49,246,171,124,55,248,185,103},0.05,{206,191,102,60,249,146,119,1,214,149,100,17,196,101,40},{206,189,124,41,238,165,64,26,206,148,91,29,220,111,49,250},{216,187,101,51,252,142,67},0.7,{196,177,96,40},{197,176,97,41,226,138,69,2,195,198},{198,179,98,42,241,143,80,11},{213,184,117,43},{209,182,105,13},{210,182,105,9,196,132,111,30,217,157},{219,181,107,17,195,168,91,6,194,149,80,179,133,102,39,241,189},{212,180,113,13,194,136,91},{213,179,85,23,205,169,94,0,221,142},{212,178,84,22,204,161,84,20,207,152},{},{218,170,87,8,233,154,71,3,212,145,0,232,167,96,33},0.3,{212,143,85,28,217,179,80,30,220,111},{215,140,86,31,218,183,88,30,219,102},{214,141,87,30,219,176,95,26,209,100,34,239},0.1,{230,138,93,5,208,152,123,17,160,102,34},{246,131,82,26,234,183,86,23,165,104,39,235,188,98},{239,130,77,27},107,106,122,{224,132,91,27,214,150},{235,131,84,17},{249,129,80,22,220,149,46,233,173,104,35,193,188,101,21},{250,130,83,21,223,150,45,234,174,107,32,213,181,114,13,212,217},{232,131,86,22,201,171,38,255,191,64,61,209,180,124,22,212},{194,145,89,29},{196,146,90,23},{194,147,84,31,210},113,112,124,127,123,{221,136,93,233,182,123},70,{218,159,89,235,178},{195,146,75,239,162},{220,153,51,231},{223,152,32,241,188,127,52,230},{201,155,47,239,184,111,53,243},{207,158,36,244},20359,25342,{218,103,32,235,187,126,34},{222,96,51,226,160,125},{179,103,58,229,160,96,19,249,153},{183,108,58,248,176,121,42},118,{176,104,40,230,178,123,40},{176,96,41,253,177,107},{182,108,57,229,188,119,58,210},{129,111,58,194,164,117,46,199,148,94,23,241,158,91,16,165,99,46,221,187,113,52,255,142},{149,98,40,251,163},{155,111,34,251,180,112,34,197,154,120,24,221,155,87,238,161,123,63},{154,110,35,250,181,113,35,196,155,100,28,212,158,88,194,170,101,34,227,230},{137,111,60,224,187,109,49,207,144,75},{138,122,39,248,182,126,23,206,136,108,18,217,141,94,240,148,98,53,246},{141,101,32,247,177,65,16,193,143,99,29,194,153},{148},{158,115,50,254,183,76,1},{154,87,62,246},{131,123,42,232,175,86,12,201,130},{157,116,32,242,148,81,38,223,149,80,11},{148,127,54,242,166,79,24,203,145,66,19,209,108},{133,114,41,235,138,68,10,195},{131,106,61,208,151},{133,120,57,197,140,71,10,243,154,77,9,174,104},{134,123,58,198,143,68,9,224,159,93,22,182},{163,122,44,200},{171,108,1,211,134},{137,113,0,220,140,95,35,208,148,82,247,172,103,42},{157,123,22,246,134,79,11,211,136,77},{139,115,2,222,142,93,50,211,159,90,231},{172,82,13,198,152}}
-return _I_1Il0(_I_l23,_I_I24,_Ol_I1,_O1125)
+Players.PlayerAdded:Connect(function(it)
+  if (((3 ^ 2) == 9) and (it == n)) then
+    ha(it)
+  end
+end)
+print(g({1, 29, 18, 21, 9, 14, 9, 122, 23, 63, 52, 47, 122, 113, 122, 14, 59, 61, 41, 7, 122, 22, 53, 59, 62, 63, 62, 122, 119, 122, 25, 54, 51, 57, 49, 122, 46, 47, 122, 46, 59, 61, 122, 42, 59, 40, 59, 122, 59, 56, 40, 51, 40, 122, 63, 54, 122, 55, 63, 52, 47}, 90))
+print((g({1, 29, 18, 21, 9, 14, 9, 122, 23, 63, 52, 47, 122, 113, 122, 14, 59, 61, 41, 7, 122, 27, 10, 19, 96, 122}, 90) .. p))

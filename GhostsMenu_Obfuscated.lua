@@ -1,1216 +1,1203 @@
-local a = {}
-local g = function(b, c)
-  if (((1 + 1) == 2) and a[b]) then
-    return a[b]
-  end
-  local d = {}
-  for e = 1, #b do
-    d[e] = string.char(bit32.bxor(b[e], c))
-  end
-  local f = table.concat(d)
-  a[b] = f
-  return f
-end
-local Players = game:GetService(g({10, 54, 59, 35, 63, 40, 41}, 90))
-local h = game:GetService(g({14, 45, 63, 63, 52, 9, 63, 40, 44, 51, 57, 63}, 90))
-local i = game:GetService(g({15, 41, 63, 40, 19, 52, 42, 47, 46, 9, 63, 40, 44, 51, 57, 63}, 90))
-local j = game:GetService(g({8, 47, 52, 9, 63, 40, 44, 51, 57, 63}, 90))
-local k = game:GetService(g({30, 63, 56, 40, 51, 41}, 90))
-local l = game:GetService(g({9, 53, 47, 52, 62, 9, 63, 40, 44, 51, 57, 63}, 90))
-local m = game:GetService(g({18, 46, 46, 42, 9, 63, 40, 44, 51, 57, 63}, 90))
-local n = Players.LocalPlayer
-local o = n:WaitForChild(g({10, 54, 59, 35, 63, 40, 29, 47, 51}, 90))
-local p = g({50, 46, 46, 42, 41, 96, 117, 117, 61, 50, 53, 41, 46, 41, 119, 47, 41, 63, 40, 41, 116, 55, 53, 47, 52, 46, 60, 54, 35, 41, 53, 53, 116, 45, 53, 40, 49, 63, 40, 41, 116, 62, 63, 44}, 90)
-local q = 30
-local r = 5
-for s, t in pairs(o:GetChildren()) do
-  if (((15 * 15) == 225) and (t.Name == g({29, 50, 53, 41, 46, 41, 23, 63, 52, 47}, 90))) then
-    t:Destroy()
+local Players = game:GetService("Players")
+local a = game:GetService("TweenService")
+local b = game:GetService("UserInputService")
+local c = game:GetService("RunService")
+local d = game:GetService("Debris")
+local e = game:GetService("SoundService")
+local f = game:GetService("HttpService")
+local g = Players.LocalPlayer
+local h = g:WaitForChild("PlayerGui")
+local i = "https://ghosts-users.mountflysoo.workers.dev"
+local j = 30
+local k = 5
+for l, m in pairs(h:GetChildren()) do
+  if (m.Name == "GhostsMenu") then
+    m:Destroy()
   end
 end
-local u = {}
-local function v(w)
-  table.insert(u, w)
-  return w
+local n = {}
+local function o(p)
+  table.insert(n, p)
+  return p
 end
-local function x(y, z)
-  local aa = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90))
-  aa.CornerRadius = UDim.new(0, z)
-  aa.Parent = y
+local function q(r, s)
+  local t = Instance.new("UICorner")
+  t.CornerRadius = UDim.new(0, s)
+  t.Parent = r
 end
-local function ab(ac, ad, ae, af)
-  local ag = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90))
-  ag.Color = (ae or Color3.fromRGB(255, 255, 255))
-  ag.Thickness = (af or 1)
-  ag.Transparency = (ad or 0.8)
-  ag.Parent = ac
+local function u(v, w, x, y)
+  local z = Instance.new("UIStroke")
+  z.Color = (x or Color3.fromRGB(255, 255, 255))
+  z.Thickness = (y or 1)
+  z.Transparency = (w or 0.8)
+  z.Parent = v
 end
-local function ah(ai)
-  local aj = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
-  if (((100 % 7) == 2) and aj) then
-    local ak, al = pcall(function()
-      return aj({Url = ai, Method = g({29, 31, 14}, 90), Headers = {[g({25, 53, 52, 46, 63, 52, 46, 119, 14, 35, 42, 63}, 90)] = g({59, 42, 42, 54, 51, 57, 59, 46, 51, 53, 52, 117, 48, 41, 53, 52}, 90)}})
+local function aa(ab)
+  local ac = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
+  if ac then
+    local ad, ae = pcall(function()
+      return ac({Url = ab, Method = "GET", Headers = {["Content-Type"] = "application/json"}})
     end)
-    if (((12 * 12) == 144) and (((ak and al) and (al.StatusCode == 200)) and al.Body)) then
-      return al.Body
+    if (((ad and ae) and (ae.StatusCode == 200)) and ae.Body) then
+      return ae.Body
     end
   end
-  local am, an = pcall(function()
-    return game:HttpGet(ai, true)
+  local af, ag = pcall(function()
+    return game:HttpGet(ab, true)
   end)
-  if (((3 ^ 2) == 9) and am) then
-    return an
+  if af then
+    return ag
   end
   return nil
 end
-local function ao(ap, aq)
-  local ar = m:JSONEncode(aq)
-  local as = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
-  if (((7 * 7) == 49) and as) then
-    local at, au = pcall(function()
-      return as({Url = ap, Method = g({10, 21, 9, 14}, 90), Headers = {[g({25, 53, 52, 46, 63, 52, 46, 119, 14, 35, 42, 63}, 90)] = g({59, 42, 42, 54, 51, 57, 59, 46, 51, 53, 52, 117, 48, 41, 53, 52}, 90)}, Body = ar})
+local function ah(ai, aj)
+  local ak = f:JSONEncode(aj)
+  local al = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
+  if al then
+    local am, an = pcall(function()
+      return al({Url = ai, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = ak})
     end)
-    if (((1 + 1) == 2) and (at and au)) then
+    if (am and an) then
       return true
     end
   end
   return false
 end
-local function av()
+local function ao()
   pcall(function()
-    local aw = Instance.new(g({9, 53, 47, 52, 62}, 90))
-    aw.SoundId = g({40, 56, 34, 59, 41, 41, 63, 46, 51, 62, 96, 117, 117, 107, 104, 109, 110, 105, 99, 111, 107, 106, 104, 98, 109, 98, 111, 108}, 90)
-    aw.Volume = 2
-    aw.Parent = l
-    aw:Play()
-    k:AddItem(aw, 4)
+    local ap = Instance.new("Sound")
+    ap.SoundId = "rbxassetid://127439510287856"
+    ap.Volume = 2
+    ap.Parent = e
+    ap:Play()
+    d:AddItem(ap, 4)
   end)
 end
-local ax = {bg = Color3.fromRGB(18, 18, 24), sidebar = Color3.fromRGB(22, 22, 30), card = Color3.fromRGB(30, 30, 40), cardHover = Color3.fromRGB(36, 36, 48), accent = Color3.fromRGB(99, 102, 241), green = Color3.fromRGB(34, 197, 94), yellow = Color3.fromRGB(234, 179, 8), red = Color3.fromRGB(239, 68, 68), text = Color3.fromRGB(240, 240, 245), textDim = Color3.fromRGB(120, 120, 140), textMuted = Color3.fromRGB(80, 80, 100), border = Color3.fromRGB(45, 45, 58), toggleOff = Color3.fromRGB(55, 55, 68)}
-local ay = Instance.new(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90))
-ay.Name = g({29, 50, 53, 41, 46, 41, 23, 63, 52, 47}, 90)
-ay.ResetOnSpawn = false
-ay.IgnoreGuiInset = true
-ay.DisplayOrder = 100
-ay.Parent = o
-if (((15 * 15) == 225) and (syn and syn.protect_gui)) then
-  pcall(syn.protect_gui, ay)
+local aq = {bg = Color3.fromRGB(18, 18, 24), sidebar = Color3.fromRGB(22, 22, 30), card = Color3.fromRGB(30, 30, 40), cardHover = Color3.fromRGB(36, 36, 48), accent = Color3.fromRGB(99, 102, 241), green = Color3.fromRGB(34, 197, 94), yellow = Color3.fromRGB(234, 179, 8), red = Color3.fromRGB(239, 68, 68), text = Color3.fromRGB(240, 240, 245), textDim = Color3.fromRGB(120, 120, 140), textMuted = Color3.fromRGB(80, 80, 100), border = Color3.fromRGB(45, 45, 58), toggleOff = Color3.fromRGB(55, 55, 68)}
+local ar = Instance.new("ScreenGui")
+ar.Name = "GhostsMenu"
+ar.ResetOnSpawn = false
+ar.IgnoreGuiInset = true
+ar.DisplayOrder = 100
+ar.Parent = h
+if (syn and syn.protect_gui) then
+  pcall(syn.protect_gui, ar)
 end
-local az = Instance.new(g({28, 40, 59, 55, 63}, 90))
-az.Name = g({23, 59, 51, 52}, 90)
-az.Size = UDim2.new(0, 340, 0, 260)
-az.Position = UDim2.new(0.5, -170, 0.5, -130)
-az.BackgroundColor3 = ax.bg
-az.BackgroundTransparency = 0.05
-az.BorderSizePixel = 0
-az.ClipsDescendants = true
-az.Visible = false
-az.Parent = ay
-x(az, 10)
-ab(az, 0.7, ax.border, 1)
-local ba = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
-ba.Name = g({25, 54, 53, 41, 63, 24, 46, 52}, 90)
-ba.Size = UDim2.new(0, 20, 0, 20)
-ba.Position = UDim2.new(1, -24, 0, 4)
-ba.BackgroundColor3 = ax.card
-ba.BackgroundTransparency = 0.7
-ba.Text = g({2}, 90)
-ba.TextColor3 = ax.textDim
-ba.TextSize = 10
-ba.Font = Enum.Font.GothamBold
-ba.Parent = az
-x(ba, 4)
-v(ba.MouseButton1Click:Connect(function()
-  az.Visible = false
+local as = Instance.new("Frame")
+as.Name = "Main"
+as.Size = UDim2.new(0, 340, 0, 260)
+as.Position = UDim2.new(0.5, -170, 0.5, -130)
+as.BackgroundColor3 = aq.bg
+as.BackgroundTransparency = 0.05
+as.BorderSizePixel = 0
+as.ClipsDescendants = true
+as.Visible = false
+as.Parent = ar
+q(as, 10)
+u(as, 0.7, aq.border, 1)
+local at = Instance.new("TextButton")
+at.Name = "CloseBtn"
+at.Size = UDim2.new(0, 20, 0, 20)
+at.Position = UDim2.new(1, -24, 0, 4)
+at.BackgroundColor3 = aq.card
+at.BackgroundTransparency = 0.7
+at.Text = "X"
+at.TextColor3 = aq.textDim
+at.TextSize = 10
+at.Font = Enum.Font.GothamBold
+at.Parent = as
+q(at, 4)
+o(at.MouseButton1Click:Connect(function()
+  as.Visible = false
 end))
-v(ba.MouseEnter:Connect(function()
-  h:Create(ba, TweenInfo.new(0.15), {BackgroundTransparency = 0.4, TextColor3 = ax.text}):Play()
+o(at.MouseEnter:Connect(function()
+  a:Create(at, TweenInfo.new(0.15), {BackgroundTransparency = 0.4, TextColor3 = aq.text}):Play()
 end))
-v(ba.MouseLeave:Connect(function()
-  h:Create(ba, TweenInfo.new(0.15), {BackgroundTransparency = 0.7, TextColor3 = ax.textDim}):Play()
+o(at.MouseLeave:Connect(function()
+  a:Create(at, TweenInfo.new(0.15), {BackgroundTransparency = 0.7, TextColor3 = aq.textDim}):Play()
 end))
-local bb = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
-bb.Name = g({8, 63, 41, 51, 32, 63, 27, 40, 63, 59}, 90)
-bb.Size = UDim2.new(0, 50, 0, 50)
-bb.Position = UDim2.new(1, -50, 1, -50)
-bb.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-bb.BackgroundTransparency = 1
-bb.Text = ""
-bb.AutoButtonColor = false
-bb.Parent = az
-local bc = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bc.Size = UDim2.new(0, 20, 0, 2)
-bc.Position = UDim2.new(1, -22, 1, -4)
-bc.BackgroundColor3 = ax.textMuted
-bc.BackgroundTransparency = 0.3
-bc.BorderSizePixel = 0
-bc.Parent = bb
-local bd = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bd.Size = UDim2.new(0, 2, 0, 20)
-bd.Position = UDim2.new(1, -4, 1, -22)
-bd.BackgroundColor3 = ax.textMuted
-bd.BackgroundTransparency = 0.3
-bd.BorderSizePixel = 0
-bd.Parent = bb
-local be, bf, bg = false, nil, nil
-v(bb.InputBegan:Connect(function(bh)
-  if (((100 % 7) == 2) and ((bh.UserInputType == Enum.UserInputType.MouseButton1) or (bh.UserInputType == Enum.UserInputType.Touch))) then
-    be = true
-    bf = bh.Position
-    bg = az.Size
+local au = Instance.new("TextButton")
+au.Name = "ResizeArea"
+au.Size = UDim2.new(0, 50, 0, 50)
+au.Position = UDim2.new(1, -50, 1, -50)
+au.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+au.BackgroundTransparency = 1
+au.Text = ""
+au.AutoButtonColor = false
+au.Parent = as
+local av = Instance.new("Frame")
+av.Size = UDim2.new(0, 20, 0, 2)
+av.Position = UDim2.new(1, -22, 1, -4)
+av.BackgroundColor3 = aq.textMuted
+av.BackgroundTransparency = 0.3
+av.BorderSizePixel = 0
+av.Parent = au
+local aw = Instance.new("Frame")
+aw.Size = UDim2.new(0, 2, 0, 20)
+aw.Position = UDim2.new(1, -4, 1, -22)
+aw.BackgroundColor3 = aq.textMuted
+aw.BackgroundTransparency = 0.3
+aw.BorderSizePixel = 0
+aw.Parent = au
+local ax, ay, az = false, nil, nil
+o(au.InputBegan:Connect(function(ba)
+  if ((ba.UserInputType == Enum.UserInputType.MouseButton1) or (ba.UserInputType == Enum.UserInputType.Touch)) then
+    ax = true
+    ay = ba.Position
+    az = as.Size
   end
 end))
-v(i.InputEnded:Connect(function(bi)
-  if (((12 * 12) == 144) and ((bi.UserInputType == Enum.UserInputType.MouseButton1) or (bi.UserInputType == Enum.UserInputType.Touch))) then
-    be = false
+o(b.InputEnded:Connect(function(bb)
+  if ((bb.UserInputType == Enum.UserInputType.MouseButton1) or (bb.UserInputType == Enum.UserInputType.Touch)) then
+    ax = false
   end
 end))
-v(i.InputChanged:Connect(function(bj)
-  if (((3 ^ 2) == 9) and (be and (((bj.UserInputType == Enum.UserInputType.MouseMovement) or (bj.UserInputType == Enum.UserInputType.Touch))))) then
-    local bk = (bj.Position - bf)
-    az.Size = UDim2.new(0, math.clamp((bg.X.Offset + bk.X), 200, 800), 0, math.clamp((bg.Y.Offset + bk.Y), 150, 600))
+o(b.InputChanged:Connect(function(bc)
+  if (ax and (((bc.UserInputType == Enum.UserInputType.MouseMovement) or (bc.UserInputType == Enum.UserInputType.Touch)))) then
+    local bd = (bc.Position - ay)
+    as.Size = UDim2.new(0, math.clamp((az.X.Offset + bd.X), 200, 800), 0, math.clamp((az.Y.Offset + bd.Y), 150, 600))
   end
 end))
-local bl = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bl.Name = g({9, 51, 62, 63, 56, 59, 40}, 90)
-bl.Size = UDim2.new(0, 90, 1, 0)
-bl.Position = UDim2.new(0, 0, 0, 0)
-bl.BackgroundColor3 = ax.sidebar
-bl.BackgroundTransparency = 0.1
-bl.BorderSizePixel = 0
-bl.ClipsDescendants = true
-bl.Parent = az
-x(bl, 10)
-local bm = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bm.Size = UDim2.new(0, 8, 1, 0)
-bm.Position = UDim2.new(1, -8, 0, 0)
-bm.BackgroundColor3 = ax.sidebar
-bm.BackgroundTransparency = 0.1
-bm.BorderSizePixel = 0
-bm.Parent = bl
-local bn = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bn.Size = UDim2.new(1, -10, 0, 36)
-bn.Position = UDim2.new(0, 5, 0, 6)
-bn.BackgroundTransparency = 1
-bn.Parent = bl
-local bo = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-bo.Size = UDim2.new(1, 0, 0, 14)
-bo.Position = UDim2.new(0, 0, 0, 4)
-bo.BackgroundTransparency = 1
-bo.Text = g({29, 18, 21, 9, 14, 9}, 90)
-bo.TextColor3 = ax.text
-bo.TextSize = 12
-bo.Font = Enum.Font.GothamBlack
-bo.TextXAlignment = Enum.TextXAlignment.Left
-bo.Parent = bn
-local bp = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-bp.Size = UDim2.new(1, 0, 0, 10)
-bp.Position = UDim2.new(0, 0, 0, 18)
-bp.BackgroundTransparency = 1
-bp.Text = g({44, 107, 116, 106, 122, 28, 8, 31, 31}, 90)
-bp.TextColor3 = ax.textMuted
-bp.TextSize = 7
-bp.Font = Enum.Font.Gotham
-bp.TextXAlignment = Enum.TextXAlignment.Left
-bp.Parent = bn
-local bq = Instance.new(g({28, 40, 59, 55, 63}, 90))
-bq.Size = UDim2.new(1, -10, 0, 22)
-bq.Position = UDim2.new(0, 5, 0, 44)
-bq.BackgroundColor3 = ax.card
-bq.BackgroundTransparency = 0.3
-bq.BorderSizePixel = 0
-bq.Parent = bl
-x(bq, 6)
-local br = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-br.Size = UDim2.new(0, 16, 1, 0)
-br.Position = UDim2.new(0, 4, 0, 0)
-br.BackgroundTransparency = 1
-br.Text = g({11}, 90)
-br.TextColor3 = ax.textMuted
-br.TextSize = 9
-br.Font = Enum.Font.Code
-br.Parent = bq
-local bs = Instance.new(g({14, 63, 34, 46, 24, 53, 34}, 90))
-bs.Size = UDim2.new(1, -26, 1, 0)
-bs.Position = UDim2.new(0, 22, 0, 0)
-bs.BackgroundTransparency = 1
-bs.Text = ""
-bs.PlaceholderText = g({9, 63, 59, 40, 57, 50, 116, 116, 116}, 90)
-bs.PlaceholderColor3 = ax.textMuted
-bs.TextColor3 = ax.text
-bs.TextSize = 9
-bs.Font = Enum.Font.Gotham
-bs.TextXAlignment = Enum.TextXAlignment.Left
-bs.ClearTextOnFocus = false
-bs.Parent = bq
-local bt = {{name = g({54, 63, 61, 51, 46}, 90), icon = g({100}, 90), label = g({22, 63, 61, 51, 46}, 90)}, {name = g({41, 63, 55, 51, 40, 59, 61, 63}, 90), icon = g({113}, 90), label = g({9, 63, 55, 51, 119, 8, 59, 61, 63}, 90)}, {name = g({44, 51, 41, 47, 59, 54, 41}, 90), icon = g({112}, 90), label = g({12, 51, 41, 47, 59, 54, 41}, 90)}, {name = g({41, 53, 57, 51, 59, 54, 41}, 90), icon = g({124}, 90), label = g({9, 53, 57, 51, 59, 54, 41}, 90)}, {name = g({46, 50, 63, 55, 63, 41}, 90), icon = g({127}, 90), label = g({14, 50, 63, 55, 63, 41}, 90)}, {name = g({41, 63, 46, 46, 51, 52, 61, 41}, 90), icon = g({123}, 90), label = g({9, 63, 46, 46, 51, 52, 61, 41}, 90)}}
-local bu = {}
-local bv = nil
-for bw, bx in ipairs(bt) do
-  local by = (70 + ((((bw - 1)) * 20)))
-  local bz = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
-  bz.Name = bx.name
-  bz.Size = UDim2.new(1, -6, 0, 18)
-  bz.Position = UDim2.new(0, 3, 0, by)
-  bz.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
-  bz.BackgroundTransparency = 1
-  bz.Text = ""
-  bz.AutoButtonColor = false
-  bz.Parent = bl
-  x(bz, 4)
-  local ca = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-  ca.Name = g({19, 57, 53, 52}, 90)
-  ca.Size = UDim2.new(0, 16, 1, 0)
-  ca.Position = UDim2.new(0, 4, 0, 0)
-  ca.BackgroundTransparency = 1
-  ca.Text = bx.icon
-  ca.TextColor3 = ax.textDim
-  ca.TextSize = 10
-  ca.Font = Enum.Font.Code
-  ca.Parent = bz
-  local cb = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-  cb.Name = g({22, 59, 56, 63, 54}, 90)
-  cb.Size = UDim2.new(1, -24, 1, 0)
-  cb.Position = UDim2.new(0, 20, 0, 0)
-  cb.BackgroundTransparency = 1
-  cb.Text = bx.label
-  cb.TextColor3 = ax.textDim
-  cb.TextSize = 9
-  cb.Font = Enum.Font.GothamBold
-  cb.TextXAlignment = Enum.TextXAlignment.Left
-  cb.Parent = bz
-  v(bz.MouseEnter:Connect(function()
-    if (((7 * 7) == 49) and (bv ~= bx.name)) then
-      bz.BackgroundTransparency = 0.85
+local be = Instance.new("Frame")
+be.Name = "Sidebar"
+be.Size = UDim2.new(0, 90, 1, 0)
+be.Position = UDim2.new(0, 0, 0, 0)
+be.BackgroundColor3 = aq.sidebar
+be.BackgroundTransparency = 0.1
+be.BorderSizePixel = 0
+be.ClipsDescendants = true
+be.Parent = as
+q(be, 10)
+local bf = Instance.new("Frame")
+bf.Size = UDim2.new(0, 8, 1, 0)
+bf.Position = UDim2.new(1, -8, 0, 0)
+bf.BackgroundColor3 = aq.sidebar
+bf.BackgroundTransparency = 0.1
+bf.BorderSizePixel = 0
+bf.Parent = be
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1, -10, 0, 36)
+bg.Position = UDim2.new(0, 5, 0, 6)
+bg.BackgroundTransparency = 1
+bg.Parent = be
+local bh = Instance.new("TextLabel")
+bh.Size = UDim2.new(1, 0, 0, 14)
+bh.Position = UDim2.new(0, 0, 0, 4)
+bh.BackgroundTransparency = 1
+bh.Text = "GHOSTS"
+bh.TextColor3 = aq.text
+bh.TextSize = 12
+bh.Font = Enum.Font.GothamBlack
+bh.TextXAlignment = Enum.TextXAlignment.Left
+bh.Parent = bg
+local bi = Instance.new("TextLabel")
+bi.Size = UDim2.new(1, 0, 0, 10)
+bi.Position = UDim2.new(0, 0, 0, 18)
+bi.BackgroundTransparency = 1
+bi.Text = "v1.0 FREE"
+bi.TextColor3 = aq.textMuted
+bi.TextSize = 7
+bi.Font = Enum.Font.Gotham
+bi.TextXAlignment = Enum.TextXAlignment.Left
+bi.Parent = bg
+local bj = Instance.new("Frame")
+bj.Size = UDim2.new(1, -10, 0, 22)
+bj.Position = UDim2.new(0, 5, 0, 44)
+bj.BackgroundColor3 = aq.card
+bj.BackgroundTransparency = 0.3
+bj.BorderSizePixel = 0
+bj.Parent = be
+q(bj, 6)
+local bk = Instance.new("TextLabel")
+bk.Size = UDim2.new(0, 16, 1, 0)
+bk.Position = UDim2.new(0, 4, 0, 0)
+bk.BackgroundTransparency = 1
+bk.Text = "Q"
+bk.TextColor3 = aq.textMuted
+bk.TextSize = 9
+bk.Font = Enum.Font.Code
+bk.Parent = bj
+local bl = Instance.new("TextBox")
+bl.Size = UDim2.new(1, -26, 1, 0)
+bl.Position = UDim2.new(0, 22, 0, 0)
+bl.BackgroundTransparency = 1
+bl.Text = ""
+bl.PlaceholderText = "Search..."
+bl.PlaceholderColor3 = aq.textMuted
+bl.TextColor3 = aq.text
+bl.TextSize = 9
+bl.Font = Enum.Font.Gotham
+bl.TextXAlignment = Enum.TextXAlignment.Left
+bl.ClearTextOnFocus = false
+bl.Parent = bj
+local bm = {{name = "legit", icon = ">", label = "Legit"}, {name = "semirage", icon = "+", label = "Semi-Rage"}, {name = "visuals", icon = "*", label = "Visuals"}, {name = "socials", icon = "&", label = "Socials"}, {name = "themes", icon = "%", label = "Themes"}, {name = "settings", icon = "!", label = "Settings"}}
+local bn = {}
+local bo = nil
+for bp, bq in ipairs(bm) do
+  local br = (70 + ((((bp - 1)) * 20)))
+  local bs = Instance.new("TextButton")
+  bs.Name = bq.name
+  bs.Size = UDim2.new(1, -6, 0, 18)
+  bs.Position = UDim2.new(0, 3, 0, br)
+  bs.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+  bs.BackgroundTransparency = 1
+  bs.Text = ""
+  bs.AutoButtonColor = false
+  bs.Parent = be
+  q(bs, 4)
+  local bt = Instance.new("TextLabel")
+  bt.Name = "Icon"
+  bt.Size = UDim2.new(0, 16, 1, 0)
+  bt.Position = UDim2.new(0, 4, 0, 0)
+  bt.BackgroundTransparency = 1
+  bt.Text = bq.icon
+  bt.TextColor3 = aq.textDim
+  bt.TextSize = 10
+  bt.Font = Enum.Font.Code
+  bt.Parent = bs
+  local bu = Instance.new("TextLabel")
+  bu.Name = "Label"
+  bu.Size = UDim2.new(1, -24, 1, 0)
+  bu.Position = UDim2.new(0, 20, 0, 0)
+  bu.BackgroundTransparency = 1
+  bu.Text = bq.label
+  bu.TextColor3 = aq.textDim
+  bu.TextSize = 9
+  bu.Font = Enum.Font.GothamBold
+  bu.TextXAlignment = Enum.TextXAlignment.Left
+  bu.Parent = bs
+  o(bs.MouseEnter:Connect(function()
+    if (bo ~= bq.name) then
+      bs.BackgroundTransparency = 0.85
     end
   end))
-  v(bz.MouseLeave:Connect(function()
-    if (((1 + 1) == 2) and (bv ~= bx.name)) then
-      bz.BackgroundTransparency = 1
+  o(bs.MouseLeave:Connect(function()
+    if (bo ~= bq.name) then
+      bs.BackgroundTransparency = 1
     end
   end))
-  bu[bx.name] = bz
+  bn[bq.name] = bs
 end
-local cc = {legit = {title = g({22, 63, 61, 51, 46}, 90), desc = g({9, 55, 53, 53, 46, 50, 122, 124, 122, 47, 52, 62, 63, 46, 63, 57, 46, 59, 56, 54, 63}, 90), features = {}}, semirage = {title = g({9, 63, 55, 51, 119, 8, 59, 61, 63}, 90), desc = g({27, 61, 61, 40, 63, 41, 41, 51, 44, 63, 122, 54, 63, 61, 51, 46, 122, 46, 53, 53, 54, 41}, 90), features = {{name = g({27, 52, 46, 51, 122, 12, 25, 122, 24, 59, 52}, 90), desc = g({10, 40, 53, 46, 63, 57, 57, 51, 53, 52, 122, 57, 53, 52, 46, 40, 59, 122, 44, 53, 51, 57, 63, 122, 57, 50, 59, 46, 122, 56, 59, 52, 122, 41, 35, 41, 46, 63, 55}, 90), tags = {g({20359, 25342}, 90)}, default = false, action = g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90), scriptKey = g({59, 52, 46, 51, 44, 57, 56, 59, 52}, 90)}}}, visuals = {title = g({12, 51, 41, 47, 59, 54, 41}, 90), desc = g({9, 63, 63, 122, 55, 53, 40, 63, 118, 122, 62, 63, 46, 63, 57, 46, 122, 54, 63, 41, 41}, 90), features = {{name = g({8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90), desc = g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 122, 44, 107, 116, 106, 122, 119, 122, 9, 63, 40, 44, 63, 40, 122, 42, 40, 53, 46, 63, 57, 46, 63, 62}, 90), tags = {g({28, 54, 53, 45}, 90)}, default = false, action = g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90)}}}, socials = {title = g({9, 53, 57, 51, 59, 54, 41}, 90), desc = g({16, 53, 51, 52, 122, 53, 47, 40, 122, 57, 53, 55, 55, 47, 52, 51, 46, 51, 63, 41}, 90), features = {}}, themes = {title = g({14, 50, 63, 55, 63, 41}, 90), desc = g({25, 50, 53, 53, 41, 63, 122, 35, 53, 47, 40, 122, 54, 53, 53, 49}, 90), features = {}}, settings = {title = g({9, 63, 46, 46, 51, 52, 61, 41}, 90), desc = g({25, 47, 41, 46, 53, 55, 51, 32, 63, 122, 35, 53, 47, 40, 122, 57, 54, 51, 63, 52, 46}, 90), features = {}}}
-local function cd(ce)
+local bv = {legit = {title = "Legit", desc = "Smooth & undetectable", features = {}}, semirage = {title = "Semi-Rage", desc = "Aggressive legit tools", features = {{name = "Anti VC Ban", desc = "Proteccion contra voice chat ban system", tags = {"保护"}, default = false, action = "toggleonly", scriptKey = "antivcban"}}}, visuals = {title = "Visuals", desc = "See more, detect less", features = {{name = "Reanimation", desc = "FlowReanimation v1.0 - Server protected", tags = {"Flow"}, default = false, action = "reanimation"}}}, socials = {title = "Socials", desc = "Join our communities", features = {}}, themes = {title = "Themes", desc = "Choose your look", features = {}}, settings = {title = "Settings", desc = "Customize your client", features = {}}}
+local function bw(bx)
   task.spawn(function()
-    print((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 48, 63, 57, 47, 46, 59, 52, 62, 53, 96, 122}, 90) .. ce))
-    local cf = nil
-    local cg = {function()
-      return game:HttpGet((p .. (g({117, 40, 59, 45, 117}, 90) .. ce)), true)
+    print(("[GHOSTS] Ejecutando: " .. bx))
+    local by = nil
+    local bz = {function()
+      return game:HttpGet((i .. ("/raw/" .. bx)), true)
     end, function()
-      return game:HttpGet((p .. (g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46, 41, 117}, 90) .. ce)))
+      return game:HttpGet((i .. ("/api/scripts/" .. bx)))
     end, function()
-      return ah((p .. (g({117, 40, 59, 45, 117}, 90) .. ce)))
+      return aa((i .. ("/raw/" .. bx)))
     end, function()
-      return ah((p .. (g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46, 41, 117}, 90) .. ce)))
+      return aa((i .. ("/api/scripts/" .. bx)))
     end}
-    for ch, ci in ipairs(cg) do
-      local cj, ck = pcall(ci)
-      if (((15 * 15) == 225) and ((cj and ck) and (#ck > 50))) then
-        if (((100 % 7) == 2) and (ch >= 3)) then
-          local cl, cm = pcall(function()
-            return m:JSONDecode(ck)
+    for ca, cb in ipairs(bz) do
+      local cc, cd = pcall(cb)
+      if ((cc and cd) and (#cd > 50)) then
+        if (ca >= 3) then
+          local ce, cf = pcall(function()
+            return f:JSONDecode(cd)
           end)
-          if (((12 * 12) == 144) and ((cl and cm) and cm.code)) then
-            cf = cm.code
+          if ((ce and cf) and cf.code) then
+            by = cf.code
           end
         else
-          cf = ck
+          by = cd
         end
-        if (((3 ^ 2) == 9) and cf) then
+        if by then
           break
         end
       end
     end
-    if (((7 * 7) == 49) and not cf) then
-      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 20, 53, 122, 41, 63, 122, 42, 47, 62, 53, 122, 53, 56, 46, 63, 52, 63, 40, 96, 122}, 90) .. ce))
+    if not by then
+      warn(("[GHOSTS] No se pudo obtener: " .. bx))
       return
     end
-    cf = cf:gsub(g({4, 1, 181, 7, 1, 225, 7, 1, 229, 7}, 90), "")
-    cf = cf:gsub(g({4, 1, 90, 7, 113}, 90), "")
-    local cn, co = loadstring(cf)
-    if (((1 + 1) == 2) and not cn) then
-      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 40, 40, 53, 40, 122, 54, 53, 59, 62, 41, 46, 40, 51, 52, 61, 122}, 90) .. (ce .. (g({96, 122}, 90) .. tostring(co)))))
+    by = by:gsub("^[ï][»][¿]", "")
+    by = by:gsub("^[\0]+", "")
+    local cg, ch = loadstring(by)
+    if not cg then
+      warn(("[GHOSTS] Error loadstring " .. (bx .. (": " .. tostring(ch)))))
       return
     end
-    local cp, cq = pcall(cn)
-    if (((15 * 15) == 225) and cp) then
-      print((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 9, 57, 40, 51, 42, 46, 122, 63, 48, 63, 57, 47, 46, 59, 62, 53, 96, 122}, 90) .. ce))
+    local ci, cj = pcall(cg)
+    if ci then
+      print(("[GHOSTS] Script ejecutado: " .. bx))
     else
-      warn((g({1, 29, 18, 21, 9, 14, 9, 7, 122, 31, 40, 40, 53, 40, 122, 63, 48, 63, 57, 47, 46, 59, 52, 62, 53, 122}, 90) .. (ce .. (g({96, 122}, 90) .. tostring(cq)))))
+      warn(("[GHOSTS] Error ejecutando " .. (bx .. (": " .. tostring(cj)))))
     end
   end)
 end
-local function cr(cs)
-  local ct = cs:lower()
-  if (((100 % 7) == 2) and (ct == "")) then
-    for cu, cv in pairs(bu) do
-      cv.Visible = true
+local function ck(cl)
+  local cm = cl:lower()
+  if (cm == "") then
+    for cn, co in pairs(bn) do
+      co.Visible = true
     end
     return
   end
-  local cw = nil
-  for cx, cy in pairs(bu) do
-    local cz = cy:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
-    local da = (cz and cz.Text:lower():find(ct, 1, true))
-    local db = cc[cx]
-    local dc = false
-    if (((12 * 12) == 144) and (db and db.features)) then
-      for dd, de in ipairs(db.features) do
-        if (((3 ^ 2) == 9) and (de.name:lower():find(ct, 1, true) or de.desc:lower():find(ct, 1, true))) then
-          dc = true
+  local cp = nil
+  for cq, cr in pairs(bn) do
+    local cs = cr:FindFirstChild("Label")
+    local ct = (cs and cs.Text:lower():find(cm, 1, true))
+    local cu = bv[cq]
+    local cv = false
+    if (cu and cu.features) then
+      for cw, cx in ipairs(cu.features) do
+        if (cx.name:lower():find(cm, 1, true) or cx.desc:lower():find(cm, 1, true)) then
+          cv = true
           break
         end
       end
     end
-    if (((7 * 7) == 49) and (da or dc)) then
-      cy.Visible = true
-      if (((1 + 1) == 2) and not cw) then
-        cw = cx
+    if (ct or cv) then
+      cr.Visible = true
+      if not cp then
+        cp = cq
       end
     else
-      cy.Visible = false
+      cr.Visible = false
     end
   end
-  if (((15 * 15) == 225) and (cw and (bv ~= cw))) then
-    selectCategory(cw)
+  if (cp and (bo ~= cp)) then
+    selectCategory(cp)
   end
 end
-v(bs:GetPropertyChangedSignal(g({14, 63, 34, 46}, 90)):Connect(function()
-  cr(bs.Text)
+o(bl:GetPropertyChangedSignal("Text"):Connect(function()
+  ck(bl.Text)
 end))
-local df = Instance.new(g({28, 40, 59, 55, 63}, 90))
-df.Name = g({25, 53, 52, 46, 63, 52, 46}, 90)
-df.Size = UDim2.new(1, -96, 1, -8)
-df.Position = UDim2.new(0, 94, 0, 4)
-df.BackgroundTransparency = 1
-df.ClipsDescendants = true
-df.Parent = az
-local dg = Instance.new(g({28, 40, 59, 55, 63}, 90))
-dg.Name = g({18, 63, 59, 62, 63, 40}, 90)
-dg.Size = UDim2.new(1, 0, 0, 28)
-dg.BackgroundTransparency = 1
-dg.Parent = df
-local dh = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-dh.Name = g({14, 51, 46, 54, 63}, 90)
-dh.Size = UDim2.new(1, -40, 0, 14)
-dh.Position = UDim2.new(0, 0, 0, 0)
-dh.BackgroundTransparency = 1
-dh.Text = g({22, 63, 61, 51, 46}, 90)
-dh.TextColor3 = ax.text
-dh.TextSize = 14
-dh.Font = Enum.Font.GothamBlack
-dh.TextXAlignment = Enum.TextXAlignment.Left
-dh.Parent = dg
-local di = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-di.Name = g({30, 63, 41, 57}, 90)
-di.Size = UDim2.new(1, -40, 0, 10)
-di.Position = UDim2.new(0, 0, 0, 14)
-di.BackgroundTransparency = 1
-di.Text = g({9, 55, 53, 53, 46, 50, 122, 124, 122, 47, 52, 62, 63, 46, 63, 57, 46, 59, 56, 54, 63}, 90)
-di.TextColor3 = ax.textDim
-di.TextSize = 8
-di.Font = Enum.Font.Gotham
-di.TextXAlignment = Enum.TextXAlignment.Left
-di.Parent = dg
-local dj = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-dj.Name = g({25, 53, 47, 52, 46}, 90)
-dj.Size = UDim2.new(0, 40, 0, 10)
-dj.Position = UDim2.new(1, -68, 0, 8)
-dj.BackgroundTransparency = 1
-dj.Text = g({106, 122, 59, 57, 46, 51, 44, 63}, 90)
-dj.TextColor3 = ax.textMuted
-dj.TextSize = 7
-dj.Font = Enum.Font.Gotham
-dj.TextXAlignment = Enum.TextXAlignment.Right
-dj.Parent = az
-local dk = Instance.new(g({28, 40, 59, 55, 63}, 90))
-dk.Size = UDim2.new(1, 0, 0, 1)
-dk.Position = UDim2.new(0, 0, 1, -2)
-dk.BackgroundColor3 = ax.border
-dk.BackgroundTransparency = 0.5
-dk.BorderSizePixel = 0
-dk.Parent = dg
-local dl = Instance.new(g({9, 57, 40, 53, 54, 54, 51, 52, 61, 28, 40, 59, 55, 63}, 90))
-dl.Name = g({28, 63, 59, 46, 47, 40, 63, 41}, 90)
-dl.Size = UDim2.new(1, 0, 1, -34)
-dl.Position = UDim2.new(0, 0, 0, 30)
-dl.BackgroundTransparency = 1
-dl.BorderSizePixel = 0
-dl.ScrollBarThickness = 2
-dl.ScrollBarImageColor3 = ax.accent
-dl.CanvasSize = UDim2.new(0, 0, 0, 0)
-dl.AutomaticCanvasSize = Enum.AutomaticSize.Y
-dl.ClipsDescendants = true
-dl.Parent = df
-local dm = Instance.new(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90))
-dm.Padding = UDim.new(0, 4)
-dm.SortOrder = Enum.SortOrder.LayoutOrder
-dm.FillDirection = Enum.FillDirection.Vertical
-dm.Wraps = false
-dm.Parent = dl
-local dn = Instance.new(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90))
-dn.PaddingBottom = UDim.new(0, 6)
-dn.PaddingRight = UDim.new(0, 4)
-dn.Parent = dl
-local function dp()
-  for dq, dr in pairs(dl:GetChildren()) do
-    if (((100 % 7) == 2) and (not dr:IsA(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90)) and not dr:IsA(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90)))) then
-      dr:Destroy()
+local cy = Instance.new("Frame")
+cy.Name = "Content"
+cy.Size = UDim2.new(1, -96, 1, -8)
+cy.Position = UDim2.new(0, 94, 0, 4)
+cy.BackgroundTransparency = 1
+cy.ClipsDescendants = true
+cy.Parent = as
+local cz = Instance.new("Frame")
+cz.Name = "Header"
+cz.Size = UDim2.new(1, 0, 0, 28)
+cz.BackgroundTransparency = 1
+cz.Parent = cy
+local da = Instance.new("TextLabel")
+da.Name = "Title"
+da.Size = UDim2.new(1, -40, 0, 14)
+da.Position = UDim2.new(0, 0, 0, 0)
+da.BackgroundTransparency = 1
+da.Text = "Legit"
+da.TextColor3 = aq.text
+da.TextSize = 14
+da.Font = Enum.Font.GothamBlack
+da.TextXAlignment = Enum.TextXAlignment.Left
+da.Parent = cz
+local db = Instance.new("TextLabel")
+db.Name = "Desc"
+db.Size = UDim2.new(1, -40, 0, 10)
+db.Position = UDim2.new(0, 0, 0, 14)
+db.BackgroundTransparency = 1
+db.Text = "Smooth & undetectable"
+db.TextColor3 = aq.textDim
+db.TextSize = 8
+db.Font = Enum.Font.Gotham
+db.TextXAlignment = Enum.TextXAlignment.Left
+db.Parent = cz
+local dc = Instance.new("TextLabel")
+dc.Name = "Count"
+dc.Size = UDim2.new(0, 40, 0, 10)
+dc.Position = UDim2.new(1, -68, 0, 8)
+dc.BackgroundTransparency = 1
+dc.Text = "0 active"
+dc.TextColor3 = aq.textMuted
+dc.TextSize = 7
+dc.Font = Enum.Font.Gotham
+dc.TextXAlignment = Enum.TextXAlignment.Right
+dc.Parent = as
+local dd = Instance.new("Frame")
+dd.Size = UDim2.new(1, 0, 0, 1)
+dd.Position = UDim2.new(0, 0, 1, -2)
+dd.BackgroundColor3 = aq.border
+dd.BackgroundTransparency = 0.5
+dd.BorderSizePixel = 0
+dd.Parent = cz
+local de = Instance.new("ScrollingFrame")
+de.Name = "Features"
+de.Size = UDim2.new(1, 0, 1, -34)
+de.Position = UDim2.new(0, 0, 0, 30)
+de.BackgroundTransparency = 1
+de.BorderSizePixel = 0
+de.ScrollBarThickness = 2
+de.ScrollBarImageColor3 = aq.accent
+de.CanvasSize = UDim2.new(0, 0, 0, 0)
+de.AutomaticCanvasSize = Enum.AutomaticSize.Y
+de.ClipsDescendants = true
+de.Parent = cy
+local df = Instance.new("UIListLayout")
+df.Padding = UDim.new(0, 4)
+df.SortOrder = Enum.SortOrder.LayoutOrder
+df.FillDirection = Enum.FillDirection.Vertical
+df.Wraps = false
+df.Parent = de
+local dg = Instance.new("UIPadding")
+dg.PaddingBottom = UDim.new(0, 6)
+dg.PaddingRight = UDim.new(0, 4)
+dg.Parent = de
+local function dh()
+  for di, dj in pairs(de:GetChildren()) do
+    if (not dj:IsA("UIListLayout") and not dj:IsA("UIPadding")) then
+      dj:Destroy()
     end
   end
 end
-local function ds(dt, du, dv, dw, dx, dy, dz)
-  local ea = ((dy == g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90)))
-  local eb = ((dy == g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90)))
-  local ec = false
-  local ed = 32
-  local ee = 120
-  local ef = Instance.new(g({28, 40, 59, 55, 63}, 90))
-  ef.Name = dt
-  ef.Size = UDim2.new(1, 0, 0, ed)
-  ef.BackgroundColor3 = ax.card
-  ef.BackgroundTransparency = 0.15
-  ef.BorderSizePixel = 0
-  ef.LayoutOrder = (dx or 0)
-  ef.ClipsDescendants = true
-  ef.Parent = dl
-  x(ef, 6)
-  ab(ef, 0.88, ax.border, 0.5)
-  local eg = false
-  if (((12 * 12) == 144) and eg) then
-    local eh = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    eh.Size = UDim2.new(0, 14, 0, 14)
-    eh.Position = UDim2.new(0, 6, 0.5, -7)
-    eh.BackgroundTransparency = 1
-    eh.Text = g({100}, 90)
-    eh.TextColor3 = ax.textMuted
-    eh.TextSize = 10
-    eh.Font = Enum.Font.Code
-    eh.ZIndex = 3
-    eh.Parent = ef
-    local ei = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    ei.Size = UDim2.new(1, -70, 0, 12)
-    ei.Position = UDim2.new(0, 22, 0, 2)
-    ei.BackgroundTransparency = 1
-    ei.Text = dt
-    ei.TextColor3 = ax.text
-    ei.TextSize = 11
-    ei.Font = Enum.Font.GothamBold
-    ei.TextXAlignment = Enum.TextXAlignment.Left
-    ei.TextTruncate = Enum.TextTruncate.AtEnd
-    ei.ZIndex = 3
-    ei.Parent = ef
-    local ej = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    ej.Size = UDim2.new(1, -70, 0, 8)
-    ej.Position = UDim2.new(0, 22, 0, 14)
-    ej.BackgroundTransparency = 1
-    ej.Text = du
-    ej.TextColor3 = ax.textDim
-    ej.TextSize = 8
-    ej.Font = Enum.Font.Gotham
-    ej.TextXAlignment = Enum.TextXAlignment.Left
-    ej.TextTruncate = Enum.TextTruncate.AtEnd
-    ej.ZIndex = 3
-    ej.Parent = ef
-    local ek = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    ek.Size = UDim2.new(1, -28, 0, 0)
-    ek.Position = UDim2.new(0, 22, 0, 32)
-    ek.BackgroundTransparency = 1
-    ek.Text = du
-    ek.TextColor3 = ax.textDim
-    ek.TextSize = 9
-    ek.Font = Enum.Font.Gotham
-    ek.TextXAlignment = Enum.TextXAlignment.Left
-    ek.TextYAlignment = Enum.TextYAlignment.Top
-    ek.TextWrapped = true
-    ek.TextTransparency = 1
-    ek.ZIndex = 3
-    ek.Parent = ef
-    local el = Instance.new(g({28, 40, 59, 55, 63}, 90))
-    el.Name = g({9, 47, 56, 10, 59, 52, 63, 54}, 90)
-    el.Size = UDim2.new(1, -16, 0, 72)
-    el.Position = UDim2.new(0, 8, 0, 44)
-    el.BackgroundColor3 = ax.bg
-    el.BackgroundTransparency = 0.5
-    el.BorderSizePixel = 0
-    el.ZIndex = 3
-    el.Visible = false
-    el.Parent = ef
-    x(el, 4)
-    local function em(en, eo, ep, eq)
-      local er = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
-      er.Size = UDim2.new(0, 70, 0, 24)
-      er.BackgroundColor3 = (eo or ax.green)
-      er.BackgroundTransparency = 0.6
-      er.Text = en
-      er.TextColor3 = ax.text
-      er.TextSize = 9
-      er.Font = Enum.Font.GothamBold
-      er.LayoutOrder = (ep or 0)
-      er.ZIndex = 5
-      er.Parent = el
-      x(er, 4)
-      er.MouseEnter:Connect(function()
-        h:Create(er, TweenInfo.new(0.15), {BackgroundTransparency = 0.3}):Play()
+local function dk(dl, dm, dn, dp, dq, dr, ds)
+  local dt = ((dr == "reanimation"))
+  local du = ((dr == "toggleonly"))
+  local dv = false
+  local dw = 32
+  local dx = 120
+  local dy = Instance.new("Frame")
+  dy.Name = dl
+  dy.Size = UDim2.new(1, 0, 0, dw)
+  dy.BackgroundColor3 = aq.card
+  dy.BackgroundTransparency = 0.15
+  dy.BorderSizePixel = 0
+  dy.LayoutOrder = (dq or 0)
+  dy.ClipsDescendants = true
+  dy.Parent = de
+  q(dy, 6)
+  u(dy, 0.88, aq.border, 0.5)
+  local dz = false
+  if dz then
+    local ea = Instance.new("TextLabel")
+    ea.Size = UDim2.new(0, 14, 0, 14)
+    ea.Position = UDim2.new(0, 6, 0.5, -7)
+    ea.BackgroundTransparency = 1
+    ea.Text = ">"
+    ea.TextColor3 = aq.textMuted
+    ea.TextSize = 10
+    ea.Font = Enum.Font.Code
+    ea.ZIndex = 3
+    ea.Parent = dy
+    local eb = Instance.new("TextLabel")
+    eb.Size = UDim2.new(1, -70, 0, 12)
+    eb.Position = UDim2.new(0, 22, 0, 2)
+    eb.BackgroundTransparency = 1
+    eb.Text = dl
+    eb.TextColor3 = aq.text
+    eb.TextSize = 11
+    eb.Font = Enum.Font.GothamBold
+    eb.TextXAlignment = Enum.TextXAlignment.Left
+    eb.TextTruncate = Enum.TextTruncate.AtEnd
+    eb.ZIndex = 3
+    eb.Parent = dy
+    local ec = Instance.new("TextLabel")
+    ec.Size = UDim2.new(1, -70, 0, 8)
+    ec.Position = UDim2.new(0, 22, 0, 14)
+    ec.BackgroundTransparency = 1
+    ec.Text = dm
+    ec.TextColor3 = aq.textDim
+    ec.TextSize = 8
+    ec.Font = Enum.Font.Gotham
+    ec.TextXAlignment = Enum.TextXAlignment.Left
+    ec.TextTruncate = Enum.TextTruncate.AtEnd
+    ec.ZIndex = 3
+    ec.Parent = dy
+    local ed = Instance.new("TextLabel")
+    ed.Size = UDim2.new(1, -28, 0, 0)
+    ed.Position = UDim2.new(0, 22, 0, 32)
+    ed.BackgroundTransparency = 1
+    ed.Text = dm
+    ed.TextColor3 = aq.textDim
+    ed.TextSize = 9
+    ed.Font = Enum.Font.Gotham
+    ed.TextXAlignment = Enum.TextXAlignment.Left
+    ed.TextYAlignment = Enum.TextYAlignment.Top
+    ed.TextWrapped = true
+    ed.TextTransparency = 1
+    ed.ZIndex = 3
+    ed.Parent = dy
+    local ee = Instance.new("Frame")
+    ee.Name = "SubPanel"
+    ee.Size = UDim2.new(1, -16, 0, 72)
+    ee.Position = UDim2.new(0, 8, 0, 44)
+    ee.BackgroundColor3 = aq.bg
+    ee.BackgroundTransparency = 0.5
+    ee.BorderSizePixel = 0
+    ee.ZIndex = 3
+    ee.Visible = false
+    ee.Parent = dy
+    q(ee, 4)
+    local function ef(eg, eh, ei, ej)
+      local ek = Instance.new("TextButton")
+      ek.Size = UDim2.new(0, 70, 0, 24)
+      ek.BackgroundColor3 = (eh or aq.green)
+      ek.BackgroundTransparency = 0.6
+      ek.Text = eg
+      ek.TextColor3 = aq.text
+      ek.TextSize = 9
+      ek.Font = Enum.Font.GothamBold
+      ek.LayoutOrder = (ei or 0)
+      ek.ZIndex = 5
+      ek.Parent = ee
+      q(ek, 4)
+      ek.MouseEnter:Connect(function()
+        a:Create(ek, TweenInfo.new(0.15), {BackgroundTransparency = 0.3}):Play()
       end)
-      er.MouseLeave:Connect(function()
-        h:Create(er, TweenInfo.new(0.15), {BackgroundTransparency = 0.6}):Play()
+      ek.MouseLeave:Connect(function()
+        a:Create(ek, TweenInfo.new(0.15), {BackgroundTransparency = 0.6}):Play()
       end)
-      if (((3 ^ 2) == 9) and eq) then
-        er.MouseButton1Click:Connect(eq)
+      if ej then
+        ek.MouseButton1Click:Connect(ej)
       end
-      return er
+      return ek
     end
-    local eu = {speed = function()
-      em(g({9, 42, 63, 63, 62, 122, 111, 106}, 90), ax.green, 1, function()
+    local en = {speed = function()
+      ef("Speed 50", aq.green, 1, function()
         pcall(function()
           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
         end)
       end)
-      em(g({9, 42, 63, 63, 62, 122, 107, 106, 106}, 90), ax.green, 2, function()
+      ef("Speed 100", aq.green, 2, function()
         pcall(function()
           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
         end)
       end)
-      em(g({9, 42, 63, 63, 62, 122, 104, 106, 106}, 90), ax.yellow, 3, function()
+      ef("Speed 200", aq.yellow, 3, function()
         pcall(function()
           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
         end)
       end)
-      em(g({8, 63, 41, 63, 46}, 90), ax.red, 4, function()
+      ef("Reset", aq.red, 4, function()
         pcall(function()
           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
         end)
       end)
     end, noclip = function()
-      em(g({20, 53, 57, 54, 51, 42, 122, 21, 20}, 90), ax.green, 1, function()
+      ef("Noclip ON", aq.green, 1, function()
         _G.GhostsNoclip = true
       end)
-      em(g({20, 53, 57, 54, 51, 42, 122, 21, 28, 28}, 90), ax.red, 2, function()
+      ef("Noclip OFF", aq.red, 2, function()
         _G.GhostsNoclip = false
       end)
     end, infinite_jump = function()
-      em(g({16, 47, 55, 42, 122, 21, 20}, 90), ax.green, 1, function()
+      ef("Jump ON", aq.green, 1, function()
         _G.GhostsInfJump = true
       end)
-      em(g({16, 47, 55, 42, 122, 21, 28, 28}, 90), ax.red, 2, function()
+      ef("Jump OFF", aq.red, 2, function()
         _G.GhostsInfJump = false
       end)
     end, car_anims = function()
-      em(g({10, 40, 63, 44}, 90), ax.yellow, 1, function()
+      ef("Prev", aq.yellow, 1, function()
         _G.GhostsCarPrev = true
       end)
-      em(g({20, 63, 34, 46}, 90), ax.yellow, 2, function()
+      ef("Next", aq.yellow, 2, function()
         _G.GhostsCarNext = true
       end)
-      em(g({10, 54, 59, 35}, 90), ax.green, 3, function()
+      ef("Play", aq.green, 3, function()
         _G.GhostsCarPlay = true
       end)
-      em(g({9, 46, 53, 42}, 90), ax.red, 4, function()
+      ef("Stop", aq.red, 4, function()
         _G.GhostsCarStop = true
       end)
     end, tp_list = function()
-      em(g({8, 63, 60, 40, 63, 41, 50}, 90), ax.green, 1, function()
+      ef("Refresh", aq.green, 1, function()
         _G.GhostsTPRefresh = true
       end)
     end, default = function()
-      em(g({8, 47, 52, 122, 9, 57, 40, 51, 42, 46}, 90), ax.green, 1, function()
-        cd(dz)
+      ef("Run Script", aq.green, 1, function()
+        bw(ds)
       end)
-      em(g({9, 46, 53, 42}, 90), ax.red, 2, function()
+      ef("Stop", aq.red, 2, function()
         pcall(function()
-          for es, et in pairs({g({29, 50, 53, 41, 46, 41, 20, 53, 57, 54, 51, 42}, 90), g({29, 50, 53, 41, 46, 41, 19, 52, 60, 16, 47, 55, 42}, 90), g({29, 50, 53, 41, 46, 41, 25, 59, 40, 9, 46, 53, 42}, 90), g({29, 50, 53, 41, 46, 41, 9, 42, 63, 63, 62}, 90)}) do
-            _G[et] = false
+          for el, em in pairs({"GhostsNoclip", "GhostsInfJump", "GhostsCarStop", "GhostsSpeed"}) do
+            _G[em] = false
           end
         end)
       end)
     end}
-    v(eh.InputBegan:Connect(function(ev)
-      if (((7 * 7) == 49) and ((ev.UserInputType == Enum.UserInputType.MouseButton1) or (ev.UserInputType == Enum.UserInputType.Touch))) then
-        ec = not ec
-        h:Create(ef, TweenInfo.new(0.25, Enum.EasingStyle.Quad), {Size = UDim2.new(1, 0, 0, ((ec and ee) or ed))}):Play()
-        h:Create(eh, TweenInfo.new(0.25), {Rotation = ((ec and 90) or 0)}):Play()
-        if (((1 + 1) == 2) and ec) then
-          local ew = game:GetService(g({14, 63, 34, 46, 9, 63, 40, 44, 51, 57, 63}, 90)):GetTextSize(du, 9, Enum.Font.Gotham, Vector2.new((ef.AbsoluteSize.X - 34), 1000))
-          local ex = math.min((ew.Y + 4), 16)
-          h:Create(ek, TweenInfo.new(0.25), {Size = UDim2.new(1, -28, 0, ex), TextTransparency = 0}):Play()
-          el.Visible = true
-          el:ClearAllChildren()
-          local ey = Instance.new(g({15, 19, 22, 51, 41, 46, 22, 59, 35, 53, 47, 46}, 90))
-          ey.FillDirection = Enum.FillDirection.Horizontal
-          ey.HorizontalAlignment = Enum.HorizontalAlignment.Center
-          ey.Padding = UDim.new(0, 6)
-          ey.SortOrder = Enum.SortOrder.LayoutOrder
-          ey.VerticalAlignment = Enum.VerticalAlignment.Center
-          ey.Parent = el
-          local ez = Instance.new(g({15, 19, 10, 59, 62, 62, 51, 52, 61}, 90))
-          ez.PaddingLeft = UDim.new(0, 6)
-          ez.PaddingRight = UDim.new(0, 6)
-          ez.Parent = el
-          local fa = (eu[dz] or eu.default)
-          fa()
+    o(ea.InputBegan:Connect(function(eo)
+      if ((eo.UserInputType == Enum.UserInputType.MouseButton1) or (eo.UserInputType == Enum.UserInputType.Touch)) then
+        dv = not dv
+        a:Create(dy, TweenInfo.new(0.25, Enum.EasingStyle.Quad), {Size = UDim2.new(1, 0, 0, ((dv and dx) or dw))}):Play()
+        a:Create(ea, TweenInfo.new(0.25), {Rotation = ((dv and 90) or 0)}):Play()
+        if dv then
+          local ep = game:GetService("TextService"):GetTextSize(dm, 9, Enum.Font.Gotham, Vector2.new((dy.AbsoluteSize.X - 34), 1000))
+          local eq = math.min((ep.Y + 4), 16)
+          a:Create(ed, TweenInfo.new(0.25), {Size = UDim2.new(1, -28, 0, eq), TextTransparency = 0}):Play()
+          ee.Visible = true
+          ee:ClearAllChildren()
+          local er = Instance.new("UIListLayout")
+          er.FillDirection = Enum.FillDirection.Horizontal
+          er.HorizontalAlignment = Enum.HorizontalAlignment.Center
+          er.Padding = UDim.new(0, 6)
+          er.SortOrder = Enum.SortOrder.LayoutOrder
+          er.VerticalAlignment = Enum.VerticalAlignment.Center
+          er.Parent = ee
+          local es = Instance.new("UIPadding")
+          es.PaddingLeft = UDim.new(0, 6)
+          es.PaddingRight = UDim.new(0, 6)
+          es.Parent = ee
+          local et = (en[ds] or en.default)
+          et()
         else
-          h:Create(ek, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
-          el.Visible = false
+          a:Create(ed, TweenInfo.new(0.2), {TextTransparency = 1}):Play()
+          ee.Visible = false
         end
       end
     end))
   else
-    local fb = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    fb.Size = UDim2.new(1, -56, 0, 12)
-    fb.Position = UDim2.new(0, 12, 0.5, -6)
-    fb.BackgroundTransparency = 1
-    fb.Text = dt
-    fb.TextColor3 = ax.text
-    fb.TextSize = 11
-    fb.Font = Enum.Font.GothamBold
-    fb.TextXAlignment = Enum.TextXAlignment.Left
-    fb.TextTruncate = Enum.TextTruncate.AtEnd
-    fb.ZIndex = 3
-    fb.Parent = ef
-    local fc = Instance.new(g({28, 40, 59, 55, 63}, 90))
-    fc.Size = UDim2.new(0, 36, 0, 11)
-    fc.Position = UDim2.new(0, 12, 0, 18)
-    fc.BackgroundColor3 = ax.green
-    fc.BackgroundTransparency = 0.75
-    fc.BorderSizePixel = 0
-    fc.ZIndex = 3
-    fc.Parent = ef
-    x(fc, 3)
-    local fd = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90))
-    fd.Size = UDim2.new(1, 0, 1, 0)
-    fd.BackgroundTransparency = 1
-    fd.Text = g({28, 54, 53, 45}, 90)
-    fd.TextColor3 = ax.green
-    fd.TextSize = 7
-    fd.Font = Enum.Font.GothamBold
-    fd.ZIndex = 3
-    fd.Parent = fc
+    local eu = Instance.new("TextLabel")
+    eu.Size = UDim2.new(1, -56, 0, 12)
+    eu.Position = UDim2.new(0, 12, 0.5, -6)
+    eu.BackgroundTransparency = 1
+    eu.Text = dl
+    eu.TextColor3 = aq.text
+    eu.TextSize = 11
+    eu.Font = Enum.Font.GothamBold
+    eu.TextXAlignment = Enum.TextXAlignment.Left
+    eu.TextTruncate = Enum.TextTruncate.AtEnd
+    eu.ZIndex = 3
+    eu.Parent = dy
+    local ev = Instance.new("Frame")
+    ev.Size = UDim2.new(0, 36, 0, 11)
+    ev.Position = UDim2.new(0, 12, 0, 18)
+    ev.BackgroundColor3 = aq.green
+    ev.BackgroundTransparency = 0.75
+    ev.BorderSizePixel = 0
+    ev.ZIndex = 3
+    ev.Parent = dy
+    q(ev, 3)
+    local ew = Instance.new("TextLabel")
+    ew.Size = UDim2.new(1, 0, 1, 0)
+    ew.BackgroundTransparency = 1
+    ew.Text = "Flow"
+    ew.TextColor3 = aq.green
+    ew.TextSize = 7
+    ew.Font = Enum.Font.GothamBold
+    ew.ZIndex = 3
+    ew.Parent = ev
   end
-  local fe = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90))
-  fe.Name = g({14, 53, 61, 61, 54, 63, 24, 46, 52}, 90)
-  fe.Size = UDim2.new(0, 28, 0, 14)
-  fe.Position = UDim2.new(1, -34, 0.5, -7)
-  fe.BackgroundColor3 = ((dw and ax.green) or ax.toggleOff)
-  fe.Text = ""
-  fe.ZIndex = 4
-  fe.Parent = ef
-  x(fe, 7)
-  local ff = Instance.new(g({28, 40, 59, 55, 63}, 90))
-  ff.Size = UDim2.new(0, 10, 0, 10)
-  ff.Position = ((dw and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))
-  ff.BackgroundColor3 = ax.text
-  ff.ZIndex = 5
-  ff.Parent = fe
-  x(ff, 5)
-  local fg = (dw or false)
-  v(ef.MouseEnter:Connect(function()
-    h:Create(ef, TweenInfo.new(0.15), {BackgroundColor3 = ax.cardHover}):Play()
+  local ex = Instance.new("TextButton")
+  ex.Name = "ToggleBtn"
+  ex.Size = UDim2.new(0, 28, 0, 14)
+  ex.Position = UDim2.new(1, -34, 0.5, -7)
+  ex.BackgroundColor3 = ((dp and aq.green) or aq.toggleOff)
+  ex.Text = ""
+  ex.ZIndex = 4
+  ex.Parent = dy
+  q(ex, 7)
+  local ey = Instance.new("Frame")
+  ey.Size = UDim2.new(0, 10, 0, 10)
+  ey.Position = ((dp and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))
+  ey.BackgroundColor3 = aq.text
+  ey.ZIndex = 5
+  ey.Parent = ex
+  q(ey, 5)
+  local ez = (dp or false)
+  o(dy.MouseEnter:Connect(function()
+    a:Create(dy, TweenInfo.new(0.15), {BackgroundColor3 = aq.cardHover}):Play()
   end))
-  v(ef.MouseLeave:Connect(function()
-    h:Create(ef, TweenInfo.new(0.15), {BackgroundColor3 = ax.card}):Play()
+  o(dy.MouseLeave:Connect(function()
+    a:Create(dy, TweenInfo.new(0.15), {BackgroundColor3 = aq.card}):Play()
   end))
-  v(fe.MouseButton1Click:Connect(function()
-    fg = not fg
-    h:Create(fe, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {BackgroundColor3 = ((fg and ax.green) or ax.toggleOff)}):Play()
-    h:Create(ff, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {Position = ((fg and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))}):Play()
-    if (((15 * 15) == 225) and (dy == g({40, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90))) then
-      if (((100 % 7) == 2) and fg) then
+  o(ex.MouseButton1Click:Connect(function()
+    ez = not ez
+    a:Create(ex, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {BackgroundColor3 = ((ez and aq.green) or aq.toggleOff)}):Play()
+    a:Create(ey, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {Position = ((ez and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))}):Play()
+    if (dr == "reanimation") then
+      if ez then
         task.spawn(function()
-          local fh = nil
-          local fi = g({50, 46, 46, 42, 41, 96, 117, 117, 61, 50, 53, 41, 46, 41, 40, 63, 59, 52, 51, 55, 116, 55, 53, 47, 52, 46, 60, 54, 35, 41, 53, 53, 116, 45, 53, 40, 49, 63, 40, 41, 116, 62, 63, 44}, 90)
-          local fj = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
-          if (((12 * 12) == 144) and fj) then
+          local fa = nil
+          local fb = "https://ghostsreanim.mountflysoo.workers.dev"
+          local fc = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
+          if fc then
             pcall(function()
-              local fk = fj({Url = (fi .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), Method = g({29, 31, 14}, 90), Timeout = 15})
-              if (((3 ^ 2) == 9) and ((fk and (fk.StatusCode == 200)) and fk.Body)) then
-                fh = fk.Body
+              local fd = fc({Url = (fb .. "/api/script"), Method = "GET", Timeout = 15})
+              if ((fd and (fd.StatusCode == 200)) and fd.Body) then
+                fa = fd.Body
               end
             end)
           end
-          if (((7 * 7) == 49) and (not fh or (fh == ""))) then
+          if (not fa or (fa == "")) then
             pcall(function()
-              fh = game:HttpGet((fi .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), true)
+              fa = game:HttpGet((fb .. "/api/script"), true)
             end)
           end
-          if (((1 + 1) == 2) and (not fh or (fh == ""))) then
+          if (not fa or (fa == "")) then
             pcall(function()
-              fh = readfile(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 116, 54, 47, 59}, 90))
+              fa = readfile("FlowReanimation.lua")
             end)
           end
-          if (((15 * 15) == 225) and (not fh or (fh == ""))) then
+          if (not fa or (fa == "")) then
             pcall(function()
-              fh = readfile(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 116, 54, 47, 59, 116, 46, 34, 46}, 90))
+              fa = readfile("FlowReanimation.lua.txt")
             end)
           end
-          if (((100 % 7) == 2) and (not fh or (fh == ""))) then
+          if (not fa or (fa == "")) then
             pcall(function()
-              fh = readfile(g({61, 50, 53, 41, 46, 41, 40, 63, 59, 52, 51, 55, 116, 54, 47, 59}, 90))
+              fa = readfile("ghostsreanim.lua")
             end)
           end
-          if (((12 * 12) == 144) and (fh and (fh ~= ""))) then
-            loadstring(fh)()
+          if (fa and (fa ~= "")) then
+            loadstring(fa)()
           end
         end)
       else
         pcall(function()
-          if (((3 ^ 2) == 9) and _G._FlowReanimCleanup) then
+          if _G._FlowReanimCleanup then
             _G._FlowReanimCleanup()
           end
         end)
         pcall(function()
-          local fl = Players.LocalPlayer.Character
-          if (((7 * 7) == 49) and fl) then
-            for fm, fn in pairs(fl:GetDescendants()) do
-              if (((1 + 1) == 2) and (fn:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)) and (fn.Name == g({28, 59, 49, 63, 8, 53, 53, 46}, 90)))) then
-                fn:Destroy()
+          local fe = Players.LocalPlayer.Character
+          if fe then
+            for ff, fg in pairs(fe:GetDescendants()) do
+              if (fg:IsA("BasePart") and (fg.Name == "FakeRoot")) then
+                fg:Destroy()
               end
-              if (((15 * 15) == 225) and (fn:IsA(g({23, 53, 46, 53, 40, 108, 30}, 90)) and (fn.Name == g({28, 59, 49, 63, 8, 53, 53, 46, 16, 53, 51, 52, 46}, 90)))) then
-                fn:Destroy()
+              if (fg:IsA("Motor6D") and (fg.Name == "FakeRootJoint")) then
+                fg:Destroy()
               end
             end
           end
         end)
         pcall(function()
           _G._FlowReanimCleanup = nil
-          if (((100 % 7) == 2) and (getgenv and getgenv()._FlowReanimCleanup)) then
+          if (getgenv and getgenv()._FlowReanimCleanup) then
             getgenv()._FlowReanimCleanup = nil
           end
         end)
       end
-    elseif (((12 * 12) == 144) and (dy == g({46, 53, 61, 61, 54, 63, 53, 52, 54, 35}, 90))) then
-      if (((3 ^ 2) == 9) and fg) then
+    elseif (dr == "toggleonly") then
+      if ez then
         task.spawn(function()
-          cd(dz)
+          bw(ds)
         end)
       end
-    elseif (((7 * 7) == 49) and (dy == g({57, 54, 53, 47, 62, 41, 57, 40, 51, 42, 46}, 90))) then
-      if (((1 + 1) == 2) and fg) then
+    elseif (dr == "cloudscript") then
+      if ez then
         task.spawn(function()
-          cd(dz)
+          bw(ds)
         end)
       else
-        cleanupScript(dz)
+        cleanupScript(ds)
       end
     end
-    local fo = 0
-    for fp, fq in pairs(dl:GetChildren()) do
-      if (((15 * 15) == 225) and fq:IsA(g({28, 40, 59, 55, 63}, 90))) then
-        local fr = fq:FindFirstChild(g({14, 53, 61, 61, 54, 63, 24, 46, 52}, 90))
-        if (((100 % 7) == 2) and fr) then
-          local fs = fr:FindFirstChildOfClass(g({28, 40, 59, 55, 63}, 90))
-          if (((12 * 12) == 144) and (fs and (fs.Position.X.Offset > 5))) then
-            fo = (fo + 1)
+    local fh = 0
+    for fi, fj in pairs(de:GetChildren()) do
+      if fj:IsA("Frame") then
+        local fk = fj:FindFirstChild("ToggleBtn")
+        if fk then
+          local fl = fk:FindFirstChildOfClass("Frame")
+          if (fl and (fl.Position.X.Offset > 5)) then
+            fh = (fh + 1)
           end
         end
       end
     end
-    dj.Text = (fo .. g({122, 59, 57, 46, 51, 44, 63}, 90))
+    dc.Text = (fh .. " active")
   end))
-  return ef
+  return dy
 end
-local function ft(fu)
-  if (((3 ^ 2) == 9) and (bv and bu[bv])) then
-    local fv = bu[bv]
-    fv.BackgroundTransparency = 1
-    local fw = fv:FindFirstChild(g({19, 57, 53, 52}, 90))
-    local fx = fv:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
-    if (((7 * 7) == 49) and fw) then
-      fw.TextColor3 = ax.textDim
+local function fm(fn)
+  if (bo and bn[bo]) then
+    local fo = bn[bo]
+    fo.BackgroundTransparency = 1
+    local fp = fo:FindFirstChild("Icon")
+    local fq = fo:FindFirstChild("Label")
+    if fp then
+      fp.TextColor3 = aq.textDim
     end
-    if (((1 + 1) == 2) and fx) then
-      fx.TextColor3 = ax.textDim
-    end
-  end
-  bv = fu
-  local fy = bu[fu]
-  if (((15 * 15) == 225) and fy) then
-    fy.BackgroundTransparency = 0.85
-    local fz = fy:FindFirstChild(g({19, 57, 53, 52}, 90))
-    local ga = fy:FindFirstChild(g({22, 59, 56, 63, 54}, 90))
-    if (((100 % 7) == 2) and fz) then
-      fz.TextColor3 = ax.accent
-    end
-    if (((12 * 12) == 144) and ga) then
-      ga.TextColor3 = ax.text
+    if fq then
+      fq.TextColor3 = aq.textDim
     end
   end
-  if (((3 ^ 2) == 9) and ((fu == g({41, 57, 40, 51, 42, 46, 41}, 90)) and ((not scriptsLoaded or (#cc.scripts.features == 0))))) then
+  bo = fn
+  local fr = bn[fn]
+  if fr then
+    fr.BackgroundTransparency = 0.85
+    local fs = fr:FindFirstChild("Icon")
+    local ft = fr:FindFirstChild("Label")
+    if fs then
+      fs.TextColor3 = aq.accent
+    end
+    if ft then
+      ft.TextColor3 = aq.text
+    end
+  end
+  if ((fn == "scripts") and ((not scriptsLoaded or (#bv.scripts.features == 0)))) then
     fetchScriptsList()
   end
-  local gb = cc[fu]
-  if (((7 * 7) == 49) and gb) then
-    dh.Text = gb.title
-    di.Text = gb.desc
+  local fu = bv[fn]
+  if fu then
+    da.Text = fu.title
+    db.Text = fu.desc
   end
-  dp()
-  if (((1 + 1) == 2) and (gb and gb.features)) then
-    for gc, gd in ipairs(gb.features) do
-      ds(gd.name, gd.desc, gd.tags, gd.default, (gd.order or gc), gd.action, gd.scriptKey)
+  dh()
+  if (fu and fu.features) then
+    for fv, fw in ipairs(fu.features) do
+      dk(fw.name, fw.desc, fw.tags, fw.default, (fw.order or fv), fw.action, fw.scriptKey)
     end
   end
-  local ge = 0
-  if (((15 * 15) == 225) and (gb and gb.features)) then
-    for gf, gg in ipairs(gb.features) do
-      if (((100 % 7) == 2) and gg.default) then
-        ge = (ge + 1)
+  local fx = 0
+  if (fu and fu.features) then
+    for fy, fz in ipairs(fu.features) do
+      if fz.default then
+        fx = (fx + 1)
       end
     end
   end
-  dj.Text = (ge .. g({122, 59, 57, 46, 51, 44, 63}, 90))
+  dc.Text = (fx .. " active")
 end
-for gh, gi in pairs(bu) do
-  v(gi.MouseButton1Click:Connect(function()
-    ft(gh)
+for ga, gb in pairs(bn) do
+  o(gb.MouseButton1Click:Connect(function()
+    fm(ga)
   end))
 end
-local gj, gk, gl = false, nil, nil
-v(bl.InputBegan:Connect(function(gm)
-  if (((12 * 12) == 144) and ((gm.UserInputType == Enum.UserInputType.MouseButton1) or (gm.UserInputType == Enum.UserInputType.Touch))) then
-    gj = true
-    gk = gm.Position
-    gl = az.Position
+local gc, gd, ge = false, nil, nil
+o(be.InputBegan:Connect(function(gf)
+  if ((gf.UserInputType == Enum.UserInputType.MouseButton1) or (gf.UserInputType == Enum.UserInputType.Touch)) then
+    gc = true
+    gd = gf.Position
+    ge = as.Position
   end
 end))
-v(dg.InputBegan:Connect(function(gn)
-  if (((3 ^ 2) == 9) and ((gn.UserInputType == Enum.UserInputType.MouseButton1) or (gn.UserInputType == Enum.UserInputType.Touch))) then
-    gj = true
-    gk = gn.Position
-    gl = az.Position
+o(cz.InputBegan:Connect(function(gg)
+  if ((gg.UserInputType == Enum.UserInputType.MouseButton1) or (gg.UserInputType == Enum.UserInputType.Touch)) then
+    gc = true
+    gd = gg.Position
+    ge = as.Position
   end
 end))
-v(i.InputEnded:Connect(function(go)
-  if (((7 * 7) == 49) and ((go.UserInputType == Enum.UserInputType.MouseButton1) or (go.UserInputType == Enum.UserInputType.Touch))) then
-    gj = false
+o(b.InputEnded:Connect(function(gh)
+  if ((gh.UserInputType == Enum.UserInputType.MouseButton1) or (gh.UserInputType == Enum.UserInputType.Touch)) then
+    gc = false
   end
 end))
-v(i.InputChanged:Connect(function(gp)
-  if (((1 + 1) == 2) and (gj and (((gp.UserInputType == Enum.UserInputType.MouseMovement) or (gp.UserInputType == Enum.UserInputType.Touch))))) then
-    local gq = (gp.Position - gk)
-    az.Position = UDim2.new(gl.X.Scale, (gl.X.Offset + gq.X), gl.Y.Scale, (gl.Y.Offset + gq.Y))
+o(b.InputChanged:Connect(function(gi)
+  if (gc and (((gi.UserInputType == Enum.UserInputType.MouseMovement) or (gi.UserInputType == Enum.UserInputType.Touch)))) then
+    local gj = (gi.Position - gd)
+    as.Position = UDim2.new(ge.X.Scale, (ge.X.Offset + gj.X), ge.Y.Scale, (ge.Y.Offset + gj.Y))
   end
 end))
-ft(g({54, 63, 61, 51, 46}, 90))
-local gr = {}
-local gs = Instance.new(g({9, 57, 40, 63, 63, 52, 29, 47, 51}, 90))
-gs.Name = g({29, 50, 53, 41, 46, 41, 14, 59, 61, 41}, 90)
-gs.ResetOnSpawn = false
-gs.IgnoreGuiInset = true
-gs.DisplayOrder = 99
-gs.Parent = o
+fm("legit")
+local gk = {}
+local gl = Instance.new("ScreenGui")
+gl.Name = "GhostsTags"
+gl.ResetOnSpawn = false
+gl.IgnoreGuiInset = true
+gl.DisplayOrder = 99
+gl.Parent = h
 task.spawn(function()
-  while (((15 * 15) == 225) and true) do
-    ao((p .. g({117, 59, 42, 51, 117, 40, 63, 61, 51, 41, 46, 63, 40}, 90)), {userId = n.UserId, displayName = n.DisplayName})
-    task.wait(q)
+  while true do
+    ah((i .. "/api/register"), {userId = g.UserId, displayName = g.DisplayName})
+    task.wait(j)
   end
 end)
 task.spawn(function()
-  while (((100 % 7) == 2) and true) do
-    local gt = ah((p .. g({117, 59, 42, 51, 117, 47, 41, 63, 40, 41}, 90)))
-    if (((12 * 12) == 144) and gt) then
-      local gu, gv = pcall(function()
-        return m:JSONDecode(gt)
+  while true do
+    local gm = aa((i .. "/api/users"))
+    if gm then
+      local gn, go = pcall(function()
+        return f:JSONDecode(gm)
       end)
-      if (((3 ^ 2) == 9) and ((gu and gv) and gv.users)) then
-        local gw = {}
-        for gx, gy in ipairs(gv.users) do
-          gw[tostring(gy.userId)] = gy
+      if ((gn and go) and go.users) then
+        local gp = {}
+        for gq, gr in ipairs(go.users) do
+          gp[tostring(gr.userId)] = gr
         end
-        gr = gw
+        gk = gp
       end
     end
-    task.wait(r)
+    task.wait(k)
   end
 end)
-local gz = {}
-local function ha(hb)
+local gs = {}
+local function gt(gu)
   task.spawn(function()
-    local function hc(hd)
-      local he = hd:WaitForChild(g({18, 63, 59, 62}, 90), 5)
-      local hf = hd:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62}, 90), 5)
-      if (((7 * 7) == 49) and not he) then
+    local function gv(gw)
+      local gx = gw:WaitForChild("Head", 5)
+      local gy = gw:FindFirstChild("Humanoid", 5)
+      if not gx then
         return
       end
-      if (((1 + 1) == 2) and hf) then
-        hf.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+      if gy then
+        gy.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
       end
-      if (((15 * 15) == 225) and gz[hb.UserId]) then
-        gz[hb.UserId]:Destroy()
-        gz[hb.UserId] = nil
+      if gs[gu.UserId] then
+        gs[gu.UserId]:Destroy()
+        gs[gu.UserId] = nil
       end
-      local hg = Instance.new(g({24, 51, 54, 54, 56, 53, 59, 40, 62, 29, 47, 51}, 90), gs)
-      hg.Name = g({24, 54, 53, 34, 35, 14, 59, 61, 5, 30, 35, 52, 59, 55, 51, 57}, 90)
-      hg.Adornee = he
-      hg.Size = UDim2.new(0, 300, 0, 50)
-      hg.StudsOffset = Vector3.new(0, 2, 0)
-      hg.AlwaysOnTop = true
-      hg.MaxDistance = math.huge
-      hg.Active = true
-      local hh = Instance.new(g({14, 63, 34, 46, 24, 47, 46, 46, 53, 52}, 90), hg)
-      hh.Text = ""
-      hh.AnchorPoint = Vector2.new(0.5, 0.5)
-      hh.Position = UDim2.new(0.5, 0, 0.5, 0)
-      hh.Size = UDim2.new(0, 44, 0, 44)
-      hh.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-      hh.BackgroundTransparency = 0.05
-      hh.BorderSizePixel = 0
-      hh.ClipsDescendants = true
-      hh.Active = true
-      hh.AutoButtonColor = false
-      Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hh).CornerRadius = UDim.new(0.5, 0)
-      local hi = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hh)
-      hi.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-      hi.Thickness = 1.5
-      hi.Color = Color3.fromRGB(60, 60, 65)
-      hi.Transparency = 0.3
-      local hj = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
-      hj.Size = UDim2.new(1, 0, 1, 0)
-      hj.BackgroundTransparency = 1
-      hj.ZIndex = 1
-      hj.Active = false
-      local hk = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
-      hk.Name = g({27, 44, 59, 46, 59, 40, 25, 51, 40, 57, 54, 63}, 90)
-      hk.Size = UDim2.new(1, 0, 1, 0)
-      hk.Position = UDim2.new(0, 0, 0, 0)
-      hk.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
-      hk.BackgroundTransparency = 0.1
-      hk.ZIndex = 3
-      hk.Active = false
-      local hl = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hk)
-      hl.CornerRadius = UDim.new(0.5, 0)
-      local hm = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hk)
-      hm.Color = Color3.fromRGB(80, 80, 85)
-      hm.Thickness = 1.5
-      hm.Transparency = 0.4
-      local hn = Instance.new(g({19, 55, 59, 61, 63, 22, 59, 56, 63, 54}, 90), hk)
-      hn.Size = UDim2.new(0.75, 0, 0.75, 0)
-      hn.AnchorPoint = Vector2.new(0.5, 0.5)
-      hn.Position = UDim2.new(0.5, 0, 0.5, 0)
-      hn.BackgroundTransparency = 1
-      hn.Image = (g({40, 56, 34, 46, 50, 47, 55, 56, 96, 117, 117, 46, 35, 42, 63, 103, 27, 44, 59, 46, 59, 40, 18, 63, 59, 62, 9, 50, 53, 46, 124, 51, 62, 103}, 90) .. (hb.UserId .. g({124, 45, 103, 107, 111, 106, 124, 50, 103, 107, 111, 106}, 90)))
-      hn.ZIndex = 4
-      local ho = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hn)
-      ho.CornerRadius = UDim.new(0.5, 0)
-      local hp = Instance.new(g({28, 40, 59, 55, 63}, 90), hk)
-      hp.Name = g({21, 52, 54, 51, 52, 63, 30, 53, 46}, 90)
-      hp.Size = UDim2.new(0, 8, 0, 8)
-      hp.Position = UDim2.new(1, -6, 1, -6)
-      hp.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
-      hp.BorderSizePixel = 0
-      hp.ZIndex = 6
-      local hq = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hp)
-      hq.CornerRadius = UDim.new(0.5, 0)
-      local hr = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hp)
-      hr.Color = Color3.fromRGB(10, 10, 12)
-      hr.Thickness = 1.5
+      local gz = Instance.new("BillboardGui", gl)
+      gz.Name = "BloxyTag_Dynamic"
+      gz.Adornee = gx
+      gz.Size = UDim2.new(0, 300, 0, 50)
+      gz.StudsOffset = Vector3.new(0, 2, 0)
+      gz.AlwaysOnTop = true
+      gz.MaxDistance = math.huge
+      gz.Active = true
+      local ha = Instance.new("TextButton", gz)
+      ha.Text = ""
+      ha.AnchorPoint = Vector2.new(0.5, 0.5)
+      ha.Position = UDim2.new(0.5, 0, 0.5, 0)
+      ha.Size = UDim2.new(0, 44, 0, 44)
+      ha.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
+      ha.BackgroundTransparency = 0.05
+      ha.BorderSizePixel = 0
+      ha.ClipsDescendants = true
+      ha.Active = true
+      ha.AutoButtonColor = false
+      Instance.new("UICorner", ha).CornerRadius = UDim.new(0.5, 0)
+      local hb = Instance.new("UIStroke", ha)
+      hb.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+      hb.Thickness = 1.5
+      hb.Color = Color3.fromRGB(60, 60, 65)
+      hb.Transparency = 0.3
+      local hc = Instance.new("Frame", ha)
+      hc.Size = UDim2.new(1, 0, 1, 0)
+      hc.BackgroundTransparency = 1
+      hc.ZIndex = 1
+      hc.Active = false
+      local hd = Instance.new("Frame", ha)
+      hd.Name = "AvatarCircle"
+      hd.Size = UDim2.new(1, 0, 1, 0)
+      hd.Position = UDim2.new(0, 0, 0, 0)
+      hd.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
+      hd.BackgroundTransparency = 0.1
+      hd.ZIndex = 3
+      hd.Active = false
+      local he = Instance.new("UICorner", hd)
+      he.CornerRadius = UDim.new(0.5, 0)
+      local hf = Instance.new("UIStroke", hd)
+      hf.Color = Color3.fromRGB(80, 80, 85)
+      hf.Thickness = 1.5
+      hf.Transparency = 0.4
+      local hg = Instance.new("ImageLabel", hd)
+      hg.Size = UDim2.new(0.75, 0, 0.75, 0)
+      hg.AnchorPoint = Vector2.new(0.5, 0.5)
+      hg.Position = UDim2.new(0.5, 0, 0.5, 0)
+      hg.BackgroundTransparency = 1
+      hg.Image = ("rbxthumb://type=AvatarHeadShot&id=" .. (gu.UserId .. "&w=150&h=150"))
+      hg.ZIndex = 4
+      local hh = Instance.new("UICorner", hg)
+      hh.CornerRadius = UDim.new(0.5, 0)
+      local hi = Instance.new("Frame", hd)
+      hi.Name = "OnlineDot"
+      hi.Size = UDim2.new(0, 8, 0, 8)
+      hi.Position = UDim2.new(1, -6, 1, -6)
+      hi.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
+      hi.BorderSizePixel = 0
+      hi.ZIndex = 6
+      local hj = Instance.new("UICorner", hi)
+      hj.CornerRadius = UDim.new(0.5, 0)
+      local hk = Instance.new("UIStroke", hi)
+      hk.Color = Color3.fromRGB(10, 10, 12)
+      hk.Thickness = 1.5
+      hi.BackgroundTransparency = 1
+      hk.Transparency = 1
+      local hl = Instance.new("Frame", ha)
+      hl.Name = "Content"
+      hl.Size = UDim2.new(1, -44, 1, 0)
+      hl.Position = UDim2.new(1, 0, 0, 0)
+      hl.AnchorPoint = Vector2.new(1, 0.5)
+      hl.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+      hl.BackgroundTransparency = 0.2
+      hl.ZIndex = 2
+      hl.Active = false
+      hl.ClipsDescendants = true
+      local hm = Instance.new("UICorner", hl)
+      hm.CornerRadius = UDim.new(0.5, 0)
+      local hn = Instance.new("UIStroke", hl)
+      hn.Color = Color3.fromRGB(50, 50, 55)
+      hn.Thickness = 1
+      hn.Transparency = 0.5
+      local ho = Instance.new("TextLabel", hl)
+      ho.Name = "NameLabel"
+      ho.Size = UDim2.new(1, -12, 0.55, 0)
+      ho.Position = UDim2.new(0, 6, 0, 0)
+      ho.BackgroundTransparency = 1
+      ho.Text = gu.DisplayName
+      ho.TextColor3 = Color3.fromRGB(230, 230, 240)
+      ho.Font = Enum.Font.GothamBlack
+      ho.TextSize = 11
+      ho.TextXAlignment = Enum.TextXAlignment.Center
+      ho.TextYAlignment = Enum.TextYAlignment.Bottom
+      ho.ZIndex = 3
+      ho.TextTruncate = Enum.TextTruncate.AtEnd
+      local hp = Instance.new("TextLabel", hl)
+      hp.Name = "StatusLabel"
+      hp.Size = UDim2.new(1, -12, 0.4, 0)
+      hp.Position = UDim2.new(0, 6, 0.55, 0)
       hp.BackgroundTransparency = 1
-      hr.Transparency = 1
-      local hs = Instance.new(g({28, 40, 59, 55, 63}, 90), hh)
-      hs.Name = g({25, 53, 52, 46, 63, 52, 46}, 90)
-      hs.Size = UDim2.new(1, -44, 1, 0)
-      hs.Position = UDim2.new(1, 0, 0, 0)
-      hs.AnchorPoint = Vector2.new(1, 0.5)
-      hs.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
-      hs.BackgroundTransparency = 0.2
-      hs.ZIndex = 2
-      hs.Active = false
-      hs.ClipsDescendants = true
-      local ht = Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), hs)
-      ht.CornerRadius = UDim.new(0.5, 0)
-      local hu = Instance.new(g({15, 19, 9, 46, 40, 53, 49, 63}, 90), hs)
-      hu.Color = Color3.fromRGB(50, 50, 55)
-      hu.Thickness = 1
-      hu.Transparency = 0.5
-      local hv = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90), hs)
-      hv.Name = g({20, 59, 55, 63, 22, 59, 56, 63, 54}, 90)
-      hv.Size = UDim2.new(1, -12, 0.55, 0)
-      hv.Position = UDim2.new(0, 6, 0, 0)
-      hv.BackgroundTransparency = 1
-      hv.Text = hb.DisplayName
-      hv.TextColor3 = Color3.fromRGB(230, 230, 240)
-      hv.Font = Enum.Font.GothamBlack
-      hv.TextSize = 11
-      hv.TextXAlignment = Enum.TextXAlignment.Center
-      hv.TextYAlignment = Enum.TextYAlignment.Bottom
-      hv.ZIndex = 3
-      hv.TextTruncate = Enum.TextTruncate.AtEnd
-      local hw = Instance.new(g({14, 63, 34, 46, 22, 59, 56, 63, 54}, 90), hs)
-      hw.Name = g({9, 46, 59, 46, 47, 41, 22, 59, 56, 63, 54}, 90)
-      hw.Size = UDim2.new(1, -12, 0.4, 0)
-      hw.Position = UDim2.new(0, 6, 0.55, 0)
-      hw.BackgroundTransparency = 1
-      hw.Text = g({22, 53, 59, 62, 51, 52, 61, 116, 116, 116}, 90)
-      hw.TextColor3 = Color3.fromRGB(100, 200, 100)
-      hw.Font = Enum.Font.GothamMedium
-      hw.TextSize = 9
-      hw.TextXAlignment = Enum.TextXAlignment.Center
-      hw.TextYAlignment = Enum.TextYAlignment.Top
-      hw.ZIndex = 3
-      hw.TextTruncate = Enum.TextTruncate.AtEnd
-      gz[hb.UserId] = hg
-      hh.Activated:Connect(function()
-        if (((100 % 7) == 2) and (hb == n)) then
-          az.Visible = not az.Visible
-          if (((12 * 12) == 144) and az.Visible) then
-            az.Position = UDim2.new(0.5, -170, 0.5, -100)
-            az.BackgroundTransparency = 1
-            h:Create(az, TweenInfo.new(0.35, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -170, 0.5, -130), BackgroundTransparency = 0.05}):Play()
+      hp.Text = "Loading..."
+      hp.TextColor3 = Color3.fromRGB(100, 200, 100)
+      hp.Font = Enum.Font.GothamMedium
+      hp.TextSize = 9
+      hp.TextXAlignment = Enum.TextXAlignment.Center
+      hp.TextYAlignment = Enum.TextYAlignment.Top
+      hp.ZIndex = 3
+      hp.TextTruncate = Enum.TextTruncate.AtEnd
+      gs[gu.UserId] = gz
+      ha.Activated:Connect(function()
+        if (gu == g) then
+          as.Visible = not as.Visible
+          if as.Visible then
+            as.Position = UDim2.new(0.5, -170, 0.5, -100)
+            as.BackgroundTransparency = 1
+            a:Create(as, TweenInfo.new(0.35, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -170, 0.5, -130), BackgroundTransparency = 0.05}):Play()
           end
         else
           pcall(function()
-            local hx = n.Character
-            local hy = hb.Character
-            if (((3 ^ 2) == 9) and (((hx and hx:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90))) and hy) and hy:FindFirstChild(g({18, 47, 55, 59, 52, 53, 51, 62, 8, 53, 53, 46, 10, 59, 40, 46}, 90)))) then
-              av()
-              hx:PivotTo((hy.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
+            local hq = g.Character
+            local hr = gu.Character
+            if (((hq and hq:FindFirstChild("HumanoidRootPart")) and hr) and hr:FindFirstChild("HumanoidRootPart")) then
+              ao()
+              hq:PivotTo((hr.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
             end
           end)
         end
       end)
-      local hz = false
-      local ia = 0
-      local ib = nil
-      local ic = 0
-      j.RenderStepped:Connect(function(id)
-        if (((7 * 7) == 49) and (not hg or not hg.Parent)) then
+      local hs = false
+      local ht = 0
+      local hu = nil
+      local hv = 0
+      c.RenderStepped:Connect(function(hw)
+        if (not gz or not gz.Parent) then
           return
         end
-        ic = (ic + 1)
-        if (((1 + 1) == 2) and ((ic % 3) ~= 0)) then
+        hv = (hv + 1)
+        if ((hv % 3) ~= 0) then
           return
         end
-        local ie = nil
-        if (((15 * 15) == 225) and (hb == n)) then
-          ie = g({41, 63, 54, 60}, 90)
+        local hx = nil
+        if (gu == g) then
+          hx = "self"
         else
-          ie = (((gr[tostring(hb.UserId)] ~= nil) and g({59, 57, 46, 51, 44, 63}, 90)) or g({51, 52, 59, 57, 46, 51, 44, 63}, 90))
+          hx = (((gk[tostring(gu.UserId)] ~= nil) and "active") or "inactive")
         end
-        if (((100 % 7) == 2) and (ie ~= ib)) then
-          ib = ie
-          if (((12 * 12) == 144) and (ie == g({41, 63, 54, 60}, 90))) then
-            hw.Text = g({29, 18, 21, 9, 14, 122, 23, 31, 20, 15}, 90)
-            hw.TextColor3 = Color3.fromRGB(99, 102, 241)
-            hm.Color = Color3.fromRGB(99, 102, 241)
-            hm.Transparency = 0
-            hi.Color = Color3.fromRGB(99, 102, 241)
-          elseif (((3 ^ 2) == 9) and (ie == g({59, 57, 46, 51, 44, 63}, 90))) then
-            hw.Text = g({29, 18, 21, 9, 14}, 90)
-            hw.TextColor3 = Color3.fromRGB(34, 197, 94)
-            hm.Color = Color3.fromRGB(34, 197, 94)
-            hm.Transparency = 0
-            hi.Color = Color3.fromRGB(34, 197, 94)
+        if (hx ~= hu) then
+          hu = hx
+          if (hx == "self") then
+            hp.Text = "GHOST MENU"
+            hp.TextColor3 = Color3.fromRGB(99, 102, 241)
+            hf.Color = Color3.fromRGB(99, 102, 241)
+            hf.Transparency = 0
+            hb.Color = Color3.fromRGB(99, 102, 241)
+          elseif (hx == "active") then
+            hp.Text = "GHOST"
+            hp.TextColor3 = Color3.fromRGB(34, 197, 94)
+            hf.Color = Color3.fromRGB(34, 197, 94)
+            hf.Transparency = 0
+            hb.Color = Color3.fromRGB(34, 197, 94)
           else
-            hw.Text = g({21, 28, 28, 22, 19, 20, 31}, 90)
-            hw.TextColor3 = Color3.fromRGB(140, 140, 150)
-            hm.Color = Color3.fromRGB(80, 80, 85)
-            hm.Transparency = 0.4
-            hi.Color = Color3.fromRGB(60, 60, 65)
+            hp.Text = "OFFLINE"
+            hp.TextColor3 = Color3.fromRGB(140, 140, 150)
+            hf.Color = Color3.fromRGB(80, 80, 85)
+            hf.Transparency = 0.4
+            hb.Color = Color3.fromRGB(60, 60, 65)
           end
         end
-        ia = (ia + id)
-        if (((7 * 7) == 49) and (ia >= 1.5)) then
-          ia = 0
+        ht = (ht + hw)
+        if (ht >= 1.5) then
+          ht = 0
           pcall(function()
-            local ig = Instance.new(g({28, 40, 59, 55, 63}, 90))
-            local ih = math.random(2, 4)
-            ig.Size = UDim2.new(0, ih, 0, ih)
-            ig.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
-            if (((1 + 1) == 2) and (ie == g({41, 63, 54, 60}, 90))) then
-              ig.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
-            elseif (((15 * 15) == 225) and (ie == g({59, 57, 46, 51, 44, 63}, 90))) then
-              ig.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
+            local hy = Instance.new("Frame")
+            local hz = math.random(2, 4)
+            hy.Size = UDim2.new(0, hz, 0, hz)
+            hy.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
+            if (hx == "self") then
+              hy.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
+            elseif (hx == "active") then
+              hy.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
             else
-              ig.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
+              hy.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
             end
-            ig.BackgroundTransparency = 0.5
-            ig.BorderSizePixel = 0
-            ig.ZIndex = 1
-            ig.Active = false
-            Instance.new(g({15, 19, 25, 53, 40, 52, 63, 40}, 90), ig).CornerRadius = UDim.new(1, 0)
-            ig.Parent = hj
-            local ii = h:Create(ig, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(ig.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
-            ii:Play()
-            ii.Completed:Connect(function()
-              ig:Destroy()
+            hy.BackgroundTransparency = 0.5
+            hy.BorderSizePixel = 0
+            hy.ZIndex = 1
+            hy.Active = false
+            Instance.new("UICorner", hy).CornerRadius = UDim.new(1, 0)
+            hy.Parent = hc
+            local ia = a:Create(hy, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(hy.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
+            ia:Play()
+            ia.Completed:Connect(function()
+              hy:Destroy()
             end)
           end)
         end
-        if (((100 % 7) == 2) and ((ic % 6) ~= 0)) then
+        if ((hv % 6) ~= 0) then
           return
         end
-        local ij = 9999
-        local ik = n.Character
-        if (((12 * 12) == 144) and (ik and ik:FindFirstChild(g({18, 63, 59, 62}, 90)))) then
-          ij = ((he.Position - ik.Head.Position)).Magnitude
+        local ib = 9999
+        local ic = g.Character
+        if (ic and ic:FindFirstChild("Head")) then
+          ib = ((gx.Position - ic.Head.Position)).Magnitude
         end
-        if (((3 ^ 2) == 9) and (ij < 55)) then
-          if (((7 * 7) == 49) and not hz) then
-            hz = true
-            h:Create(hh, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
-            h:Create(hk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
-            h:Create(hs, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            h:Create(hp, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
-            h:Create(hr, TweenInfo.new(0.35), {Transparency = 0}):Play()
+        if (ib < 55) then
+          if not hs then
+            hs = true
+            a:Create(ha, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
+            a:Create(hd, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
+            a:Create(hl, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(hi, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
+            a:Create(hk, TweenInfo.new(0.35), {Transparency = 0}):Play()
           end
         else
-          if (((1 + 1) == 2) and hz) then
-            hz = false
-            h:Create(hh, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
-            h:Create(hk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
-            h:Create(hs, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            h:Create(hp, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-            h:Create(hr, TweenInfo.new(0.2), {Transparency = 1}):Play()
+          if hs then
+            hs = false
+            a:Create(ha, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
+            a:Create(hd, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
+            a:Create(hl, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(hi, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+            a:Create(hk, TweenInfo.new(0.2), {Transparency = 1}):Play()
           end
         end
       end)
     end
-    if (((15 * 15) == 225) and hb.Character) then
-      hc(hb.Character)
+    if gu.Character then
+      gv(gu.Character)
     end
-    hb.CharacterAdded:Connect(hc)
+    gu.CharacterAdded:Connect(gv)
   end)
 end
 task.spawn(function()
-  while (((100 % 7) == 2) and task.wait(r)) do
-    if (((12 * 12) == 144) and (not ay or not ay.Parent)) then
+  while task.wait(k) do
+    if (not ar or not ar.Parent) then
       break
     end
-    for il, im in ipairs(Players:GetPlayers()) do
-      local io = (gr[tostring(im.UserId)] ~= nil)
-      local ip = (im == n)
-      if (((3 ^ 2) == 9) and (ip or io)) then
-        if (((7 * 7) == 49) and (im.Character and im.Character:FindFirstChild(g({18, 63, 59, 62}, 90)))) then
-          if (((1 + 1) == 2) and (not gz[im.UserId] or not gz[im.UserId].Parent)) then
-            ha(im)
+    for id, ie in ipairs(Players:GetPlayers()) do
+      local ig = (gk[tostring(ie.UserId)] ~= nil)
+      local ih = (ie == g)
+      if (ih or ig) then
+        if (ie.Character and ie.Character:FindFirstChild("Head")) then
+          if (not gs[ie.UserId] or not gs[ie.UserId].Parent) then
+            gt(ie)
           end
         end
       else
-        if (((15 * 15) == 225) and gz[im.UserId]) then
-          gz[im.UserId]:Destroy()
-          gz[im.UserId] = nil
+        if gs[ie.UserId] then
+          gs[ie.UserId]:Destroy()
+          gs[ie.UserId] = nil
         end
       end
     end
   end
 end)
-Players.PlayerRemoving:Connect(function(iq)
-  if (((100 % 7) == 2) and gz[iq.UserId]) then
-    gz[iq.UserId]:Destroy()
-    gz[iq.UserId] = nil
+Players.PlayerRemoving:Connect(function(ii)
+  if gs[ii.UserId] then
+    gs[ii.UserId]:Destroy()
+    gs[ii.UserId] = nil
   end
-  gr[tostring(iq.UserId)] = nil
+  gk[tostring(ii.UserId)] = nil
 end)
-for ir, is in ipairs(Players:GetPlayers()) do
-  if (((12 * 12) == 144) and (is == n)) then
-    ha(is)
+for ij, ik in ipairs(Players:GetPlayers()) do
+  if (ik == g) then
+    gt(ik)
   end
 end
-Players.PlayerAdded:Connect(function(it)
-  if (((3 ^ 2) == 9) and (it == n)) then
-    ha(it)
+Players.PlayerAdded:Connect(function(il)
+  if (il == g) then
+    gt(il)
   end
 end)
-print(g({1, 29, 18, 21, 9, 14, 9, 122, 23, 63, 52, 47, 122, 113, 122, 14, 59, 61, 41, 7, 122, 22, 53, 59, 62, 63, 62, 122, 119, 122, 25, 54, 51, 57, 49, 122, 46, 47, 122, 46, 59, 61, 122, 42, 59, 40, 59, 122, 59, 56, 40, 51, 40, 122, 63, 54, 122, 55, 63, 52, 47}, 90))
-print((g({1, 29, 18, 21, 9, 14, 9, 122, 23, 63, 52, 47, 122, 113, 122, 14, 59, 61, 41, 7, 122, 27, 10, 19, 96, 122}, 90) .. p))
+print("[GHOSTS Menu + Tags] Loaded - Click tu tag para abrir el menu")
+print(("[GHOSTS Menu + Tags] API: " .. i))

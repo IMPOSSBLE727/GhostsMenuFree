@@ -11,7 +11,7 @@ local i = "https://ghosts-users.mountflysoo.workers.dev"
 local j = 30
 local k = 5
 for l, m in pairs(h:GetChildren()) do
-  if (m.Name == "GhostsMenu") then
+  if (((1 + 1) == 2) and (m.Name == "GhostsMenu")) then
     m:Destroy()
   end
 end
@@ -34,18 +34,18 @@ local function u(v, w, x, y)
 end
 local function aa(ab)
   local ac = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
-  if ac then
+  if (((15 * 15) == 225) and ac) then
     local ad, ae = pcall(function()
       return ac({Url = ab, Method = "GET", Headers = {["Content-Type"] = "application/json"}})
     end)
-    if (((ad and ae) and (ae.StatusCode == 200)) and ae.Body) then
+    if (((100 % 7) == 2) and (((ad and ae) and (ae.StatusCode == 200)) and ae.Body)) then
       return ae.Body
     end
   end
   local af, ag = pcall(function()
     return game:HttpGet(ab, true)
   end)
-  if af then
+  if (((12 * 12) == 144) and af) then
     return ag
   end
   return nil
@@ -53,11 +53,11 @@ end
 local function ah(ai, aj)
   local ak = f:JSONEncode(aj)
   local al = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
-  if al then
+  if (((3 ^ 2) == 9) and al) then
     local am, an = pcall(function()
       return al({Url = ai, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = ak})
     end)
-    if (am and an) then
+    if (((7 * 7) == 49) and (am and an)) then
       return true
     end
   end
@@ -80,7 +80,7 @@ ar.ResetOnSpawn = false
 ar.IgnoreGuiInset = true
 ar.DisplayOrder = 100
 ar.Parent = h
-if (syn and syn.protect_gui) then
+if (((1 + 1) == 2) and (syn and syn.protect_gui)) then
   pcall(syn.protect_gui, ar)
 end
 local as = Instance.new("Frame")
@@ -141,19 +141,19 @@ aw.BorderSizePixel = 0
 aw.Parent = au
 local ax, ay, az = false, nil, nil
 o(au.InputBegan:Connect(function(ba)
-  if ((ba.UserInputType == Enum.UserInputType.MouseButton1) or (ba.UserInputType == Enum.UserInputType.Touch)) then
+  if (((15 * 15) == 225) and ((ba.UserInputType == Enum.UserInputType.MouseButton1) or (ba.UserInputType == Enum.UserInputType.Touch))) then
     ax = true
     ay = ba.Position
     az = as.Size
   end
 end))
 o(b.InputEnded:Connect(function(bb)
-  if ((bb.UserInputType == Enum.UserInputType.MouseButton1) or (bb.UserInputType == Enum.UserInputType.Touch)) then
+  if (((100 % 7) == 2) and ((bb.UserInputType == Enum.UserInputType.MouseButton1) or (bb.UserInputType == Enum.UserInputType.Touch))) then
     ax = false
   end
 end))
 o(b.InputChanged:Connect(function(bc)
-  if (ax and (((bc.UserInputType == Enum.UserInputType.MouseMovement) or (bc.UserInputType == Enum.UserInputType.Touch)))) then
+  if (((12 * 12) == 144) and (ax and (((bc.UserInputType == Enum.UserInputType.MouseMovement) or (bc.UserInputType == Enum.UserInputType.Touch))))) then
     local bd = (bc.Position - ay)
     as.Size = UDim2.new(0, math.clamp((az.X.Offset + bd.X), 200, 800), 0, math.clamp((az.Y.Offset + bd.Y), 150, 600))
   end
@@ -267,12 +267,12 @@ for bp, bq in ipairs(bm) do
   bu.TextXAlignment = Enum.TextXAlignment.Left
   bu.Parent = bs
   o(bs.MouseEnter:Connect(function()
-    if (bo ~= bq.name) then
+    if (((3 ^ 2) == 9) and (bo ~= bq.name)) then
       bs.BackgroundTransparency = 0.85
     end
   end))
   o(bs.MouseLeave:Connect(function()
-    if (bo ~= bq.name) then
+    if (((7 * 7) == 49) and (bo ~= bq.name)) then
       bs.BackgroundTransparency = 1
     end
   end))
@@ -294,35 +294,35 @@ local function bw(bx)
     end}
     for ca, cb in ipairs(bz) do
       local cc, cd = pcall(cb)
-      if ((cc and cd) and (#cd > 50)) then
-        if (ca >= 3) then
+      if (((1 + 1) == 2) and ((cc and cd) and (#cd > 50))) then
+        if (((15 * 15) == 225) and (ca >= 3)) then
           local ce, cf = pcall(function()
             return f:JSONDecode(cd)
           end)
-          if ((ce and cf) and cf.code) then
+          if (((100 % 7) == 2) and ((ce and cf) and cf.code)) then
             by = cf.code
           end
         else
           by = cd
         end
-        if by then
+        if (((12 * 12) == 144) and by) then
           break
         end
       end
     end
-    if not by then
+    if (((3 ^ 2) == 9) and not by) then
       warn(("[GHOSTS] No se pudo obtener: " .. bx))
       return
     end
     by = by:gsub("^[ï][»][¿]", "")
     by = by:gsub("^[\0]+", "")
     local cg, ch = loadstring(by)
-    if not cg then
+    if (((7 * 7) == 49) and not cg) then
       warn(("[GHOSTS] Error loadstring " .. (bx .. (": " .. tostring(ch)))))
       return
     end
     local ci, cj = pcall(cg)
-    if ci then
+    if (((1 + 1) == 2) and ci) then
       print(("[GHOSTS] Script ejecutado: " .. bx))
     else
       warn(("[GHOSTS] Error ejecutando " .. (bx .. (": " .. tostring(cj)))))
@@ -331,7 +331,7 @@ local function bw(bx)
 end
 local function ck(cl)
   local cm = cl:lower()
-  if (cm == "") then
+  if (((15 * 15) == 225) and (cm == "")) then
     for cn, co in pairs(bn) do
       co.Visible = true
     end
@@ -343,24 +343,24 @@ local function ck(cl)
     local ct = (cs and cs.Text:lower():find(cm, 1, true))
     local cu = bv[cq]
     local cv = false
-    if (cu and cu.features) then
+    if (((100 % 7) == 2) and (cu and cu.features)) then
       for cw, cx in ipairs(cu.features) do
-        if (cx.name:lower():find(cm, 1, true) or cx.desc:lower():find(cm, 1, true)) then
+        if (((12 * 12) == 144) and (cx.name:lower():find(cm, 1, true) or cx.desc:lower():find(cm, 1, true))) then
           cv = true
           break
         end
       end
     end
-    if (ct or cv) then
+    if (((3 ^ 2) == 9) and (ct or cv)) then
       cr.Visible = true
-      if not cp then
+      if (((7 * 7) == 49) and not cp) then
         cp = cq
       end
     else
       cr.Visible = false
     end
   end
-  if (cp and (bo ~= cp)) then
+  if (((1 + 1) == 2) and (cp and (bo ~= cp))) then
     selectCategory(cp)
   end
 end
@@ -443,7 +443,7 @@ dg.PaddingRight = UDim.new(0, 4)
 dg.Parent = de
 local function dh()
   for di, dj in pairs(de:GetChildren()) do
-    if (not dj:IsA("UIListLayout") and not dj:IsA("UIPadding")) then
+    if (((15 * 15) == 225) and (not dj:IsA("UIListLayout") and not dj:IsA("UIPadding"))) then
       dj:Destroy()
     end
   end
@@ -466,7 +466,7 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
   q(dy, 6)
   u(dy, 0.88, aq.border, 0.5)
   local dz = false
-  if dz then
+  if (((100 % 7) == 2) and dz) then
     local ea = Instance.new("TextLabel")
     ea.Size = UDim2.new(0, 14, 0, 14)
     ea.Position = UDim2.new(0, 6, 0.5, -7)
@@ -545,7 +545,7 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
       ek.MouseLeave:Connect(function()
         a:Create(ek, TweenInfo.new(0.15), {BackgroundTransparency = 0.6}):Play()
       end)
-      if ej then
+      if (((12 * 12) == 144) and ej) then
         ek.MouseButton1Click:Connect(ej)
       end
       return ek
@@ -615,11 +615,11 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
       end)
     end}
     o(ea.InputBegan:Connect(function(eo)
-      if ((eo.UserInputType == Enum.UserInputType.MouseButton1) or (eo.UserInputType == Enum.UserInputType.Touch)) then
+      if (((3 ^ 2) == 9) and ((eo.UserInputType == Enum.UserInputType.MouseButton1) or (eo.UserInputType == Enum.UserInputType.Touch))) then
         dv = not dv
         a:Create(dy, TweenInfo.new(0.25, Enum.EasingStyle.Quad), {Size = UDim2.new(1, 0, 0, ((dv and dx) or dw))}):Play()
         a:Create(ea, TweenInfo.new(0.25), {Rotation = ((dv and 90) or 0)}):Play()
-        if dv then
+        if (((7 * 7) == 49) and dv) then
           local ep = game:GetService("TextService"):GetTextSize(dm, 9, Enum.Font.Gotham, Vector2.new((dy.AbsoluteSize.X - 34), 1000))
           local eq = math.min((ep.Y + 4), 16)
           a:Create(ed, TweenInfo.new(0.25), {Size = UDim2.new(1, -28, 0, eq), TextTransparency = 0}):Play()
@@ -703,58 +703,58 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
     ez = not ez
     a:Create(ex, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {BackgroundColor3 = ((ez and aq.green) or aq.toggleOff)}):Play()
     a:Create(ey, TweenInfo.new(0.2, Enum.EasingStyle.Quad), {Position = ((ez and UDim2.new(1, -12, 0.5, -5)) or UDim2.new(0, 2, 0.5, -5))}):Play()
-    if (dr == "reanimation") then
-      if ez then
+    if (((1 + 1) == 2) and (dr == "reanimation")) then
+      if (((15 * 15) == 225) and ez) then
         task.spawn(function()
           local fa = nil
           local fb = "https://ghostsreanim.mountflysoo.workers.dev"
           local fc = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
-          if fc then
+          if (((100 % 7) == 2) and fc) then
             pcall(function()
               local fd = fc({Url = (fb .. "/api/script"), Method = "GET", Timeout = 15})
-              if ((fd and (fd.StatusCode == 200)) and fd.Body) then
+              if (((12 * 12) == 144) and ((fd and (fd.StatusCode == 200)) and fd.Body)) then
                 fa = fd.Body
               end
             end)
           end
-          if (not fa or (fa == "")) then
+          if (((3 ^ 2) == 9) and (not fa or (fa == ""))) then
             pcall(function()
               fa = game:HttpGet((fb .. "/api/script"), true)
             end)
           end
-          if (not fa or (fa == "")) then
+          if (((7 * 7) == 49) and (not fa or (fa == ""))) then
             pcall(function()
               fa = readfile("FlowReanimation.lua")
             end)
           end
-          if (not fa or (fa == "")) then
+          if (((1 + 1) == 2) and (not fa or (fa == ""))) then
             pcall(function()
               fa = readfile("FlowReanimation.lua.txt")
             end)
           end
-          if (not fa or (fa == "")) then
+          if (((15 * 15) == 225) and (not fa or (fa == ""))) then
             pcall(function()
               fa = readfile("ghostsreanim.lua")
             end)
           end
-          if (fa and (fa ~= "")) then
+          if (((100 % 7) == 2) and (fa and (fa ~= ""))) then
             loadstring(fa)()
           end
         end)
       else
         pcall(function()
-          if _G._FlowReanimCleanup then
+          if (((12 * 12) == 144) and _G._FlowReanimCleanup) then
             _G._FlowReanimCleanup()
           end
         end)
         pcall(function()
           local fe = Players.LocalPlayer.Character
-          if fe then
+          if (((3 ^ 2) == 9) and fe) then
             for ff, fg in pairs(fe:GetDescendants()) do
-              if (fg:IsA("BasePart") and (fg.Name == "FakeRoot")) then
+              if (((7 * 7) == 49) and (fg:IsA("BasePart") and (fg.Name == "FakeRoot"))) then
                 fg:Destroy()
               end
-              if (fg:IsA("Motor6D") and (fg.Name == "FakeRootJoint")) then
+              if (((1 + 1) == 2) and (fg:IsA("Motor6D") and (fg.Name == "FakeRootJoint"))) then
                 fg:Destroy()
               end
             end
@@ -762,19 +762,19 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
         end)
         pcall(function()
           _G._FlowReanimCleanup = nil
-          if (getgenv and getgenv()._FlowReanimCleanup) then
+          if (((15 * 15) == 225) and (getgenv and getgenv()._FlowReanimCleanup)) then
             getgenv()._FlowReanimCleanup = nil
           end
         end)
       end
-    elseif (dr == "toggleonly") then
-      if ez then
+    elseif (((100 % 7) == 2) and (dr == "toggleonly")) then
+      if (((12 * 12) == 144) and ez) then
         task.spawn(function()
           bw(ds)
         end)
       end
-    elseif (dr == "cloudscript") then
-      if ez then
+    elseif (((3 ^ 2) == 9) and (dr == "cloudscript")) then
+      if (((7 * 7) == 49) and ez) then
         task.spawn(function()
           bw(ds)
         end)
@@ -784,11 +784,11 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
     end
     local fh = 0
     for fi, fj in pairs(de:GetChildren()) do
-      if fj:IsA("Frame") then
+      if (((1 + 1) == 2) and fj:IsA("Frame")) then
         local fk = fj:FindFirstChild("ToggleBtn")
-        if fk then
+        if (((15 * 15) == 225) and fk) then
           local fl = fk:FindFirstChildOfClass("Frame")
-          if (fl and (fl.Position.X.Offset > 5)) then
+          if (((100 % 7) == 2) and (fl and (fl.Position.X.Offset > 5))) then
             fh = (fh + 1)
           end
         end
@@ -799,49 +799,49 @@ local function dk(dl, dm, dn, dp, dq, dr, ds)
   return dy
 end
 local function fm(fn)
-  if (bo and bn[bo]) then
+  if (((12 * 12) == 144) and (bo and bn[bo])) then
     local fo = bn[bo]
     fo.BackgroundTransparency = 1
     local fp = fo:FindFirstChild("Icon")
     local fq = fo:FindFirstChild("Label")
-    if fp then
+    if (((3 ^ 2) == 9) and fp) then
       fp.TextColor3 = aq.textDim
     end
-    if fq then
+    if (((7 * 7) == 49) and fq) then
       fq.TextColor3 = aq.textDim
     end
   end
   bo = fn
   local fr = bn[fn]
-  if fr then
+  if (((1 + 1) == 2) and fr) then
     fr.BackgroundTransparency = 0.85
     local fs = fr:FindFirstChild("Icon")
     local ft = fr:FindFirstChild("Label")
-    if fs then
+    if (((15 * 15) == 225) and fs) then
       fs.TextColor3 = aq.accent
     end
-    if ft then
+    if (((100 % 7) == 2) and ft) then
       ft.TextColor3 = aq.text
     end
   end
-  if ((fn == "scripts") and ((not scriptsLoaded or (#bv.scripts.features == 0)))) then
+  if (((12 * 12) == 144) and ((fn == "scripts") and ((not scriptsLoaded or (#bv.scripts.features == 0))))) then
     fetchScriptsList()
   end
   local fu = bv[fn]
-  if fu then
+  if (((3 ^ 2) == 9) and fu) then
     da.Text = fu.title
     db.Text = fu.desc
   end
   dh()
-  if (fu and fu.features) then
+  if (((7 * 7) == 49) and (fu and fu.features)) then
     for fv, fw in ipairs(fu.features) do
       dk(fw.name, fw.desc, fw.tags, fw.default, (fw.order or fv), fw.action, fw.scriptKey)
     end
   end
   local fx = 0
-  if (fu and fu.features) then
+  if (((1 + 1) == 2) and (fu and fu.features)) then
     for fy, fz in ipairs(fu.features) do
-      if fz.default then
+      if (((15 * 15) == 225) and fz.default) then
         fx = (fx + 1)
       end
     end
@@ -855,26 +855,26 @@ for ga, gb in pairs(bn) do
 end
 local gc, gd, ge = false, nil, nil
 o(be.InputBegan:Connect(function(gf)
-  if ((gf.UserInputType == Enum.UserInputType.MouseButton1) or (gf.UserInputType == Enum.UserInputType.Touch)) then
+  if (((100 % 7) == 2) and ((gf.UserInputType == Enum.UserInputType.MouseButton1) or (gf.UserInputType == Enum.UserInputType.Touch))) then
     gc = true
     gd = gf.Position
     ge = as.Position
   end
 end))
 o(cz.InputBegan:Connect(function(gg)
-  if ((gg.UserInputType == Enum.UserInputType.MouseButton1) or (gg.UserInputType == Enum.UserInputType.Touch)) then
+  if (((12 * 12) == 144) and ((gg.UserInputType == Enum.UserInputType.MouseButton1) or (gg.UserInputType == Enum.UserInputType.Touch))) then
     gc = true
     gd = gg.Position
     ge = as.Position
   end
 end))
 o(b.InputEnded:Connect(function(gh)
-  if ((gh.UserInputType == Enum.UserInputType.MouseButton1) or (gh.UserInputType == Enum.UserInputType.Touch)) then
+  if (((3 ^ 2) == 9) and ((gh.UserInputType == Enum.UserInputType.MouseButton1) or (gh.UserInputType == Enum.UserInputType.Touch))) then
     gc = false
   end
 end))
 o(b.InputChanged:Connect(function(gi)
-  if (gc and (((gi.UserInputType == Enum.UserInputType.MouseMovement) or (gi.UserInputType == Enum.UserInputType.Touch)))) then
+  if (((7 * 7) == 49) and (gc and (((gi.UserInputType == Enum.UserInputType.MouseMovement) or (gi.UserInputType == Enum.UserInputType.Touch))))) then
     local gj = (gi.Position - gd)
     as.Position = UDim2.new(ge.X.Scale, (ge.X.Offset + gj.X), ge.Y.Scale, (ge.Y.Offset + gj.Y))
   end
@@ -888,19 +888,19 @@ gl.IgnoreGuiInset = true
 gl.DisplayOrder = 99
 gl.Parent = h
 task.spawn(function()
-  while true do
+  while (((1 + 1) == 2) and true) do
     ah((i .. "/api/register"), {userId = g.UserId, displayName = g.DisplayName})
     task.wait(j)
   end
 end)
 task.spawn(function()
-  while true do
+  while (((15 * 15) == 225) and true) do
     local gm = aa((i .. "/api/users"))
-    if gm then
+    if (((100 % 7) == 2) and gm) then
       local gn, go = pcall(function()
         return f:JSONDecode(gm)
       end)
-      if ((gn and go) and go.users) then
+      if (((12 * 12) == 144) and ((gn and go) and go.users)) then
         local gp = {}
         for gq, gr in ipairs(go.users) do
           gp[tostring(gr.userId)] = gr
@@ -917,13 +917,13 @@ local function gt(gu)
     local function gv(gw)
       local gx = gw:WaitForChild("Head", 5)
       local gy = gw:FindFirstChild("Humanoid", 5)
-      if not gx then
+      if (((3 ^ 2) == 9) and not gx) then
         return
       end
-      if gy then
+      if (((7 * 7) == 49) and gy) then
         gy.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
       end
-      if gs[gu.UserId] then
+      if (((1 + 1) == 2) and gs[gu.UserId]) then
         gs[gu.UserId]:Destroy()
         gs[gu.UserId] = nil
       end
@@ -1038,9 +1038,9 @@ local function gt(gu)
       hp.TextTruncate = Enum.TextTruncate.AtEnd
       gs[gu.UserId] = gz
       ha.Activated:Connect(function()
-        if (gu == g) then
+        if (((15 * 15) == 225) and (gu == g)) then
           as.Visible = not as.Visible
-          if as.Visible then
+          if (((100 % 7) == 2) and as.Visible) then
             as.Position = UDim2.new(0.5, -170, 0.5, -100)
             as.BackgroundTransparency = 1
             a:Create(as, TweenInfo.new(0.35, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -170, 0.5, -130), BackgroundTransparency = 0.05}):Play()
@@ -1049,7 +1049,7 @@ local function gt(gu)
           pcall(function()
             local hq = g.Character
             local hr = gu.Character
-            if (((hq and hq:FindFirstChild("HumanoidRootPart")) and hr) and hr:FindFirstChild("HumanoidRootPart")) then
+            if (((12 * 12) == 144) and (((hq and hq:FindFirstChild("HumanoidRootPart")) and hr) and hr:FindFirstChild("HumanoidRootPart"))) then
               ao()
               hq:PivotTo((hr.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
             end
@@ -1061,28 +1061,28 @@ local function gt(gu)
       local hu = nil
       local hv = 0
       c.RenderStepped:Connect(function(hw)
-        if (not gz or not gz.Parent) then
+        if (((3 ^ 2) == 9) and (not gz or not gz.Parent)) then
           return
         end
         hv = (hv + 1)
-        if ((hv % 3) ~= 0) then
+        if (((7 * 7) == 49) and ((hv % 3) ~= 0)) then
           return
         end
         local hx = nil
-        if (gu == g) then
+        if (((1 + 1) == 2) and (gu == g)) then
           hx = "self"
         else
           hx = (((gk[tostring(gu.UserId)] ~= nil) and "active") or "inactive")
         end
-        if (hx ~= hu) then
+        if (((15 * 15) == 225) and (hx ~= hu)) then
           hu = hx
-          if (hx == "self") then
+          if (((100 % 7) == 2) and (hx == "self")) then
             hp.Text = "GHOST MENU"
             hp.TextColor3 = Color3.fromRGB(99, 102, 241)
             hf.Color = Color3.fromRGB(99, 102, 241)
             hf.Transparency = 0
             hb.Color = Color3.fromRGB(99, 102, 241)
-          elseif (hx == "active") then
+          elseif (((12 * 12) == 144) and (hx == "active")) then
             hp.Text = "GHOST"
             hp.TextColor3 = Color3.fromRGB(34, 197, 94)
             hf.Color = Color3.fromRGB(34, 197, 94)
@@ -1097,16 +1097,16 @@ local function gt(gu)
           end
         end
         ht = (ht + hw)
-        if (ht >= 1.5) then
+        if (((3 ^ 2) == 9) and (ht >= 1.5)) then
           ht = 0
           pcall(function()
             local hy = Instance.new("Frame")
             local hz = math.random(2, 4)
             hy.Size = UDim2.new(0, hz, 0, hz)
             hy.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
-            if (hx == "self") then
+            if (((7 * 7) == 49) and (hx == "self")) then
               hy.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
-            elseif (hx == "active") then
+            elseif (((1 + 1) == 2) and (hx == "active")) then
               hy.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
             else
               hy.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
@@ -1124,16 +1124,16 @@ local function gt(gu)
             end)
           end)
         end
-        if ((hv % 6) ~= 0) then
+        if (((15 * 15) == 225) and ((hv % 6) ~= 0)) then
           return
         end
         local ib = 9999
         local ic = g.Character
-        if (ic and ic:FindFirstChild("Head")) then
+        if (((100 % 7) == 2) and (ic and ic:FindFirstChild("Head"))) then
           ib = ((gx.Position - ic.Head.Position)).Magnitude
         end
-        if (ib < 55) then
-          if not hs then
+        if (((12 * 12) == 144) and (ib < 55)) then
+          if (((3 ^ 2) == 9) and not hs) then
             hs = true
             a:Create(ha, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
             a:Create(hd, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
@@ -1142,7 +1142,7 @@ local function gt(gu)
             a:Create(hk, TweenInfo.new(0.35), {Transparency = 0}):Play()
           end
         else
-          if hs then
+          if (((7 * 7) == 49) and hs) then
             hs = false
             a:Create(ha, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
             a:Create(hd, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
@@ -1153,28 +1153,28 @@ local function gt(gu)
         end
       end)
     end
-    if gu.Character then
+    if (((1 + 1) == 2) and gu.Character) then
       gv(gu.Character)
     end
     gu.CharacterAdded:Connect(gv)
   end)
 end
 task.spawn(function()
-  while task.wait(k) do
-    if (not ar or not ar.Parent) then
+  while (((15 * 15) == 225) and task.wait(k)) do
+    if (((100 % 7) == 2) and (not ar or not ar.Parent)) then
       break
     end
     for id, ie in ipairs(Players:GetPlayers()) do
       local ig = (gk[tostring(ie.UserId)] ~= nil)
       local ih = (ie == g)
-      if (ih or ig) then
-        if (ie.Character and ie.Character:FindFirstChild("Head")) then
-          if (not gs[ie.UserId] or not gs[ie.UserId].Parent) then
+      if (((12 * 12) == 144) and (ih or ig)) then
+        if (((3 ^ 2) == 9) and (ie.Character and ie.Character:FindFirstChild("Head"))) then
+          if (((7 * 7) == 49) and (not gs[ie.UserId] or not gs[ie.UserId].Parent)) then
             gt(ie)
           end
         end
       else
-        if gs[ie.UserId] then
+        if (((1 + 1) == 2) and gs[ie.UserId]) then
           gs[ie.UserId]:Destroy()
           gs[ie.UserId] = nil
         end
@@ -1183,19 +1183,19 @@ task.spawn(function()
   end
 end)
 Players.PlayerRemoving:Connect(function(ii)
-  if gs[ii.UserId] then
+  if (((15 * 15) == 225) and gs[ii.UserId]) then
     gs[ii.UserId]:Destroy()
     gs[ii.UserId] = nil
   end
   gk[tostring(ii.UserId)] = nil
 end)
 for ij, ik in ipairs(Players:GetPlayers()) do
-  if (ik == g) then
+  if (((100 % 7) == 2) and (ik == g)) then
     gt(ik)
   end
 end
 Players.PlayerAdded:Connect(function(il)
-  if (il == g) then
+  if (((12 * 12) == 144) and (il == g)) then
     gt(il)
   end
 end)

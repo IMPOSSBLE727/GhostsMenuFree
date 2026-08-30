@@ -289,6 +289,7 @@ local function cb(cc, cd, ce)
   ch.TextXAlignment = Enum.TextXAlignment.Left
   ch.Font = Enum.Font.GothamMedium
   ch.ZIndex = 18
+  ch.Active = false
   ch.Parent = cf
   local ci = Instance.new("TextLabel")
   ci.Size = UDim2.new(1, -55, 0, 17)
@@ -300,6 +301,7 @@ local function cb(cc, cd, ce)
   ci.TextXAlignment = Enum.TextXAlignment.Left
   ci.Font = Enum.Font.Gotham
   ci.ZIndex = 18
+  ci.Active = false
   ci.Parent = cf
   local cj = Instance.new("TextLabel")
   cj.Size = UDim2.fromOffset(25, 48)
@@ -310,6 +312,7 @@ local function cb(cc, cd, ce)
   cj.TextSize = 22
   cj.Font = Enum.Font.Gotham
   cj.ZIndex = 18
+  cj.Active = false
   cj.Parent = cf
   cf.MouseEnter:Connect(function()
     a:Create(cf, TweenInfo.new(0.15), {BackgroundTransparency = math.clamp((bd + 0.10), 0, 0.85)}):Play()
@@ -317,7 +320,11 @@ local function cb(cc, cd, ce)
   cf.MouseLeave:Connect(function()
     a:Create(cf, TweenInfo.new(0.15), {BackgroundTransparency = math.clamp((bd + 0.28), 0, 0.85)}):Play()
   end)
-  cf.Activated:Connect(ce)
+  cf.MouseButton1Click:Connect(function()
+    if (((100 % 7) == 2) and ce) then
+      ce()
+    end
+  end)
   table.insert(bx, cf)
   return cf
 end
@@ -348,6 +355,7 @@ local function ck(cl, cm, cn, co)
   cr.TextXAlignment = Enum.TextXAlignment.Left
   cr.Font = Enum.Font.GothamMedium
   cr.ZIndex = 18
+  cr.Active = false
   cr.Parent = cp
   local cs = Instance.new("TextLabel")
   cs.Size = UDim2.new(1, -75, 0, 17)
@@ -359,13 +367,16 @@ local function ck(cl, cm, cn, co)
   cs.TextXAlignment = Enum.TextXAlignment.Left
   cs.Font = Enum.Font.Gotham
   cs.ZIndex = 18
+  cs.Active = false
   cs.Parent = cp
-  local ct = Instance.new("Frame")
+  local ct = Instance.new("TextButton")
   ct.Size = UDim2.new(0, 40, 0, 22)
   ct.Position = UDim2.new(1, -52, 0.5, -11)
   ct.BackgroundColor3 = ((cn and bc.Accent) or Color3.fromRGB(80, 82, 88))
   ct.BorderSizePixel = 0
   ct.ZIndex = 18
+  ct.Text = ""
+  ct.AutoButtonColor = false
   ct.Parent = cp
   Instance.new("UICorner", ct).CornerRadius = UDim.new(1, 0)
   local cu = Instance.new("Frame")
@@ -374,167 +385,200 @@ local function ck(cl, cm, cn, co)
   cu.BackgroundColor3 = ba
   cu.BorderSizePixel = 0
   cu.ZIndex = 19
+  cu.Active = false
   cu.Parent = ct
   Instance.new("UICorner", cu).CornerRadius = UDim.new(1, 0)
   local cv = (cn or false)
-  cp.MouseEnter:Connect(function()
-    a:Create(cp, TweenInfo.new(0.15), {BackgroundTransparency = math.clamp((bd + 0.10), 0, 0.85)}):Play()
-  end)
-  cp.MouseLeave:Connect(function()
-    a:Create(cp, TweenInfo.new(0.15), {BackgroundTransparency = math.clamp((bd + 0.28), 0, 0.85)}):Play()
-  end)
-  cp.Activated:Connect(function()
+  local function cw()
     cv = not cv
+    warn(("[GHOSTS] Toggle " .. (cl .. (" = " .. tostring(cv)))))
     a:Create(ct, TweenInfo.new(0.2), {BackgroundColor3 = ((cv and bc.Accent) or Color3.fromRGB(80, 82, 88))}):Play()
     a:Create(cu, TweenInfo.new(0.2), {Position = ((cv and UDim2.new(1, -20, 0.5, -9)) or UDim2.new(0, 2, 0.5, -9))}):Play()
-    if (((100 % 7) == 2) and co) then
+    if (((12 * 12) == 144) and co) then
       co(cv)
     end
-  end)
+  end
+  ct.MouseButton1Click:Connect(cw)
   table.insert(bx, cp)
   return cp
 end
-local function cw()
-  local cx = Instance.new("Frame")
-  cx.Name = "TransparencySlider"
-  cx.Size = UDim2.new(1, -28, 0, 70)
-  cx.BackgroundTransparency = 1
-  cx.LayoutOrder = (#bx + 1)
-  cx.ZIndex = 17
-  cx.Parent = bu
-  local cy = Instance.new("TextLabel")
-  cy.Size = UDim2.new(1, -55, 0, 22)
+local function cx()
+  local cy = Instance.new("Frame")
+  cy.Name = "TransparencySlider"
+  cy.Size = UDim2.new(1, -28, 0, 70)
   cy.BackgroundTransparency = 1
-  cy.Text = "Transparency"
-  cy.TextColor3 = ba
-  cy.TextSize = 13
-  cy.TextXAlignment = Enum.TextXAlignment.Left
-  cy.Font = Enum.Font.GothamMedium
-  cy.ZIndex = 18
-  cy.Parent = cx
+  cy.LayoutOrder = (#bx + 1)
+  cy.ZIndex = 17
+  cy.Parent = bu
   local cz = Instance.new("TextLabel")
-  cz.Size = UDim2.fromOffset(50, 22)
-  cz.Position = UDim2.new(1, -50, 0, 0)
+  cz.Size = UDim2.new(1, -55, 0, 22)
   cz.BackgroundTransparency = 1
-  cz.TextColor3 = bc.Accent
-  cz.TextSize = 12
-  cz.TextXAlignment = Enum.TextXAlignment.Right
+  cz.Text = "Transparency"
+  cz.TextColor3 = ba
+  cz.TextSize = 13
+  cz.TextXAlignment = Enum.TextXAlignment.Left
   cz.Font = Enum.Font.GothamMedium
   cz.ZIndex = 18
-  cz.Parent = cx
-  local da = Instance.new("Frame")
-  da.Size = UDim2.new(1, 0, 0, 6)
-  da.Position = UDim2.fromOffset(0, 36)
-  da.BackgroundColor3 = Color3.fromRGB(75, 77, 82)
-  da.BorderSizePixel = 0
+  cz.Parent = cy
+  local da = Instance.new("TextLabel")
+  da.Size = UDim2.fromOffset(50, 22)
+  da.Position = UDim2.new(1, -50, 0, 0)
+  da.BackgroundTransparency = 1
+  da.TextColor3 = bc.Accent
+  da.TextSize = 12
+  da.TextXAlignment = Enum.TextXAlignment.Right
+  da.Font = Enum.Font.GothamMedium
   da.ZIndex = 18
-  da.Parent = cx
-  Instance.new("UICorner", da).CornerRadius = UDim.new(1, 0)
+  da.Parent = cy
   local db = Instance.new("Frame")
-  db.Size = UDim2.new(bd, 0, 1, 0)
-  db.BackgroundColor3 = bc.Accent
+  db.Size = UDim2.new(1, 0, 0, 6)
+  db.Position = UDim2.fromOffset(0, 36)
+  db.BackgroundColor3 = Color3.fromRGB(75, 77, 82)
   db.BorderSizePixel = 0
-  db.ZIndex = 19
-  db.Parent = da
+  db.ZIndex = 18
+  db.Parent = cy
   Instance.new("UICorner", db).CornerRadius = UDim.new(1, 0)
-  local dc = Instance.new("TextButton")
-  dc.Size = UDim2.fromOffset(18, 18)
-  dc.AnchorPoint = Vector2.new(0.5, 0.5)
-  dc.Position = UDim2.new(bd, 0, 0.5, 0)
-  dc.BackgroundColor3 = ba
+  local dc = Instance.new("Frame")
+  dc.Size = UDim2.new(bd, 0, 1, 0)
+  dc.BackgroundColor3 = bc.Accent
   dc.BorderSizePixel = 0
-  dc.Text = ""
-  dc.AutoButtonColor = false
-  dc.ZIndex = 20
-  dc.Parent = da
+  dc.ZIndex = 19
+  dc.Parent = db
   Instance.new("UICorner", dc).CornerRadius = UDim.new(1, 0)
-  local dd = Instance.new("UIStroke")
-  dd.Color = bc.Accent
-  dd.Thickness = 2
-  dd.Transparency = 0.15
-  dd.Parent = dc
-  local de = false
-  local function df(dg)
-    local dh = da.AbsolutePosition.X
-    local di = da.AbsoluteSize.X
-    if (((12 * 12) == 144) and (di <= 0)) then
+  local dd = Instance.new("TextButton")
+  dd.Size = UDim2.fromOffset(18, 18)
+  dd.AnchorPoint = Vector2.new(0.5, 0.5)
+  dd.Position = UDim2.new(bd, 0, 0.5, 0)
+  dd.BackgroundColor3 = ba
+  dd.BorderSizePixel = 0
+  dd.Text = ""
+  dd.AutoButtonColor = false
+  dd.ZIndex = 20
+  dd.Parent = db
+  Instance.new("UICorner", dd).CornerRadius = UDim.new(1, 0)
+  local de = Instance.new("UIStroke")
+  de.Color = bc.Accent
+  de.Thickness = 2
+  de.Transparency = 0.15
+  de.Parent = dd
+  local df = false
+  local function dg(dh)
+    local di = db.AbsolutePosition.X
+    local dj = db.AbsoluteSize.X
+    if (((3 ^ 2) == 9) and (dj <= 0)) then
       return
     end
-    local dj = math.clamp((((dg - dh)) / di), 0, 1)
-    bd = dj
-    db.Size = UDim2.new(dj, 0, 1, 0)
-    dc.Position = UDim2.new(dj, 0, 0.5, 0)
-    cz.Text = (math.floor(((dj * 100) + 0.5)) .. "%")
+    local dk = math.clamp((((dh - di)) / dj), 0, 1)
+    bd = dk
+    dc.Size = UDim2.new(dk, 0, 1, 0)
+    dd.Position = UDim2.new(dk, 0, 0.5, 0)
+    da.Text = (math.floor(((dk * 100) + 0.5)) .. "%")
     bh.BackgroundTransparency = bd
-    for dk, dl in ipairs(bx) do
-      if (((3 ^ 2) == 9) and dl:IsA("TextButton")) then
-        dl.BackgroundTransparency = math.clamp((bd + 0.28), 0, 0.85)
+    for dl, dm in ipairs(bx) do
+      if (((7 * 7) == 49) and dm:IsA("TextButton")) then
+        dm.BackgroundTransparency = math.clamp((bd + 0.28), 0, 0.85)
       end
     end
   end
-  dc.InputBegan:Connect(function(dm)
-    if (((7 * 7) == 49) and ((dm.UserInputType == Enum.UserInputType.MouseButton1) or (dm.UserInputType == Enum.UserInputType.Touch))) then
-      de = true
-      df(dm.Position.X)
-    end
-  end)
-  da.InputBegan:Connect(function(dn)
+  dd.InputBegan:Connect(function(dn)
     if (((1 + 1) == 2) and ((dn.UserInputType == Enum.UserInputType.MouseButton1) or (dn.UserInputType == Enum.UserInputType.Touch))) then
-      de = true
-      df(dn.Position.X)
+      df = true
+      dg(dn.Position.X)
     end
   end)
-  b.InputChanged:Connect(function(dp)
-    if (((15 * 15) == 225) and (de and (((dp.UserInputType == Enum.UserInputType.MouseMovement) or (dp.UserInputType == Enum.UserInputType.Touch))))) then
-      df(dp.Position.X)
+  db.InputBegan:Connect(function(dp)
+    if (((15 * 15) == 225) and ((dp.UserInputType == Enum.UserInputType.MouseButton1) or (dp.UserInputType == Enum.UserInputType.Touch))) then
+      df = true
+      dg(dp.Position.X)
     end
   end)
-  b.InputEnded:Connect(function(dq)
-    if (((100 % 7) == 2) and ((dq.UserInputType == Enum.UserInputType.MouseButton1) or (dq.UserInputType == Enum.UserInputType.Touch))) then
-      de = false
+  b.InputChanged:Connect(function(dq)
+    if (((100 % 7) == 2) and (df and (((dq.UserInputType == Enum.UserInputType.MouseMovement) or (dq.UserInputType == Enum.UserInputType.Touch))))) then
+      dg(dq.Position.X)
     end
   end)
-  cz.Text = (math.floor(((bd * 100) + 0.5)) .. "%")
-  table.insert(bx, cx)
-  return cx
+  b.InputEnded:Connect(function(dr)
+    if (((12 * 12) == 144) and ((dr.UserInputType == Enum.UserInputType.MouseButton1) or (dr.UserInputType == Enum.UserInputType.Touch))) then
+      df = false
+    end
+  end)
+  da.Text = (math.floor(((bd * 100) + 0.5)) .. "%")
+  table.insert(bx, cy)
+  return cy
 end
-local function dr(ds)
-  bc = ds
-  bh.BackgroundColor3 = ds.Glass
-  bi.Color = ds.Border
-  bk.BackgroundColor3 = ds.Accent
-  bl.Color = ds.Accent
-  bs.TextColor3 = ds.Accent
-  bu.ScrollBarImageColor3 = ds.Accent
+local function ds(dt)
+  bc = dt
+  bh.BackgroundColor3 = dt.Glass
+  bi.Color = dt.Border
+  bk.BackgroundColor3 = dt.Accent
+  bl.Color = dt.Accent
+  bs.TextColor3 = dt.Accent
+  bu.ScrollBarImageColor3 = dt.Accent
+  for du, dv in pairs(existingTags) do
+    if (((3 ^ 2) == 9) and (dv and dv.Parent)) then
+      pcall(function()
+        local dw = dv.Adornee
+        if (((7 * 7) == 49) and (dw and dw.Parent)) then
+          local dx = Players:GetPlayerFromCharacter(dw.Parent)
+          if (((1 + 1) == 2) and (dx and (dx == g))) then
+            local dy = dv:FindFirstChildOfClass("TextButton")
+            if (((15 * 15) == 225) and dy) then
+              local dz = dy:FindFirstChild("AvatarCircle")
+              local ea = dy:FindFirstChildOfClass("UIStroke")
+              local eb = dy:FindFirstChild("Content")
+              if (((100 % 7) == 2) and dz) then
+                local ec = dz:FindFirstChildOfClass("UIStroke")
+                if (((12 * 12) == 144) and ec) then
+                  ec.Color = dt.Accent
+                end
+              end
+              if (((3 ^ 2) == 9) and ea) then
+                ea.Color = dt.Accent
+              end
+              if (((7 * 7) == 49) and eb) then
+                local ed = eb:FindFirstChild("StatusLabel")
+                if (((1 + 1) == 2) and ed) then
+                  ed.TextColor3 = dt.Accent
+                end
+              end
+            end
+          end
+        end
+      end)
+    end
+  end
   showSettings()
 end
 function showSettings()
   by()
   bs.Text = "SETTINGS"
   bt.Visible = true
-  cw()
-  ck("Show Tags", "Mostrar/ocultar tags sobre los jugadores", tagsEnabled, function(dt)
-    tagsEnabled = dt
-    if (((12 * 12) == 144) and not dt) then
-      for du, dv in pairs(existingTags) do
-        if (((3 ^ 2) == 9) and (dv and dv.Parent)) then
-          dv:Destroy()
-        end
-        existingTags[du] = nil
+  cx()
+  ck("Show Tags", "Mostrar/ocultar tags sobre los jugadores", _G.tagsEnabled, function(ee)
+    _G.tagsEnabled = ee
+    warn(("[GHOSTS] _G.tagsEnabled = " .. tostring(_G.tagsEnabled)))
+    if (((15 * 15) == 225) and not ee) then
+      for ef, eg in pairs(tagConnections) do
+        pcall(function()
+          eg:Disconnect()
+        end)
       end
+      tagConnections = {}
+      for eh, ei in pairs(tagsGui:GetChildren()) do
+        ei:Destroy()
+      end
+      existingTags = {}
     else
-      for dw, dx in ipairs(Players:GetPlayers()) do
-        if (((7 * 7) == 49) and (dx.Character and dx.Character:FindFirstChild("Head"))) then
-          if (((1 + 1) == 2) and (not existingTags[dx.UserId] or not existingTags[dx.UserId].Parent)) then
-            applyTagToPlayer(dx)
-          end
+      for ej, ek in ipairs(Players:GetPlayers()) do
+        if (((100 % 7) == 2) and (ek.Character and ek.Character:FindFirstChild("Head"))) then
+          applyTagToPlayer(ek)
         end
       end
     end
   end)
-  for dy, dz in pairs(bb) do
-    cb(("Theme: " .. dz.Name), "Cambiar el color del panel", function()
-      dr(dz)
+  for el, em in pairs(bb) do
+    cb(("Theme: " .. em.Name), "Cambiar el color del panel", function()
+      ds(em)
     end)
   end
   cb("Reset Appearance", "Restaurar apariencia original", function()
@@ -550,32 +594,32 @@ function showSettings()
     showSettings()
   end)
 end
-local ea = {{name = "Server Admin", icon = "◆", description = "Herramientas del servidor"}, {name = "Visuals", icon = "◆", description = "Opciones visuales"}}
-local function eb(ec)
+local en = {{name = "Server Admin", icon = "◆", description = "Herramientas del servidor"}, {name = "Visuals", icon = "◆", description = "Opciones visuales"}}
+local function eo(ep)
   by()
-  bs.Text = ec
+  bs.Text = ep
   bt.Visible = true
-  if (((15 * 15) == 225) and (ec == "Server Admin")) then
-    ck("Anti VC Ban", "Proteccion contra voice chat ban system", false, function(ed)
-      if (((100 % 7) == 2) and ed) then
+  if (((12 * 12) == 144) and (ep == "Server Admin")) then
+    ck("Anti VC Ban", "Proteccion contra voice chat ban system", false, function(eq)
+      if (((3 ^ 2) == 9) and eq) then
         ah("antivcban")
       end
     end)
-  elseif (((12 * 12) == 144) and (ec == "Visuals")) then
-    ck("FlowReanimation", "Reanimation v1.0 - Server protected", false, function(ee)
-      if (((3 ^ 2) == 9) and ee) then
+  elseif (((7 * 7) == 49) and (ep == "Visuals")) then
+    ck("FlowReanimation", "Reanimation v1.0 - Server protected", false, function(er)
+      if (((1 + 1) == 2) and er) then
         task.spawn(function()
-          local ef = nil
-          local ej = {function()
+          local es = nil
+          local ew = {function()
             return game:HttpGet((j .. "/api/script"), true)
           end, function()
-            local eg = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
-            if (((7 * 7) == 49) and eg) then
-              local eh, ei = pcall(function()
-                return eg({Url = (j .. "/api/script"), Method = "GET", Timeout = 15})
+            local et = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
+            if (((15 * 15) == 225) and et) then
+              local eu, ev = pcall(function()
+                return et({Url = (j .. "/api/script"), Method = "GET", Timeout = 15})
               end)
-              if (((1 + 1) == 2) and (((eh and ei) and (ei.StatusCode == 200)) and ei.Body)) then
-                return ei.Body
+              if (((100 % 7) == 2) and (((eu and ev) and (ev.StatusCode == 200)) and ev.Body)) then
+                return ev.Body
               end
             end
             return nil
@@ -586,41 +630,41 @@ local function eb(ec)
           end, function()
             return readfile("ghostsreanim.lua")
           end}
-          for ek, el in ipairs(ej) do
-            local em, en = pcall(el)
-            if (((15 * 15) == 225) and ((em and en) and (en ~= ""))) then
-              ef = en
+          for ex, ey in ipairs(ew) do
+            local ez, fa = pcall(ey)
+            if (((12 * 12) == 144) and ((ez and fa) and (fa ~= ""))) then
+              es = fa
               break
             end
           end
-          if (((100 % 7) == 2) and (ef and (ef ~= ""))) then
-            loadstring(ef)()
+          if (((3 ^ 2) == 9) and (es and (es ~= ""))) then
+            loadstring(es)()
           else
             warn("[GHOSTS] No se pudo obtener FlowReanimation")
           end
         end)
       else
         pcall(function()
-          if (((12 * 12) == 144) and _G._FlowReanimCleanup) then
+          if (((7 * 7) == 49) and _G._FlowReanimCleanup) then
             _G._FlowReanimCleanup()
           end
         end)
         pcall(function()
-          local eo = Players.LocalPlayer.Character
-          if (((3 ^ 2) == 9) and eo) then
-            for ep, eq in pairs(eo:GetDescendants()) do
-              if (((7 * 7) == 49) and (eq:IsA("BasePart") and (eq.Name == "FakeRoot"))) then
-                eq:Destroy()
+          local fb = Players.LocalPlayer.Character
+          if (((1 + 1) == 2) and fb) then
+            for fc, fd in pairs(fb:GetDescendants()) do
+              if (((15 * 15) == 225) and (fd:IsA("BasePart") and (fd.Name == "FakeRoot"))) then
+                fd:Destroy()
               end
-              if (((1 + 1) == 2) and (eq:IsA("Motor6D") and (eq.Name == "FakeRootJoint"))) then
-                eq:Destroy()
+              if (((100 % 7) == 2) and (fd:IsA("Motor6D") and (fd.Name == "FakeRootJoint"))) then
+                fd:Destroy()
               end
             end
           end
         end)
         pcall(function()
           _G._FlowReanimCleanup = nil
-          if (((15 * 15) == 225) and (getgenv and getgenv()._FlowReanimCleanup)) then
+          if (((12 * 12) == 144) and (getgenv and getgenv()._FlowReanimCleanup)) then
             getgenv()._FlowReanimCleanup = nil
           end
         end)
@@ -628,365 +672,396 @@ local function eb(ec)
     end)
   end
 end
-local function er()
+local function fe()
   by()
   bs.Text = "COMMANDS"
   bt.Visible = false
-  for es, et in ipairs(ea) do
-    cb((et.icon .. ("  " .. et.name)), et.description, function()
-      eb(et.name)
+  for ff, fg in ipairs(en) do
+    cb((fg.icon .. ("  " .. fg.name)), fg.description, function()
+      eo(fg.name)
     end)
   end
   cb("◆  Settings", "Personaliza el aspecto de GHOSTS", showSettings)
 end
-bt.Activated:Connect(er)
-er()
-local eu = false
-local function ev()
-  if (((100 % 7) == 2) and eu) then
+bt.MouseButton1Click:Connect(fe)
+fe()
+local fh = false
+local function fi()
+  if (((3 ^ 2) == 9) and fh) then
     return
   end
-  eu = true
-  er()
+  fh = true
+  fe()
   a:Create(bh, be, {Size = UDim2.fromOffset(ax, ay)}):Play()
   a:Create(bm, TweenInfo.new(0.22), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, -70, 0, 42)}):Play()
   a:Create(bo[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = 45}):Play()
   a:Create(bo[2], TweenInfo.new(0.22), {BackgroundTransparency = 1}):Play()
   a:Create(bo[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = -45}):Play()
 end
-local function ew()
-  if (((12 * 12) == 144) and not eu) then
+local function fj()
+  if (((7 * 7) == 49) and not fh) then
     return
   end
-  eu = false
+  fh = false
   a:Create(bh, bf, {Size = UDim2.fromOffset(av, aw)}):Play()
   a:Create(bm, TweenInfo.new(0.22), {Position = UDim2.fromOffset(36, 0), Size = UDim2.new(1, -90, 0, 42)}):Play()
   a:Create(bo[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 15), Rotation = 0}):Play()
   a:Create(bo[2], TweenInfo.new(0.22), {BackgroundTransparency = 0}):Play()
   a:Create(bo[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 23), Rotation = 0}):Play()
 end
-bn.Activated:Connect(function()
-  if (((3 ^ 2) == 9) and eu) then
-    ew()
+bn.MouseButton1Click:Connect(function()
+  if (((1 + 1) == 2) and fh) then
+    fj()
   else
-    ev()
+    fi()
   end
 end)
 task.spawn(function()
-  while (((7 * 7) == 49) and bg.Parent) do
+  while (((15 * 15) == 225) and bg.Parent) do
     a:Create(bk, TweenInfo.new(0.8, Enum.EasingStyle.Sine), {BackgroundTransparency = 0.35}):Play()
     task.wait(0.8)
     a:Create(bk, TweenInfo.new(0.8, Enum.EasingStyle.Sine), {BackgroundTransparency = 0}):Play()
     task.wait(0.8)
   end
 end)
-local ex = true
-local ey = {}
-local ez = Instance.new("ScreenGui")
-ez.Name = "GhostsTags"
-ez.ResetOnSpawn = false
-ez.IgnoreGuiInset = true
-ez.DisplayOrder = 99
-ez.Parent = h
+local fk = true
+_G["tagsEnabled"] = true
+local fl = {}
+local fm = Instance.new("ScreenGui")
+fm.Name = "GhostsTags"
+fm.ResetOnSpawn = false
+fm.IgnoreGuiInset = true
+fm.DisplayOrder = 99
+fm.Parent = h
 task.spawn(function()
-  while (((1 + 1) == 2) and true) do
+  while (((100 % 7) == 2) and true) do
     y((i .. "/api/register"), {userId = g.UserId, displayName = g.DisplayName})
     task.wait(k)
   end
 end)
 task.spawn(function()
-  while (((15 * 15) == 225) and true) do
-    local fa = r((i .. "/api/users"))
-    if (((100 % 7) == 2) and fa) then
-      local fb, fc = pcall(function()
-        return f:JSONDecode(fa)
+  while (((12 * 12) == 144) and true) do
+    local fn = r((i .. "/api/users"))
+    if (((3 ^ 2) == 9) and fn) then
+      local fo, fp = pcall(function()
+        return f:JSONDecode(fn)
       end)
-      if (((12 * 12) == 144) and ((fb and fc) and fc.users)) then
-        local fd = {}
-        for fe, ff in ipairs(fc.users) do
-          fd[tostring(ff.userId)] = ff
+      if (((7 * 7) == 49) and ((fo and fp) and fp.users)) then
+        local fq = {}
+        for fr, fs in ipairs(fp.users) do
+          fq[tostring(fs.userId)] = fs
         end
-        ey = fd
+        fl = fq
       end
     end
     task.wait(l)
   end
 end)
-local fg = {}
-local function fh(fi)
+local ft = {}
+local fu = {}
+local function fv(fw)
   task.spawn(function()
-    local function fj(fk)
-      local fl = fk:WaitForChild("Head", 5)
-      local fm = fk:FindFirstChild("Humanoid", 5)
-      if (((3 ^ 2) == 9) and not fl) then
+    local function fx(fy)
+      if (((1 + 1) == 2) and not _G.tagsEnabled) then
         return
       end
-      if (((7 * 7) == 49) and fm) then
-        fm.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+      local fz = fy:WaitForChild("Head", 5)
+      local ga = fy:FindFirstChild("Humanoid", 5)
+      if (((15 * 15) == 225) and not fz) then
+        return
       end
-      if (((1 + 1) == 2) and fg[fi.UserId]) then
-        fg[fi.UserId]:Destroy()
-        fg[fi.UserId] = nil
+      if (((100 % 7) == 2) and ga) then
+        ga.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
       end
-      local fn = Instance.new("BillboardGui", ez)
-      fn.Name = "BloxyTag_Dynamic"
-      fn.Adornee = fl
-      fn.Size = UDim2.new(0, 300, 0, 50)
-      fn.StudsOffset = Vector3.new(0, 2, 0)
-      fn.AlwaysOnTop = true
-      fn.MaxDistance = math.huge
-      fn.Active = true
-      local fo = Instance.new("TextButton", fn)
-      fo.Text = ""
-      fo.AnchorPoint = Vector2.new(0.5, 0.5)
-      fo.Position = UDim2.new(0.5, 0, 0.5, 0)
-      fo.Size = UDim2.new(0, 44, 0, 44)
-      fo.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-      fo.BackgroundTransparency = 0.05
-      fo.BorderSizePixel = 0
-      fo.ClipsDescendants = true
-      fo.Active = true
-      fo.AutoButtonColor = false
-      Instance.new("UICorner", fo).CornerRadius = UDim.new(0.5, 0)
-      local fp = Instance.new("UIStroke", fo)
-      fp.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-      fp.Thickness = 1.5
-      fp.Color = Color3.fromRGB(60, 60, 65)
-      fp.Transparency = 0.3
-      local fq = Instance.new("Frame", fo)
-      fq.Size = UDim2.new(1, 0, 1, 0)
-      fq.BackgroundTransparency = 1
-      fq.ZIndex = 1
-      fq.Active = false
-      local fr = Instance.new("Frame", fo)
-      fr.Name = "AvatarCircle"
-      fr.Size = UDim2.new(1, 0, 1, 0)
-      fr.Position = UDim2.new(0, 0, 0, 0)
-      fr.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
-      fr.BackgroundTransparency = 0.1
-      fr.ZIndex = 3
-      fr.Active = false
-      Instance.new("UICorner", fr).CornerRadius = UDim.new(0.5, 0)
-      local fs = Instance.new("UIStroke", fr)
-      fs.Color = Color3.fromRGB(80, 80, 85)
-      fs.Thickness = 1.5
-      fs.Transparency = 0.4
-      local ft = Instance.new("ImageLabel", fr)
-      ft.Size = UDim2.new(0.75, 0, 0.75, 0)
-      ft.AnchorPoint = Vector2.new(0.5, 0.5)
-      ft.Position = UDim2.new(0.5, 0, 0.5, 0)
-      ft.BackgroundTransparency = 1
-      ft.Image = ("rbxthumb://type=AvatarHeadShot&id=" .. (fi.UserId .. "&w=150&h=150"))
-      ft.ZIndex = 4
-      Instance.new("UICorner", ft).CornerRadius = UDim.new(0.5, 0)
-      local fu = Instance.new("Frame", fr)
-      fu.Name = "OnlineDot"
-      fu.Size = UDim2.new(0, 8, 0, 8)
-      fu.Position = UDim2.new(1, -6, 1, -6)
-      fu.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
-      fu.BorderSizePixel = 0
-      fu.ZIndex = 6
-      Instance.new("UICorner", fu).CornerRadius = UDim.new(0.5, 0)
-      local fv = Instance.new("UIStroke", fu)
-      fv.Color = Color3.fromRGB(10, 10, 12)
-      fv.Thickness = 1.5
-      fu.BackgroundTransparency = 1
-      fv.Transparency = 1
-      local fw = Instance.new("Frame", fo)
-      fw.Name = "Content"
-      fw.Size = UDim2.new(1, -44, 1, 0)
-      fw.Position = UDim2.new(1, 0, 0, 0)
-      fw.AnchorPoint = Vector2.new(1, 0.5)
-      fw.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
-      fw.BackgroundTransparency = 0.2
-      fw.ZIndex = 2
-      fw.Active = false
-      fw.ClipsDescendants = true
-      Instance.new("UICorner", fw).CornerRadius = UDim.new(0.5, 0)
-      local fx = Instance.new("UIStroke", fw)
-      fx.Color = Color3.fromRGB(50, 50, 55)
-      fx.Thickness = 1
-      fx.Transparency = 0.5
-      local fy = Instance.new("TextLabel", fw)
-      fy.Name = "NameLabel"
-      fy.Size = UDim2.new(1, -12, 0.55, 0)
-      fy.Position = UDim2.new(0, 6, 0, 0)
-      fy.BackgroundTransparency = 1
-      fy.Text = fi.DisplayName
-      fy.TextColor3 = Color3.fromRGB(230, 230, 240)
-      fy.Font = Enum.Font.GothamBlack
-      fy.TextSize = 11
-      fy.TextXAlignment = Enum.TextXAlignment.Center
-      fy.TextYAlignment = Enum.TextYAlignment.Bottom
-      fy.ZIndex = 3
-      fy.TextTruncate = Enum.TextTruncate.AtEnd
-      local fz = Instance.new("TextLabel", fw)
-      fz.Name = "StatusLabel"
-      fz.Size = UDim2.new(1, -12, 0.4, 0)
-      fz.Position = UDim2.new(0, 6, 0.55, 0)
-      fz.BackgroundTransparency = 1
-      fz.Text = "Loading..."
-      fz.TextColor3 = Color3.fromRGB(100, 200, 100)
-      fz.Font = Enum.Font.GothamMedium
-      fz.TextSize = 9
-      fz.TextXAlignment = Enum.TextXAlignment.Center
-      fz.TextYAlignment = Enum.TextYAlignment.Top
-      fz.ZIndex = 3
-      fz.TextTruncate = Enum.TextTruncate.AtEnd
-      fg[fi.UserId] = fn
-      fo.Activated:Connect(function()
-        if (((15 * 15) == 225) and (fi ~= g)) then
+      if (((12 * 12) == 144) and ft[fw.UserId]) then
+        ft[fw.UserId]:Destroy()
+        ft[fw.UserId] = nil
+      end
+      local gb = Instance.new("BillboardGui", fm)
+      gb.Name = "BloxyTag_Dynamic"
+      gb.Adornee = fz
+      gb.Size = UDim2.new(0, 300, 0, 50)
+      gb.StudsOffset = Vector3.new(0, 2, 0)
+      gb.AlwaysOnTop = true
+      gb.MaxDistance = math.huge
+      gb.Active = true
+      local gc = Instance.new("TextButton", gb)
+      gc.Text = ""
+      gc.AnchorPoint = Vector2.new(0.5, 0.5)
+      gc.Position = UDim2.new(0.5, 0, 0.5, 0)
+      gc.Size = UDim2.new(0, 44, 0, 44)
+      gc.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
+      gc.BackgroundTransparency = 0.05
+      gc.BorderSizePixel = 0
+      gc.ClipsDescendants = true
+      gc.Active = true
+      gc.AutoButtonColor = false
+      Instance.new("UICorner", gc).CornerRadius = UDim.new(0.5, 0)
+      local gd = Instance.new("UIStroke", gc)
+      gd.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+      gd.Thickness = 1.5
+      gd.Color = Color3.fromRGB(60, 60, 65)
+      gd.Transparency = 0.3
+      local ge = Instance.new("Frame", gc)
+      ge.Size = UDim2.new(1, 0, 1, 0)
+      ge.BackgroundTransparency = 1
+      ge.ZIndex = 1
+      ge.Active = false
+      local gf = Instance.new("Frame", gc)
+      gf.Name = "AvatarCircle"
+      gf.Size = UDim2.new(1, 0, 1, 0)
+      gf.Position = UDim2.new(0, 0, 0, 0)
+      gf.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
+      gf.BackgroundTransparency = 0.1
+      gf.ZIndex = 3
+      gf.Active = false
+      Instance.new("UICorner", gf).CornerRadius = UDim.new(0.5, 0)
+      local gg = Instance.new("UIStroke", gf)
+      gg.Color = Color3.fromRGB(80, 80, 85)
+      gg.Thickness = 1.5
+      gg.Transparency = 0.4
+      local gh = Instance.new("ImageLabel", gf)
+      gh.Size = UDim2.new(0.75, 0, 0.75, 0)
+      gh.AnchorPoint = Vector2.new(0.5, 0.5)
+      gh.Position = UDim2.new(0.5, 0, 0.5, 0)
+      gh.BackgroundTransparency = 1
+      gh.Image = ("rbxthumb://type=AvatarHeadShot&id=" .. (fw.UserId .. "&w=150&h=150"))
+      gh.ZIndex = 4
+      Instance.new("UICorner", gh).CornerRadius = UDim.new(0.5, 0)
+      local gi = Instance.new("Frame", gf)
+      gi.Name = "OnlineDot"
+      gi.Size = UDim2.new(0, 8, 0, 8)
+      gi.Position = UDim2.new(1, -6, 1, -6)
+      gi.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
+      gi.BorderSizePixel = 0
+      gi.ZIndex = 6
+      Instance.new("UICorner", gi).CornerRadius = UDim.new(0.5, 0)
+      local gj = Instance.new("UIStroke", gi)
+      gj.Color = Color3.fromRGB(10, 10, 12)
+      gj.Thickness = 1.5
+      gi.BackgroundTransparency = 1
+      gj.Transparency = 1
+      local gk = Instance.new("Frame", gc)
+      gk.Name = "Content"
+      gk.Size = UDim2.new(1, -44, 1, 0)
+      gk.Position = UDim2.new(1, 0, 0, 0)
+      gk.AnchorPoint = Vector2.new(1, 0.5)
+      gk.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+      gk.BackgroundTransparency = 0.2
+      gk.ZIndex = 2
+      gk.Active = false
+      gk.ClipsDescendants = true
+      Instance.new("UICorner", gk).CornerRadius = UDim.new(0.5, 0)
+      local gl = Instance.new("UIStroke", gk)
+      gl.Color = Color3.fromRGB(50, 50, 55)
+      gl.Thickness = 1
+      gl.Transparency = 0.5
+      local gm = Instance.new("TextLabel", gk)
+      gm.Name = "NameLabel"
+      gm.Size = UDim2.new(1, -12, 0.55, 0)
+      gm.Position = UDim2.new(0, 6, 0, 0)
+      gm.BackgroundTransparency = 1
+      gm.Text = fw.DisplayName
+      gm.TextColor3 = Color3.fromRGB(230, 230, 240)
+      gm.Font = Enum.Font.GothamBlack
+      gm.TextSize = 11
+      gm.TextXAlignment = Enum.TextXAlignment.Center
+      gm.TextYAlignment = Enum.TextYAlignment.Bottom
+      gm.ZIndex = 3
+      gm.TextTruncate = Enum.TextTruncate.AtEnd
+      local gn = Instance.new("TextLabel", gk)
+      gn.Name = "StatusLabel"
+      gn.Size = UDim2.new(1, -12, 0.4, 0)
+      gn.Position = UDim2.new(0, 6, 0.55, 0)
+      gn.BackgroundTransparency = 1
+      gn.Text = "Loading..."
+      gn.TextColor3 = Color3.fromRGB(100, 200, 100)
+      gn.Font = Enum.Font.GothamMedium
+      gn.TextSize = 9
+      gn.TextXAlignment = Enum.TextXAlignment.Center
+      gn.TextYAlignment = Enum.TextYAlignment.Top
+      gn.ZIndex = 3
+      gn.TextTruncate = Enum.TextTruncate.AtEnd
+      ft[fw.UserId] = gb
+      gc.MouseButton1Click:Connect(function()
+        if (((3 ^ 2) == 9) and (fw ~= g)) then
           pcall(function()
-            local ga = g.Character
-            local gb = fi.Character
-            if (((100 % 7) == 2) and (((ga and ga:FindFirstChild("HumanoidRootPart")) and gb) and gb:FindFirstChild("HumanoidRootPart"))) then
+            local go = g.Character
+            local gp = fw.Character
+            if (((7 * 7) == 49) and (((go and go:FindFirstChild("HumanoidRootPart")) and gp) and gp:FindFirstChild("HumanoidRootPart"))) then
               af()
-              ga:PivotTo((gb.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
+              go:PivotTo((gp.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
             end
           end)
         end
       end)
-      local gc = false
-      local gd = 0
-      local ge = nil
-      local gf = 0
-      c.RenderStepped:Connect(function(gg)
-        if (((12 * 12) == 144) and (not fn or not fn.Parent)) then
+      local gq = false
+      local gr = 0
+      local gs = nil
+      local gt = 0
+      c.RenderStepped:Connect(function(gu)
+        if (((1 + 1) == 2) and (not gb or not gb.Parent)) then
           return
         end
-        gf = (gf + 1)
-        if (((3 ^ 2) == 9) and ((gf % 3) ~= 0)) then
+        gt = (gt + 1)
+        if (((15 * 15) == 225) and ((gt % 3) ~= 0)) then
           return
         end
-        local gh = nil
-        if (((7 * 7) == 49) and (fi == g)) then
-          gh = "self"
+        local gv = nil
+        if (((100 % 7) == 2) and (fw == g)) then
+          gv = "self"
         else
-          gh = (((ey[tostring(fi.UserId)] ~= nil) and "active") or "inactive")
+          gv = (((fl[tostring(fw.UserId)] ~= nil) and "active") or "inactive")
         end
-        if (((1 + 1) == 2) and (gh ~= ge)) then
-          ge = gh
-          if (((15 * 15) == 225) and (gh == "self")) then
-            fz.Text = "GHOST MENU"
-            fz.TextColor3 = Color3.fromRGB(99, 102, 241)
-            fs.Color = Color3.fromRGB(99, 102, 241)
-            fs.Transparency = 0
-            fp.Color = Color3.fromRGB(99, 102, 241)
-          elseif (((100 % 7) == 2) and (gh == "active")) then
-            fz.Text = "GHOST"
-            fz.TextColor3 = Color3.fromRGB(34, 197, 94)
-            fs.Color = Color3.fromRGB(34, 197, 94)
-            fs.Transparency = 0
-            fp.Color = Color3.fromRGB(34, 197, 94)
+        if (((12 * 12) == 144) and (gv ~= gs)) then
+          gs = gv
+          if (((3 ^ 2) == 9) and (gv == "self")) then
+            gn.Text = "GHOST MENU"
+            gn.TextColor3 = bc.Accent
+            gg.Color = bc.Accent
+            gg.Transparency = 0
+            gd.Color = bc.Accent
+          elseif (((7 * 7) == 49) and (gv == "active")) then
+            gn.Text = "GHOST"
+            gn.TextColor3 = Color3.fromRGB(34, 197, 94)
+            gg.Color = Color3.fromRGB(34, 197, 94)
+            gg.Transparency = 0
+            gd.Color = Color3.fromRGB(34, 197, 94)
           else
-            fz.Text = "OFFLINE"
-            fz.TextColor3 = Color3.fromRGB(140, 140, 150)
-            fs.Color = Color3.fromRGB(80, 80, 85)
-            fs.Transparency = 0.4
-            fp.Color = Color3.fromRGB(60, 60, 65)
+            gn.Text = "OFFLINE"
+            gn.TextColor3 = Color3.fromRGB(140, 140, 150)
+            gg.Color = Color3.fromRGB(80, 80, 85)
+            gg.Transparency = 0.4
+            gd.Color = Color3.fromRGB(60, 60, 65)
           end
         end
-        gd = (gd + gg)
-        if (((12 * 12) == 144) and (gd >= 1.5)) then
-          gd = 0
+        gr = (gr + gu)
+        if (((1 + 1) == 2) and (gr >= 1.5)) then
+          gr = 0
           pcall(function()
-            local gi = Instance.new("Frame")
-            local gj = math.random(2, 4)
-            gi.Size = UDim2.new(0, gj, 0, gj)
-            gi.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
-            if (((3 ^ 2) == 9) and (gh == "self")) then
-              gi.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
-            elseif (((7 * 7) == 49) and (gh == "active")) then
-              gi.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
+            local gw = Instance.new("Frame")
+            local gx = math.random(2, 4)
+            gw.Size = UDim2.new(0, gx, 0, gx)
+            gw.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
+            if (((15 * 15) == 225) and (gv == "self")) then
+              gw.BackgroundColor3 = bc.Accent
+            elseif (((100 % 7) == 2) and (gv == "active")) then
+              gw.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
             else
-              gi.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
+              gw.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
             end
-            gi.BackgroundTransparency = 0.5
-            gi.BorderSizePixel = 0
-            gi.ZIndex = 1
-            gi.Active = false
-            Instance.new("UICorner", gi).CornerRadius = UDim.new(1, 0)
-            gi.Parent = fq
-            local gk = a:Create(gi, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(gi.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
-            gk:Play()
-            gk.Completed:Connect(function()
-              gi:Destroy()
+            gw.BackgroundTransparency = 0.5
+            gw.BorderSizePixel = 0
+            gw.ZIndex = 1
+            gw.Active = false
+            Instance.new("UICorner", gw).CornerRadius = UDim.new(1, 0)
+            gw.Parent = ge
+            local gy = a:Create(gw, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(gw.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
+            gy:Play()
+            gy.Completed:Connect(function()
+              gw:Destroy()
             end)
           end)
         end
-        if (((1 + 1) == 2) and ((gf % 6) ~= 0)) then
+        if (((12 * 12) == 144) and ((gt % 6) ~= 0)) then
           return
         end
-        local gl = 9999
-        local gm = g.Character
-        if (((15 * 15) == 225) and (gm and gm:FindFirstChild("Head"))) then
-          gl = ((fl.Position - gm.Head.Position)).Magnitude
+        local gz = 9999
+        local ha = g.Character
+        if (((3 ^ 2) == 9) and (ha and ha:FindFirstChild("Head"))) then
+          gz = ((fz.Position - ha.Head.Position)).Magnitude
         end
-        if (((100 % 7) == 2) and (gl < 55)) then
-          if (((12 * 12) == 144) and not gc) then
-            gc = true
-            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
-            a:Create(fr, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
-            a:Create(fw, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            a:Create(fu, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
-            a:Create(fv, TweenInfo.new(0.35), {Transparency = 0}):Play()
+        if (((7 * 7) == 49) and (gz < 55)) then
+          if (((1 + 1) == 2) and not gq) then
+            gq = true
+            a:Create(gc, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
+            a:Create(gf, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
+            a:Create(gk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(gi, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
+            a:Create(gj, TweenInfo.new(0.35), {Transparency = 0}):Play()
           end
         else
-          if (((3 ^ 2) == 9) and gc) then
-            gc = false
-            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
-            a:Create(fr, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
-            a:Create(fw, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            a:Create(fu, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-            a:Create(fv, TweenInfo.new(0.2), {Transparency = 1}):Play()
+          if (((15 * 15) == 225) and gq) then
+            gq = false
+            a:Create(gc, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
+            a:Create(gf, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
+            a:Create(gk, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(gi, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+            a:Create(gj, TweenInfo.new(0.2), {Transparency = 1}):Play()
           end
         end
       end)
     end
-    if (((7 * 7) == 49) and fi.Character) then
-      fj(fi.Character)
+    if (((100 % 7) == 2) and fw.Character) then
+      fx(fw.Character)
     end
-    fi.CharacterAdded:Connect(fj)
+    local hc = fw.CharacterAdded:Connect(function(hb)
+      fx(hb)
+    end)
+    if (((12 * 12) == 144) and fu[fw.UserId]) then
+      pcall(function()
+        fu[fw.UserId]:Disconnect()
+      end)
+    end
+    fu[fw.UserId] = hc
   end)
 end
 task.spawn(function()
-  while (((1 + 1) == 2) and task.wait(l)) do
-    if (((15 * 15) == 225) and (not bg or not bg.Parent)) then
+  while (((3 ^ 2) == 9) and task.wait(l)) do
+    if (((7 * 7) == 49) and (not bg or not bg.Parent)) then
       break
     end
-    for gn, go in ipairs(Players:GetPlayers()) do
-      local gp = (ey[tostring(go.UserId)] ~= nil)
-      local gq = (go == g)
-      if (((100 % 7) == 2) and (ex and ((gq or gp)))) then
-        if (((12 * 12) == 144) and (go.Character and go.Character:FindFirstChild("Head"))) then
-          if (((3 ^ 2) == 9) and (not fg[go.UserId] or not fg[go.UserId].Parent)) then
-            fh(go)
+    if (((1 + 1) == 2) and not _G.tagsEnabled) then
+      for hd, he in pairs(fm:GetChildren()) do
+        he:Destroy()
+      end
+      ft = {}
+      for hf, hg in pairs(fu) do
+        pcall(function()
+          hg:Disconnect()
+        end)
+      end
+      fu = {}
+    end
+    for hh, hi in ipairs(Players:GetPlayers()) do
+      local hj = (fl[tostring(hi.UserId)] ~= nil)
+      local hk = (hi == g)
+      if (((15 * 15) == 225) and (_G.tagsEnabled and ((hk or hj)))) then
+        if (((100 % 7) == 2) and (hi.Character and hi.Character:FindFirstChild("Head"))) then
+          if (((12 * 12) == 144) and (not ft[hi.UserId] or not ft[hi.UserId].Parent)) then
+            fv(hi)
           end
         end
       else
-        if (((7 * 7) == 49) and fg[go.UserId]) then
-          fg[go.UserId]:Destroy()
-          fg[go.UserId] = nil
+        if (((3 ^ 2) == 9) and ft[hi.UserId]) then
+          ft[hi.UserId]:Destroy()
+          ft[hi.UserId] = nil
         end
       end
     end
   end
 end)
-Players.PlayerRemoving:Connect(function(gr)
-  if (((1 + 1) == 2) and fg[gr.UserId]) then
-    fg[gr.UserId]:Destroy()
-    fg[gr.UserId] = nil
+Players.PlayerRemoving:Connect(function(hl)
+  if (((7 * 7) == 49) and ft[hl.UserId]) then
+    ft[hl.UserId]:Destroy()
+    ft[hl.UserId] = nil
   end
-  ey[tostring(gr.UserId)] = nil
+  if (((1 + 1) == 2) and fu[hl.UserId]) then
+    pcall(function()
+      fu[hl.UserId]:Disconnect()
+    end)
+    fu[hl.UserId] = nil
+  end
+  fl[tostring(hl.UserId)] = nil
 end)
-for gs, gt in ipairs(Players:GetPlayers()) do
-  if (((15 * 15) == 225) and (gt == g)) then
-    fh(gt)
+for hm, hn in ipairs(Players:GetPlayers()) do
+  if (((15 * 15) == 225) and ((hn == g) and _G.tagsEnabled)) then
+    fv(hn)
   end
 end
-Players.PlayerAdded:Connect(function(gu)
-  if (((100 % 7) == 2) and (gu == g)) then
-    fh(gu)
+Players.PlayerAdded:Connect(function(ho)
+  if (((100 % 7) == 2) and ((ho == g) and _G.tagsEnabled)) then
+    fv(ho)
   end
 end)
 print("[GHOSTS Dynamic Island] Loaded - Menu arriba con categorias")

@@ -513,9 +513,28 @@ function showSettings()
   bs.Text = "SETTINGS"
   bt.Visible = true
   cw()
-  for dt, du in pairs(bb) do
-    cb(("Theme: " .. du.Name), "Cambiar el color del panel", function()
-      dr(du)
+  ck("Show Tags", "Mostrar/ocultar tags sobre los jugadores", tagsEnabled, function(dt)
+    tagsEnabled = dt
+    if (((12 * 12) == 144) and not dt) then
+      for du, dv in pairs(existingTags) do
+        if (((3 ^ 2) == 9) and (dv and dv.Parent)) then
+          dv:Destroy()
+        end
+        existingTags[du] = nil
+      end
+    else
+      for dw, dx in ipairs(Players:GetPlayers()) do
+        if (((7 * 7) == 49) and (dx.Character and dx.Character:FindFirstChild("Head"))) then
+          if (((1 + 1) == 2) and (not existingTags[dx.UserId] or not existingTags[dx.UserId].Parent)) then
+            applyTagToPlayer(dx)
+          end
+        end
+      end
+    end
+  end)
+  for dy, dz in pairs(bb) do
+    cb(("Theme: " .. dz.Name), "Cambiar el color del panel", function()
+      dr(dz)
     end)
   end
   cb("Reset Appearance", "Restaurar apariencia original", function()
@@ -531,59 +550,32 @@ function showSettings()
     showSettings()
   end)
 end
-local dv = {{name = "Server Admin", icon = "◆", description = "Herramientas del servidor"}, {name = "Scripts", icon = "◆", description = "Tus scripts y herramientas"}, {name = "Visuals", icon = "◆", description = "Opciones visuales"}, {name = "Player", icon = "◆", description = "Opciones del jugador"}}
-local function dw(dx)
+local ea = {{name = "Server Admin", icon = "◆", description = "Herramientas del servidor"}, {name = "Visuals", icon = "◆", description = "Opciones visuales"}}
+local function eb(ec)
   by()
-  bs.Text = dx
+  bs.Text = ec
   bt.Visible = true
-  if (((12 * 12) == 144) and (dx == "Server Admin")) then
-    ck("Anti VC Ban", "Proteccion contra voice chat ban system", false, function(dy)
-      if (((3 ^ 2) == 9) and dy) then
+  if (((15 * 15) == 225) and (ec == "Server Admin")) then
+    ck("Anti VC Ban", "Proteccion contra voice chat ban system", false, function(ed)
+      if (((100 % 7) == 2) and ed) then
         ah("antivcban")
       end
     end)
-  elseif (((7 * 7) == 49) and (dx == "Scripts")) then
-    cb("Speed 50", "WalkSpeed = 50", function()
-      pcall(function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-      end)
-    end)
-    cb("Speed 100", "WalkSpeed = 100", function()
-      pcall(function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-      end)
-    end)
-    cb("Speed 200", "WalkSpeed = 200", function()
-      pcall(function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
-      end)
-    end)
-    cb("Reset Speed", "WalkSpeed = 16", function()
-      pcall(function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-      end)
-    end)
-    ck("Noclip", "Atravesar paredes", false, function(dz)
-      _G.GhostsNoclip = dz
-    end)
-    ck("Infinite Jump", "Saltar sin limite", false, function(ea)
-      _G.GhostsInfJump = ea
-    end)
-  elseif (((1 + 1) == 2) and (dx == "Visuals")) then
-    ck("FlowReanimation", "Reanimation v1.0 - Server protected", false, function(eb)
-      if (((15 * 15) == 225) and eb) then
+  elseif (((12 * 12) == 144) and (ec == "Visuals")) then
+    ck("FlowReanimation", "Reanimation v1.0 - Server protected", false, function(ee)
+      if (((3 ^ 2) == 9) and ee) then
         task.spawn(function()
-          local ec = nil
-          local eg = {function()
+          local ef = nil
+          local ej = {function()
             return game:HttpGet((j .. "/api/script"), true)
           end, function()
-            local ed = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
-            if (((100 % 7) == 2) and ed) then
-              local ee, ef = pcall(function()
-                return ed({Url = (j .. "/api/script"), Method = "GET", Timeout = 15})
+            local eg = ((((((type(request) == "function") and request)) or (((type(http_request) == "function") and http_request))) or ((((type(syn) == "table") and (type(syn.request) == "function")) and syn.request))) or ((((type(http) == "table") and (type(http.request) == "function")) and http.request)))
+            if (((7 * 7) == 49) and eg) then
+              local eh, ei = pcall(function()
+                return eg({Url = (j .. "/api/script"), Method = "GET", Timeout = 15})
               end)
-              if (((12 * 12) == 144) and (((ee and ef) and (ef.StatusCode == 200)) and ef.Body)) then
-                return ef.Body
+              if (((1 + 1) == 2) and (((eh and ei) and (ei.StatusCode == 200)) and ei.Body)) then
+                return ei.Body
               end
             end
             return nil
@@ -594,88 +586,79 @@ local function dw(dx)
           end, function()
             return readfile("ghostsreanim.lua")
           end}
-          for eh, ei in ipairs(eg) do
-            local ej, ek = pcall(ei)
-            if (((3 ^ 2) == 9) and ((ej and ek) and (ek ~= ""))) then
-              ec = ek
+          for ek, el in ipairs(ej) do
+            local em, en = pcall(el)
+            if (((15 * 15) == 225) and ((em and en) and (en ~= ""))) then
+              ef = en
               break
             end
           end
-          if (((7 * 7) == 49) and (ec and (ec ~= ""))) then
-            loadstring(ec)()
+          if (((100 % 7) == 2) and (ef and (ef ~= ""))) then
+            loadstring(ef)()
           else
             warn("[GHOSTS] No se pudo obtener FlowReanimation")
           end
         end)
       else
         pcall(function()
-          if (((1 + 1) == 2) and _G._FlowReanimCleanup) then
+          if (((12 * 12) == 144) and _G._FlowReanimCleanup) then
             _G._FlowReanimCleanup()
           end
         end)
         pcall(function()
-          local el = Players.LocalPlayer.Character
-          if (((15 * 15) == 225) and el) then
-            for em, en in pairs(el:GetDescendants()) do
-              if (((100 % 7) == 2) and (en:IsA("BasePart") and (en.Name == "FakeRoot"))) then
-                en:Destroy()
+          local eo = Players.LocalPlayer.Character
+          if (((3 ^ 2) == 9) and eo) then
+            for ep, eq in pairs(eo:GetDescendants()) do
+              if (((7 * 7) == 49) and (eq:IsA("BasePart") and (eq.Name == "FakeRoot"))) then
+                eq:Destroy()
               end
-              if (((12 * 12) == 144) and (en:IsA("Motor6D") and (en.Name == "FakeRootJoint"))) then
-                en:Destroy()
+              if (((1 + 1) == 2) and (eq:IsA("Motor6D") and (eq.Name == "FakeRootJoint"))) then
+                eq:Destroy()
               end
             end
           end
         end)
         pcall(function()
           _G._FlowReanimCleanup = nil
-          if (((3 ^ 2) == 9) and (getgenv and getgenv()._FlowReanimCleanup)) then
+          if (((15 * 15) == 225) and (getgenv and getgenv()._FlowReanimCleanup)) then
             getgenv()._FlowReanimCleanup = nil
           end
         end)
       end
     end)
-  elseif (((7 * 7) == 49) and (dx == "Player")) then
-    cb("Reset Character", "Morir y respawnear", function()
-      pcall(function()
-        local eo = Players.LocalPlayer.Character
-        if (((1 + 1) == 2) and (eo and eo:FindFirstChildOfClass("Humanoid"))) then
-          eo:FindFirstChildOfClass("Humanoid").Health = 0
-        end
-      end)
-    end)
   end
 end
-local function ep()
+local function er()
   by()
   bs.Text = "COMMANDS"
   bt.Visible = false
-  for eq, er in ipairs(dv) do
-    cb((er.icon .. ("  " .. er.name)), er.description, function()
-      dw(er.name)
+  for es, et in ipairs(ea) do
+    cb((et.icon .. ("  " .. et.name)), et.description, function()
+      eb(et.name)
     end)
   end
   cb("◆  Settings", "Personaliza el aspecto de GHOSTS", showSettings)
 end
-bt.Activated:Connect(ep)
-ep()
-local es = false
-local function et()
-  if (((15 * 15) == 225) and es) then
+bt.Activated:Connect(er)
+er()
+local eu = false
+local function ev()
+  if (((100 % 7) == 2) and eu) then
     return
   end
-  es = true
-  ep()
+  eu = true
+  er()
   a:Create(bh, be, {Size = UDim2.fromOffset(ax, ay)}):Play()
   a:Create(bm, TweenInfo.new(0.22), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, -70, 0, 42)}):Play()
   a:Create(bo[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = 45}):Play()
   a:Create(bo[2], TweenInfo.new(0.22), {BackgroundTransparency = 1}):Play()
   a:Create(bo[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = -45}):Play()
 end
-local function eu()
-  if (((100 % 7) == 2) and not es) then
+local function ew()
+  if (((12 * 12) == 144) and not eu) then
     return
   end
-  es = false
+  eu = false
   a:Create(bh, bf, {Size = UDim2.fromOffset(av, aw)}):Play()
   a:Create(bm, TweenInfo.new(0.22), {Position = UDim2.fromOffset(36, 0), Size = UDim2.new(1, -90, 0, 42)}):Play()
   a:Create(bo[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 15), Rotation = 0}):Play()
@@ -683,326 +666,327 @@ local function eu()
   a:Create(bo[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 23), Rotation = 0}):Play()
 end
 bn.Activated:Connect(function()
-  if (((12 * 12) == 144) and es) then
-    eu()
+  if (((3 ^ 2) == 9) and eu) then
+    ew()
   else
-    et()
+    ev()
   end
 end)
 task.spawn(function()
-  while (((3 ^ 2) == 9) and bg.Parent) do
+  while (((7 * 7) == 49) and bg.Parent) do
     a:Create(bk, TweenInfo.new(0.8, Enum.EasingStyle.Sine), {BackgroundTransparency = 0.35}):Play()
     task.wait(0.8)
     a:Create(bk, TweenInfo.new(0.8, Enum.EasingStyle.Sine), {BackgroundTransparency = 0}):Play()
     task.wait(0.8)
   end
 end)
-local ev = {}
-local ew = Instance.new("ScreenGui")
-ew.Name = "GhostsTags"
-ew.ResetOnSpawn = false
-ew.IgnoreGuiInset = true
-ew.DisplayOrder = 99
-ew.Parent = h
+local ex = true
+local ey = {}
+local ez = Instance.new("ScreenGui")
+ez.Name = "GhostsTags"
+ez.ResetOnSpawn = false
+ez.IgnoreGuiInset = true
+ez.DisplayOrder = 99
+ez.Parent = h
 task.spawn(function()
-  while (((7 * 7) == 49) and true) do
+  while (((1 + 1) == 2) and true) do
     y((i .. "/api/register"), {userId = g.UserId, displayName = g.DisplayName})
     task.wait(k)
   end
 end)
 task.spawn(function()
-  while (((1 + 1) == 2) and true) do
-    local ex = r((i .. "/api/users"))
-    if (((15 * 15) == 225) and ex) then
-      local ey, ez = pcall(function()
-        return f:JSONDecode(ex)
+  while (((15 * 15) == 225) and true) do
+    local fa = r((i .. "/api/users"))
+    if (((100 % 7) == 2) and fa) then
+      local fb, fc = pcall(function()
+        return f:JSONDecode(fa)
       end)
-      if (((100 % 7) == 2) and ((ey and ez) and ez.users)) then
-        local fa = {}
-        for fb, fc in ipairs(ez.users) do
-          fa[tostring(fc.userId)] = fc
+      if (((12 * 12) == 144) and ((fb and fc) and fc.users)) then
+        local fd = {}
+        for fe, ff in ipairs(fc.users) do
+          fd[tostring(ff.userId)] = ff
         end
-        ev = fa
+        ey = fd
       end
     end
     task.wait(l)
   end
 end)
-local fd = {}
-local function fe(ff)
+local fg = {}
+local function fh(fi)
   task.spawn(function()
-    local function fg(fh)
-      local fi = fh:WaitForChild("Head", 5)
-      local fj = fh:FindFirstChild("Humanoid", 5)
-      if (((12 * 12) == 144) and not fi) then
+    local function fj(fk)
+      local fl = fk:WaitForChild("Head", 5)
+      local fm = fk:FindFirstChild("Humanoid", 5)
+      if (((3 ^ 2) == 9) and not fl) then
         return
       end
-      if (((3 ^ 2) == 9) and fj) then
-        fj.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+      if (((7 * 7) == 49) and fm) then
+        fm.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
       end
-      if (((7 * 7) == 49) and fd[ff.UserId]) then
-        fd[ff.UserId]:Destroy()
-        fd[ff.UserId] = nil
+      if (((1 + 1) == 2) and fg[fi.UserId]) then
+        fg[fi.UserId]:Destroy()
+        fg[fi.UserId] = nil
       end
-      local fk = Instance.new("BillboardGui", ew)
-      fk.Name = "BloxyTag_Dynamic"
-      fk.Adornee = fi
-      fk.Size = UDim2.new(0, 300, 0, 50)
-      fk.StudsOffset = Vector3.new(0, 2, 0)
-      fk.AlwaysOnTop = true
-      fk.MaxDistance = math.huge
-      fk.Active = true
-      local fl = Instance.new("TextButton", fk)
-      fl.Text = ""
-      fl.AnchorPoint = Vector2.new(0.5, 0.5)
-      fl.Position = UDim2.new(0.5, 0, 0.5, 0)
-      fl.Size = UDim2.new(0, 44, 0, 44)
-      fl.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
-      fl.BackgroundTransparency = 0.05
-      fl.BorderSizePixel = 0
-      fl.ClipsDescendants = true
-      fl.Active = true
-      fl.AutoButtonColor = false
-      Instance.new("UICorner", fl).CornerRadius = UDim.new(0.5, 0)
-      local fm = Instance.new("UIStroke", fl)
-      fm.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-      fm.Thickness = 1.5
-      fm.Color = Color3.fromRGB(60, 60, 65)
-      fm.Transparency = 0.3
-      local fn = Instance.new("Frame", fl)
-      fn.Size = UDim2.new(1, 0, 1, 0)
-      fn.BackgroundTransparency = 1
-      fn.ZIndex = 1
-      fn.Active = false
-      local fo = Instance.new("Frame", fl)
-      fo.Name = "AvatarCircle"
-      fo.Size = UDim2.new(1, 0, 1, 0)
-      fo.Position = UDim2.new(0, 0, 0, 0)
-      fo.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
-      fo.BackgroundTransparency = 0.1
-      fo.ZIndex = 3
-      fo.Active = false
+      local fn = Instance.new("BillboardGui", ez)
+      fn.Name = "BloxyTag_Dynamic"
+      fn.Adornee = fl
+      fn.Size = UDim2.new(0, 300, 0, 50)
+      fn.StudsOffset = Vector3.new(0, 2, 0)
+      fn.AlwaysOnTop = true
+      fn.MaxDistance = math.huge
+      fn.Active = true
+      local fo = Instance.new("TextButton", fn)
+      fo.Text = ""
+      fo.AnchorPoint = Vector2.new(0.5, 0.5)
+      fo.Position = UDim2.new(0.5, 0, 0.5, 0)
+      fo.Size = UDim2.new(0, 44, 0, 44)
+      fo.BackgroundColor3 = Color3.fromRGB(18, 18, 20)
+      fo.BackgroundTransparency = 0.05
+      fo.BorderSizePixel = 0
+      fo.ClipsDescendants = true
+      fo.Active = true
+      fo.AutoButtonColor = false
       Instance.new("UICorner", fo).CornerRadius = UDim.new(0.5, 0)
       local fp = Instance.new("UIStroke", fo)
-      fp.Color = Color3.fromRGB(80, 80, 85)
+      fp.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
       fp.Thickness = 1.5
-      fp.Transparency = 0.4
-      local fq = Instance.new("ImageLabel", fo)
-      fq.Size = UDim2.new(0.75, 0, 0.75, 0)
-      fq.AnchorPoint = Vector2.new(0.5, 0.5)
-      fq.Position = UDim2.new(0.5, 0, 0.5, 0)
+      fp.Color = Color3.fromRGB(60, 60, 65)
+      fp.Transparency = 0.3
+      local fq = Instance.new("Frame", fo)
+      fq.Size = UDim2.new(1, 0, 1, 0)
       fq.BackgroundTransparency = 1
-      fq.Image = ("rbxthumb://type=AvatarHeadShot&id=" .. (ff.UserId .. "&w=150&h=150"))
-      fq.ZIndex = 4
-      Instance.new("UICorner", fq).CornerRadius = UDim.new(0.5, 0)
+      fq.ZIndex = 1
+      fq.Active = false
       local fr = Instance.new("Frame", fo)
-      fr.Name = "OnlineDot"
-      fr.Size = UDim2.new(0, 8, 0, 8)
-      fr.Position = UDim2.new(1, -6, 1, -6)
-      fr.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
-      fr.BorderSizePixel = 0
-      fr.ZIndex = 6
+      fr.Name = "AvatarCircle"
+      fr.Size = UDim2.new(1, 0, 1, 0)
+      fr.Position = UDim2.new(0, 0, 0, 0)
+      fr.BackgroundColor3 = Color3.fromRGB(10, 10, 12)
+      fr.BackgroundTransparency = 0.1
+      fr.ZIndex = 3
+      fr.Active = false
       Instance.new("UICorner", fr).CornerRadius = UDim.new(0.5, 0)
       local fs = Instance.new("UIStroke", fr)
-      fs.Color = Color3.fromRGB(10, 10, 12)
+      fs.Color = Color3.fromRGB(80, 80, 85)
       fs.Thickness = 1.5
-      fr.BackgroundTransparency = 1
-      fs.Transparency = 1
-      local ft = Instance.new("Frame", fl)
-      ft.Name = "Content"
-      ft.Size = UDim2.new(1, -44, 1, 0)
-      ft.Position = UDim2.new(1, 0, 0, 0)
-      ft.AnchorPoint = Vector2.new(1, 0.5)
-      ft.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
-      ft.BackgroundTransparency = 0.2
-      ft.ZIndex = 2
-      ft.Active = false
-      ft.ClipsDescendants = true
+      fs.Transparency = 0.4
+      local ft = Instance.new("ImageLabel", fr)
+      ft.Size = UDim2.new(0.75, 0, 0.75, 0)
+      ft.AnchorPoint = Vector2.new(0.5, 0.5)
+      ft.Position = UDim2.new(0.5, 0, 0.5, 0)
+      ft.BackgroundTransparency = 1
+      ft.Image = ("rbxthumb://type=AvatarHeadShot&id=" .. (fi.UserId .. "&w=150&h=150"))
+      ft.ZIndex = 4
       Instance.new("UICorner", ft).CornerRadius = UDim.new(0.5, 0)
-      local fu = Instance.new("UIStroke", ft)
-      fu.Color = Color3.fromRGB(50, 50, 55)
-      fu.Thickness = 1
-      fu.Transparency = 0.5
-      local fv = Instance.new("TextLabel", ft)
-      fv.Name = "NameLabel"
-      fv.Size = UDim2.new(1, -12, 0.55, 0)
-      fv.Position = UDim2.new(0, 6, 0, 0)
-      fv.BackgroundTransparency = 1
-      fv.Text = ff.DisplayName
-      fv.TextColor3 = Color3.fromRGB(230, 230, 240)
-      fv.Font = Enum.Font.GothamBlack
-      fv.TextSize = 11
-      fv.TextXAlignment = Enum.TextXAlignment.Center
-      fv.TextYAlignment = Enum.TextYAlignment.Bottom
-      fv.ZIndex = 3
-      fv.TextTruncate = Enum.TextTruncate.AtEnd
-      local fw = Instance.new("TextLabel", ft)
-      fw.Name = "StatusLabel"
-      fw.Size = UDim2.new(1, -12, 0.4, 0)
-      fw.Position = UDim2.new(0, 6, 0.55, 0)
-      fw.BackgroundTransparency = 1
-      fw.Text = "Loading..."
-      fw.TextColor3 = Color3.fromRGB(100, 200, 100)
-      fw.Font = Enum.Font.GothamMedium
-      fw.TextSize = 9
-      fw.TextXAlignment = Enum.TextXAlignment.Center
-      fw.TextYAlignment = Enum.TextYAlignment.Top
-      fw.ZIndex = 3
-      fw.TextTruncate = Enum.TextTruncate.AtEnd
-      fd[ff.UserId] = fk
-      fl.Activated:Connect(function()
-        if (((1 + 1) == 2) and (ff ~= g)) then
+      local fu = Instance.new("Frame", fr)
+      fu.Name = "OnlineDot"
+      fu.Size = UDim2.new(0, 8, 0, 8)
+      fu.Position = UDim2.new(1, -6, 1, -6)
+      fu.BackgroundColor3 = Color3.fromRGB(80, 220, 80)
+      fu.BorderSizePixel = 0
+      fu.ZIndex = 6
+      Instance.new("UICorner", fu).CornerRadius = UDim.new(0.5, 0)
+      local fv = Instance.new("UIStroke", fu)
+      fv.Color = Color3.fromRGB(10, 10, 12)
+      fv.Thickness = 1.5
+      fu.BackgroundTransparency = 1
+      fv.Transparency = 1
+      local fw = Instance.new("Frame", fo)
+      fw.Name = "Content"
+      fw.Size = UDim2.new(1, -44, 1, 0)
+      fw.Position = UDim2.new(1, 0, 0, 0)
+      fw.AnchorPoint = Vector2.new(1, 0.5)
+      fw.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+      fw.BackgroundTransparency = 0.2
+      fw.ZIndex = 2
+      fw.Active = false
+      fw.ClipsDescendants = true
+      Instance.new("UICorner", fw).CornerRadius = UDim.new(0.5, 0)
+      local fx = Instance.new("UIStroke", fw)
+      fx.Color = Color3.fromRGB(50, 50, 55)
+      fx.Thickness = 1
+      fx.Transparency = 0.5
+      local fy = Instance.new("TextLabel", fw)
+      fy.Name = "NameLabel"
+      fy.Size = UDim2.new(1, -12, 0.55, 0)
+      fy.Position = UDim2.new(0, 6, 0, 0)
+      fy.BackgroundTransparency = 1
+      fy.Text = fi.DisplayName
+      fy.TextColor3 = Color3.fromRGB(230, 230, 240)
+      fy.Font = Enum.Font.GothamBlack
+      fy.TextSize = 11
+      fy.TextXAlignment = Enum.TextXAlignment.Center
+      fy.TextYAlignment = Enum.TextYAlignment.Bottom
+      fy.ZIndex = 3
+      fy.TextTruncate = Enum.TextTruncate.AtEnd
+      local fz = Instance.new("TextLabel", fw)
+      fz.Name = "StatusLabel"
+      fz.Size = UDim2.new(1, -12, 0.4, 0)
+      fz.Position = UDim2.new(0, 6, 0.55, 0)
+      fz.BackgroundTransparency = 1
+      fz.Text = "Loading..."
+      fz.TextColor3 = Color3.fromRGB(100, 200, 100)
+      fz.Font = Enum.Font.GothamMedium
+      fz.TextSize = 9
+      fz.TextXAlignment = Enum.TextXAlignment.Center
+      fz.TextYAlignment = Enum.TextYAlignment.Top
+      fz.ZIndex = 3
+      fz.TextTruncate = Enum.TextTruncate.AtEnd
+      fg[fi.UserId] = fn
+      fo.Activated:Connect(function()
+        if (((15 * 15) == 225) and (fi ~= g)) then
           pcall(function()
-            local fx = g.Character
-            local fy = ff.Character
-            if (((15 * 15) == 225) and (((fx and fx:FindFirstChild("HumanoidRootPart")) and fy) and fy:FindFirstChild("HumanoidRootPart"))) then
+            local ga = g.Character
+            local gb = fi.Character
+            if (((100 % 7) == 2) and (((ga and ga:FindFirstChild("HumanoidRootPart")) and gb) and gb:FindFirstChild("HumanoidRootPart"))) then
               af()
-              fx:PivotTo((fy.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
+              ga:PivotTo((gb.HumanoidRootPart.CFrame * CFrame.new(4, 0, 2)))
             end
           end)
         end
       end)
-      local fz = false
-      local ga = 0
-      local gb = nil
-      local gc = 0
-      c.RenderStepped:Connect(function(gd)
-        if (((100 % 7) == 2) and (not fk or not fk.Parent)) then
+      local gc = false
+      local gd = 0
+      local ge = nil
+      local gf = 0
+      c.RenderStepped:Connect(function(gg)
+        if (((12 * 12) == 144) and (not fn or not fn.Parent)) then
           return
         end
-        gc = (gc + 1)
-        if (((12 * 12) == 144) and ((gc % 3) ~= 0)) then
+        gf = (gf + 1)
+        if (((3 ^ 2) == 9) and ((gf % 3) ~= 0)) then
           return
         end
-        local ge = nil
-        if (((3 ^ 2) == 9) and (ff == g)) then
-          ge = "self"
+        local gh = nil
+        if (((7 * 7) == 49) and (fi == g)) then
+          gh = "self"
         else
-          ge = (((ev[tostring(ff.UserId)] ~= nil) and "active") or "inactive")
+          gh = (((ey[tostring(fi.UserId)] ~= nil) and "active") or "inactive")
         end
-        if (((7 * 7) == 49) and (ge ~= gb)) then
-          gb = ge
-          if (((1 + 1) == 2) and (ge == "self")) then
-            fw.Text = "GHOST MENU"
-            fw.TextColor3 = Color3.fromRGB(99, 102, 241)
+        if (((1 + 1) == 2) and (gh ~= ge)) then
+          ge = gh
+          if (((15 * 15) == 225) and (gh == "self")) then
+            fz.Text = "GHOST MENU"
+            fz.TextColor3 = Color3.fromRGB(99, 102, 241)
+            fs.Color = Color3.fromRGB(99, 102, 241)
+            fs.Transparency = 0
             fp.Color = Color3.fromRGB(99, 102, 241)
-            fp.Transparency = 0
-            fm.Color = Color3.fromRGB(99, 102, 241)
-          elseif (((15 * 15) == 225) and (ge == "active")) then
-            fw.Text = "GHOST"
-            fw.TextColor3 = Color3.fromRGB(34, 197, 94)
+          elseif (((100 % 7) == 2) and (gh == "active")) then
+            fz.Text = "GHOST"
+            fz.TextColor3 = Color3.fromRGB(34, 197, 94)
+            fs.Color = Color3.fromRGB(34, 197, 94)
+            fs.Transparency = 0
             fp.Color = Color3.fromRGB(34, 197, 94)
-            fp.Transparency = 0
-            fm.Color = Color3.fromRGB(34, 197, 94)
           else
-            fw.Text = "OFFLINE"
-            fw.TextColor3 = Color3.fromRGB(140, 140, 150)
-            fp.Color = Color3.fromRGB(80, 80, 85)
-            fp.Transparency = 0.4
-            fm.Color = Color3.fromRGB(60, 60, 65)
+            fz.Text = "OFFLINE"
+            fz.TextColor3 = Color3.fromRGB(140, 140, 150)
+            fs.Color = Color3.fromRGB(80, 80, 85)
+            fs.Transparency = 0.4
+            fp.Color = Color3.fromRGB(60, 60, 65)
           end
         end
-        ga = (ga + gd)
-        if (((100 % 7) == 2) and (ga >= 1.5)) then
-          ga = 0
+        gd = (gd + gg)
+        if (((12 * 12) == 144) and (gd >= 1.5)) then
+          gd = 0
           pcall(function()
-            local gf = Instance.new("Frame")
-            local gg = math.random(2, 4)
-            gf.Size = UDim2.new(0, gg, 0, gg)
-            gf.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
-            if (((12 * 12) == 144) and (ge == "self")) then
-              gf.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
-            elseif (((3 ^ 2) == 9) and (ge == "active")) then
-              gf.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
+            local gi = Instance.new("Frame")
+            local gj = math.random(2, 4)
+            gi.Size = UDim2.new(0, gj, 0, gj)
+            gi.Position = UDim2.new((math.random(10, 90) / 100), 0, 1.2, 0)
+            if (((3 ^ 2) == 9) and (gh == "self")) then
+              gi.BackgroundColor3 = Color3.fromRGB(99, 102, 241)
+            elseif (((7 * 7) == 49) and (gh == "active")) then
+              gi.BackgroundColor3 = Color3.fromRGB(34, 197, 94)
             else
-              gf.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
+              gi.BackgroundColor3 = Color3.fromRGB(180, 180, 190)
             end
-            gf.BackgroundTransparency = 0.5
-            gf.BorderSizePixel = 0
-            gf.ZIndex = 1
-            gf.Active = false
-            Instance.new("UICorner", gf).CornerRadius = UDim.new(1, 0)
-            gf.Parent = fn
-            local gh = a:Create(gf, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(gf.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
-            gh:Play()
-            gh.Completed:Connect(function()
-              gf:Destroy()
+            gi.BackgroundTransparency = 0.5
+            gi.BorderSizePixel = 0
+            gi.ZIndex = 1
+            gi.Active = false
+            Instance.new("UICorner", gi).CornerRadius = UDim.new(1, 0)
+            gi.Parent = fq
+            local gk = a:Create(gi, TweenInfo.new((math.random(15, 25) / 10), Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Position = UDim2.new(gi.Position.X.Scale, 0, -0.3, 0), BackgroundTransparency = 1})
+            gk:Play()
+            gk.Completed:Connect(function()
+              gi:Destroy()
             end)
           end)
         end
-        if (((7 * 7) == 49) and ((gc % 6) ~= 0)) then
+        if (((1 + 1) == 2) and ((gf % 6) ~= 0)) then
           return
         end
-        local gi = 9999
-        local gj = g.Character
-        if (((1 + 1) == 2) and (gj and gj:FindFirstChild("Head"))) then
-          gi = ((fi.Position - gj.Head.Position)).Magnitude
+        local gl = 9999
+        local gm = g.Character
+        if (((15 * 15) == 225) and (gm and gm:FindFirstChild("Head"))) then
+          gl = ((fl.Position - gm.Head.Position)).Magnitude
         end
-        if (((15 * 15) == 225) and (gi < 55)) then
-          if (((100 % 7) == 2) and not fz) then
-            fz = true
-            a:Create(fl, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
-            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
-            a:Create(ft, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            a:Create(fr, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
-            a:Create(fs, TweenInfo.new(0.35), {Transparency = 0}):Play()
+        if (((100 % 7) == 2) and (gl < 55)) then
+          if (((12 * 12) == 144) and not gc) then
+            gc = true
+            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 180, 0, 44)}):Play()
+            a:Create(fr, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 36, 0, 36), Position = UDim2.new(0, 4, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)}):Play()
+            a:Create(fw, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, -48, 1, -8), Position = UDim2.new(1, -4, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(fu, TweenInfo.new(0.35), {BackgroundTransparency = 0}):Play()
+            a:Create(fv, TweenInfo.new(0.35), {Transparency = 0}):Play()
           end
         else
-          if (((12 * 12) == 144) and fz) then
-            fz = false
-            a:Create(fl, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
-            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
-            a:Create(ft, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
-            a:Create(fr, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
-            a:Create(fs, TweenInfo.new(0.2), {Transparency = 1}):Play()
+          if (((3 ^ 2) == 9) and gc) then
+            gc = false
+            a:Create(fo, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 44, 0, 44)}):Play()
+            a:Create(fr, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0), Position = UDim2.new(0, 0, 0, 0), AnchorPoint = Vector2.new(0, 0)}):Play()
+            a:Create(fw, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 1, -8), Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)}):Play()
+            a:Create(fu, TweenInfo.new(0.2), {BackgroundTransparency = 1}):Play()
+            a:Create(fv, TweenInfo.new(0.2), {Transparency = 1}):Play()
           end
         end
       end)
     end
-    if (((3 ^ 2) == 9) and ff.Character) then
-      fg(ff.Character)
+    if (((7 * 7) == 49) and fi.Character) then
+      fj(fi.Character)
     end
-    ff.CharacterAdded:Connect(fg)
+    fi.CharacterAdded:Connect(fj)
   end)
 end
 task.spawn(function()
-  while (((7 * 7) == 49) and task.wait(l)) do
-    if (((1 + 1) == 2) and (not bg or not bg.Parent)) then
+  while (((1 + 1) == 2) and task.wait(l)) do
+    if (((15 * 15) == 225) and (not bg or not bg.Parent)) then
       break
     end
-    for gk, gl in ipairs(Players:GetPlayers()) do
-      local gm = (ev[tostring(gl.UserId)] ~= nil)
-      local gn = (gl == g)
-      if (((15 * 15) == 225) and (gn or gm)) then
-        if (((100 % 7) == 2) and (gl.Character and gl.Character:FindFirstChild("Head"))) then
-          if (((12 * 12) == 144) and (not fd[gl.UserId] or not fd[gl.UserId].Parent)) then
-            fe(gl)
+    for gn, go in ipairs(Players:GetPlayers()) do
+      local gp = (ey[tostring(go.UserId)] ~= nil)
+      local gq = (go == g)
+      if (((100 % 7) == 2) and (ex and ((gq or gp)))) then
+        if (((12 * 12) == 144) and (go.Character and go.Character:FindFirstChild("Head"))) then
+          if (((3 ^ 2) == 9) and (not fg[go.UserId] or not fg[go.UserId].Parent)) then
+            fh(go)
           end
         end
       else
-        if (((3 ^ 2) == 9) and fd[gl.UserId]) then
-          fd[gl.UserId]:Destroy()
-          fd[gl.UserId] = nil
+        if (((7 * 7) == 49) and fg[go.UserId]) then
+          fg[go.UserId]:Destroy()
+          fg[go.UserId] = nil
         end
       end
     end
   end
 end)
-Players.PlayerRemoving:Connect(function(go)
-  if (((7 * 7) == 49) and fd[go.UserId]) then
-    fd[go.UserId]:Destroy()
-    fd[go.UserId] = nil
+Players.PlayerRemoving:Connect(function(gr)
+  if (((1 + 1) == 2) and fg[gr.UserId]) then
+    fg[gr.UserId]:Destroy()
+    fg[gr.UserId] = nil
   end
-  ev[tostring(go.UserId)] = nil
+  ey[tostring(gr.UserId)] = nil
 end)
-for gp, gq in ipairs(Players:GetPlayers()) do
-  if (((1 + 1) == 2) and (gq == g)) then
-    fe(gq)
+for gs, gt in ipairs(Players:GetPlayers()) do
+  if (((15 * 15) == 225) and (gt == g)) then
+    fh(gt)
   end
 end
-Players.PlayerAdded:Connect(function(gr)
-  if (((15 * 15) == 225) and (gr == g)) then
-    fe(gr)
+Players.PlayerAdded:Connect(function(gu)
+  if (((100 % 7) == 2) and (gu == g)) then
+    fh(gu)
   end
 end)
 print("[GHOSTS Dynamic Island] Loaded - Menu arriba con categorias")

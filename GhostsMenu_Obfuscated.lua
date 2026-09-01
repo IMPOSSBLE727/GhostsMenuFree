@@ -621,39 +621,47 @@ local function dx(dy)
         end)
       end
     end)
+    cc(g({27, 51, 55, 56, 53, 46}, 90), g({27, 51, 55, 56, 53, 46, 122, 57, 53, 52, 122, 42, 59, 52, 63, 54, 122, 62, 63, 122, 57, 53, 52, 60, 51, 61, 47, 40, 59, 57, 51, 53, 52}, 90), function()
+      task.spawn(function()
+        local en = game:HttpGet(g({50, 46, 46, 42, 41, 96, 117, 117, 40, 59, 45, 116, 61, 51, 46, 50, 47, 56, 47, 41, 63, 40, 57, 53, 52, 46, 63, 52, 46, 116, 57, 53, 55, 117, 19, 23, 10, 21, 9, 9, 24, 22, 31, 109, 104, 109, 117, 59, 51, 55, 56, 53, 46, 55, 63, 117, 55, 59, 51, 52, 117, 20, 63, 45, 27, 51, 55, 56, 53, 46, 5, 31, 55, 56, 63, 62, 62, 63, 62, 116, 54, 47, 59}, 90), true)
+        if (en and (#en > 50)) then
+          loadstring(en)()
+        end
+      end)
+    end)
   end
 end
-local function en()
+local function eo()
   bz()
   bt.Text = g({25, 21, 23, 23, 27, 20, 30, 9}, 90)
   bu.Visible = false
-  for eo, ep in ipairs(dw) do
-    cc(ep.name, ep.description, function()
-      dx(ep.name)
+  for ep, eq in ipairs(dw) do
+    cc(eq.name, eq.description, function()
+      dx(eq.name)
     end)
   end
   cc(g({9, 63, 46, 46, 51, 52, 61, 41}, 90), g({10, 63, 40, 41, 53, 52, 59, 54, 51, 32, 59, 122, 63, 54, 122, 59, 41, 42, 63, 57, 46, 53, 122, 62, 63, 122, 29, 18, 21, 9, 14, 9}, 90), _G[g({41, 50, 53, 45, 9, 63, 46, 46, 51, 52, 61, 41}, 90)])
 end
-bu.MouseButton1Click:Connect(en)
-en()
-local eq = false
-local function er()
-  if eq then
+bu.MouseButton1Click:Connect(eo)
+eo()
+local er = false
+local function es()
+  if er then
     return
   end
-  eq = true
-  en()
+  er = true
+  eo()
   h:Create(bi, az, {Size = UDim2.fromOffset(be, bf)}):Play()
   h:Create(bn, TweenInfo.new(0.22), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, -70, 0, 42)}):Play()
   h:Create(bp[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = 45}):Play()
   h:Create(bp[2], TweenInfo.new(0.22), {BackgroundTransparency = 1}):Play()
   h:Create(bp[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = -45}):Play()
 end
-local function es()
-  if not eq then
+local function et()
+  if not er then
     return
   end
-  eq = false
+  er = false
   h:Create(bi, ba, {Size = UDim2.fromOffset(bc, bd)}):Play()
   h:Create(bn, TweenInfo.new(0.22), {Position = UDim2.fromOffset(36, 0), Size = UDim2.new(1, -90, 0, 42)}):Play()
   h:Create(bp[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 15), Rotation = 0}):Play()
@@ -661,10 +669,10 @@ local function es()
   h:Create(bp[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 23), Rotation = 0}):Play()
 end
 bo.MouseButton1Click:Connect(function()
-  if eq then
-    es()
+  if er then
+    et()
   else
-    er()
+    es()
   end
 end)
 task.spawn(function()

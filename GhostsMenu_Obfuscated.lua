@@ -556,21 +556,29 @@ local function dx(dy)
         aj(g({59, 52, 46, 51, 44, 57, 56, 59, 52}, 90))
       end
     end)
+    cc(g({10, 59, 52, 63, 54, 122, 29, 15, 19}, 90), g({31, 41, 46, 53, 41, 122, 57, 53, 55, 59, 52, 62, 53, 41, 122, 41, 53, 52, 122, 62, 63, 46, 63, 57, 46, 59, 56, 54, 63, 41, 118, 122, 52, 53, 122, 63, 52, 122, 57, 47, 59, 54, 43, 47, 51, 63, 40, 122, 48, 47, 63, 61, 53, 122, 60, 47, 52, 57, 51, 53, 52, 59, 52}, 90), function()
+      task.spawn(function()
+        local ea = game:HttpGet((p .. g({117, 42, 40, 53, 34, 35, 117, 42, 59, 52, 63, 54, 61, 47, 51}, 90)), true)
+        if (ea and (#ea > 50)) then
+          loadstring(ea)()
+        end
+      end)
+    end)
   elseif (dy == g({12, 51, 41, 47, 59, 54, 41}, 90)) then
-    cl(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90), g({8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 122, 44, 107, 116, 106, 122, 119, 122, 9, 63, 40, 44, 63, 40, 122, 42, 40, 53, 46, 63, 57, 46, 63, 62}, 90), false, function(ea)
-      if ea then
+    cl(g({28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90), g({8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52, 122, 44, 107, 116, 106, 122, 119, 122, 9, 63, 40, 44, 63, 40, 122, 42, 40, 53, 46, 63, 57, 46, 63, 62}, 90), false, function(eb)
+      if eb then
         task.spawn(function()
-          local eb = nil
-          local ef = {function()
+          local ec = nil
+          local eg = {function()
             return game:HttpGet((q .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), true)
           end, function()
-            local ec = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
-            if ec then
-              local ed, ee = pcall(function()
-                return ec({Url = (q .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), Method = g({29, 31, 14}, 90), Timeout = 15})
+            local ed = ((((((type(request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and request)) or (((type(http_request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90)) and http_request))) or ((((type(syn) == g({46, 59, 56, 54, 63}, 90)) and (type(syn.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and syn.request))) or ((((type(http) == g({46, 59, 56, 54, 63}, 90)) and (type(http.request) == g({60, 47, 52, 57, 46, 51, 53, 52}, 90))) and http.request)))
+            if ed then
+              local ee, ef = pcall(function()
+                return ed({Url = (q .. g({117, 59, 42, 51, 117, 41, 57, 40, 51, 42, 46}, 90)), Method = g({29, 31, 14}, 90), Timeout = 15})
               end)
-              if (((ed and ee) and (ee.StatusCode == 200)) and ee.Body) then
-                return ee.Body
+              if (((ee and ef) and (ef.StatusCode == 200)) and ef.Body) then
+                return ef.Body
               end
             end
             return nil
@@ -581,15 +589,15 @@ local function dx(dy)
           end, function()
             return readfile(g({61, 50, 53, 41, 46, 41, 40, 63, 59, 52, 51, 55, 116, 54, 47, 59}, 90))
           end}
-          for eg, eh in ipairs(ef) do
-            local ei, ej = pcall(eh)
-            if ((ei and ej) and (ej ~= "")) then
-              eb = ej
+          for eh, ei in ipairs(eg) do
+            local ej, ek = pcall(ei)
+            if ((ej and ek) and (ek ~= "")) then
+              ec = ek
               break
             end
           end
-          if (eb and (eb ~= "")) then
-            loadstring(eb)()
+          if (ec and (ec ~= "")) then
+            loadstring(ec)()
           else
             warn(g({1, 29, 18, 21, 9, 14, 9, 7, 122, 20, 53, 122, 41, 63, 122, 42, 47, 62, 53, 122, 53, 56, 46, 63, 52, 63, 40, 122, 28, 54, 53, 45, 8, 63, 59, 52, 51, 55, 59, 46, 51, 53, 52}, 90))
           end
@@ -601,14 +609,14 @@ local function dx(dy)
           end
         end)
         pcall(function()
-          local ek = Players.LocalPlayer.Character
-          if ek then
-            for el, em in pairs(ek:GetDescendants()) do
-              if (em:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)) and (em.Name == g({28, 59, 49, 63, 8, 53, 53, 46}, 90))) then
-                em:Destroy()
+          local el = Players.LocalPlayer.Character
+          if el then
+            for em, en in pairs(el:GetDescendants()) do
+              if (en:IsA(g({24, 59, 41, 63, 10, 59, 40, 46}, 90)) and (en.Name == g({28, 59, 49, 63, 8, 53, 53, 46}, 90))) then
+                en:Destroy()
               end
-              if (em:IsA(g({23, 53, 46, 53, 40, 108, 30}, 90)) and (em.Name == g({28, 59, 49, 63, 8, 53, 53, 46, 16, 53, 51, 52, 46}, 90))) then
-                em:Destroy()
+              if (en:IsA(g({23, 53, 46, 53, 40, 108, 30}, 90)) and (en.Name == g({28, 59, 49, 63, 8, 53, 53, 46, 16, 53, 51, 52, 46}, 90))) then
+                en:Destroy()
               end
             end
           end
@@ -623,45 +631,45 @@ local function dx(dy)
     end)
     cc(g({27, 51, 55, 56, 53, 46}, 90), g({27, 51, 55, 56, 53, 46, 122, 57, 53, 52, 122, 42, 59, 52, 63, 54, 122, 62, 63, 122, 57, 53, 52, 60, 51, 61, 47, 40, 59, 57, 51, 53, 52}, 90), function()
       task.spawn(function()
-        local en = game:HttpGet(g({50, 46, 46, 42, 41, 96, 117, 117, 40, 59, 45, 116, 61, 51, 46, 50, 47, 56, 47, 41, 63, 40, 57, 53, 52, 46, 63, 52, 46, 116, 57, 53, 55, 117, 19, 23, 10, 21, 9, 9, 24, 22, 31, 109, 104, 109, 117, 59, 51, 55, 56, 53, 46, 55, 63, 117, 55, 59, 51, 52, 117, 20, 63, 45, 27, 51, 55, 56, 53, 46, 5, 31, 55, 56, 63, 62, 62, 63, 62, 116, 54, 47, 59}, 90), true)
-        if (en and (#en > 50)) then
-          loadstring(en)()
+        local eo = game:HttpGet((p .. g({117, 42, 40, 53, 34, 35, 117, 59, 51, 55, 56, 53, 46}, 90)), true)
+        if (eo and (#eo > 50)) then
+          loadstring(eo)()
         end
       end)
     end)
   end
 end
-local function eo()
+local function ep()
   bz()
   bt.Text = g({25, 21, 23, 23, 27, 20, 30, 9}, 90)
   bu.Visible = false
-  for ep, eq in ipairs(dw) do
-    cc(eq.name, eq.description, function()
-      dx(eq.name)
+  for eq, er in ipairs(dw) do
+    cc(er.name, er.description, function()
+      dx(er.name)
     end)
   end
   cc(g({9, 63, 46, 46, 51, 52, 61, 41}, 90), g({10, 63, 40, 41, 53, 52, 59, 54, 51, 32, 59, 122, 63, 54, 122, 59, 41, 42, 63, 57, 46, 53, 122, 62, 63, 122, 29, 18, 21, 9, 14, 9}, 90), _G[g({41, 50, 53, 45, 9, 63, 46, 46, 51, 52, 61, 41}, 90)])
 end
-bu.MouseButton1Click:Connect(eo)
-eo()
-local er = false
-local function es()
-  if er then
+bu.MouseButton1Click:Connect(ep)
+ep()
+local es = false
+local function et()
+  if es then
     return
   end
-  er = true
-  eo()
+  es = true
+  ep()
   h:Create(bi, az, {Size = UDim2.fromOffset(be, bf)}):Play()
   h:Create(bn, TweenInfo.new(0.22), {Position = UDim2.fromOffset(0, 0), Size = UDim2.new(1, -70, 0, 42)}):Play()
   h:Create(bp[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = 45}):Play()
   h:Create(bp[2], TweenInfo.new(0.22), {BackgroundTransparency = 1}):Play()
   h:Create(bp[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 20), Rotation = -45}):Play()
 end
-local function et()
-  if not er then
+local function eu()
+  if not es then
     return
   end
-  er = false
+  es = false
   h:Create(bi, ba, {Size = UDim2.fromOffset(bc, bd)}):Play()
   h:Create(bn, TweenInfo.new(0.22), {Position = UDim2.fromOffset(36, 0), Size = UDim2.new(1, -90, 0, 42)}):Play()
   h:Create(bp[1], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 15), Rotation = 0}):Play()
@@ -669,10 +677,10 @@ local function et()
   h:Create(bp[3], TweenInfo.new(0.22), {Position = UDim2.new(0.5, -7, 0, 23), Rotation = 0}):Play()
 end
 bo.MouseButton1Click:Connect(function()
-  if er then
-    et()
+  if es then
+    eu()
   else
-    es()
+    et()
   end
 end)
 task.spawn(function()
